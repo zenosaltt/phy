@@ -1,0 +1,59 @@
+\usepackage[english, italian]{babel}
+\addto\captionsitalian{\renewcommand\chaptername{}}
+
+
+% awkward quotations
+\usepackage{epigraph}
+
+% minitoc at the beginning of each chapter
+\usepackage{minitoc}
+\nomtcpagenumbers
+\mtcsetdepth{minitoc}{1}
+\mtcsettitle{minitoc}{}
+\mtcsetrules{minitoc}{off}
+\setlength{\mtcindent}{-0.5cm}
+
+\setlength{\marginparwidth}{4.5cm}
+\setlength{\marginparsep}{1cm}
+
+\usepackage[outer = 7cm]{geometry}
+\usepackage{graphicx} %\includegraphics command for figures
+\usepackage{float} %codes for image placement
+\usepackage{sidenotes} %white space alternating margins
+
+
+
+% CHAPTER FORMAT
+\usepackage{titlesec}
+\titleformat{\chapter}[display] %hang = numero sulla stessa linea del titolo
+{\normalfont\huge\bfseries}{\chaptertitlename\thechapter}{20pt}{\LARGE}   
+\titlespacing*{\chapter}{0pt}{-50pt}{5pt} % left space, upper space, bottom space
+
+\newcommand{\chptr}[1]{\chapter{\textit{#1}}\noindent\rule{\textwidth}{1pt}}
+
+
+
+% footnotes
+\usepackage[bottom]{footmisc} % note appiccicate al fondo della pagina
+\usepackage{footnotehyper}
+\makesavenoteenv{tcolorbox} % note delle box appiccicate al fondo, fuori dalle box
+
+% math stuff
+\usepackage{
+    amsmath,
+    amsfonts,
+    amssymb, % varnothing command
+    amsthm,
+}
+\theoremstyle{remark}
+\newtheorem*{osservaz}{Osservazione}
+
+% colors
+\usepackage{tcolorbox} % box
+\usepackage{xcolor} % testo colorato
+
+\usepackage[hidelinks]{hyperref} % link di pagina
+
+% caption setup (doesn't work for margin figures)
+\usepackage[margin = 1cm]{caption}
+\usepackage[font = small, labelfont = bf]{caption} % small font for caption (and bold Figure word)
