@@ -1,0 +1,11 @@
+# ignore everything but .tex and .pdf files
+
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.maf
+*.mtc*
+*.out
+*.synctex.gz
+*.toc
