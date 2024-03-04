@@ -1,0 +1,214 @@
+% Lezione 1/2024-02-26
+% - Introduzione filosofica alla fisica (di che si occupa, rapporto con la realta' e filosofia della quantificazione, metodo scientifico)
+% - Quantificazione: misura ed errore di misura, stima
+
+% Lezione 2/2024-02-28
+% - Notazioni sulla quantificazione: ordine di grandezza
+% (include altri argomenti, ma con un capitolo dedicato)
+
+\chptr{Introduzione alla Fisica}
+
+\section{Definizione e scopi della fisica}
+
+Si possono formulare definizioni diverse riguardo la disciplina scientifica
+della fisica, come la seguente:
+
+\vspace{8pt}
+\begin{tcolorbox}[colback = yellow!30, colframe = yellow!30!black, title = {Fisica}]
+La fisica è lo studio quantitativo delle leggi fondamentali della natura, cioè
+delle leggi che governano tutti i fenomeni naturali dell'universo.
+
+Una legge fisica è una regolarita' della natura esprimibile in forma matematica.
+\end{tcolorbox}
+\vspace{5pt}
+
+La fisica si avvale del \textbf{metodo scientifico}, secondo cui la natura deve
+essere interrogata per vie sperimentali, facendosi guidare da \textbf{ipotesi} e
+modelli teorici. Una particolarita' di questo metodo è la capacita' di isolare
+un certo fenomeno che si intende studiare, tralasciando (si usera' spesso il
+termine \textit{trascurare}) certi aspetti ritenuti non rilevanti in modo da
+scoprire quelle regolarita' dalle quali potrebbe essere dedotta una certa'
+relazione matematica.
+
+Il ruolo della matematica è di fornire un linguaggio formale per descrivere
+quantitativamente i fenomeni osservati e costruire modelli utili alla loro
+trattazione.
+
+
+
+\section{Grandezze fisiche}
+La fisica è una scienza quantitativa, ovvero essa si occupa di caratteristiche
+e proprieta' del mondo che possono essere misurate e quantificate: le cosiddette
+grandezze fisiche. Esempi di grandezze fisiche sono la lunghezza, la massa, la
+temperatura, la durata temporale e cosi' via.
+
+\vspace{8pt}
+\begin{tcolorbox}[colback = yellow!30, colframe = yellow!30!black, title = {Grandezza fisica}]
+Una grandezza fisica è una caratteristica di un oggetto o di un fenomeno che puo'
+essere misurata in termini quantitativi (oltre che oggettivi, ovvero indipendentemente
+dalle sensazioni personali degli individui).
+\end{tcolorbox}
+\vspace{5pt}
+
+È implicito, intuitivamente, il concetto di \textbf{misura}. Misurare una grandezza
+fisica significa confrontarla con una grandezza ``campione'', detta \textbf{unita'
+di misura}, e stabilire quante volte l'unita' di misura è contenuta nella
+grandezza data. Il valore numerico ottenuto è la misura della grandezza e deve
+essere sempre accompagnato dall'unita' di misura.
+In altre parole, la \textbf{misura} non è altro che un \textit{rapporto} tra la
+grandezza che si intende misurare e la grandezza campione scelta convenzionalmente
+per tale scopo.
+
+Mostriamo un esempio: supponiamo di voler misurare la lunghezza di qualsiasi cosa
+in ``chiavette USB'' (si potrebbe argomentare circa quale chiavetta si stia
+impiegando e quale posizione la chiavetta debba assumere durante la misura.
+Supponiamo qui che la chiavetta sia posta in verticale, senza perderci in ulteriori
+dettagli). Decidiamo poi di misurare l'altezza di una porta—anche qui, non
+specifichiamo quale porta—utilizzando l'unita' appena scelta. Supponiamo quindi
+di aver registrato il seguente dato:
+\[ H = 20 \text{ chiavette USB} \]
+Notare come siano stati specificati:
+\begin{itemize}
+    \item Un nome per l'oggetto che si intendeva misurare, $H$, ovvero l'altezza
+    della porta.
+    \item Il valore numerico individuato, 20.
+    \item Una affermazione per legare il nome e il dato, = (``corrisponde a'', ``è
+    uguale a'')—caratteristica che peraltro si trova anche nei linguaggi di
+    programmazione.
+    \item L'unita' di misura, chiavette USB.
+\end{itemize}
+Tuttavia, tale misurazione non è stata affatto ``sincera'': non vi è la
+garanzia del fatto che il valore registrato sia esatto. La prossima sezione
+trattera' questo problema, ovvero quello dell'\textit{incertezza}.
+
+
+\section{Incertezza}
+Idealmente, si vorrebbe impiegare, grazie alle misure, numeri puntuali ed esatti.
+In altre parole, dei numeri con una precisione indefinita, aventi un numero
+illimitato di cifre decimali e non.
+
+Ma quando si effettua una misura di una grandezza, il risultato ottenuto è noto solo
+con una certa precisione. Riprendendo l'esempio della chiavetta USB, è impossible
+misurare con certezza tutte le lunghezze, in quanto non multipli esatti della
+chiavetta stessa: ci sara' sempre un certo margine di ``un pezzo di chiavetta'',
+minore dell'unita' prescelta. Ma al di sotto di quella unita' non è possibile
+fornire alcuna garanzia sulla puntualita' del dato. In altre parole, la
+\textit{sensibilità}\footnote{La più piccola variazione della grandezza che lo
+strumento è in grado di rilevare.} dello strumento è uno dei limiti alla precisione
+della misura.
+
+\vspace{8pt}
+\begin{tcolorbox}[colback = yellow!30, colframe = yellow!30!black, title = {Cifre significative del risultato di una misura}]
+Le cifre significative del risultato di una misura sono le cifre note
+con certezza e la prima cifra incerta. In altre parole, esse sono le cifre che si
+possono controllare con lo strumento impiegato nella misura.
+\end{tcolorbox}
+\vspace{5pt}
+
+Ad esempio, il valore corrispondente alla lunghezza di una barca $L = 10,5$ m
+possiede tre cifre significative, che non equivale a $10,50$ m. Il secondo dato,
+infatti, dichiara che la misurazione è stata possibile controllando le cifre
+fino al centimetro. $L = 0,002$ possiede solo una cifra significativa, perché
+in genere si ignorano gli zeri a sinistra della prima cifra significativa diversa
+da zero. Possono essere ambigui valori come $L = 2500 \text{ m}$: quali zeri sono
+cifre significative? Come vedremo tra poco, è utile esprimere questi valori in
+notazione scientifica per eliminare ambiguità.
+
+Vi potrebbero anche essere errori dovuti a imprecisioni introdotte nell'utilizzo
+degli strumenti di misura. Questo errore deve tuttavia essere quantificato ed ogni
+misura ne è affetta (comprese quelle che non la riportano).
+
+\vspace{8pt}
+\begin{tcolorbox}[colback = yellow!30, colframe = yellow!30!black, title = {Risultato della misura di una grandezza}]
+Il risultato della misura di una grandezza è sempre un'approssimazione
+accompagnata da una certa incertezza, ovvero un \textbf{valore attendibile}
+e un \textbf{errore assoluto} (o semplicemente \textit{incertezza}).
+\[ x = \overline{x} \pm e_x  \]
+\end{tcolorbox}
+\vspace{5pt}
+
+Questo risultato non è quindi altro che un intervallo in cui il valore reale
+della misura si trova. Ci limiteremo agli errori relativi a singole misure,
+nelle quali $x$ corrisponde al valore misurato e $e_x$ la sensibilità dello
+strumento. Di conseguenza, possiamo ora correggere il risultato della misura
+effettuata in chiavette USB:
+\[ H = (20 \pm 1) \text{ chiavette USB} \]
+
+\section{Notazione scientifica e ordini di grandezza}
+Unità di misura come il metro e il kologrammo sono comode nella vita di tutti i
+giorni, ma rappresentano quantità enormi su scala atomica e subatomica e quantità
+minuscole su scala astronomica e cosmica. Conseguenza di ciò è che alcune misure
+possono essere espresse da numeri ``scomodi''. Considerando solo valori attendibili,
+la massa dell'atomo di idrogeno è circa
+\[ m_H = 0,000 000 000 000 000 000 000 000 001 67 \text{ kg} \]
+mentre la massa della Terra è
+\[ m_T = 5 970 000 000 000 000 000 000 000 \text{ kg} \]
+È pressoché evidente il motivo di tale scomodità: la notazione è di difficile
+trattazione. Viene dunque in aiuto la \textbf{notazione scientifica}, ovvero una
+notazione numerica che permette di contrarre rappresentazioni estese impiegando
+potenze di 10. Nella notazione scientifica, ogni numero è scritto come prodotto
+di due fattori:
+\begin{itemize}
+    \item Un numero decimale $x:x\in R, 1\leq x < 10$\footnote{In realtà, questa notazione corrisponde alla variante ``ingegneristica''. Esiste anche una notazione che prevede che il valore espresso $x$ sia $0\leq x < 1$.}.
+    \item Una potenza di 10, con esponente intero.
+\end{itemize}
+Pertanto, le misure precedenti si possono esprimere in notazione scientifica come
+segue:
+\[ m_H = 1,67 \cdot 10^{-27} \text{ kg} \]
+\[ m_T = 5,97 \cdot 10^{24} \text{ kg}\]
+Notare come la notazione sia in grado di eliminare ambiguità sul numero di cifre
+significative: ora sappiamo che la massa della Terra è stata calcolata fino a
+tre cifre significative e non 25.
+
+Non sempre è necessario calcolare esattamente il valore di una certa grandezza.
+Talvolta basta averne solo un'idea approssimata. Supponiamo, ad esempio, che sia
+sufficiente sapere se una certa massa vale all'incirca 1 grammo oppure 1
+ettogrammo. In questo caso, possiamo accontentarci di stimare il valore della
+massa con un'accuratezza di un fattore 10, cioè di calcolare il suo ordine di
+grandezza.
+
+\vspace{8pt}
+\begin{tcolorbox}[colback = yellow!30, colframe = yellow!30!black, title = {Ordine di grandezza}]
+L'ordine di grandezza di un numero è la potenza di 10 più vicina a quel numero.
+\end{tcolorbox}
+\vspace{5pt}
+
+Per determinare l'ordine di grandezza di un numero occorre quindi esprimerlo in
+notazione scientifica—prodotto di un numero decimale compreso tra 1 e 10 e di
+una potenza di 10—e poi approssimare il valore alla potenza di 10 più vicina.
+In particolare:
+\begin{itemize}
+    \item Se il numero decimale è minore di 5, si mantiene l'esponente della
+    potenza. Ad esempio:
+    \[ 3,6 \cdot 10^2 \to \text{ Ordine di grandezza } 10^2 \]
+    \[ 4,2 \cdot 10^{-3} \to \text{ Ordine di grandezza } 10^{-3} \]
+
+    \item Se il numero decimale è maggiore di 5, si somma +1 all'esponente della
+    potenza. Ad esempio:
+    \[ 9 \cdot 10^2 \approx 10 \cdot 10^2 \to \text{ Ordine di grandezza } 10^3 \]
+    \[ 8,1 \cdot 10^{-12} \approx 10 \cdot 10^{-12} \to \text{ Ordine di grandezza } 10^{-11} \]
+\end{itemize}
+
+
+Sono stati definiti dei prefissi stadard per certi ordini di grandezza notevoli,
+cioè quelli che, escludendo la potenza nulla, rappresentano multipli di tre.
+Utilizzando questi prefissi, di fianco all'unità di misura adottata, si contrae
+ancora di più la notazione scientifica, sottointendendo un certo ordine di
+grandezza.
+
+\marginpar{
+    \footnotesize
+    %\hspace*{-0.5cm}
+    \begin{tabular}{c|c|c}
+        Potenza   & Simbolo & Prefisso\\
+        \hline
+        $10^{12}$  & T       & Tera\\
+        $10^{9}$   & G       & Giga\\
+        $10^{6}$   & M       & Mega\\
+        $10^{3}$   & k       & kilo\\
+        $10^{-3}$  & m       & milli\\
+        $10^{-6}$  & $\mu$   & micro\\
+        $10^{-9}$  & n       & nano\\
+        $10^{-12}$ & p       & pico\\
+    \end{tabular}
+}
