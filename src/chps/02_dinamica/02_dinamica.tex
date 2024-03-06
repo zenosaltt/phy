@@ -1,5 +1,13 @@
 % Lezione 3/2024-03-04
-%
+% - introduzione alla dinamica
+% - prima e seconda legge
+% - esercizi su moto uniformemente accelerato
+% - accenni al concetto di forza e introduzione alla forza elastica con legge di hooke
+
+% Lezione 4/2024-03-06
+% - grafico orario: grafico nel quale un asse riporta lo spazio (una dimensione), mentre sull'altro il tempo
+% - differenza tra SPOSTAMENTO e distanza
+% - interpretazione grafica della velocità e accelerazione, con analisi di funzione
 
 \chptr{Dinamica}
 \marginpar{\minitoc}
@@ -41,7 +49,7 @@ della velocità nel tempo è chiamata \textbf{accelerazione}.
 \vspace{8pt}
 \begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Seconda legge della dinamica}]
     \begin{align}
-        \frac{F}{a} = m
+        \frac{|\overrightarrow{F}|}{|\overrightarrow{a}|} = \frac{F}{a} = m
     \end{align}
 \end{tcolorbox}
 \vspace{5pt}
@@ -59,7 +67,8 @@ massa (inerziale).
 \subsection{Molla e forza elastica}
 \[ F \propto \Delta x \]
 
-La forza che la molla esercita, essendo in opposizione, corrisponde a:
+La forza che la molla esercita, essendo in opposizione alla direzione nella
+quale la deformazione viene effettuata, corrisponde a:
 \[ F_\textit{el} = -k\Delta x \]
 
 \section{Forza agente sul moto}
@@ -125,4 +134,66 @@ dall'equazione $v_0 + at_f = 0 \to t_f = -\frac{v_0}{a}$.
 Sapendo che $a = -|g|$, la quota massima $h_m$ raggiunta è:
 \[ h_m = \frac{v_0^2}{2|g|} \]
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{Spostamento}
+\[ \Delta\overrightarrow{s} = \overrightarrow{s}_f - \overrightarrow{s}_i \]
+
+
 \subsection{La terza legge}
+\vspace{8pt}
+\begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Terza legge della dinamica}]
+
+\end{tcolorbox}
+\vspace{5pt}
+
+
+
+\vspace{8pt}
+\begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Accelerazione centripeta nel moto circolare uniforme}]
+\begin{align}
+    a = \frac{v^2}{r} = \omega^2 r
+\end{align}
+\end{tcolorbox}
+\vspace{5pt}
+
+
+\section{Moto armonico semplice}
+
+\[
+    \begin{cases}
+        x_p(t) = r\cos\alpha\\
+        y_p(t) = r\sin\alpha
+    \end{cases}
+\]
+\[ P\equiv(R,\alpha)\equiv(x_p,y_p) \]
+\[
+    \begin{cases}
+        x_p = r\cos(\omega t)\\
+        y_p = r\sin(\omega t)
+    \end{cases}
+    \Rightarrow
+    \begin{cases}
+        -\omega R \sin(\omega t)\\
+        \omega R \cos(\omega t)
+    \end{cases}
+    \Rightarrow
+    \begin{cases}
+        -\omega^2 R\cos(\omega t)\\
+        -\omega^2 R\sin(\omega t)
+    \end{cases}
+\]
+
+\[
+    |\overrightarrow{r}| = \sqrt{x_p^2 + y_p^2} = r \quad |\overrightarrow{v}| = \omega r \quad |\overrightarrow{a}| = \omega^2 r
+\]
+
+Accelerazione
+\[
+    \begin{cases}
+        -\omega^2(x_p)\\
+        -\omega^2(y_p)
+    \end{cases}
+    \Rightarrow
+    \overrightarrow{a} = -\omega^2\overrightarrow{r}
+\]
