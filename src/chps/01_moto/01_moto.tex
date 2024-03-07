@@ -71,7 +71,7 @@ cioè la differenza tra la posizione iniziale e quella finale dell'oggetto:
 \section{Moto rettilineo uniforme}
 
 
-\section{Moto rettilineo uniformemente accelerato}
+\section{Accelerazione}
 
 
 
@@ -187,7 +187,7 @@ che parte con una velocità iniziale $\overrightarrow{v}_i$ e termina con la
 velocità finale $\overrightarrow{v}_f$, uguali in modulo ma diverse in direzione.
 Come già detto, possiamo esprimere l'accelerazione come variazione della
 velocità tangenziale.
-\[ \overrightarrow{a} = \frac{d\overrightarrow{v}}{dt} \sim \frac{\Delta\overrightarrow{v}}{\Delta t} \]
+\[ \overrightarrow{a} = \frac{d\overrightarrow{v}}{dt} \simeq \frac{\Delta\overrightarrow{v}}{\Delta t} \]
 Concentriamoci sul termine $\Delta\overrightarrow{v}$.
 \[ \Delta\overrightarrow{v} = \overrightarrow{v}_f - \overrightarrow{v}_i = \overrightarrow{v}_f + (-\overrightarrow{v}_i) \]
 Geometricamente, i vettori velocità si sommano secondo la ``regola del parallelogramma''
@@ -201,5 +201,74 @@ avanti che la relazione precisa tra i moduli di queste grandezze è data da
 
 \section{Moto armonico}
 
+\begin{marginfigure}
+    \centering
+    \includegraphics[width = \marginparwidth]{figures/armonico.pdf}
+    \caption{Modello di moti armonici semplici a partire da proiezioni
+    di un moto circolare uniforme}
+\end{marginfigure}
+
+\[
+    \begin{cases}
+        x_p(t) = r\cos\alpha\\
+        y_p(t) = r\sin\alpha
+    \end{cases}
+\]
+\[
+    \begin{cases}
+        x_p = r\cos(\omega t)\\
+        y_p = r\sin(\omega t)
+    \end{cases}
+    \Rightarrow
+    \begin{cases}
+        -\omega R \sin(\omega t)\\
+        \omega R \cos(\omega t)
+    \end{cases}
+    \Rightarrow
+    \begin{cases}
+        -\omega^2 R\cos(\omega t)\\
+        -\omega^2 R\sin(\omega t)
+    \end{cases}
+\]
+
+\[
+    |\overrightarrow{r}| = \sqrt{x_p^2 + y_p^2} = r \quad |\overrightarrow{v}| = \omega r \quad |\overrightarrow{a}| = \omega^2 r
+\]
+
+Accelerazione
+\[
+    \begin{cases}
+        -\omega^2(x_p)\\
+        -\omega^2(y_p)
+    \end{cases}
+    \Rightarrow
+    \overrightarrow{a} = -\omega^2\overrightarrow{r}
+\]
 
 
+\subsubsection*{Relazione tra accelerazione centripeta e velocità}
+Siamo ora in grado di mostrare l'origine della relazione $a = \frac{v^2}{r} = \omega^2 r$
+tra accelerazione centripeta e velocità (angolare e tangenziale) in un moto
+circolare uniforme.
+
+Osserviamo che il sistema che descrive l'accelerazione del moto armonico
+contiene i termini $r\cos(\omega t)$ e $r\sin(\omega t)$: le coordinate del
+punto in moto circolare uniforme in funzione del tempo. Dunque
+
+\[
+    \begin{cases}
+        a_x(t) = -\omega^2 r\cos(\omega t)\\
+        a_y(t) = -\omega^2 r\sin(\omega t)
+    \end{cases}
+    \Rightarrow
+    \begin{cases}
+        a_x(t) = -\omega^2 x(t)\\
+        a_y(t) = -\omega^2 y(t)
+    \end{cases}
+\]
+Queste non sono altro che le componenti dell'accelerazione centripeta
+solidali al sistema di riferimento di assi $xy$. Sapendo che il modulo
+di un vettore corrisponde a $|\overrightarrow{r}| = r = \sqrt{x_r^2 + y_r^2}$
+(con $x_r,y_r$ le componenti del vettore $r$ rispetto ad un sistema di
+assi ortogonali $xy$), è immediato trovare che
+\[ |\overrightarrow{a}| = a = \sqrt{(-\omega^2 x)^2 + (-\omega^2 y)^2} = \sqrt{\omega^4x^2 + \omega^4y^2} = \omega^2 \sqrt{x^2 + y^2} = \omega^2 r \]
