@@ -1,10 +1,3 @@
-% Lezione 2/2024-02-28
-% - Introduzione alla descrizione quantitativa del moto (cinematica?)
-% - cinematica del punto materiale da una a piu' dimensioni: moto rettilineo uniforme, piano cartesiano
-% - equazioni del moto, con notazione vettoriale
-% Esercitarsi su: moto rettilineo uniforme, vettori e trigonometria, sistemi di riferimento cartesiani e algebra sul piano cartesiano
-
-
 \chptr{Descrizione del moto}
 \marginpar{\minitoc}
 
@@ -49,8 +42,10 @@ tempo viene spesso omesso dalla rappresentazione grafica).
 
 La scelta del sistema di riferimento di assi cartesiani è del tutto arbitraria\footnote{
 Gli assi possono addirittura non essere ortogonali, purché si segua la \textit{regola del
-parallelogramma}.}, ma una volta fissata è necessario essere coerenti con essa.
-Questo permette di riflettere che il moto è sempre relativo al sitema di
+parallelogramma} e si rinunci alle proprietà e alle regolarità matematiche degli
+assi ortogonali, come il teorema di Pitagora per il calcolo del modulo dei
+vettori.}, ma una volta fissata è necessario essere coerenti con essa.
+Questo permette di riflettere sul fatto che il moto è sempre relativo al sitema di
 riferimento adottato: cambiando sistema di riferimento, il moto cambia.
 
 
@@ -134,7 +129,7 @@ Abbiamo quindi ottenuto la relazione cercata:
 \[ v = r\omega \]
 Notare come $v\propto r$, al contrario di $\omega$. Ciò significa che,
 assumendo una velocità angolare costante, la velocità tangenziale è tanto
-maggiore quanto $r$ cresce.
+maggiore quanto più $r$ cresce.
 
 \subsection{Moto circolare uniforme}
 Un moto circolare uniforme è un moto circolare con velocità \textit{angolare} costante.
@@ -200,56 +195,62 @@ come mostrato nella Figura. Con i dovuti formalismi geometrici, sapendo che il
 modulo di $v$ è sempre costante, possiamo dimostrare che l'accelerazione è
 effettivamente centripeta e ortogonale alla velocità tangenziale, ovvero il
 suo vettore punta sempre verso il centro della circonferenza. Sempre dalla Figura,
-possiamo osservare che al crescere di $v$ cresce anche $a$. Dimostreremo più
+possiamo osservare che al crescere di $v$ cresce anche $a$; tenendo poi
+presente che la variazione $\Delta \overrightarrow{v}$, che è un vettore,
+viene moltiplicata per la quantità scalare $\frac{1}{\Delta t}$, il vettore
+risultante dell'accelerazione cresce in modulo quanto più piccolo diventa
+l'intervallo $\Delta t$: ovvero la velocità dell'oggetto è maggiore.
+Dimostreremo più
 avanti che la relazione precisa tra i moduli di queste grandezze è data da
 \[ a = \frac{v^2}{r} = \omega^2 r \]
 
 \section{Moto armonico}
+Supponiamo di osservare un oggetto in moto circolare uniforme, ma invece di
+vederlo ``dall'alto'' lo guardiamo con la riconferenza della traiettoria
+posta orizzontalmente. Da questo punto di vista, vedremo l'oggetto \textit{oscillare}
+a destra e sinistra all'interno di uno spazio la cui larghezza corrisponde al
+diametro della circonferenza. Ciò che si vede è un moto particolare, il
+\textit{moto armonico semplice}.
 
+Dalla Figura \ref{armonicosemplice} possiamo notare che, fissato il solito
+sistema di riferimento $xy$, il moto armonico semplice non è altro che la
+proiezione sugli assi di un moto circolare uniforme. Per questo motivo,
+possiamo descrivere la posizione dell'oggetto caratterizzato da tale moto:
 \begin{marginfigure}
     \centering
     \includegraphics[width = \marginparwidth]{figures/armonico.pdf}
     \caption{Modello di moti armonici semplici a partire da proiezioni
     di un moto circolare uniforme}
+    \label{armonicosemplice}
 \end{marginfigure}
-
 \[
     \begin{cases}
         x_p(t) = r\cos\alpha\\
         y_p(t) = r\sin\alpha
     \end{cases}
 \]
+Possiamo notare che il moto circolare è la composizione di due moti
+armonici.
+Sapendo che la velocità corrisponde alla derivata della funzione che
+descrive la posizione:
 \[
     \begin{cases}
-        x_p = r\cos(\omega t)\\
-        y_p = r\sin(\omega t)
-    \end{cases}
-    \Rightarrow
-    \begin{cases}
-        -\omega R \sin(\omega t)\\
-        \omega R \cos(\omega t)
-    \end{cases}
-    \Rightarrow
-    \begin{cases}
-        -\omega^2 R\cos(\omega t)\\
-        -\omega^2 R\sin(\omega t)
+        v_x(t) = -\omega R \sin(\omega t)\\
+        v_y(t) = \omega R \cos(\omega t)
     \end{cases}
 \]
-
-\[
-    |\overrightarrow{r}| = \sqrt{x_p^2 + y_p^2} = r \quad |\overrightarrow{v}| = \omega r \quad |\overrightarrow{a}| = \omega^2 r
-\]
-
-Accelerazione
+Derivando nuovamente, otteniamo l'accelerazione:
 \[
     \begin{cases}
-        -\omega^2(x_p)\\
-        -\omega^2(y_p)
+        a_x(t) = -\omega^2 R\cos(\omega t)\\
+        a_y(t) = -\omega^2 R\sin(\omega t)
     \end{cases}
-    \Rightarrow
-    \overrightarrow{a} = -\omega^2\overrightarrow{r}
 \]
-
+Esiste anche una dimostrazione geometrica di tali relazioni, che non impiega
+esplicitamente i metodi del calcolo infinitesimale. È sufficiente tenere in
+considerazione la posizione angolare $\theta$, avere dimestichezza con le
+funzioni sinusoidali e ricordare direzione e verso dei vettori velocità
+tangenziale e accelerazione centripeta durante un moto circolare uniforme.
 
 \subsubsection*{Relazione tra accelerazione centripeta e velocità}
 Siamo ora in grado di mostrare l'origine della relazione $a = \frac{v^2}{r} = \omega^2 r$
@@ -275,5 +276,73 @@ Queste non sono altro che le componenti dell'accelerazione centripeta
 solidali al sistema di riferimento di assi $xy$. Sapendo che il modulo
 di un vettore corrisponde a $|\overrightarrow{r}| = r = \sqrt{x_r^2 + y_r^2}$
 (con $x_r,y_r$ le componenti del vettore $r$ rispetto ad un sistema di
-assi ortogonali $xy$), è immediato trovare che
+assi ortogonali $xy$), è immediato mostrare che
 \[ |\overrightarrow{a}| = a = \sqrt{(-\omega^2 x)^2 + (-\omega^2 y)^2} = \sqrt{\omega^4x^2 + \omega^4y^2} = \omega^2 \sqrt{x^2 + y^2} = \omega^2 r \]
+
+Dal precedente sistema, è possibile capire perché il vettore dell'accelerazione
+è diretto verso il centro della circonferenza: $x$ ed $y$ sono le componenti
+del \textit{vettore posizione} dell'oggetto in movimento; tale vettore
+non è altro che una freccia di modulo uguale alla lunghezza del raggio e la
+cui punta indica il punto in cui il corpo si trova sulla circonferenza,
+dunque questo vettore punta verso l'esterno; ma dato che ogni componente
+viene moltiplicata per la quantità negativa $-\omega^2$, il vettore
+accelerazione centripeta non può che puntare nel verso opposto, quindi
+verso il centro della circonferenza. L'equazione vettoriale è dunque la
+seguente:
+\[ \overrightarrow{a} = -\frac{v^2}{\overrightarrow{r}} \]
+
+\subsubsection*{Accelerazione centripeta, traiettorie curvilinee, raggio di curvatura}
+L'accelerazione centripeta non esiste solamente nei moti circolari uniformi,
+ma, come possiamo ricordare da esperienze quotidiane, qualsiasi variazione
+nella traiettoria di un corpo in moto, attraverso una ``sterzata'', permette
+di percepire l'effetto e la direzione dell'accelerazione.
+Possiamo dunque estendere la descrizione del moto circolare uniforme a casi
+meno eccezionali, come quelli dei moti dalle traiettorie curvilinee. È interessante
+come l'equazione dell'accelerazione centripeta permetta di ottenere informazioni
+interessantissime su moti come questi, come il \textbf{raggio di curvatura}. Si
+osservi l'esempio in Figura \ref{curvilinee}.
+\begin{marginfigure}
+    \centering
+    \includegraphics[width = \marginparwidth]{figures/curvilinee.pdf}
+    \caption{Una traiettoria curvilinea apporssimata da archi di circonferenze con raggi differenti}
+    \label{curvilinee}
+\end{marginfigure}
+Tratti di traiettorie come queste possono essere approssimate da archi di
+circonferenze con raggi di lunghezze differenti. Durante ognuno di questi brevi
+tratti, percorsi sugli archi, l'oggetto in moto è sottoposto ad una certa
+accelerazione centripeta. Assumento che tale oggetto abbia una massa, è
+possibile misurare l'accelerazione rilevando la forza esercitata sull'oggetto
+durante il tratto di curva. Dall'equazione dell'accelerazione centripeta,
+vale
+\[\frac{F}{m} = \frac{v^2}{r}\]
+Date le nostre supposizioni sulle grandezze conosciute (forza, massa e velocità), l'unico
+dato che rimane è il raggio, che in questo caso prende il nome di
+\textit{raggio di curvatura}:
+\[ r = \frac{v^2m}{F} \]
+
+\section{Moto nel piano}
+
+\subsection{Vettori}
+Vettori posizione e spostamento.
+\[ \Delta\overrightarrow{s} = \overrightarrow{s}_f - \overrightarrow{s}_i \]
+
+Vettore velocità
+\[ \overrightarrow{v} = \lim_{\Delta t \to 0}\frac{\Delta\overrightarrow{s}}{\Delta t} = \frac{d\overrightarrow{s}}{dt} \sim ds\cdot\frac{1}{dt} \]
+Per definizione \textit{sempre} tangente alla traiettoria. La traiettoria
+è la serie dei punti che si ottiene percorrendo per tratti infinitesimi le
+velocità istantanee.
+
+Accelerazione tangente e accelerazione normale.
+
+
+\subsubsection*{Esercizio}
+$|\overrightarrow{v}_i| = 50\text{ km/h}$, $|\overrightarrow{v}_f| = 100\text{ km/h}$,
+$m = 1800\text{ kg}$, $R = 20\text{ m}$, $\Delta t = 2\text{ s}$. $|\overrightarrow{F}_n| = ?$ (forza normale),
+$|\overrightarrow{a}_t| = ?$. Assumiamo che l'auto acceleri con costanza tra le
+due velocità.
+
+\begin{itemize}
+    \item $a_{n,i} = \frac{v_i^2}{R}$, $a_{n,f} = \frac{v_f^2}{R}$
+    \item $F_{n,i} = ma_{n,i} \simeq 17100 \text{ N}$, $F_{n,f} = ma_{n,f} \simeq 68400\text{ N}$
+    \item $|\overrightarrow{a}_t| = \textit{cost} = \frac{|\Delta\overrightarrow{v}|}{\Delta t} \simeq 6,95\text{ m/s}^2$
+\end{itemize}
