@@ -189,14 +189,67 @@ un atomo che vibra intorno al suo punto di equilibrio (con le dovute approssimaz
 
 
 \subsection{Le equazioni del moto armonico}
-\[ \theta(t) = A\sin(\omega t + \phi) = A\sin(\omega(t - t_0)) \]
+Riprendiamo le equazioni del moto armonico introdotto nel capitolo precedente.
+Il cuore pulsante di tutte le leggi orarie del moto armonico è la funzione
+periodica, seno o coseno. La scelta tra queste due dipende dal sistema di
+riferimento scelto e dalle condizioni iniziali dell'oscillatore. Nel nostro
+caso, scegliamo un oscillatore che parte dalla posizione di equilibrio
+(e che come vedremo avrà velocità massima in questo punto), quindi utilizziamo
+il seno per descrivere la sua posizione in funzione del tempo:
+\[ x(t) = A\sin(\omega t) \]
+È necessario fare alcune precisazioni: per \textit{posizione} non intendiamo
+solo quella spaziale, ma anche, per esempio, quella angolare; inoltre,
+l'equazione precedente non è sufficientemente generale, perché abbiamo
+implicitamente supposto che l'istante temporale iniziale sia $t_0 = 0$. Per
+questo, la legge oraria generale della posizione di un oscillatore armonico
+è $x(t) = A\sin(\omega (t - t_0)) = A\sin(\omega t - \omega t_0)$ (è facile
+verificare che effettivamente $x(t_0) = 0$, in accordo con la nostra scelta
+del sistema di riferimento). In genere la legge si scrive in questo modo
+\begin{align}
+    x(t) = A\sin(\omega t + \phi)
+\end{align}
+Introduciamo alcune terminologie tecniche:
 \begin{itemize}
-    \item $A$ ampiezza
-    \item $\phi$ fase: $\phi = -\omega t_0$
-\end{itemize}
-\[ \frac{d^2\theta}{dt^2} = \frac{d}{dt}\frac{d\theta}{dt} = \frac{d}{dt}(A\omega\cos(\omega t + \phi)) = -\omega^2 A\sin(\omega t + \phi) = -\omega^2\theta \]
-Sostituendo nell'equaione armonica funziona tutto.
+    \item \textbf{Ampiezza} $A$: si tratta del massimo spostamento spaziale
+    dell'osillatore. Nell'esempio del moto circolare, corrisponde al raggio
+    della circonferenza. L'oscillatore si muove di fatto tra il massimo $A$
+    e il minimo $-A$.
 
+    \item \textbf{Pulsazione} $\omega$: è un indice della ``rapidità''
+    dell'oscillatore nel compiere i suoi cicli. Approfondiremo meglio
+    l'interpretazione della pulsazione nei prossimi paragrafi.
+    
+    \item \textbf{Fase} $\phi = -\omega t_0$: intuitivamente, lo
+    ``sfasamento'' dell'oscillatore. Incontriamo spesso oscillatori sfasati
+    quando essi vengono messi in moto in istanti differenti. Per comodità,
+    ometteremo spesso la fase, sottointendendo $t_0 = 0$.
+\end{itemize}
+Con qualche derivata della posizione, otteniamo velocità e accelerazione
+dell'oscillatore in fuznione del tempo:
+\[ v(t) = \frac{d}{dt}x(t) = \frac{d}{dt}(A\sin(\omega t + \phi)) = A\omega\cos(\omega t + \phi) \]
+\[ a(t) = \frac{d}{dt}v(t) = \frac{d}{dt}(A\omega\cos(\omega t + \phi)) = -A\omega^2\sin(\omega t + \phi) \]
+Ecco dunque le leggi orarie generali della velocità e dell'accelerazione di
+un oscillatore armonico:
+\begin{align}
+    v(t) &= A\omega\cos(\omega t + \phi)\label{velarmonica}\\
+    a(t) &= -A\omega^2\sin(\omega t + \phi)\label{accarmonica}
+\end{align}
+Concludiamo scrivendo la legge per eccellenza di un moto armonico, ovvero la
+\textit{condizione sufficiente}. Sappiamo che l'accelerazione non è altro che
+la derivata seconda della posizione rispetto al tempo:
+\[ a = \frac{dv}{dt} = \frac{d^2x}{dt^2} \]
+Ma dall'Equazione \ref{accarmonica} notiamo che
+\[ a = -A\omega^2\sin(\omega t + \phi) = -\omega^2(A\sin(\omega t + \phi)) = -\omega^2x \]
+Dunque
+\begin{align}
+    \frac{d^2x}{dt^2} + \omega^2x = 0
+\end{align}
+Abbiamo appena definito matematicamente l'oscillatore armonico: cinematicamente,
+in un oscillatore l'accelerazione è proporzionale allo spostamento con costante
+di proporzionalità negativa.
+
+\subsubsection*{Interpretazione dell'ampiezza}
+\subsubsection*{Interpretazione della fase}
 \subsubsection{Interpretazione della pulsazione}
 In tutte le equazioni dei moti armonici dominano le funzioni goniometriche.
 Esse sono periodiche, ovvero esiste una quantità $T$ tale per cui $f(x + T) =
@@ -236,11 +289,13 @@ Possiamo applicare la seconda legge di newton:
 \[ -kx = ma = m\frac{d}{dt}(v) = m\frac{d}{dt}\frac{d}{dt}(x) = m\frac{d^2x}{dt^2} \]
 Da cui
 \[ \frac{d^2x}{dt^2} + \frac{k}{m}x = 0 \]
-Abbiamo mostrato che
-
-
-$x(t) = A\sin(\omega t + \phi)$, $T = \frac{2\pi}{\omega} = 2\pi\sqrt{\frac{m}{k}}$.
-
+È evidente che si tratta di un oscillatore armonico, perché l'accelerazione
+è proporzionale allo spostamento, con costante di proporzionalità negativa.
+Questa costante è $-\frac{k}{m} = -\omega^2$, da cui possiamo dedurre il
+periodo dell'oscillatore a molla:
+\begin{align}
+    T = 2\pi\sqrt{\frac{m}{k}}
+\end{align}
 
 \subsubsection*{Misurare dinamicamente $k$ di molle per ammortizzatori}
 $m = 1500\text{ kg}$ (massa di una ruota per quattro).
