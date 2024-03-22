@@ -1,4 +1,137 @@
 \chptr{Meccanica}
 \marginpar{\minitoc}
 
-\section{Conservazione}
+\section{Lavoro di una forza}
+
+
+Il lavoro di una forza costante corrisponde al prodotto scalare\footnote{Ricordiamo
+che il prodotto scalare $p$ tra due vettori \textbf{a} e \textbf{b} è un valore scalare
+definito da $p = |\textbf{a}||\textbf{b}|\cos\theta_{\textbf{ab}}$, con $\theta_\textbf{ab}$
+l'angolo tra i vettori.}
+tra la forza e lo spostamento:
+\begin{align}
+W = \textbf{F}\cdot\textbf{r}
+\end{align}
+Il lavoro si misura in Joule (J), dove
+\[ 1\text{ J} = 1\text{ Nm} = 1\text{ kg$\frac{\text{m}^2}{\text{s}^2}$} \]
+
+
+Lavoro di una forza variabile durante lo spostamento:
+\begin{align}
+    W_{AB} = \int_{A}^{B}\textbf{F}(r)\cdot d\textbf{r}
+\end{align}
+
+\section*{app}
+Si parte da $\overrightarrow{F} = m\overrightarrow{a} \Rightarrow
+\overrightarrow{F} = m\frac{d\overrightarrow{v}}{dt}$. Abbiamo una traiettoria
+qualsiasi, posizione descritta da $\overrightarrow{r}(t)$. Prendiamo una variazione
+infinitesima della posizione $\Delta\overrightarrow{r}\to d\overrightarrow{r} =
+\overrightarrow{r}_f - \overrightarrow{r}_i$.
+
+\subsection{Lavoro di una forza}
+\[ dW = \textbf{F}\cdot d\textbf{r} = |\textbf{F}||d\textbf{r}|\cos\theta \]
+Può essere positivo, negativo, nullo.
+\begin{itemize}
+    \item \textbf{Lavoro motore} $dW > 0$
+    \item \textbf{Lavoro resistente} $dW < 0$ (la forza si oppone allo spostamento)
+    \item \textbf{Lavoro nullo} $dW = 0$ (la forza è ortogonale allo spostamento),
+    es forza centripeta
+\end{itemize}
+
+Analisi dimensionale:
+\[ \left[dW\right] = \left[\textbf{F}d\textbf{r}\right] = \left[M\frac{L}{T^2}L\right] = \left[M\left(\frac{L}{T}\right)^2\right] \]
+\[ 1\text{ J} = 1\text{ Nm} = 1\text{ kg$\frac{\text{m}^2}{\text{s}^2}$} \]
+
+Esempio cammino sentiero
+\[ W_{A\to B} = \sum_{i = A}^{N = B}dW_i \to \int_{A}^{B}dW \text{ per } N\to\infty \]
+\[ W_{A\to B} = \int_{A}^{B}\textbf{F}\cdot d\textbf{r} \]
+Notiamo che 
+\[ \textbf{P}\cdot d\textbf{r} = |\textbf{P}| (|d\textbf{r}|\cos\theta) \]
+Dove abbiamo la proiezione dello spostamento sul peso P. Questo significa che
+per calcolo del lavoro importa solo la variazione della quota, $dh$.
+\[ W_{0\to 2000\text{ m}} = \sum_{0}^{2000}\textbf{P}\cdot d\textbf{r} = \int_{0}^{2000}mg dh = mgh_{bondone} \]
+
+\subsubsection*{Versore}
+\[ \hat{v} = \frac{\overrightarrow{v}}{|\overrightarrow{v}|} \]
+
+\[ W = \int_{i}^{f}\overrightarrow{F}\cdot d\overrightarrow{s} = \int_{0}^{L}(F\hat{f})\cdot(ds\hat{x}) = F(\hat{f}\cdot\hat{x})\int_{0}^{L}ds = F\cos(\theta) L\]
+Quindi
+\[ \cos\theta = \frac{W}{FL} \]
+
+\section{Teorema delle forze vive}
+\textit{vis viva} (forza viva), quantità che viene dalle forze, che pareva avere
+vita propria, in grado di trasferirsi da corpo a corpo.
+Partiamo da seconda legge della dinamica
+\[ \textbf{F} = m\frac{d\textbf{v}}{dt} \]
+Senza giustificare le ragioni matematiche dei prossimi passaggi, ma facendoci
+guidare dall'intuizione fisica, eseguiamo il prodotto scalare con $d\textbf{s}$
+su entrambi i membri
+\[ \textbf{F}\cdot d\textbf{s} = m\frac{d\textbf{v}}{dt}\cdot d\textbf{s} = m d\textbf{v}\cdot\frac{d\textbf{s}}{dt} \]
+Notiamo che questa operazione ha permesso di ottenere un lavoro al membro di
+sinistra, mentre a destra si ottiene il termine $d\mathbf{s}/dt$, che corrisponderebbe
+proprio alla velocità $\textbf{v}$. Con ulteriori sviluppi, si raggiunge la
+seguente equazione (il simbolo $d$ ha il significato fisico di variazione o
+differenza infinitesima).
+\[ \textbf{F}\cdot d\textbf{s} = m\textbf{v}\cdot d\textbf{v} = m\text{ }d\left[\frac{v^2}{2}\right] \]
+Dimostriamo come sviluppare il termine $\textbf{v}\cdot d\textbf{v} = d\left[\frac{v^2}{2}\right]$.
+Ricorriamo alla definizione vettoriale di prodotto scalare\footnote{Il prodotto scalare
+di due vettori \textbf{a} e \textbf{b} è calcolabile anche attraverso la somma
+dei prodotti tra i valori delle componenti dei due vettori: $\mathbf{a}\cdot\mathbf{b} = a_xb_x + a_yb_y + ...$}
+e utilizziamo questo abuso di notazione, ma ragionevole dal punto di vista fisico:
+\[ \int x \,dx =  \frac{x^2}{2} + c \Rightarrow \frac{d}{dx}\left[\frac{x^2}{2} + c\right] = x \Rightarrow \int x \,dx = \int d\left[\frac{x^2}{2}\right] \]
+Quindi
+\[ v_x dv_x + v_y dv_y + v_z dv_z \Rightarrow d\left[\frac{v_x^2}{2}\right] + ... = d\left[\frac{v_x^2 + ...}{2}\right] = d\left[\frac{v^2}{2}\right] \]
+Riprendendo l'equazione $\mathbf{F}\cdot d\textbf{s} = m\text{ }d\left[\frac{v^2}{2}\right]$ otteniamo
+\[ dW = d\left[\frac12 mv^2\right] \]
+Il termine $E_K = \frac{1}{2}mv^2$ viene chiamato \textit{energia cinetica}. Quindi
+\[ dW = dE_K \]
+Questa equazione può essere tradotta come ``una infinitesima quantità di lavoro
+corrisponde ad una variazione infinitesima dell'energia cinetica''. Ora possiamo
+enunciare il teorema delle foze vive:
+\vspace{8pt}
+\begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Teorema dell'energia cinetica (o delle forze vive)}]
+    Quando una forza (risultante) applicata a un oggetto per un dato tratto di
+    traiettoria, compie su di esso un lavoro, il risultato è una variazione del
+    modulo della velocità dell'oggetto e quindi una variazione della sua energia
+    cinetica. Quindi, il lavoro compiuto su un oggetto è uguale alla variazione
+    della sua energia cinetica.
+    \begin{align}
+        W_{i\to f}^{(R)} = E_{K,f} - E_{K,i}
+    \end{align}
+\end{tcolorbox}
+\vspace{5pt}
+
+\noindent È necessario sottolineare alcune osservazioni:
+\begin{enumerate}
+    \item Il teorema presuppone che il lavoro sia dovuto all'effetto della risultante delle forze agenti sul corpo.
+    \item Il lavoro è rappresentato da una variazione di energia cinetica. Possiamo descrivere dunque lo stato finale
+    come \[ E_{K,f} = E_{K,i} + W_{i\to f} \] dunque se il lavoro, quindi l'energia trasferita all'oggetto, è positivo,
+    l'energia cinetica aumenta e viceversa.
+
+    \item Il teorema sposta la descrizione del sistema fisico dal piano vettoriale a quello scalare. Ovvero, partendo
+    da grandezze vettoriali, abbiamo ottenuto una legge dove compaiono solamente dei numeri. Ciò rende particolarmente agevole
+    l'utilizzo del teorema in svariati problemi nei quali l'analisi vettoriale può essere ostica.
+
+    \item Il teorema è molto potente per la sua validità generale, perché non sono state fatte ipotesi sulla natura delle
+    forze, se non presupponendo come vera la seconda legge della dinamica $\textbf{F} = m\textbf{a}$.
+\end{enumerate}
+
+\subsubsection*{Applicazione del teorema delle forze vive}
+Supponiamo di avere un punto di massa $m$ sulla sommità di un piano inclinato di
+alteza $h$ con
+un angolo $\theta$ rispetto all'orizzontale. Sappiamo che la massa parte dalla
+cima con velocità $v_i$ parallela alla lunghezza del piano e diretta verso la
+discesa. Vogliamo trovare la velocità finale della massa. Si esprima il calcolo sia
+con che senza attrito, considerando nell'ultimo caso un coefficiente di attrito
+dinamico $\mu$.
+\[ W = \Delta E_K \]
+\[ W = \mathbf{P}\cdot\mathbf{L} = |\mathbf{P}||\mathbf{L}|\cos\left(\frac{\pi}{2} - \theta\right) = |\mathbf{P}||\mathbf{L}|\sin\theta = |\mathbf{P}|h = mgh \]
+\[ \Delta E_K = \frac12mv_f^2 - \frac12mv_i^2 \]
+Quindi
+\[ mgh = \frac12mv_f^2 - \frac12mv_i^2 \]
+\[ v_f = \sqrt{2gh + v_i^2} \]
+
+Con attrito il peso è contrastato. L'attrito compie il suo lavoro per tutta la
+lunghezza del piano fino alla fine della discesa. L'espressione della differenza
+di energia cinetica è tuttavia la stessa.
+\[ W = W_P - W_A = Ph - F_AL = Ph - \mu F_\perp L = mgh - \mu mg\sin\theta L \]

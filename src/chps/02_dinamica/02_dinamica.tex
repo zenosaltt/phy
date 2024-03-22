@@ -1,10 +1,6 @@
 \chptr{Dinamica}
 \marginpar{\minitoc}
 
-\section{Recap}
-\[ \overrightarrow{x} = \overrightarrow{x_0} + \overrightarrow{v}(t - t_0) \]
-Semplificazioni in termini di variazioni, infinità.
-
 \section{Leggi della dinamica}
 
 Nella descrizione introduttiva del moto, non è stata analizzata alcuna causa del
@@ -131,18 +127,11 @@ Sapendo che $a = -|g|$, la quota massima $h_m$ raggiunta è:
 
 \subsection{La terza legge}
 \vspace{8pt}
-\begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Terza legge della dinamica}]
+\begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Terza legge della dinamica (legge di azione e reazione)}]
+La forza che un corpo $A$ esercita su un corpo $B$ è uguale e opposta alla forza
+che
 
-\end{tcolorbox}
-\vspace{5pt}
-
-
-
-\vspace{8pt}
-\begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Accelerazione centripeta nel moto circolare uniforme}]
-\begin{align}
-    a = \frac{v^2}{r} = \omega^2 r
-\end{align}
+\[ \overrightarrow{F}_{A\to B} = -\overrightarrow{F}_{B\to A} \]
 \end{tcolorbox}
 \vspace{5pt}
 
@@ -211,9 +200,10 @@ del sistema di riferimento). In genere la legge si scrive in questo modo
 Introduciamo alcune terminologie tecniche:
 \begin{itemize}
     \item \textbf{Ampiezza} $A$: si tratta del massimo spostamento spaziale
-    dell'osillatore. Nell'esempio del moto circolare, corrisponde al raggio
-    della circonferenza. L'oscillatore si muove di fatto tra il massimo $A$
-    e il minimo $-A$.
+    dell'osillatore a partire dal suo punto di equilibrio, in genere assunto
+    come origine del sistema di riferimento adottato per la posizione. Nell'esempio del moto
+    circolare, corrisponde al raggio della circonferenza. L'oscillatore si
+    muove di fatto tra il massimo $A$ e il minimo $-A$.
 
     \item \textbf{Pulsazione} $\omega$: è un indice della ``rapidità''
     dell'oscillatore nel compiere i suoi cicli. Approfondiremo meglio
@@ -294,7 +284,7 @@ Da cui
 Questa costante è $-\frac{k}{m} = -\omega^2$, da cui possiamo dedurre il
 periodo dell'oscillatore a molla:
 \begin{align}
-    T = 2\pi\sqrt{\frac{m}{k}}
+    T = 2\pi\sqrt{\frac{m}{k}}\label{periodomolla}
 \end{align}
 
 \subsubsection*{Oscillatori verticali}
@@ -309,10 +299,24 @@ invariata, ma è necessario fare attenzione ad eventuali traslazioni spaziali
 derivanti dalla scelta del sistema di riferimento.
 
 \subsubsection*{Misurare dinamicamente $k$ di molle per ammortizzatori}
-$m = 1500\text{ kg}$ (massa di una ruota per quattro).
-\[ k = m_r\frac{4\pi^2}{T^2} = m\frac{\pi^2}{T^2} \simeq 1500\frac{10}{1\text{ s}}\text{ kg/s$^2$}\]
-$T \simeq 1\text{ s}$.
+Per misurare la costante elastica di una molla, è immediato tentare un approccio
+statico, quindi allungando la molla, registrando la lunghezza di tale allungamento
+e la forza di richiamo della molla in seguito alla deformazione. Esiste tuttavia
+un metodo ancora più interessante che sfrutta le equazioni armoniche, in particolare
+il periodo espresso nell'equazione \ref{periodomolla}.
+\[ k = 4\pi^2\frac{m}{T^2} \]
+Supponiamo di voler misurare la costante elastica dell'ammortizzatore di un'auto.
+Con un po' di ingegno, deduciamo che se affrontiamo un dosso ad alta velocità
+l'auto oscillerà verticalmente per qualche istante, per poi assestarsi. Possiamo
+dunque stimare il tempo che l'auto impiega per compiere la primissima oscillazione,
+che in realtà corrisponderà pressapoco alla metà del periodo di oscillazione.
+Infine, conoscendo la massa dell'auto, è possibile utilizzare l'equazione precedente,
+ma con una massa divisa per quattro, perché essa viene distribuita sulle quattro
+ruote.
 
+%$m = 1500\text{ kg}$ (massa di una ruota per quattro).
+%\[ k = m_r\frac{4\pi^2}{T^2} = m\frac{\pi^2}{T^2} \simeq 1500\frac{10}{1\text{ s}}\text{ kg/s$^2$}\]
+%$T \simeq 1\text{ s}$.
 
 
 \subsection{Il pendolo}
@@ -437,9 +441,72 @@ $\theta\ll1$, possiamo utilizziare
 l'equazione della velocità tangenziale ottenuta precedentemente:
 \[ T(t) = mg\cos\theta(t) + mlA^2\omega^2\cos^2(\omega t + \phi) \]
 Per via delle approssimazioni, possiamo semplificare anche la funzione coseno
-dipendente da $\theta$, rimanendo con il termine $mg\theta(t)$. Avendo la
+dipendente da $\theta$, rimanendo con il termine $mg(1-\frac{\theta^2}{2})$. Avendo la
 descrizione armonica $\theta(t) = A\sin(\omega t + \phi)$ otteniamo la funzione
 della tensione di un pendolo per piccole oscillazioni:
 \begin{align}
-    T(t) = mg\left(1 - \frac{(a\sin(\omega t + \phi))^2}{2}\right) + mlA^2\omega^2\cos^2(\omega t + \phi)
+    T(t) = mg\left(1 - \frac{(A\sin(\omega t + \phi))^2}{2}\right) + mlA^2\omega^2\cos^2(\omega t + \phi)
+\end{align}
+
+\section{Forze}
+Il mondo che ci circonda è costituito da oggetti che esercitano delle azioni gli
+uni sugli altri. Tali azioni impresse da agenti esterni su altri agenti sono
+generalmente chiamate \textit{forze}, ma possono avere natura differente a seconda
+del fenomeno fisico in esame. Ad esempio, le forze possono agire per contatto, come
+la spinta delle ruote di un'auto sull'asfalto, o a distanza, come la forza di gravità.
+Rimane tuttavia la caratteristica comune del loro \textit{effetto}, ovvero la capacità
+di modificare il moto dei corpi in accordo con la seconda legge della dinamica.
+
+\subsection{Peso}
+
+\subsection{Forza elastica}
+
+\subsection{Attrito}
+Anche la più liscia delle superfici, se osservata a livello atomico, risulta
+scabra. Per far scorrere due superfici l'una sull'altra, occorre superare la
+resistenza dovuta agli urti fra i loro minuscoli avvallamenti e sporgenze. Questo
+modello grossolano spiega intuitivamente l'origine della forza chiamata
+\textit{attrito}. Esso dipende da molti fattori, come il materiale, la finitura
+delle superfici, la presenza di lubrificanti, e pertanto non esiste una legge
+fisica semplice ed universale che lo descriva. È tuttavia possibile derivare
+alcune leggi empiriche in grado di calcolare le forze di attrito.
+
+\subsubsection*{Attrito radente}
+L'attrito radente si manifesta durante lo scivolamento tra due superfici (esiste
+anche l'attrito volvente, che riguarda corpi estesi che rotolano e ruotano, ma non
+è di nostro interesse dato lo studio del punto materiale). La forza di attrito
+radente è proporzionale alla forza normale alla superficie ma è indipendente dalla
+superficie di contatto fra le superfici ed è espressa dalla relazione
+\[ \textbf{F}_A = \mu\mathbf{F}_\perp \]
+dove $\mathbf{F}_\perp$ è la forza perpendicolare, o premente, alla superficie,
+mentre $\mu$ è un coefficiente di attrito che dipende dai materiali degli oggetti
+e altri fattori e spesso è compreso tra 0 e 1.
+
+Le forze di attrito si suddividono a loro volta in attrito \textit{dinamico} e
+\textit{statico}.
+
+\subsubsection*{Attrito dinamico}
+L'attrito dinamico si oppone allo scorrimento di un corpo su una superficie.
+
+\subsubsection*{Attrito statico}
+L'attrito statico si oppone al distacco di un corpo da una superficie. Esso tende
+a impedire che un oggetto fermo su una superficie si distacchi da essa, cominciando
+a scivolare. L'attrito statico è generalmente maggiore di quello dinamico, perché,
+quando le supefici sono in contatto statico, i loro microscopici avvallamenti
+(riprendiamo il modello introdotto per spiegare l'origine dell'attrito)
+possono aderire maggiormente l'uno all'altro, determinando una maggiore
+interazione tra superfici.
+
+\subsubsection*{...}
+$\overrightarrow{F_A} = \mu|\overrightarrow{N}|\hat{A}$. Grafico, zona statica
+forza di attrito statica, regime dinamico forza di attrito dinamica.
+
+Statica
+\begin{align}
+    \mathbf{F}_{A,S} = -\mathbf{F}_{\text{app}, T}\\
+    |\mathbf{F}_{A,S} = |\mathbf{F}_{A,S}^\text{max}| = \mu_s|\mathbf{N}|
+\end{align}
+Dinamica
+\begin{align}
+    \mathbf{F}_{A,D} = -\mu_d|\mathbf{N}|\hat{v}
 \end{align}
