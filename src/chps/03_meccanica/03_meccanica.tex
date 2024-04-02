@@ -96,7 +96,7 @@ enunciare il teorema delle foze vive:
     cinetica. Quindi, il lavoro compiuto su un oggetto è uguale alla variazione
     della sua energia cinetica.
     \begin{align}
-        W_{i\to f}^{(R)} = E_{K,f} - E_{K,i}
+        W_{i\to f}^{(R)} = \Delta E_K
     \end{align}
 \end{tcolorbox}
 \vspace{5pt}
@@ -117,13 +117,19 @@ enunciare il teorema delle foze vive:
 \end{enumerate}
 
 \subsubsection*{Applicazione del teorema delle forze vive}
-Supponiamo di avere un punto di massa $m$ sulla sommità di un piano inclinato di
-alteza $h$ con
-un angolo $\theta$ rispetto all'orizzontale. Sappiamo che la massa parte dalla
-cima con velocità $v_i$ parallela alla lunghezza del piano e diretta verso la
-discesa. Vogliamo trovare la velocità finale della massa. Si esprima il calcolo sia
-con che senza attrito, considerando nell'ultimo caso un coefficiente di attrito
-dinamico $\mu$.
+\textit{Supponiamo di avere un punto di massa $m$ sulla sommità di un piano
+inclinato di alteza $h$ con un angolo $\theta$ rispetto all'orizzontale. Sappiamo
+che la massa parte dalla cima con velocità $v_i$ parallela alla lunghezza del piano
+e diretta verso la discesa. Vogliamo trovare la velocità finale della massa. Si
+esprima il calcolo sia con che senza attrito, considerando nell'ultimo caso un
+coefficiente di attrito dinamico $\mu$.}
+\begin{marginfigure}
+    \centering
+    \includegraphics[width = \marginparwidth]{figures/pianoinclinato.pdf}
+    \caption{Un piano inclinato}
+\end{marginfigure}
+\\\\
+Possiamo risolvere il problema utilizzando il teorema delle forze vive.
 \[ W = \Delta E_K \]
 \[ W = \mathbf{P}\cdot\mathbf{L} = |\mathbf{P}||\mathbf{L}|\cos\left(\frac{\pi}{2} - \theta\right) = |\mathbf{P}||\mathbf{L}|\sin\theta = |\mathbf{P}|h = mgh \]
 \[ \Delta E_K = \frac12mv_f^2 - \frac12mv_i^2 \]
@@ -135,3 +141,130 @@ Con attrito il peso è contrastato. L'attrito compie il suo lavoro per tutta la
 lunghezza del piano fino alla fine della discesa. L'espressione della differenza
 di energia cinetica è tuttavia la stessa.
 \[ W = W_P - W_A = Ph - F_AL = Ph - \mu F_\perp L = mgh - \mu mg\sin\theta L \]
+
+
+\subsubsection*{Problemino}
+Supponiamo di avere un piano inclinato, con attrito e lunghezza $l$, come nel problema precedente.
+La massa viene stavolta lanciata con una velocità iniziale dalla base del piano.
+La massa raggiunge una certa altezza $h$ e poi scivola di nuovo fino in fondo. Si
+vuole determinare la velocità alla quale la massa raggiunge nuovamente la base del
+piano.
+
+\[ W_P = \int dW_P = \int \mathbf{P}\cdot d\mathbf{s} = \int_\text{salita} \mathbf{P}\cdot d\mathbf{s} + \int_\text{discesa} \mathbf{P}\cdot d\mathbf{s} \]
+\[ - \int_{0}^{L}P_\parallel\cdot d\mathbf{s} + \int_{L}^{0}P_\parallel\cdot d\mathbf{s} =  \]
+
+\section{Forze conservative}
+In fisica, possiamo classificare le forze in \textit{conservative} e \textit{non
+conservative}. La distinzione tra di esse sta nel fatto che quando agisce una
+forza conservativa, il lavoro compiuto viene immagazzinato in una forma di energia,
+\textit{l'energia potenziale}, che è possibile risprigionare. Il lavoro compiuto
+da una forza non conservativa, invece, non può essere recuperato in seguito come
+energia cinetica, ma viene trasformato in altre forme di energia. Le differenze tra
+forze conservative e non conservative emergono se prendiamo in esame il moto di un
+oggetto lungo una traiettoria chiusa.
+
+\vspace{8pt}
+\begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Forza conservativa (condizione I)}]
+    Una forza conservativa è una forza che compie un lavoro totale nullo lungo ogni
+    percorso chiuso. Se il percorso è $\gamma = A\to A$ (il percorso si chiude su
+    se stesso) e $\mathbf{F}$ è una forza conservativa, allora:
+    \begin{align}
+        W_{A \to A} = \oint_\gamma \mathbf{F} \cdot d\mathbf{s} = 0 \qquad \forall \gamma
+    \end{align}
+\end{tcolorbox}
+\vspace{5pt}
+
+\noindent Da questa prima caratteristica delle forze conservative ne segue nua
+seconda. Si considerino i percorsi tra $A$ e $B$ in Figura \ref{percorsi}.
+\begin{marginfigure}
+    \centering
+    \includegraphics[width = \marginparwidth]{figures/circ.pdf}
+    \caption{Percorsi tra due punti in presenza di una forza conservativa}
+    \label{percorsi}
+\end{marginfigure}
+Supponiamo di dover raggiungere il punto $A$ partendo da $B$ e possiamo fare
+ciò percorrendo due strade differenti, $\alpha$ e $\gamma$. Disegnamo poi un
+terzo percorso, che invece riporta $A$ in $B$.
+Per ipotesi vale la condizione I, ovvero sta agendo una forza conservativa
+lungo tali percorsi. Dunque, il lavoro compiuto dalla forza nei percorsi chiusi
+$\alpha\beta$ e $\beta\gamma$ è nullo:
+\begin{align*}
+    W_{\alpha\beta} = W_\alpha + W_\beta = 0\\
+    W_{\beta\gamma} = W_\beta + W_\gamma = 0
+\end{align*}
+Ma allora
+\[ W_\beta = -W_\alpha = -W_\gamma \quad \therefore \quad W_\alpha = W_\gamma \]
+Abbiamo mostrato che il lavoro compiuto dalla forza conservativa dal punto $B$
+al punto $A$ è uguale per entrambi i percorsi. In altre parole, il lavoro totale
+dipende solo dai punti $A$ e $B$.
+
+Possiamo dimostrare questa proprietà in un altro modo. Consideriamo il percorso
+chiuso $\beta\gamma$. Vale per ipotesi
+\[ W_{\alpha\beta} = W_\beta + W_\gamma = \int_{A}^{B}\mathbf{F}\cdot d\mathbf{s} + \int_{B}^{A}\mathbf{F}\cdot d\mathbf{s} = 0 \]
+Quindi 
+\[ \int_{A}^{B}\mathbf{F}\cdot d\mathbf{s} = - \int_{B}^{A}\mathbf{F}\cdot d\mathbf{s} = \int_{A}^{B}\mathbf{F}\cdot d\mathbf{s} \]
+
+\vspace{8pt}
+\begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Forza conservativa (condizione II)}]
+    Una forza è conservativa se il lavoro totale compiuto da essa durante uno spostamento
+    da $A$ a $B$ dipende unicamente da questi punti di partenza e di arrivo, non
+    dal percorso seguito tra essi.
+    \[ W[\mathbf{F}]_{A\to B} \text{ indipendente dai percorsi tra A e B} \]
+\end{tcolorbox}
+\vspace{5pt}
+
+\section{Energia potenziale}
+Una forza conservativa può essere caratterizzata da una terza condizione che deriva
+dalla seconda.
+
+\vspace{8pt}
+\begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Forza conservativa (condizione III)}]
+    Una forza è conservativa se il lavoro effettuato da essa è esprimibile in
+    funzione delle sole ``coordinate'' $A$ e $B$ tramite una primitiva nella forma
+    seguente:
+    \[ W_{A\to B} = -\left[\mathcal{U}(\mathbf{x}_B) - \mathcal{U}(\mathbf{x}_A)\right] = -\Delta\mathcal{U} \]
+\end{tcolorbox}
+\vspace{5pt}
+
+\noindent Questa condizione esprime la proprietà delle forze conservative di
+consentire agli oggetti ad essa sottoposti di immagazzinare una certa quantità
+di energia da essa trasferita se l'oggetto passa da $A$ a $B$ e di liberare
+quella stessa energia nel tragitto inverso. Immaginiamo di lanciare una palla
+nel vuoto. La forza peso, derivante dalla gravità, è conservativa. Mentre la
+palla cade, il peso effettua un lavoro su di essa e di fatto la sua energia
+cinetica aumenta. Quella energia deve pur provenire da qualche parte. Se osserviamo
+questo esperimento ``invertendo il tempo'' (o equivalentemente lanciamo in alto
+la palla), osseviamo che la forza peso esegue un lavoro negativo sulla palla,
+quindi la sua energia cinetica diminuisce mano a mano. Ma il peso è una forza
+conservativa, dunque l'energia da essa sottratta viene comunque conservata
+in qualche forma. Questa è l'energia potenziale, che dipende appunto dalla differenza
+di quota della palla.
+
+Mostriamo come ricavare la condizione III. Sappiamo che il lavoro di una
+forza conservativa è definita da un integrale, che non dipende dal percorso
+effettuato tra l'inizio $A$ e la fine $B$. Dunque il lavoro deve in qualche modo
+poter essere descritto da una funzione nelle variabili $A$ e $B$.
+\[ W_{A \to B} = \int_{A}^{B}\mathbf{F}\cdot d\mathbf{s} = f(A,B) \]
+Questa funzione sarà una qualche primitiva della funzione integranda, che sarà
+quindi composta da dei contributi lineari di $A$ e $B$ dentro qualche funzione
+$\mathcal{U}$ (a meno di costanti moltiplicative esterne alla funzione).
+Abbiamo quindi le seguenti scelte:
+\begin{align*}
+    \mathcal{U}(A) + \mathcal{U}(B)\\
+    \mathcal{U}(A) - \mathcal{U}(B)
+\end{align*}
+Ma sapendo che la funzione $f(A,B)$ è una qualche primitiva, ciò significa che
+deve valere la proprietà di antisimmetria (invertendo gli estremi di integrazione,
+deve cambiare il segno). Questa proprietà vale solo per la seconda funzione:
+\[ f(B,A) = \mathcal{U}(B) - \mathcal{U}(A) = - (\mathcal{U}(A) - \mathcal{U}(B)) \]
+Definiamo dunque la \textit{differenza di energia potenziale} per forze conservative.
+\[ \Delta\mathcal{U}_{A\to B} = \mathcal{U}(B) - \mathcal{U}(A) = -W_{A\to B} \]
+Notare che stiamo definendo solo la differenza di energia potenziale, non l'energia
+potenziale in sé. Possiamo infatti fissare lo ``zero'' dell'energia potenziale in
+modo del tutto arbitrario, in quanto esso non sarà mai utile nel risultato finale
+di un problema di meccanica.
+
+\subsection{Energia potenziale gravitazionale}
+\subsection{Energia potenziale elastica}
+
+\section{Conservazione dell'energia meccanica}
