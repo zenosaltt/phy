@@ -45,9 +45,12 @@
     amsfonts,
     amssymb, % varnothing command
     amsthm,
+    mathtools
 }
 \theoremstyle{remark}
 \newtheorem*{osservaz}{Osservazione}
+
+\newcommand\eqdef{\stackrel{\mathclap{\normalfont\mbox{\tiny def}}}{=}} % def hovering above =
 
 % colors
 \usepackage{tcolorbox} % box
