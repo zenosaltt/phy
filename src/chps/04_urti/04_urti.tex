@@ -1,0 +1,155 @@
+\chptr{Meccanica e Urti}
+\marginpar{\minitoc}
+
+Vogliamo prevedere lo stato del sistema dopo l'urto, in termini di
+velocità (vettori) dei corpi coinvolti. Ci serve un \textit{sistema
+isolato} e la terza legge della dinamica.
+
+\section{Quantità di moto}
+Abbiamo sempre espresso la seconda legge come
+\[ \mathbf{F} = m\mathbf{a} = m\frac{d\mathbf{v}}{dt} \]
+ma questa proposizione afferma che l'effetto dell'agente esterno (la forza
+$\mathbf{F}$) si traduce interamente in una variazione dello stato di
+moto del corpo (accelerazione $\mathbf{a}$). Si suppone quindi che la
+massa sia sempre costante, anche se ciò non è sempre vero. Ad esempio,
+un razzo pieno di carburante non avrà la stessa massa che aveva in partenza
+una volta arrivato in orbita, quindi la forza esercitata dalla propulsione
+dei motori si è tradotta non solo in una variazione dello stato di moto,
+ma anche in una variaizione della massa. Non tratteremo sistemi complessi
+come il razzo, ma ciò fa intuire che la seconda legge della dinamica può
+essere generalizzata nella forma seguente
+\begin{align}
+    \mathbf{F} = \frac{d}{dt}(m\mathbf{v}) = \frac{d\mathbf{p}}{dt}
+\end{align}
+Dove la quantità $\mathbf{p}$ prende il nome di \textit{quantià di moto},
+definita come
+\begin{align}
+    \mathbf{p} \eqdef m\mathbf{v}
+\end{align}
+Come dice il termine, la quantità di moto descrive il moto dei corpi
+sulla base della velocità di una massa più la massa stessa, a differenza
+di quanto accade nello studio cinematico del moto, dove solo le variazioni
+dello stato di moto contano, slegate da cause (forze) e materia (massa).
+
+\section{Il fenomeno dell'urto}
+\vspace{8pt}
+\begin{tcolorbox}[colback = yellow!30, colframe = yellow!30!black, title = {Urto}]
+    Un urto è un'interazione tra corpi, nella quale
+\end{tcolorbox}
+\vspace{5pt}
+
+Un classico esempio che unisce nozioni su urti e quantità di moto è il
+tavolo da biliardo. Supponiamo di avere due palle, 1 e 2, sul tavolo in moto
+rettilineo
+uniforme e in rotta di collisione tra loro; ovvero, sappiamo con certezza
+che la loro traiettoria si intersecherà e che tale punto verrà raggiunto
+da entrambi i corpi nel medesimo istante di tempo. L'esprerienza ci permette
+di concludere che, passata la \textit{zona d'urto}, le palle non procederanno
+sulle stesse rette dei moti precedenti, ma devieranno.
+Dobbiamo fare alcune assunzioni fondamentali. Innanzitutto, supporremo che
+nessun altro agente agirà sul sistema appena descritto (aiuterebbe immaginare
+due palle che vagano nello spazio profondo).
+Immaginiamo l'intervallo temporale nel quale le due palle saranno a contatto
+tra loro, collidendo: entrambe eserciteranno una forza sull'altra e aiutati
+dalla terza legge della dinamica sappiamo che
+\[ \textbf{F}_{1 \to 2} = -\textbf{F}_{2 \to 1} \]
+cioè l'applicazione di una forza su una palla determina una forza identica
+in modulo e direzione, ma verso opposto e applicata sull'altra palla.
+Sviluppiamo l'equazione sfruttando la definizione di quantità di moto,
+ricordando che una forza $x \to y$ determina una variazione dello stato di
+moto di $y$.
+\[ \frac{d\mathbf{p}_2}{dt} = -\frac{d\mathbf{p}_1}{dt} \]
+Ricorrendo agli usuali abusi di notazione matematica, ma ragionevoli da
+un punto di vista fisico, semplifichiamo l'intervallo di tempo infinitesimale
+del differenziale:
+\begin{align*}
+    &d\mathbf{p}_2 = -d\mathbf{p}_1\\
+    &d[\mathbf{p}_1 + \mathbf{p}_2] = 0\\
+    &d\mathbf{p}_\text{tot} = 0
+\end{align*}
+Abbiamo mostrato, in anticipo, che per un sistema di due corpi come le palle
+da biliardo, assumendo che non agiscano forze esterne, la quantità di moto
+totale del sistema si conserva. Come l'energia meccanica, possiamo dunque
+concludere che un urto ideale non modifichi la quantità di moto del sistema.
+Un'altra supposizione importante che è stata
+sottointesa è la seguente: le distanze (eventuali variazioni della forma
+degli oggetti) e i tempi (intervalli di tempo nei quali avviene il contatto
+o più generalmente l'azione delle forze generate nella collisione) tipici dell'urto sono
+molto piccoli e trascurabili rispetto a quelli normalmente osservabili al
+di fuori dell'urto.
+Con tutte queste assunzioni possiamo descrivere il
+sistema attraverso la seguente approssimazione (dove $m$ indica la massa
+di una palla), che consente di descrivere lo stato del sistema prima o
+dopo l'urto, \textit{iniziale} e \textit{finale}.
+\[ m_1v_{1,i} + m_2v_{2,i} = m_1v_{1,f} + m_2v_{2,f} \]
+
+\section{Urto elastico}
+In un urto elastico
+
+\section{Forze interne ed esterne}
+Approfondiamo il concetto di \textit{sistema di punti materiali} e studiamone
+uno contentente un certo numero di punti materiali $N$. Immaginiamo che
+tra questi punti agiscano forze di varia natura: repulsive elettriche,
+attrattive gravitazionali ecc.; inoltre, supponiamo che vengano applicate
+altre forze dall'esterno di questo sistema di punti materiali\footnote{Una
+immagine esplicativa è il polmone, dove le molecole dell'aria formano i
+punti materiali e i muscoli del torace sono gli agenti esterni.}.
+Possiamo suddividere le forze in gioco in due insiemi:
+\begin{enumerate}
+    \item \textbf{Forze interne}: le forze che i punti esercitano gli uni
+    sugli altri. Forze che descrivono l'interazione tra i punti.
+    \item \textbf{Forze esterne}: le forze che l'ambiente esterno esercita
+    sul sistema, l'insieme di punti.
+\end{enumerate}
+Ogni punto $i$-esimo sarà sottoposto ad una certa forza totale, o risultante, derivante
+dalla somma/sovrapposizione di tutte le forze precedentemente descritte
+\begin{align*}
+    \mathbf{R}_i = m_i\mathbf{a}_i\\
+    \mathbf{R}^{(E)}_i + \mathbf{R}^{(I)}_i = m_i\mathbf{a}_i
+\end{align*}
+Definiamo le risultanti delle forze esterne, che supponiamo essere presenti
+in un certo numero $M$, ed interne agenti sul punto
+$i$-esimo:
+\begin{align*}
+    \mathbf{R}^{(E)}_i &\eqdef \sum_{k = 1}^{M} \mathbf{F}^{(E)}_{k \to i}\\
+    \mathbf{R}^{(I)}_i &\eqdef \sum_{j = 1}^{N} \mathbf{F}^{(I)}_{j \to i} \qquad j \not = i
+\end{align*}
+Supponiamo che un punto non eserciti alcuna forza su se stesso.
+La risultante di tutte le forze in gioco sarà
+\[ \mathbf{R} = \sum_{i = 1}^{N} \mathbf{R}_i \]
+In tale somma, concentriamoci sulla risultante delle forze interne:
+\[ \mathbf{R}^{(I)} = \sum_{i = 1}^{N} \mathbf{R}^{(I)}_i = \sum_{i = 1}^{N} \sum_{j = 1}^{N} \mathbf{F}^{(I)}_{j \to i} \]
+In questa somma, supponiamo che non vi siano forze agenti su un corpo
+ed esercitate dal corpo stesso, dunque poniamo $\mathbf{F}^{(I)}_{j \to i} = \overrightarrow{0} \quad \forall j = i$.
+Sappiamo che vale la terza legge della dinamica, dunque
+$\mathbf{F}^{(I)}_{j \to i} = -\mathbf{F}^{(I)}_{i \to j}$. Ma allora
+\begin{align}
+    \mathbf{R}^{(I)} = \sum_{i = 1}^{N} \sum_{j = 1}^{N} \mathbf{F}^{(I)}_{j \to i} = \overrightarrow{0}\label{interne}
+\end{align}
+Abbiamo appena dimostrato, grazie all'ipotesi della terza legge,
+che, in un sistema di punti materiali, la risultante delle forze interne
+è nulla.
+
+\section{Punto materiale}
+Dall'Equazione \ref{interne} possiamo dedurre che la risultante delle
+forze, interne ed esterne, coinvolte in un sistema di punti materiali
+è determinata solamente dalle forze esterne.
+\[ \mathbf{R} = \mathbf{R}^{(E)} = \sum_{i} \mathbf{R}^{(E)}_i = \sum_i m_i\mathbf{a}_i \]
+Dalla precedente equazione, si può ricavare un'interessante definizione:
+\[ \sum_i m_i\mathbf{a}_i = \sum_i m_i \frac{d^2\mathbf{x}_i}{dt^2} = \left(\sum_i m_i\right) \frac{d^2}{dt^2}\left[ \frac{\sum_i m_i\mathbf{x}_i}{\sum_i m_i} \right] \]
+Abbiamo ottenuto un termine molto interessante, un artificio matematico
+che ha interpretazioni e applicazioni piuttosto importanti: \textit{il
+centro di massa}.
+\begin{align}
+    \mathbf{x}_\text{CM} \eqdef \frac{\sum_i m_i\mathbf{x}_i}{\sum_i m_i}
+\end{align}
+Dalla definizione è banale ricavare la velocità e l'accelerazione del
+centro di massa. Riprendendo le equazioni precedenti e ponendo $M = \sum_i m_i$,
+possiamo concludere che
+\[ \mathbf{R}^{(E)} = M\frac{d^2\mathbf{x}_\text{CM}}{dt^2} = M\mathbf{a}_\text{CM} \]
+
+\section{Impulso}
+\[ \left\langle \mathbf{F} \right\rangle = \mathbf{F}_\text{impulsiva} \simeq \frac{\Delta\mathbf{p}}{\Delta t} \]
+\[ \Delta\mathbf{p} = \mathbf{F}_\text{impulsiva}\Delta t \]
+Deformazioni per tempi brevi, tempo di contatto.
+\[ \Delta\mathbf{p} = m\mathbf{v}_f - m(\overrightarrow{0}) \qquad F_\text{imp} = \frac{mv_f}{T} \]
