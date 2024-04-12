@@ -96,7 +96,7 @@ enunciare il teorema delle foze vive:
     cinetica. Quindi, il lavoro compiuto su un oggetto è uguale alla variazione
     della sua energia cinetica.
     \begin{align}
-        W_{i\to f}^{(R)} = \Delta E_K
+        W_{i\to f}^{(R)} = \Delta E_K\label{forzevive}
     \end{align}
 \end{tcolorbox}
 \vspace{5pt}
@@ -114,6 +114,8 @@ enunciare il teorema delle foze vive:
 
     \item Il teorema è molto potente per la sua validità generale, perché non sono state fatte ipotesi sulla natura delle
     forze, se non presupponendo come vera la seconda legge della dinamica $\textbf{F} = m\textbf{a}$.
+    La legge può essere dunque applicata ad un pendolo, ad una palla da bowling,
+    a delle molecole microscopiche in movimento.
 \end{enumerate}
 
 \subsubsection*{Applicazione del teorema delle forze vive}
@@ -268,3 +270,43 @@ di un problema di meccanica.
 \subsection{Energia potenziale elastica}
 
 \section{Conservazione dell'energia meccanica}
+Ricordiamo il teorema delle forze vive (Equazione \ref{forzevive})
+\[ W_{i \to f}^\text{tot} = E_{K,f} - E_{K,i} \]
+Abbiamo inoltre mostrato che il lavoro dovuto alle forze conservative
+è legato ad una differenza di energia potenziale:
+\[ W_{i \to f}^\text{FC} = -(\mathcal{U}_f - \mathcal{U}_i) \]
+Per il principio di sovrapposizione, possiamo esprimere il lavoro totale
+nel seguente modo, separando forze conservative e non conservative:
+\[ W_{i \to f}^\text{tot} = W_{i \to f}^\text{FNC} + W_{i \to f}^\text{FC} \]
+Unendo le equazioni finora ottenute,
+\begin{align}
+    W_{i \to f}^\text{FNC} = \Delta E_K + \Delta\mathcal{U} = (E_{K,f} + \mathcal{U}_f) - (E_{K,i} + \mathcal{U}_i) = \Delta E\label{nonconserva}
+\end{align}
+Al membro destro abbiamo unito quantità relative a momenti correlati,
+cioè abbiamo unito energia cinetica finale con energia potenziale finale
+ed energia cinetica iniziale con energia potenziale iniziale.
+La somma di queste quantità viene chiamata \textit{energia meccanica}:
+\begin{align}
+    E \eqdef E_K + \mathcal{U}
+\end{align}
+Dalla \ref{nonconserva} possiamo notare che, se agiscono forze non conservative,
+la variazione di energia meccanica corrisponde al lavoro effettuato dalle
+froze non conservative stesse. Per questo, è intuitivo utilizzare l'equazione
+nella forma
+\[ E_f = E_i + W_{i \to f}^\text{FNC} \]
+perché permette di capire che l'energia meccanica finale del sistema cambierà
+da quella iniziale di una certa quantità dovuta all'azione delle forze non
+conservative, che possono aggiungere o sottrarre energia meccanica.
+In assenza di forze non conservative, allora $W_{i \to f}^\text{FNC} = 0$.
+Segue dunque un importante teorema, ovvero il teorema di conservazione
+dell'energia meccanica, del quale abbiamo appena esposto la dimostrazione.
+
+\vspace{8pt}
+\begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Teorema di conservazione dell'energia meccanica}]
+    Se su un oggetto non agisce alcuna forza non conservativa,
+    allora l'energia meccanica si conserva.
+    \begin{align}
+        \Delta E = 0
+    \end{align}
+\end{tcolorbox}
+\vspace{5pt}
