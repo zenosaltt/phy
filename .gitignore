@@ -9,3 +9,7 @@
 *.out
 *.synctex.gz
 *.toc
+
+# ignore makefiles
+
+makefile
