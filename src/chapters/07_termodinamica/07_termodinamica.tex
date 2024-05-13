@@ -71,3 +71,188 @@ Un sistema si dice in equilibrio dinamico se esso rispetta i seguenti equilibri:
 \noindent Per ``parti'' di uno stato o di un sistema intendiamo sottoinsiemi
 abbastanza piccoli rispetto al sistema originale ma allo stesso tempo sufficientemente
 grandi affiché gli strumenti della termodinamica funzionino.
+
+
+\section{La teoria cinetica dei gas}
+Finora abbiamo affrontato la termodinamica parlando spesso di gas.
+Lo abbiamo fatto inoltre da un punto di vista macroscopico, ovvero
+utilizzando variabili termodinamiche (pressione, volume, temperatura).
+Tuttavia, vogliamo ora tentare di costruire un modello che permetta
+di spiegare cosa accade a livello microscopico e che sia allo stesso
+tempo coerente con le leggi mostrate fino ad ora.
+Per giungere a tale obbiettivo, ovvero collegare macroscopico e mocroscopico,
+l'unico strumento che abbiamo a diposizione in questo corso è la meccanica.
+Questa è la via che porta alla cosiddetta \textit{teoria cinetica dei
+gas}.
+
+\subsection*{Ipotesi e presupposti della teoria cinetica}
+La teoria cinetica dei gas semplifica molto ciò che veramente accade
+nella realtà fisica, ma è una approssimazione piuttosto buona e
+soddisfacente. In particolare, chiariamo che la teoria si basa sulle
+seguenti ipotesi:
+\begin{itemize}
+    \item Oggetto delle osservazioni è un gas \textit{ideale} (o
+    perfetto) che si trova all'interno di un contenitore con volume
+    $V$.
+
+    \item Il gas è ideale nel senso che esso è costituito da
+    particelle infinitamente piccole rispetto al contenitore nel
+    quale sitrovano e alle distanze che le separano; tali particelle
+    sono inoltre tutte uguali, compresa massa e altre proprietà.
+
+    \item Il gas ha una densità bassa nell'ordine in cui le interazione
+    tra le sue particelle è minimo o possibilmente nullo (non avvengono
+    urti, interazioni gravitazionali o di qualsiasi altra natura).
+
+    \item Gli unici urti di interesse teorico, non trascurabili, sono
+    quelli con le pareti del contenitore, perfettamente elastici (la
+    massa delle particelle è infinitamente piccola rispetto a quella
+    delle pareti del contenitore).
+\end{itemize}
+
+\subsection*{Logica e risultati della teoria}
+Per semplificare i calcoli, supponiamo che il contenitore sia un
+cubo con lati di lunghezza $L$. Si consideri una sola particella
+di gas (massa $m$) che sta per urtare la parete destra e la componente $x$
+della sua velocità ($v_x$). La quantità di moto iniziale di tale particella
+è
+
+\[ \mathbf{p}_{x,i} = m\textbf{v}_{x,i} \]
+
+Avviene un urto elastico con la parete destra, dunque la velocità finale
+della particella è uguale in modulo a quella iniziale, ma con verso
+opposto:
+
+\[ \mathbf{p}_{x,f} = m\textbf{v}_{x,f} = -m\textbf{v}_{x,i} \]
+
+La variazione della quantità di moto della particella equivale dunque
+a
+
+\[ \Delta\mathbf{p}_x = -2mv_x\hat{x} \]
+
+Utilizziamo d'ora in poi i moduli dei vettori. Sappiamo che tale
+variazione nella quantità di moto della particella può essere
+interpretata come un impulso esercitato dalla parete; dunque la
+parete esercita una forza sulla particella, ma come calcolarla?
+Diventa necessario trovare un intervallo temporale entro il quale
+agisce l'impulso per ricavare l'intensita della forza.
+Semplicemente notiamo che la velocità della particella non varia,
+per via degli urti elastici, e dunque essa rimbalza ripetutamente
+a destra e sinistra nel cubo. Dunque, la particella impiega un tempo
+
+\[ \Delta t = \frac{2L}{v_x} \]
+
+Per lasciare la parete e tornarvici per un altro urto. In media nel
+tempo, dunque, la forza impulsiva esercitata dalla parete destra
+sulla particella equivale a
+
+\[ F_x = \left|\frac{\Delta p_x}{\Delta t}\right| = 2mv_x \cdot \frac{v_x}{2L} = \frac{mv_x^2}{L} \]
+
+Dalla definizione di pressione, otteniamo la pressione esercitata
+dalla particella che rimbalza tra due pareti opposte (di superficie
+$S = L^2$):
+
+\[ p_x = \frac{F_x}{S} = \frac{mv_x^2}{L^3} = \frac{mv_x^2}{V} \]
+
+Lo stesso ragionamento vale per tutte le componenti spaziali.
+Macroscopicamente, osserviamo che la pressione è una quantità intensiva,
+che non dipende dalla località della misurazione. Dunque tutte
+le dimensioni spaziali sono equivalenti e possiamo effettuare la
+seguente semplificazione:
+
+\[ p_x = p_y = p_z = p \]
+
+Unendo la legge dei gas perfetti al risultato ottenuto precedentemente,
+
+\[ pV = mv_x^2 \]
+
+Ma ciò riguarda solamente una singola particella. Sommiamo dunque
+tutti i contributi:
+
+\[ F_{\text{tot}, x} = \sum_i F_{x,i} = \sum_i \frac{mv_{x,i}^2}{L} = \frac{m}{L}\sum_iv_{x,i}^2 \]
+
+In generale le velocità delle particelle potrebbero non essere tutte
+uguali. Supponendo che il gas sia costituito da $N$ particelle, possiamo
+determinare la loro velocità quadratica media
+
+\[ F_{\text{tot},x} = N\frac{m}{L}\overline{v_x^2} \]
+
+Dunque
+
+\[ pV = Nm\overline{v_x^2} \]
+
+Sappiamo che $v^2 = v_x^2 + v_y^2 + v_z^2$, che vale anche per la
+velocità quadratica media $\overline{v^2}$. Ma trattando delle medie,
+i contributi di tutte le dimensioni sono tra loro equivalenti:
+
+\[ \overline{v_x^2} = \overline{v_y^2} = \overline{v_z^2} \]
+
+Da cui
+
+\[ \overline{v^2} = \overline{v_x^2} + \overline{v_y^2} + \overline{v_z^2} = 3\overline{v_x^2} \]
+
+Allora
+
+\[ pV = Nm\frac{\overline{v^2}}{3} = \frac{2}{3}N\overline{E_K}\]
+
+Dove abbiamo esplicitato l'energia cinetica media della singola particella.
+Per andare più in profondità, possiamo notare che la teoria può
+portarci a concludere che
+
+\[ N\overline{E_K} = E_{int} = U \]
+
+Abbiamo dunque collegato la nostra teoria da un lato e gli esperimenti
+dall'altro:
+
+\[ pV = Nk_BT = \frac{2}{3}U \]
+
+Possiamo inoltre osservare dalla precedente che
+
+\[ \overline{E_K} = \frac{3}{2}k_BT \]
+
+Che esprime la relazione tra energia cinetica media di una particella
+e la temperatura. In un certo senso, dunque, la temperatura \textit{è}
+proprio l'energia cinetica media delle particelle.
+
+\subsection*{Risultati della teroria}
+Il risultato più importante della teoria cinetica è l'unione tra
+il mondo macroscopico osservato sperimentalmente e il mondo microscopico
+modellato teoricamente. In particolare:
+\begin{itemize}
+    \item La teoria cinetica offre una spiegazione dell'origine della
+    pressione esercitata da un gas in un contenitore.
+
+    \item La teoria cinetica mostra che la temperatura è strettamente
+    legata all'energia cinetica media delle particelle. Intuitivamente,
+    la temperatura è interpretabile proprio come l'agitazione media
+    delle particelle, per l'appunto l'energia del loro movimento.
+
+    \item La teoria cinetica costruisce un modello generalizzabile
+    a sistemi di costituenti non necessariamente monoatomico-puntiformi,
+    come approfondito nella prossima sezione.
+\end{itemize}
+
+\subsubsection*{Gradi di libertà}
+Il fattore $1/2$ deriva dalla definizione di enrgia cinetica, ma
+il numero $3$ invece? Esso dipende dal numero di dimensioni entro
+le quali le particelle possono muoversi, ovvero i \textit{gradi di
+libertà}. Se compissimo lo studio da capo, costringendo però le particelle
+a giacere su un piano, i gradi di libertà sarebbero solo due e il fattore
+moltiplicativo
+dell'energia cinetica media sarebbe diverso. Ciò è dovuto al fatto
+che ogni grado di libertà permette alla particella di muoversi su
+un'altra dimensione e dunque di aggiungere un contributo in più alla
+propria energia cinetica. In generale, dunque, ogni grado di
+liberta comporta un contributo energetico di $\frac12k_BT$ e
+dunque, per $l$ gradi di libertà, si ottiene
+
+\[ \overline{E_K} = \frac{l}{2}k_BT \]
+
+I gradi di libertà possono crescere all'aumentare della complessità
+della particella di gas. Oltre alle tre dimensioni, una molecola
+biatomica (quindi non puntiforme come abbiamo sempre supposto finora)
+può anche ruotare su due assi\footnote{Due assi sono sufficienti a
+coprire tutte le rotazioni nelle tre dimensioni}; i due atomi possono
+poi vibrare intorno alla loro ``sede'' nella molecola, dunque anche
+questa energia deve essere presa in considerazione. In totale, una
+molecola biatomica ideale può avere $l = 6$ gradi di libertà.
