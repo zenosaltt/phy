@@ -1,2 +1,2 @@
-# Fisica: Dalla Meccanica Newtoniana all'Elettromagnetismo
+# Fisica: Meccanica Newtoniana, Termodinamica
 Appunti di fisica, 2023-2024.
