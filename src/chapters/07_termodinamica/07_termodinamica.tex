@@ -369,9 +369,50 @@ meno dispendioso innalzare l'energia interna di un gas a volume
 costante. Da qui il motivo della disuguaglianza $c_p > c_V$.
 
 \subsection{Trasformazioni isoterme}
-Nelle trasformazioni isoterme, la temperatura non varia.
+Nelle trasformazioni isoterme, la temperatura non varia. Come
+conseguenza, nemmeno l'energia interna varia.
+
+\[ dU = nc_VdT = 0 \]
+
+Segue dunque che
+
+\[ dQ - dW = 0 \]
+\[ dQ = dW = pdV = nRT\frac{dV}{V} \]
+\[ Q_\text{isoterma} = \int_{i}^{f}nRT\frac{dV}{V} = nRT\ln\left(\frac{V_f}{V_i}\right) = W_\text{isoterma} \]
+
+In una isoterma, dunque, non varia l'energia interna, perché il calore
+scambiato viene ``consumato'' in una quantità uguale di lavoro.
 
 \subsection{Trasformazioni adiabatiche}
+In queste trasformazioni non avvengono scambi di calore.
 
+\[ dU = dQ - dW = -dW \]
+
+Come sempre, sapendo che la variazione di energia interna è esprimibile
+attraverso una corrispondente variazione di temperatura legata a $c_V$,
+
+\[ nc_VdT = -pdV \]
+
+\[ nc_VdT = -nRTdV \]
+
+Otteniamo dunque la seguente relazione:
+
+\[ \frac{dT}{T} = -\frac{R}{c_V}\frac{dV}{V} \]
+
+\[ \int_{i}^{f}\frac{dT}{T} = -\frac{R}{c_V}\int_{i}^{f}\frac{dV}{V} \]
+
+\[ \ln\left( \frac{T_f}{T_i} \right) = -(\gamma - 1)\ln\left(\frac{V_f}{V_i}\right) \]
+
+\[ T_i V_i^{\gamma - 1} = T_fV_f^{\gamma - 1} \]
+
+Vale allora per le adiabatiche
+
+\begin{align}
+    TV^{\gamma - 1} = \text{const}\\
+    pV^\gamma = \text{const}
+\end{align}
+
+In particolare, nel caso di trasformazioni adiabatiche che coinvolgono
+gas monotatomici risulta $pV^{\frac53} = \text{const}$.
 
 \subsection{Esercizio: trasformazioni cicliche}
