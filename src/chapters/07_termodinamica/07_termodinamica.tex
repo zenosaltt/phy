@@ -425,7 +425,107 @@ Vale allora per le adiabatiche
 In particolare, nel caso di trasformazioni adiabatiche che coinvolgono
 gas monotatomici risulta $pV^{\frac53} = \text{const}$.
 
-\subsection{Esercizio: trasformazioni cicliche}
+\section{Trasformazioni cicliche}
+Combinando insieme le trasformazioni semplici viste fino ad ora, è possibile
+comporre trasformazioni più complesse. Tra queste, quelle più interessanti
+sono forse le \textit{trasformazioni cicliche} (o cicli termodinamici), nelle
+quali, data una coordinata termodinamica, il sistema ritorna nello stesso
+punto dopo aver compiuto alcune trasformazioni. Seguendo i nostri presupposti,
+possiamo concludere che la variazione di energia interna dei sistemi che
+subiscono trasformazioni cicliche non varia per definizione:
 
+\[ \Delta U_\gamma = 0 \quad \forall \gamma = A \to A \]
+
+\noindent in quanto quest'ultima dipende unicamente dallo stato.
 
 \section{Macchine}
+I cicli termodinamici caratterizzano i principi di funzionamento delle
+\textit{macchine}. Un motore a combustioine interna dell'Husqvarna sotto
+casa è una macchina; ma lo è anche un freezer. Di fatto, la termodinamica
+distingue due categorie principali di macchine sulla base del verso degli
+scambi di energia:
+
+\begin{itemize}
+    \item \textbf{Macchine termiche:} per queste macchine valgono
+    
+    \[ W,Q > 0 \]
+    ovvero compiono lavoro al prezzo di un consumo di calore.
+
+    \item \textbf{Macchine frigorifere:} vale
+    
+    \[ W,Q < 0 \]
+    ossia esse dissipano calore al prezzo di un lavoro esterno.
+\end{itemize}
+
+Notare che la classificazione parte dal segno del lavoro, per poi
+dedurre il flusso di calore mediante la definizione di trasformazione
+ciclica combinata alla prima legge della termodinamica $\Delta U = 0 = Q - W$.
+
+\subsection{Rendimento}
+Sappiamo bene che è necessario un costo in termini energetici (dunque monetari,
+ambientali e così via nella nostra vita economica) per far funzionare una
+macchina e ottenere da essa i risultati attesi. Dal motore dell'auto è desiderabile
+ottenere il massimo della distanza percorribile e della potenza sprigionabile
+partendo dalla benzina pagata al pieno precedente. Ma come valutare la bontà
+di un motore?
+
+Consideriamo una macchina termica, ovvero il motore dell'auto. Il suo scopo
+è produrre lavoro, cioè trasmettere forza motrice alle ruote. Per far funzionare
+una macchina termica è necessario fornire calore. Dunque, possiamo valutare
+l'\textit{efficienza} del motore dell'auto secondo il seguente rapporto:
+
+\begin{align}
+    \eta = \frac{W}{Q_A}
+\end{align}
+
+
+\noindent Dove $Q_A$ rappresenta il calore assorbito dalla macchina, o l'energia pagata
+e immessa nell'auto. Possiamo riformulare la definizione di rendimento
+notando che, durante il funzionamento del motore, parte del calore assorbito
+$Q_A$ viene sì trasformato in lavoro, ma anche in altre forme, che racchiuderemo
+nel calore totale ceduto $Q_C$. Vale dunque:
+
+\[ \Delta U = 0 = Q - W = Q_A + Q_C - W \]
+
+\[ W = Q_A + Q_C \]
+
+\noindent da cui riformuliamo l'efficienza:
+
+\begin{align}
+    \eta = 1 + \frac{Q_C}{Q_A} = 1 - \frac{|Q_C|}{|Q_A|}
+\end{align}
+
+\noindent Notare che, per definizione di macchina termica, il calore
+ceduto possiede segno negativo.
+
+\subsection{Utopie}
+Chiaramente, senza l'intervento di agenti esterni, non è possibile
+ottenere dal nostro motore più lavoro di quanto calore è stato fornito
+inizialmente
+
+\[ Q_A < W \]
+
+\noindent perché, come sappiamo dalla meccanica, l'energia si conserva
+e non è possibile dunque crearne ``magicamente''. È però lecito chiedersi
+se è possibile ottenere qualcosa come questo:
+
+\[ Q_A \stackrel{?}{=} W \]
+
+\noindent ovvero costruire un motore completamente efficiente. Sempre
+dalla meccanica, possiamo ipotizzare che, anche solo teoricamente e
+in situazioni ideali, ciò sarebbe ammesso, perché i sistemi meccanici
+sono \textit{reversibili}, ovvero è sempre possibile riportarli allo
+stato iniziale dopo un certo fenomeno. Non aggiungiamo altro per riservare
+la sorpresa ai lettori.
+
+In ogni caso, un buon motore dovrebbe produrre quanto più lavoro rispetto
+ad un quantitativo basso di calore assorbito:
+
+\begin{center}
+    \textit{Minimo sforzo, massima resa. Spendi poco, ottieni molto.}
+\end{center}
+
+\section{Il ciclo di Carnot}
+Qual è la macchina più efficiente in assoluto? Oppure, in quali condizioni
+una macchina può ottenere il rendimento massimo? Queste sono domande che
+Carnot si pose ai suoi tempi.
