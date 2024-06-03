@@ -122,24 +122,23 @@ dalla somma/sovrapposizione di tutte le forze precedentemente descritte
     \mathbf{R}_i = m_i\mathbf{a}_i\\
     \mathbf{R}^{(E)}_i + \mathbf{R}^{(I)}_i = m_i\mathbf{a}_i
 \end{align*}
-Definiamo le risultanti delle forze esterne, che supponiamo essere presenti
-in un certo numero $M$, ed interne agenti sul punto
+Definiamo le risultanti delle forze esterne, ed interne agenti sul punto
 $i$-esimo:
 \begin{align*}
-    \mathbf{R}^{(E)}_i &\eqdef \sum_{k = 1}^{M} \mathbf{F}^{(E)}_{k \to i}\\
-    \mathbf{R}^{(I)}_i &\eqdef \sum_{j = 1}^{N} \mathbf{F}^{(I)}_{j \to i} \qquad j \not = i
+    \mathbf{R}^{(E)}_i &\eqdef \sum_{k} \mathbf{F}^{(E)}_{k \to i}\\
+    \mathbf{R}^{(I)}_i &\eqdef \sum_{j} \mathbf{F}^{(I)}_{j \to i} \qquad j \not = i
 \end{align*}
 Supponiamo che un punto non eserciti alcuna forza su se stesso.
 La risultante di tutte le forze in gioco sarà
-\[ \mathbf{R} = \sum_{i = 1}^{N} \mathbf{R}_i \]
+\[ \mathbf{R} = \sum_{i} \mathbf{R}_i \]
 In tale somma, concentriamoci sulla risultante delle forze interne:
-\[ \mathbf{R}^{(I)} = \sum_{i = 1}^{N} \mathbf{R}^{(I)}_i = \sum_{i = 1}^{N} \sum_{j = 1}^{N} \mathbf{F}^{(I)}_{j \to i} \]
+\[ \mathbf{R}^{(I)} = \sum_{i} \mathbf{R}^{(I)}_i = \sum_{i} \sum_{j} \mathbf{F}^{(I)}_{j \to i} \]
 In questa somma, supponiamo che non vi siano forze agenti su un corpo
 ed esercitate dal corpo stesso, dunque poniamo $\mathbf{F}^{(I)}_{j \to i} = \overrightarrow{0} \quad \forall j = i$.
 Sappiamo che vale la terza legge della dinamica, dunque
 $\mathbf{F}^{(I)}_{j \to i} = -\mathbf{F}^{(I)}_{i \to j}$. Ma allora
 \begin{align}
-    \mathbf{R}^{(I)} = \sum_{i = 1}^{N} \sum_{j = 1}^{N} \mathbf{F}^{(I)}_{j \to i} = \overrightarrow{0}\label{interne}
+    \mathbf{R}^{(I)} = \sum_{i} \sum_{j} \mathbf{F}^{(I)}_{j \to i} = \overrightarrow{0}\label{interne}
 \end{align}
 Abbiamo appena dimostrato, grazie all'ipotesi della terza legge,
 che, in un sistema di punti materiali, la risultante delle forze interne
@@ -240,9 +239,14 @@ finale,
 è immediato infatti notare che, data la conservazione della quantità di moto,
 il corpo finale comprensivo di entrambe le massse non potrà che muoversi
 con velocità identica a quella del centro di massa.
-Abbiamo dunque mostrato che l'energia cinetica non si conserva nell'urto
-\[ E_{K,f} \leq E_{K,i} \]
-Il motivo di tale fenomeno può essere spiegato attraverso numerose
+Abbiamo dunque mostrato che in generale l'energia cinetica non si conserva nell'urto.
+In particolare, essa diminuisce sempre in situazioni reali.
+
+\begin{align}
+    E_{K,f} \leq E_{K,i}
+\end{align}
+
+\noindent Il motivo di tale fenomeno può essere spiegato attraverso numerose
 interpretazioni, che possono dipendere dal sistema analizzato. In generale,
 la perdita di energia cinetica è dovuta al costo per mantenere unite le
 masse dopo l'urto, oppure, come accade sempre nella realtà, quell'energia

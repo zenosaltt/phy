@@ -33,16 +33,19 @@ della velocità nel tempo è chiamata \textbf{accelerazione}.
 
 \vspace{8pt}
 \begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Seconda legge della dinamica}]
+Il cambiamento di moto è proporzionale all'intensità della forza applicata.
     \begin{align}
+        F \propto a\\
         \frac{|\overrightarrow{F}|}{|\overrightarrow{a}|} = \frac{F}{a} = m
     \end{align}
 \end{tcolorbox}
 \vspace{5pt}
 
-
-Gli oggetti hanno inerzia, ovvero capacità di opporsi all'agire dell'agente
+\noindent Gli oggetti hanno inerzia, ovvero capacità di opporsi all'agire dell'agente
 esterno. Questa capacità di opporsi è rappresentato da una quantità detta
-massa (inerziale).
+\textit{massa inerziale}. Essa è la costante di proporzionalità che lega forza applicata
+e accelerazione: fissata una accelerazione $a$, più $m$ è grande, tanto più $F$ cresce.
+Questo è l'effetto tangibile dell'inerzia.
 
 \subsection{Analisi dimensionale}
 \[ [F] = [ma] = \left[m\cdot\frac{v}{t}\right] = \left[m\cdot\frac{l}{t^2}\right]  \]
@@ -345,9 +348,12 @@ $F_c$ derivante dal moto circolare, oltre la tensione. Concentriamoci
 sull'accelerazione tangenziale nella prima equazione. Ricordando che gli
 angoli sono in relazione con la lunghezza degli archi $a$ secondo
 l'equazione $a = l\theta$:
-\[ a_t = \frac{dv_t}{dt} = \frac{d}{dt}\left(\frac{ld\theta}{dt}\right) = l\frac{d^2\theta}{dt^2} \]
-Dunque, riprendendo la primissima equazione riguardo la componente
+
+\[ a_t = \frac{dv_t}{dt} = \frac{d}{dt} (\omega l) = l \frac{d}{dt}\left(\frac{d\theta}{dt}\right) = l\frac{d^2\theta}{dt^2} \]
+
+\noindent Dunque, riprendendo la primissima equazione riguardo la componente
 tangenziale del peso, semplificando la massa:
+
 \[ l\frac{d^2\theta}{dt^2} + g\sin\theta = 0 \]
 Per rendere più semplice la trattazione del sistema fisico, supporremo
 per ipotesi che $\theta\ll 1$ (in radianti), dunque ciò che calcoleremo
@@ -410,7 +416,11 @@ Possiamo dunque concludere che queste compensazioni sono il motivo
 delle indipendenze osservabili nell'equazione \ref{periodopendolo}.
 
 \subsubsection*{Analisi approfondita del moto di un pendolo}
-Alla luce delle equazioni sul moto armonico semplice, definiamo la
+Alla luce delle equazioni sul moto armonico semplice, poniamo
+
+\[ \theta = A \sin(\omega t + \phi) \]
+
+\noindent e definiamo la
 velocità \textit{angolare} di una massa di un pendolo semplice:
 \[ \nu = \frac{d\theta}{dt} = A\omega\cos(\omega t + \phi) \]
 Ricordiamo che l'ampiezza $A$ corrisponde all'angolo massimo spazzato

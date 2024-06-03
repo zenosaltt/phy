@@ -440,10 +440,10 @@ subiscono trasformazioni cicliche non varia per definizione:
 
 \section{Macchine}
 I cicli termodinamici caratterizzano i principi di funzionamento delle
-\textit{macchine}. Un motore a combustioine interna dell'Husqvarna sotto
+\textit{macchine}. Il motore due-tempi dell'Husqvarna sotto
 casa è una macchina; ma lo è anche un freezer. Di fatto, la termodinamica
-distingue due categorie principali di macchine sulla base del verso degli
-scambi di energia:
+distingue due categorie principali di macchine sulla base del verso con il
+quale avvengono gli scambi di energia:
 
 \begin{itemize}
     \item \textbf{Macchine termiche:} per queste macchine valgono
@@ -525,7 +525,198 @@ ad un quantitativo basso di calore assorbito:
     \textit{Minimo sforzo, massima resa. Spendi poco, ottieni molto.}
 \end{center}
 
-\section{Il ciclo di Carnot}
+\section{Il secondo principio della termodinamica}
+Il primo principio della termodinamica ci consente di osservare che non
+è possibile costruire macchine in grado di sprigionare più energia di
+quella con la quale la alimentiamo. Possiamo però notare che se $\Delta U = 0$
+allora $Q = W$. Ciò può far sperare che una macchina possa comunque
+convertire l'intera energia fornita in lavoro, senza alcuna dispersione.
+Tuttavia, ciò è talmente difficile da sembrare impossibile (vedremo che
+effettivamente lo è). Parimenti è sperimentalmente evidente che il
+calore non fluisce \textit{mai spontaneamente} da una sorgente fredda
+da una calda. Quest'ultima osservazione in particolare è la base che
+supporta il secondo principio della termodinamica, del quale sono date
+due formulazioni ben note:
+
+\begin{itemize}
+    \item \textbf{Enunciato di Kelvin-Plank}
+    
+    \begin{center}
+        \textit{È impossibile realizzare una macchina il cui unico risultato\\
+        sia quello di trasformare calore, da una sorgente, interamente in lavoro.}
+    \end{center}
+
+    \item \textbf{Enunciato di Clausius}
+    
+    \begin{center}
+        \textit{È impossibile realizzare un processo il cui unico risultato\\
+        sia quello di trasferire calore da un corpo ad uno più caldo.}
+    \end{center}
+\end{itemize}
+
+
+\noindent Purtroppo per la nostra umanità (e probabilmente per tutte le civiltà avvenire),
+non è possibile realizzare macchine perfette, ovvero dal rendimento del
+$100\%$, perché questo è impedito dal secondo principio, in particolar modo
+dalla formulazione di Kelvin-Plank.
+
+Entrambe le formulazioni sono date per vere, ma possiamo tuttavia dimostrarne
+l'equivalenza.
+
+\section{Esperienza di Carnot}
 Qual è la macchina più efficiente in assoluto? Oppure, in quali condizioni
 una macchina può ottenere il rendimento massimo? Queste sono domande che
 Carnot si pose ai suoi tempi.
+
+\section{Esperienza di Clausius}
+Altra figura importante in termodinamica è il tedesco Rudolf Clausius,
+che estese gli studi importanti di Carnot ad un livello superiore.
+
+\subsection{Teorema di Clausius}
+Abbiamo appena visto che una delle relazioni ottenute da Carnot è la
+somma di rapporti $\frac{Q_1}{T_1} + \frac{Q_2}{T_2} \leq 0$. Ciò vale
+per tutte le macchine, reversibili o no, che operano tra due sorgenti
+$T_1 < T_2$. Avere però solamente due sorgenti è piuttosto limitante,
+perché nella realtà le macchine operano su cicli ben più complessi e
+dunque è come se operassero tra più di due sorgenti. Clausius ebbe così
+la brillante idea di generalizzare le conclusioni di Carnot per un
+ciclo termodinamico qualsiasi.
+
+Supponiamo di osservare un cilo motore qualsiasi (la nocciolina motrice,
+che carina). Questo ciclo
+attraversa gradi di temperatura molteplici. Possiamo però effettuare
+una approssimazione della curva del ciclo immaginando di percorrerla
+mediante piccole trasformazioni adiabatiche e isoterme. Se estendiamo
+queste piccole trasformazioni, otterremo
+una suddivisione dell'area interna del nostro ciclo in tanti piccoli
+cicli di Carnot. Per allora il ciclo $i$-esimo, vale la relazione
+
+\[ \frac{Q_{1,i}}{T_{1,i}} + \frac{Q_{2,i}}{T_{2,i}} \leq 0 \]
+
+\noindent È allora immediato osservare che sommando questa quantità
+per ogni ciclo interno all'area del ciclo vale
+
+\[ \sum_{i} \left(\frac{Q_{1,i}}{T_{1,i}} + \frac{Q_{2,i}}{T_{2,i}}\right) \leq 0\]
+
+\noindent Questa relazione non ci dice ancora molto di straordinario.
+Possiamo però notare due cose: i tratti adiabatici non coinvolgono
+scambi di calore per definizione, e dunque possiamo ignorarli nel
+nostro calcolo, perché il rapporto calore-temperatura è sempre nullo
+durante questo tipo di trasformazione; esistono molti tratti isotermi
+che vengono percorsi in versi opposti. Questi sono i tratti \textit{interni}
+alla nostra curva origniale ed essendo percorsi in versi opposti non
+introducono ulteriori contributi calorici. Gli unici tratti di nostro
+interesse, dunque, sono quelli delle trasformazioni isoterme \textit{ai
+bordi} del ciclo. Possiamo allora riformulare la sommatoria unendo
+solo questi rapporti. Supponendo che il tratto $j$-esimo sia una isoterma
+che costituisce un pezzo di bordo della curva originale, otteniamo
+
+\[ \sum_{j} \frac{Q_j}{T_j} \leq 0 \]
+
+\noindent o per i più duri e cazzuti come noi, vere allieve e veri allievi
+del Maestro Iuppa,
+
+\begin{align}
+    \oint \frac{dQ}{T} \leq 0
+\end{align}
+
+\noindent che è proprio la tesi del teorema di Clausius. L'integrale
+prende il nome di \textit{integrale di Clausius}, giusto per sottolineare
+che se un qualche oggetto matematico porta il nome di una persona, esso è più
+importante di quanto si possa credere. Inoltre, come sempre, l'uguaglianza
+vale solamente per trasformazioni reversibili.
+
+\subsection{Entropia}
+Supponiamo di avere un ciclo reversibile $\gamma$ qualsiasi. Essendo
+reversibile, possiamo concludere che
+
+\[ \oint_\gamma \frac{dQ}{T} = 0 \]
+
+\noindent Selezioniamo due punti distinti su questo ciclo, $A$ e $B$
+e scomponiamo l'integrale di Clausius nei due percorsi $\alpha$ e
+$\beta$:
+
+\[ \int_{A,\alpha}^{B} \frac{dQ}{T} + \int_{B,\beta}^{A} \frac{dQ}{T} = 0 \]
+
+\noindent Trattandosi di un ciclo reversibile, vale la proprietà
+antisimmetrica dell'integrale. Giungiamo dunque alla seguente conclusione:
+
+\[ \int_{A,\alpha}^{B} \frac{dQ}{T} = \int_{A,\beta}^{B} \frac{dQ}{T} \]
+
+\noindent Dunque, qualsiasi sia il percorso tra $A$ e $B$, luguaglianza
+precedente vale sempre per percorsi reversibili. Vi è dunque una dipendenza
+di una certa quantita dai soli stati iniziale e finale. Definiamo dunque,
+come abbiamo fatto per l'energia potenziale, la \textit{differenza di
+entropia tra due stati termodinamici:}
+
+\[ \Delta S_{AB} = S_B - S_A \stackrel{\text{def}}{=} \int_{A,\text{rev}}^{B} \frac{dQ}{T} \]
+
+\noindent L'entropia è a tutti gli effetti una funzione di stato. Possiamo
+inoltre ricavare le seguenti osservazioni:
+
+\begin{itemize}
+    \item La somma dell'entropia di due sottosistemi corrisponde all'entropia
+    del sistema complessivo. Da questa osservazione è possibile supporre
+    che l'universo abbia una propria entropia, derivante da tutti i suoi
+    sottosistemi, conosciuti e non.
+
+    \item Si tratta di una grandezza estensiva. Ha significato solo se si
+    considera l'intero sistema.
+
+    \item Per calcolare le differenze di entropia nelle trasformazioni
+    reversibili, è sufficiente essere furbi utilizzando le trasformazioni
+    reversibili più comode dal punto di vista computazionale, perché
+    l'entropia è una funzione di stato e non dipende dal percorso.
+\end{itemize}
+
+\subsection{Variazione di entropia nelle trasformazioni reversibili elementari}
+\begin{itemize}
+    \item Isoterma:
+\end{itemize}
+
+
+\subsection{Il teorema dell'entropia}
+Consideriamo due trasformazioni termodinamiche che collegano due punti
+$A$ e $B$ descritti da coordinate termodinamiche. Tuttavia, il primo,
+$\alpha$, è irreversibile, mentre $\beta$, il secondo, è reversibile.
+Unendo $\alpha$ e $\beta$ (invertito), otteniamo un ciclo per il quale
+vale la seguente disuguaglianza, che segue dal teorema di Clausius
+
+\[ \oint_\gamma \frac{dQ}{T} < 0 \]
+
+\noindent Perché il tratto $\alpha$ rende l'intera trasfomrazione irreversibile.
+Come per la definizione di variazione di entropia, spezziamo l'integrale
+di Clausius:
+
+\[ \oint_\gamma \frac{dQ}{T} = \int_{A,\alpha}^{B} \frac{dQ}{T} + \int_{B,\beta}^{A} \frac{dQ}{T} < 0 \]
+
+\noindent Da cui, sapendo che $\beta$ è reversibile,
+
+\[ \int_{A,\alpha}^{B} \frac{dQ}{T} < \int_{A,\beta}^{B} \frac{dQ}{T} = \Delta S_{AB} \]
+
+Il fatto che la variazione di entropia dipenda solo dagli stati
+iniziale e finale, è possibile concludere con la seguente generalizzazione
+
+\begin{align}
+    \Delta S_{AB} \geq \int_{A,\text{qualsiasi}}^{B} \frac{dQ}{T}
+\end{align}
+
+\noindent che è l'enunciato del teorema dell'entropia (come sempre,
+l'uguaglianza vale solamente per trasformazioni reversibili). Dal
+teorema segue un'osservazione inquietante. Per un sistema isolato,
+non vi è alcuno scambio di calore con l'esterno, qualunque siano le
+trasformazioni che stanno avvenendo al suo interno, reversibili oppure
+no. Dunque $dQ = 0$ e l'integrale è sempre nullo.
+
+\[ \Delta_{AB} \geq \int_{A}^{B} \frac{dQ}{T} = 0 \qquad \Delta_{AB} \geq 0 \]
+
+\noindent ovvero
+
+\[ S_B \geq S_A \]
+
+\noindent Segue che per il nostro sistema isolato l'entropia non può mai
+diminuire; essa può al più rimanere costante. Ma la cosa più sconcertante
+è che anche quest'ultima prospettiva è pressoché un miraggio: dovremmo
+riprodurre trasformazioni \textit{sempre reversibili}.
+
+\subsection*{Entropia e tempo}
