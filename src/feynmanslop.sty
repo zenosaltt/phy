@@ -22,7 +22,7 @@
 \usepackage{float} %codes for image placement
 \usepackage{sidenotes} %white space alternating margins
 
-
+\graphicspath{{./figures}{./cover}} %percorsi default immagini (usa {subpath1/}...{subpathn/} per aggiungerne altri)
 
 % CHAPTER FORMAT
 \usepackage{titlesec}
@@ -63,7 +63,10 @@
 \usepackage[font = small, labelfont = bf]{caption} % small font for caption (and bold Figure word)
 
 % tikz for diagrams of every sort of things
-
 \usepackage{tikz}
 
-% colored numbers for sections
+% afterpage disables formattazioni after specified pages
+\usepackage{afterpage}
+
+% paragrafi
+\usepackage{indentfirst} %indenta prima linea di ogni sezione

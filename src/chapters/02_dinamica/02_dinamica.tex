@@ -33,10 +33,14 @@ della velocità nel tempo è chiamata \textbf{accelerazione}.
 
 \vspace{8pt}
 \begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Seconda legge della dinamica}]
-Il cambiamento di moto è proporzionale all'intensità della forza applicata.
+Il cambiamento dello stato di moto è proporzionale all'intensità della forza applicata.
     \begin{align}
-        F \propto a\\
-        \frac{|\overrightarrow{F}|}{|\overrightarrow{a}|} = \frac{F}{a} = m
+        F \propto a
+    \end{align}
+Inoltre, il cambiamento avviene lungo la retta secondo la quale la forza
+si applica.
+    \begin{align}
+        \mathbf{F} = m \mathbf{a}
     \end{align}
 \end{tcolorbox}
 \vspace{5pt}
@@ -70,7 +74,7 @@ di distanza?
 
 \begin{marginfigure}
     \centering
-    \includegraphics[width = \marginparwidth]{figures/scivola.pdf}
+    \includegraphics[width = \marginparwidth]{scivola.pdf}
     \caption{Forza agente su una massa in moto}
 \end{marginfigure}
 
@@ -105,7 +109,7 @@ Rallentando, si arriverà ad un istante $t_f$ nel quale l'oggetto avrà velocit�
 nulla:
 \begin{marginfigure}
     \centering
-    \includegraphics[width = \marginparwidth]{figures/greve.pdf}
+    \includegraphics[width = \marginparwidth]{greve.pdf}
     \caption{Lancio di un oggetto verso l'alto}
     \label{lanciobasso}
 \end{marginfigure}
@@ -125,7 +129,7 @@ Sapendo che $a = -|g|$, la quota massima $h_m$ raggiunta è:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection*{Spostamento}
-\[ \Delta\overrightarrow{s} = \overrightarrow{s}_f - \overrightarrow{s}_i \]
+\[ \Delta\mathbf{s} = \mathbf{s}_f - \mathbf{s}_i \]
 
 
 \subsection{La terza legge}
@@ -134,24 +138,24 @@ Sapendo che $a = -|g|$, la quota massima $h_m$ raggiunta è:
 La forza che un corpo $A$ esercita su un corpo $B$ è uguale e opposta alla forza
 che
 
-\[ \overrightarrow{F}_{A\to B} = -\overrightarrow{F}_{B\to A} \]
+\[ \mathbf{F}_{A\to B} = -\mathbf{F}_{B\to A} \]
 \end{tcolorbox}
 \vspace{5pt}
 
 
 \section{Statica}
-\[ \sum_{i = 1}^{N}\overrightarrow{F}_i = m\overrightarrow{a} \]
-La somma nel membro di sinistra è detta \textit{risultante} ($\overrightarrow{R}$).
+\[ \sum_{i = 1}^{N}\mathbf{F}_i = m\mathbf{a} \]
+La somma nel membro di sinistra è detta \textit{risultante} ($\mathbf{R}$).
 In quiete, non c'è accelerazione:
-\[ \overrightarrow{R} = \overrightarrow{0} \]
+\[ \mathbf{R} = \mathbf{0} \]
 Se la velocità è costante, possiamo parlare di problemi di quiete? Yes.
 
 \subsection*{Esercizio}
-$\overrightarrow{P} + \overrightarrow{T} = \overrightarrow{0} \Rightarrow -mg + T = 0 \Rightarrow T = mg$.
+$\mathbf{P} + \mathbf{T} = \mathbf{0} \Rightarrow -mg + T = 0 \Rightarrow T = mg$.
 
 \begin{marginfigure}
     \centering
-    \includegraphics[width = \marginparwidth]{figures/statica.pdf}
+    \includegraphics[width = \marginparwidth]{statica.pdf}
     \caption{Massa appesa ad un filo}
     \label{filo}
 \end{marginfigure}
@@ -509,7 +513,7 @@ possono aderire maggiormente l'uno all'altro, determinando una maggiore
 interazione tra superfici.
 
 \subsubsection*{...}
-$\overrightarrow{F_A} = \mu|\overrightarrow{N}|\hat{A}$. Grafico, zona statica
+$\mathbf{F_A} = \mu|\mathbf{N}|\hat{A}$. Grafico, zona statica
 forza di attrito statica, regime dinamico forza di attrito dinamica.
 
 Statica

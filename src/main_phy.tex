@@ -169,14 +169,12 @@
 % - Esercizi grossi grossi finali sulla termodinamica.
 
 
-
-% Potenziali lezioni (niente elettromagnetismo...)
+% Potenziali lezioni(niente elettromagnetismo...)
 % Lezione 28-23/2024-05-29
 % Lezione 29-24/2024-06-03
 % Lezione 30-25/2024-06-05
 
 \documentclass{book}
-
 \usepackage{feynmanslop}
 
 \title{Fisica}
@@ -188,8 +186,12 @@
 
 
 \begin{titlepage}
+    \newgeometry{left = 0cm, right = 0cm, top = 0cm, bottom = 0cm}
+    \pagecolor{brown}\afterpage{\nopagecolor}
+    \includegraphics[width = \linewidth]{bookcover.pdf} % also works with logo.pdf
 
-\maketitle
+    \restoregeometry
+\end{titlepage}
 
 \epigraph{If, in some cataclysm, all of scientific knowledge were
 to be destroyed, and only one sentence passed on to the next generations
@@ -205,15 +207,18 @@ thinking are applied.}{Richard P. Feynman,\\\textit{The Feynman Lectures on Phys
 \vspace*{9cm}
 \begin{center}
 Consigliamo di consultare questa dispensa ascoltando il brano seguente:\\
-\href{https://www.youtube.com/watch?v=JuSsvM8B4Jc}{\textcolor{blue}{\textit{Cornfield Chase} by Hans Zimmer (from \textit{Interstellar})}}
+\href{https://www.youtube.com/watch?v=JuSsvM8B4Jc}{\textcolor{blue}{\textit{Cornfield Chase} by Hans Zimmer (from \textit{Interstellar} by Christopher Nolan)}}
 \end{center}
 
-\end{titlepage}
+\newpage
+\input{esterni/preface.tex}
 
-%\dominitoc %otherwise tocs won't appear (but in linux it is not necessary, apparently)
+\newpage
+\input{esterni/errata.tex}
+\input{esterni/ack.tex}
+
+\dominitoc %otherwise tocs won't appear (but in linux it is not necessary, apparently)
 \tableofcontents
-
-\part{Book}
 
 \input{chapters/00_introduzione/00_introduzione.tex}
 \input{chapters/01_moto/01_moto.tex}
@@ -238,8 +243,6 @@ Consigliamo di consultare questa dispensa ascoltando il brano seguente:\\
 
 %\setcounter{chapter}{0}
 
-%\part{Esercitazioni}
-%\input{chps/e02_dinamica/e02_dinamica.tex}
 
 \part{Appendici}
 

@@ -1,6 +1,47 @@
 \chptr{Termodimaica}
+\marginpar{\minitoc}
 
 \section{Introduzione}
+\section{Principio zero}
+\section{Principio primo}
+\section{Gas ideali}
+\section{La teoria cinetica dei gas}
+\section{Le trasformazioni termodinamiche}
+\section{Macchine}
+\section{Principio secondo}
+\section{Studi di Carnot}
+\section{Studi di Clausius}
+
+\section{Entropia}
+Si consideri una trasformazione termodinamica \textit{reversibile} qualsiasi.
+Per ipotesi di reversibilità, l'integrale di Clausius calcolato sulla curva $\gamma$
+di tale trasformazione nel piano pressione-volume è nullo.
+
+\[ \oint_\gamma \frac{dQ}{T} = 0 \]
+
+\noindent Selezioniamo due punti, $A$ e $B$, distinti su questo ciclo. Scomponiamo
+dunque l'integrale nei due percorsi, sempre reversibili, $\alpha$ e $\beta$.
+
+\[ \int_{A,\alpha}^{B} \frac{dQ}{T} + \int_{B,\beta}^{A} \frac{dQ}{T} = 0 \]
+
+\noindent Trattandosi di un ciclo reversibile, vale la proprietà antisimmetrica
+dell'integrale. Giungiamo dunque alla seguente conclusione:
+
+\[ \int_{A,\alpha}^{B} \frac{dQ}{T} = \int_{A,\beta}^{B} \frac{dQ}{T} \]
+
+\noindent Dunque, qualsiasi sia il percorso tra $A$ e $B$, l'uguaglianza
+precedente vale sempre per percorsi reversibili. Vi è dunque una dipendenza
+di una certa quantità dai soli stati iniziale e finale della trasformazione.
+Definiamo dunque, in modo simile all'energia potenziale studiata in meccanica,
+la \textit{differenza di entropia tra due stati termodinamici}.
+
+\begin{align}
+    \Delta S_{AB} = S_B - S_A = \stackrel{\text{def}}{=} \int_{A,\text{rev}}^{B} \frac{dQ}{T}
+\end{align}
+
+
+
+\section*{Introduzione}
 D'ora in poi, il ruolo dell'energia sarà ancora più importante. In precedenza
 abbiamo dimostrato che la differenza di energia meccanica di un corpo corrisponde
 al lavoro totale delle forze non conservative.
@@ -20,7 +61,7 @@ Ci occuperemo di sistemi contenenti un numero di costituenti nell'ordine di
 \noindent ossia il numero di Avogadro. Questi costituenti possono scambiare energia
 attraverso ciò che definiremo calore.
 
-\subsection*{Sistemi termodinamici}
+\subsection{Sistemi termodinamici}
 Le nostre trattazioni avranno per oggetto i \textit{sistemi termodinamici}, per
 definizione contenuto in un \textit{ambiente esterno}. Ambiente esterno e il suo
 contenuto costituiscono l'\textit{universo}, per definizione l'unico sistema che
@@ -72,12 +113,12 @@ Un sistema si dice in equilibrio dinamico se esso rispetta i seguenti equilibri:
 abbastanza piccoli rispetto al sistema originale ma allo stesso tempo sufficientemente
 grandi affiché gli strumenti della termodinamica funzionino.
 
-\section{Calore e scambi}
-\section{Gas ideali}
+\section*{Calore e scambi}
+\section*{Gas ideali}
 \subsection{Leggi dei gas ideali}
 \subsection{Lavoro di un gas ideale}
 
-\section{La teoria cinetica dei gas}
+\section*{La teoria cinetica dei gas}
 Finora abbiamo affrontato la termodinamica parlando spesso di gas.
 Lo abbiamo fatto inoltre da un punto di vista macroscopico, ovvero
 utilizzando variabili termodinamiche (pressione, volume, temperatura).
@@ -262,7 +303,7 @@ questa energia deve essere presa in considerazione. In totale, una
 molecola biatomica ideale può avere $l = 6$ gradi di libertà.
 
 
-\section{Trasformazioni termodinamiche}
+\section*{Trasformazioni termodinamiche}
 Abbiamo mostrato che il lavoro di un gas ideale (ovvero a bassa densità)
 è legato al volume e alla temperatura dalla seguente relazione:
 
@@ -425,7 +466,7 @@ Vale allora per le adiabatiche
 In particolare, nel caso di trasformazioni adiabatiche che coinvolgono
 gas monotatomici risulta $pV^{\frac53} = \text{const}$.
 
-\section{Trasformazioni cicliche}
+\section*{Trasformazioni cicliche}
 Combinando insieme le trasformazioni semplici viste fino ad ora, è possibile
 comporre trasformazioni più complesse. Tra queste, quelle più interessanti
 sono forse le \textit{trasformazioni cicliche} (o cicli termodinamici), nelle
@@ -438,7 +479,7 @@ subiscono trasformazioni cicliche non varia per definizione:
 
 \noindent in quanto quest'ultima dipende unicamente dallo stato.
 
-\section{Macchine}
+\section*{Macchine}
 I cicli termodinamici caratterizzano i principi di funzionamento delle
 \textit{macchine}. Il motore due-tempi dell'Husqvarna sotto
 casa è una macchina; ma lo è anche un freezer. Di fatto, la termodinamica
@@ -525,7 +566,7 @@ ad un quantitativo basso di calore assorbito:
     \textit{Minimo sforzo, massima resa. Spendi poco, ottieni molto.}
 \end{center}
 
-\section{Il secondo principio della termodinamica}
+\section*{Il secondo principio della termodinamica}
 Il primo principio della termodinamica ci consente di osservare che non
 è possibile costruire macchine in grado di sprigionare più energia di
 quella con la quale la alimentiamo. Possiamo però notare che se $\Delta U = 0$
@@ -563,12 +604,12 @@ dalla formulazione di Kelvin-Plank.
 Entrambe le formulazioni sono date per vere, ma possiamo tuttavia dimostrarne
 l'equivalenza.
 
-\section{Esperienza di Carnot}
+\section*{Esperienza di Carnot}
 Qual è la macchina più efficiente in assoluto? Oppure, in quali condizioni
 una macchina può ottenere il rendimento massimo? Queste sono domande che
 Carnot si pose ai suoi tempi.
 
-\section{Esperienza di Clausius}
+\section*{Esperienza di Clausius}
 Altra figura importante in termodinamica è il tedesco Rudolf Clausius,
 che estese gli studi importanti di Carnot ad un livello superiore.
 

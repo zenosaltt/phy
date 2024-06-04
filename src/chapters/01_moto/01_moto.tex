@@ -3,7 +3,7 @@
 
 \section{Moto del punto}
 Un corpo è in moto quando la sua posizione cambia nel tempo. Nel descrivere il
-moto, si introdurrà la seguente semplificazione: gli oggetti in moto saranno
+moto, si introdurrà la seguente semplificazione: Gli oggetti saranno
 trattati come \textit{punti materiali}, ovvero concentrati in un punto
 adimensionale. In particolare, \textit{le dimensioni dell'oggetto del quale si
 intende studiare il moto saranno considerate trascurabili rispetto a quelle
@@ -13,13 +13,13 @@ dell'ambiente circostante}.
 Alla base della descrizione del moto, è importante individuare quelli che sono
 chiamati \textit{posizione} e \textit{traiettoria}. Avendo assunto la semplificazione
 del punto materiale, è intuibile che la posizione verrà descritta matematicamente
-come una tupla di coordinate inserite in un sistema di riferimento. Tra le
+come una tupla di coordinate inserite in un sistema di assi cartesiani. Tra le
 coordinate, è importante tenere presente anche il tempo. Di fatto, abbiamo
 introdotto il moto definendolo come variazione della posizione nel tempo.
 
 La traiettoria non è altro che la linea che unisce le posizioni occupate
 successivamente dal corpo. Tratteremo prima moti con traiettorie rettilinee,
-per poi passare a traiettorie curvilinee semplici (il moto circolare).
+per poi passare a traiettorie curvilinee semplici, come il moto circolare.
 
 \subsection{Sistemi di riferimento}
 Abbiamo detto che il moto è caratterizzato da un cambiamento di posizione. Il primo
@@ -33,7 +33,7 @@ tempo viene spesso omesso dalla rappresentazione grafica).
 
 \begin{marginfigure}
     \centering
-    \includegraphics[width = \marginparwidth]{figures/puntomateriale.pdf}
+    \includegraphics[width = \marginparwidth]{puntomateriale.pdf}
     \caption{Sistema di riferimento con una sola dimensione spaziale ($x$)
     in funzione del tempo ($t$). All'istante $t_i$, il punto materiale $P$
     si trova nella posizione $x_i$}
@@ -56,14 +56,14 @@ scalare e corrisponde alla distanza totale percorsa durante il tragitto
 effettuato dall'oggetto in moto. Il secondo è una grandezza vettoriale e
 corrisponde al cambiamento di posizione,
 cioè la differenza tra la posizione iniziale e quella finale dell'oggetto:
-\[ \Delta \overrightarrow{x} = \overrightarrow{x}_f - \overrightarrow{x}_i \]
+\[ \Delta \mathbf{x} = \mathbf{x}_f - \mathbf{x}_i \]
 
 
 \section{Interpretazioni geometriche}
 
 \begin{marginfigure}
     \centering
-    \includegraphics[width = \marginparwidth]{figures/velocita.pdf}
+    \includegraphics[width = \marginparwidth]{velocita.pdf}
     \caption{Oggetti in moto rettilineo uniforme con velocità differenti}
 \end{marginfigure}
 
@@ -87,7 +87,7 @@ hanno origine nel centro del piano cartesiano, quindi della circonferenza).
 
 \begin{marginfigure}
     \centering
-    \includegraphics[width = \marginparwidth]{figures/riferimentocirc.pdf}
+    \includegraphics[width = \marginparwidth]{riferimentocirc.pdf}
     \caption{Sistema di riferimento per un moto circolare}
     \label{circref}
 \end{marginfigure}
@@ -112,7 +112,7 @@ In ogni istante, una particella in moto circolare si muove in direzione
 tangenziale alla traiettoria.
 \begin{marginfigure}
     \centering
-    \includegraphics[width = \marginparwidth]{figures/circspeed.pdf}
+    \includegraphics[width = \marginparwidth]{circspeed.pdf}
     \caption{Velocità tangenziale}
     \label{circspeed}
 \end{marginfigure}
@@ -178,25 +178,28 @@ dimostrarlo formalmente per tutti i moti circolari uniformi? Consideriamo la
 situazione in Figura \ref{circolare}.
 \begin{marginfigure}
     \centering
-    \includegraphics[width = \marginparwidth]{figures/circolare.pdf}
+    \includegraphics[width = \marginparwidth]{circolare.pdf}
     \caption{Dimostrazione delle caratteristiche geometriche del vettore accelerazione centripeta}
     \label{circolare}
 \end{marginfigure}
 consideriamo una variazione molto piccola nella posizione angolare dell'oggetto,
-che parte con una velocità iniziale $\overrightarrow{v}_i$ e termina con la
-velocità finale $\overrightarrow{v}_f$, uguali in modulo ma diverse in direzione.
+che parte con una velocità iniziale $\mathbf{v}_i$ e termina con la
+velocità finale $\mathbf{v}_f$, uguali in modulo ma diverse in direzione.
 Come già detto, possiamo esprimere l'accelerazione come variazione della
 velocità tangenziale.
-\[ \overrightarrow{a} = \frac{d\overrightarrow{v}}{dt} \simeq \frac{\Delta\overrightarrow{v}}{\Delta t} \]
-Concentriamoci sul termine $\Delta\overrightarrow{v}$.
-\[ \Delta\overrightarrow{v} = \overrightarrow{v}_f - \overrightarrow{v}_i = \overrightarrow{v}_f + (-\overrightarrow{v}_i) \]
+
+\[ \mathbf{a} = \frac{d\mathbf{v}}{dt} \simeq \frac{\Delta\mathbf{v}}{\Delta t} \]
+
+\noindent Concentriamoci sul termine $\Delta\mathbf{v}$.
+
+\[ \Delta\mathbf{v} = \mathbf{v}_f - \mathbf{v}_i = \mathbf{v}_f + (-\mathbf{v}_i) \]
 Geometricamente, i vettori velocità si sommano secondo la ``regola del parallelogramma''
 come mostrato nella Figura. Con i dovuti formalismi geometrici, sapendo che il
 modulo di $v$ è sempre costante, possiamo dimostrare che l'accelerazione è
 effettivamente centripeta e ortogonale alla velocità tangenziale, ovvero il
 suo vettore punta sempre verso il centro della circonferenza. Sempre dalla Figura,
 possiamo osservare che al crescere di $v$ cresce anche $a$; tenendo poi
-presente che la variazione $\Delta \overrightarrow{v}$, che è un vettore,
+presente che la variazione $\Delta \mathbf{v}$, che è un vettore,
 viene moltiplicata per la quantità scalare $\frac{1}{\Delta t}$, il vettore
 risultante dell'accelerazione cresce in modulo quanto più piccolo diventa
 l'intervallo $\Delta t$: ovvero la velocità dell'oggetto è maggiore.
@@ -218,7 +221,7 @@ proiezione sugli assi di un moto circolare uniforme. Per questo motivo,
 possiamo descrivere la posizione dell'oggetto caratterizzato da tale moto:
 \begin{marginfigure}
     \centering
-    \includegraphics[width = \marginparwidth]{figures/armonico.pdf}
+    \includegraphics[width = \marginparwidth]{armonico.pdf}
     \caption{Modello di moti armonici semplici a partire da proiezioni
     di un moto circolare uniforme}
     \label{armonicosemplice}
@@ -274,10 +277,10 @@ punto in moto circolare uniforme in funzione del tempo. Dunque
 \]
 Queste non sono altro che le componenti dell'accelerazione centripeta
 solidali al sistema di riferimento di assi $xy$. Sapendo che il modulo
-di un vettore corrisponde a $|\overrightarrow{r}| = r = \sqrt{x_r^2 + y_r^2}$
+di un vettore corrisponde a $|\mathbf{r}| = r = \sqrt{x_r^2 + y_r^2}$
 (con $x_r,y_r$ le componenti del vettore $r$ rispetto ad un sistema di
 assi ortogonali $xy$), è immediato mostrare che
-\[ |\overrightarrow{a}| = a = \sqrt{(-\omega^2 x)^2 + (-\omega^2 y)^2} = \sqrt{\omega^4x^2 + \omega^4y^2} = \omega^2 \sqrt{x^2 + y^2} = \omega^2 r \]
+\[ |\mathbf{a}| = a = \sqrt{(-\omega^2 x)^2 + (-\omega^2 y)^2} = \sqrt{\omega^4x^2 + \omega^4y^2} = \omega^2 \sqrt{x^2 + y^2} = \omega^2 r \]
 
 Dal precedente sistema, è possibile capire perché il vettore dell'accelerazione
 è diretto verso il centro della circonferenza: $x$ ed $y$ sono le componenti
@@ -289,7 +292,7 @@ viene moltiplicata per la quantità negativa $-\omega^2$, il vettore
 accelerazione centripeta non può che puntare nel verso opposto, quindi
 verso il centro della circonferenza. L'equazione vettoriale è dunque la
 seguente:
-\[ \overrightarrow{a} = -\frac{v^2}{\overrightarrow{r}} \]
+\[ \mathbf{a} = -\frac{\mathbf{v}^2}{\mathbf{r}} \]
 
 \subsubsection*{Accelerazione centripeta, traiettorie curvilinee, raggio di curvatura}
 L'accelerazione centripeta non esiste solamente nei moti circolari uniformi,
@@ -301,12 +304,14 @@ meno eccezionali, come quelli dei moti dalle traiettorie curvilinee. È interess
 come l'equazione dell'accelerazione centripeta permetta di ottenere informazioni
 interessantissime su moti come questi, come il \textbf{raggio di curvatura}. Si
 osservi l'esempio in Figura \ref{curvilinee}.
+
 \begin{marginfigure}
     \centering
-    \includegraphics[width = \marginparwidth]{figures/curvilinee.pdf}
+    \includegraphics[width = \marginparwidth]{curvilinee.pdf}
     \caption{Una traiettoria curvilinea apporssimata da archi di circonferenze con raggi differenti}
     \label{curvilinee}
 \end{marginfigure}
+
 Tratti di traiettorie come queste possono essere approssimate da archi di
 circonferenze con raggi di lunghezze differenti. Durante ognuno di questi brevi
 tratti, percorsi sugli archi, l'oggetto in moto è sottoposto ad una certa
@@ -340,10 +345,10 @@ Tangente a questa parabola:
 
 \subsection{Vettori}
 Vettori posizione e spostamento.
-\[ \Delta\overrightarrow{s} = \overrightarrow{s}_f - \overrightarrow{s}_i \]
+\[ \Delta\mathbf{s} = \mathbf{s}_f - \mathbf{s}_i \]
 
 Vettore velocità
-\[ \overrightarrow{v} = \lim_{\Delta t \to 0}\frac{\Delta\overrightarrow{s}}{\Delta t} = \frac{d\overrightarrow{s}}{dt} \sim ds\cdot\frac{1}{dt} \]
+\[ \mathbf{v} = \lim_{\Delta t \to 0}\frac{\Delta\mathbf{s}}{\Delta t} = \frac{d\mathbf{s}}{dt} \sim ds\cdot\frac{1}{dt} \]
 Per definizione \textit{sempre} tangente alla traiettoria. La traiettoria
 è la serie dei punti che si ottiene percorrendo per tratti infinitesimi le
 velocità istantanee.
@@ -352,18 +357,18 @@ Accelerazione tangente e accelerazione normale.
 
 
 \subsubsection*{Esercizio}
-$|\overrightarrow{v}_i| = 50\text{ km/h}$, $|\overrightarrow{v}_f| = 100\text{ km/h}$,
-$m = 1800\text{ kg}$, $R = 20\text{ m}$, $\Delta t = 2\text{ s}$. $|\overrightarrow{F}_n| = ?$ (forza normale),
-$|\overrightarrow{a}_t| = ?$. Assumiamo che l'auto acceleri con costanza tra le
+$|\mathbf{v}_i| = 50\text{ km/h}$, $|\mathbf{v}_f| = 100\text{ km/h}$,
+$m = 1800\text{ kg}$, $R = 20\text{ m}$, $\Delta t = 2\text{ s}$. $|\mathbf{F}_n| = ?$ (forza normale),
+$|\mathbf{a}_t| = ?$. Assumiamo che l'auto acceleri con costanza tra le
 due velocità.
 
 \begin{itemize}
     \item $a_{n,i} = \frac{v_i^2}{R}$, $a_{n,f} = \frac{v_f^2}{R}$
     \item $F_{n,i} = ma_{n,i} \simeq 17100 \text{ N}$, $F_{n,f} = ma_{n,f} \simeq 68400\text{ N}$
-    \item $|\overrightarrow{a}_t| = \textit{cost} = \frac{|\Delta\overrightarrow{v}|}{\Delta t} \simeq 6,95\text{ m/s}^2$
+    \item $|\mathbf{a}_t| = \textit{cost} = \frac{|\Delta\mathbf{v}|}{\Delta t} \simeq 6,95\text{ m/s}^2$
 \end{itemize}
 
 
 \section*{Recap}
-\[ \overrightarrow{x} = \overrightarrow{x_0} + \overrightarrow{v}(t - t_0) \]
+\[ \mathbf{x} = \mathbf{x_0} + \mathbf{v}(t - t_0) \]
 Semplificazioni in termini di variazioni, infinità.
