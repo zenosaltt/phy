@@ -22,9 +22,9 @@ Appunti di fisica, 2023-2024.
 
 <div class="row">
     <div class="column">
-        <img src="./src/cover/bookcover.jpg" style="width:100%">
+        <img src="./src/cover/bookcover.jpg">
     </div>
     <div class="column">
-        <img src="./src/cover/demo.png" style="width:100%">
+        <img src="./src/cover/demo.png">
     </div>
 </div>
