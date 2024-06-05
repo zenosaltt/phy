@@ -3,9 +3,25 @@ Appunti di fisica, 2023-2024.
 
 ## Il progetto
 
-<p align="center">
- <img src="./src/cover/bookcover.jpg" width="50%">
-</p>
+<style>
+    .row {
+        display: flex;
+    }
+
+    .column {
+        flex: 33.33%;
+        padding: 5px;
+    }
+</style>
+
+<div class="row">
+  <div class="column">
+    <img src="./src/cover/bookcover.jpg" alt="Cover" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="./src/cover/demo.png" alt="Chapter" style="width:100%">
+  </div>
+</div>
 
 ## Peculiarità del template
 * Veste grafica generale ispirata alle _The Feynman Lectures on Physics_
@@ -14,7 +30,3 @@ Appunti di fisica, 2023-2024.
 * Margine esterno ampio, per figure e tabelle.
 * Per ogni capitolo, un _mini-table-of-contents_ laterale.
 * Collegamenti e riferimenti interni.
-
-<p align="center">
- <img src="./src/cover/demo.png" width="50%">
-</p>
