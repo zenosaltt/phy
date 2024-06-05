@@ -30,3 +30,8 @@ Appunti di fisica, 2023-2024.
 * Margine esterno ampio, per figure e tabelle.
 * Per ogni capitolo, un _mini-table-of-contents_ laterale.
 * Collegamenti e riferimenti interni.
+
+
+Copertina                       | Capitolo
+:------------------------------:|:-------------------------:
+![](./src/cover/bookcover.jpg)  |  ![](./src/cover/demo.png)
