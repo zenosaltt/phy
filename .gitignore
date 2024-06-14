@@ -10,7 +10,13 @@
 *.synctex.gz
 *.toc
 
+
 # ignore makefiles
 
 makefile
 Makefile
+
+
+#ignore secrets
+
+*.secret

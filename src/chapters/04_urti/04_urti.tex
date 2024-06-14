@@ -1,16 +1,12 @@
 \chptr{Meccanica e Urti}
 \marginpar{\minitoc}
 
-Vogliamo prevedere lo stato del sistema dopo l'urto, in termini di
-velocità (vettori) dei corpi coinvolti. Ci serve un \textit{sistema
-isolato} e la terza legge della dinamica.
-
 \section{Quantità di moto}
 Abbiamo sempre espresso la seconda legge come
-\[ \mathbf{F} = m\mathbf{a} = m\frac{d\mathbf{v}}{dt} \]
+\[ \vecsymb{F} = m\vecsymb{a} = m\frac{d\vecsymb{v}}{dt} \]
 ma questa proposizione afferma che l'effetto dell'agente esterno (la forza
-$\mathbf{F}$) si traduce interamente in una variazione dello stato di
-moto del corpo (accelerazione $\mathbf{a}$). Si suppone quindi che la
+$\vecsymb{F}$) si traduce interamente in una variazione dello stato di
+moto del corpo (accelerazione $\vecsymb{a}$). Si suppone quindi che la
 massa sia sempre costante, anche se ciò non è sempre vero. Ad esempio,
 un razzo pieno di carburante non avrà la stessa massa che aveva in partenza
 una volta arrivato in orbita, quindi la forza esercitata dalla propulsione
@@ -19,12 +15,12 @@ ma anche in una variaizione della massa. Non tratteremo sistemi complessi
 come il razzo, ma ciò fa intuire che la seconda legge della dinamica può
 essere generalizzata nella forma seguente
 \begin{align}
-    \mathbf{F} = \frac{d}{dt}(m\mathbf{v}) = \frac{d\mathbf{p}}{dt}
+    \vecsymb{F} = \frac{d}{dt}(m\vecsymb{v}) = \frac{d\vecsymb{p}}{dt}
 \end{align}
-Dove la quantità $\mathbf{p}$ prende il nome di \textit{quantià di moto},
+Dove la quantità $\vecsymb{p}$ prende il nome di \textit{quantià di moto},
 definita come
 \begin{align}
-    \mathbf{p} \eqdef m\mathbf{v}
+    \vecsymb{p} \eqdef m\vecsymb{v}
 \end{align}
 Come dice il termine, la quantità di moto descrive il moto dei corpi
 sulla base della velocità di una massa più la massa stessa, a differenza
@@ -32,6 +28,10 @@ di quanto accade nello studio cinematico del moto, dove solo le variazioni
 dello stato di moto contano, slegate da cause (forze) e materia (massa).
 
 \section{Il fenomeno dell'urto}
+Vogliamo prevedere lo stato del sistema dopo l'urto, in termini di
+velocità (vettori) dei corpi coinvolti. Ci serve un \textit{sistema
+isolato} e la terza legge della dinamica.
+
 \vspace{8pt}
 \begin{tcolorbox}[colback = yellow!30, colframe = yellow!30!black, title = {Urto}]
     Un urto è un'interazione tra corpi, nella quale
@@ -52,20 +52,20 @@ due palle che vagano nello spazio profondo).
 Immaginiamo l'intervallo temporale nel quale le due palle saranno a contatto
 tra loro, collidendo: entrambe eserciteranno una forza sull'altra e aiutati
 dalla terza legge della dinamica sappiamo che
-\[ \textbf{F}_{1 \to 2} = -\textbf{F}_{2 \to 1} \]
+\[ \vecsymb{F}_{1 \to 2} = -\vecsymb{F}_{2 \to 1} \]
 cioè l'applicazione di una forza su una palla determina una forza identica
 in modulo e direzione, ma verso opposto e applicata sull'altra palla.
 Sviluppiamo l'equazione sfruttando la definizione di quantità di moto,
 ricordando che una forza $x \to y$ determina una variazione dello stato di
 moto di $y$.
-\[ \frac{d\mathbf{p}_2}{dt} = -\frac{d\mathbf{p}_1}{dt} \]
+\[ \frac{d\vecsymb{p}_2}{dt} = -\frac{d\vecsymb{p}_1}{dt} \]
 Ricorrendo agli usuali abusi di notazione matematica, ma ragionevoli da
 un punto di vista fisico, semplifichiamo l'intervallo di tempo infinitesimale
 del differenziale:
 \begin{align*}
-    &d\mathbf{p}_2 = -d\mathbf{p}_1\\
-    &d[\mathbf{p}_1 + \mathbf{p}_2] = 0\\
-    &d\mathbf{p}_\text{tot} = 0
+    &d\vecsymb{p}_2 = -d\vecsymb{p}_1\\
+    &d[\vecsymb{p}_1 + \vecsymb{p}_2] = 0\\
+    &d\vecsymb{p}_\text{tot} = 0
 \end{align*}
 Abbiamo mostrato, in anticipo, che per un sistema di due corpi come le palle
 da biliardo, assumendo che non agiscano forze esterne, la quantità di moto
@@ -119,26 +119,26 @@ Possiamo suddividere le forze in gioco in due insiemi:
 Ogni punto $i$-esimo sarà sottoposto ad una certa forza totale, o risultante, derivante
 dalla somma/sovrapposizione di tutte le forze precedentemente descritte
 \begin{align*}
-    \mathbf{R}_i = m_i\mathbf{a}_i\\
-    \mathbf{R}^{(E)}_i + \mathbf{R}^{(I)}_i = m_i\mathbf{a}_i
+    \vecsymb{R}_i = m_i\vecsymb{a}_i\\
+    \vecsymb{R}^{(E)}_i + \vecsymb{R}^{(I)}_i = m_i\vecsymb{a}_i
 \end{align*}
 Definiamo le risultanti delle forze esterne, ed interne agenti sul punto
 $i$-esimo:
 \begin{align*}
-    \mathbf{R}^{(E)}_i &\eqdef \sum_{k} \mathbf{F}^{(E)}_{k \to i}\\
-    \mathbf{R}^{(I)}_i &\eqdef \sum_{j} \mathbf{F}^{(I)}_{j \to i} \qquad j \not = i
+    \vecsymb{R}^{(E)}_i &\eqdef \sum_{k} \vecsymb{F}^{(E)}_{k \to i}\\
+    \vecsymb{R}^{(I)}_i &\eqdef \sum_{j} \vecsymb{F}^{(I)}_{j \to i} \qquad j \not = i
 \end{align*}
 Supponiamo che un punto non eserciti alcuna forza su se stesso.
 La risultante di tutte le forze in gioco sarà
-\[ \mathbf{R} = \sum_{i} \mathbf{R}_i \]
+\[ \vecsymb{R} = \sum_{i} \vecsymb{R}_i \]
 In tale somma, concentriamoci sulla risultante delle forze interne:
-\[ \mathbf{R}^{(I)} = \sum_{i} \mathbf{R}^{(I)}_i = \sum_{i} \sum_{j} \mathbf{F}^{(I)}_{j \to i} \]
+\[ \vecsymb{R}^{(I)} = \sum_{i} \vecsymb{R}^{(I)}_i = \sum_{i} \sum_{j} \vecsymb{F}^{(I)}_{j \to i} \]
 In questa somma, supponiamo che non vi siano forze agenti su un corpo
-ed esercitate dal corpo stesso, dunque poniamo $\mathbf{F}^{(I)}_{j \to i} = \overrightarrow{0} \quad \forall j = i$.
+ed esercitate dal corpo stesso, dunque poniamo $\vecsymb{F}^{(I)}_{j \to i} = \overrightarrow{0} \quad \forall j = i$.
 Sappiamo che vale la terza legge della dinamica, dunque
-$\mathbf{F}^{(I)}_{j \to i} = -\mathbf{F}^{(I)}_{i \to j}$. Ma allora
+$\vecsymb{F}^{(I)}_{j \to i} = -\vecsymb{F}^{(I)}_{i \to j}$. Ma allora
 \begin{align}
-    \mathbf{R}^{(I)} = \sum_{i} \sum_{j} \mathbf{F}^{(I)}_{j \to i} = \overrightarrow{0}\label{interne}
+    \vecsymb{R}^{(I)} = \sum_{i} \sum_{j} \vecsymb{F}^{(I)}_{j \to i} = \overrightarrow{0}\label{interne}
 \end{align}
 Abbiamo appena dimostrato, grazie all'ipotesi della terza legge,
 che, in un sistema di punti materiali, la risultante delle forze interne
@@ -148,37 +148,37 @@ che, in un sistema di punti materiali, la risultante delle forze interne
 Dall'Equazione \ref{interne} possiamo dedurre che la risultante delle
 forze, interne ed esterne, coinvolte in un sistema di punti materiali
 è determinata solamente dalle forze esterne.
-\[ \mathbf{R} = \mathbf{R}^{(E)} = \sum_{i} \mathbf{R}^{(E)}_i = \sum_i m_i\mathbf{a}_i \]
+\[ \vecsymb{R} = \vecsymb{R}^{(E)} = \sum_{i} \vecsymb{R}^{(E)}_i = \sum_i m_i\vecsymb{a}_i \]
 Dalla precedente equazione, si può ricavare un'interessante definizione:
-\[ \sum_i m_i\mathbf{a}_i = \sum_i m_i \frac{d^2\mathbf{x}_i}{dt^2} = \left(\sum_i m_i\right) \frac{d^2}{dt^2}\left[ \frac{\sum_i m_i\mathbf{x}_i}{\sum_i m_i} \right] \]
+\[ \sum_i m_i\vecsymb{a}_i = \sum_i m_i \frac{d^2\vecsymb{x}_i}{dt^2} = \left(\sum_i m_i\right) \frac{d^2}{dt^2}\left[ \frac{\sum_i m_i\vecsymb{x}_i}{\sum_i m_i} \right] \]
 Abbiamo ottenuto un termine molto interessante, un artificio matematico
 che ha interpretazioni e applicazioni piuttosto importanti: \textit{il
 centro di massa}.
 \begin{align}
-    \mathbf{x}_\text{CM} \eqdef \frac{\sum_i m_i\mathbf{x}_i}{\sum_i m_i}
+    \vecsymb{x}_\text{CM} \eqdef \frac{\sum_i m_i\vecsymb{x}_i}{\sum_i m_i}
 \end{align}
 Dalla definizione è banane\footnote{Esattamente, banane. Ci scusiamo per questo scherzo di nevrosi.} ricavare la velocità e l'accelerazione del
 centro di massa. Riprendendo le equazioni precedenti e ponendo $M = \sum_i m_i$,
 possiamo concludere che
-\[ \mathbf{R}^{(E)} = M\frac{d^2\mathbf{x}_\text{CM}}{dt^2} = M\mathbf{a}_\text{CM} \]
+\[ \vecsymb{R}^{(E)} = M\frac{d^2\vecsymb{x}_\text{CM}}{dt^2} = M\vecsymb{a}_\text{CM} \]
 
 \subsection{La legge di conservazione della quantità di moto}
 In un sistema isolato, non si rilevano forze esterne. Allora
-\[ \mathbf{R}^{(E)} = \overrightarrow{0} \quad \therefore \quad M\mathbf{a}_\text{CM} = 0 \quad \therefore \quad \mathbf{a}_\text{CM} = 0 \]
+\[ \vecsymb{R}^{(E)} = \overrightarrow{0} \quad \therefore \quad M\vecsymb{a}_\text{CM} = 0 \quad \therefore \quad \vecsymb{a}_\text{CM} = 0 \]
 ovvero, la velocità del centro di massa è costante, quindi la
 quantità di moto del centro di massa è costante e si conserva in
 un sistema isolato. Vale dunque la seguente in un sistema isolato:
 
 \begin{align*}
-    \mathbf{v}_{\text{CM}, i} &= \mathbf{v}_{\text{CM}, f}\\
-    \frac{\sum_j m_j\mathbf{v}_{j,i}}{M} &= \frac{\sum_j m_j\mathbf{v}_{j,f}}{M}\\
-    \mathbf{p}_{\text{tot}, i} &= \mathbf{p}_{\text{tot}, f}
+    \vecsymb{v}_{\text{CM}, i} &= \vecsymb{v}_{\text{CM}, f}\\
+    \frac{\sum_j m_j\vecsymb{v}_{j,i}}{M} &= \frac{\sum_j m_j\vecsymb{v}_{j,f}}{M}\\
+    \vecsymb{p}_{\text{tot}, i} &= \vecsymb{p}_{\text{tot}, f}
 \end{align*}
 
 \noindent Da cui
 
 \begin{align}
-    \frac{d}{dt}\mathbf{p}_\text{tot} = 0
+    \frac{d}{dt}\vecsymb{p}_\text{tot} = 0
 \end{align}
 Tale risultato ha conseguenze di portata non trascurabile. Si consideri
 infatti il problema esposto nella prossima sottosezione.
@@ -193,11 +193,11 @@ della collisione.
 Alla luce della legge di conservazione della quantità di moto, sappiamo
 che nella situazione iniziale la quantità di moto totale del sistema è
 nulla, in quanto i due magneti sono mantenuti fermi.
-\[ \mathbf{p}_i = 0 \]
+\[ \vecsymb{p}_i = 0 \]
 Il problema non fa alcun cenno all'azione di forze esterne, dunque possiamo
 supporre che il sistema sia isolato e che dunque la quantità di moto
 iniziale si conserverà anche subito prima dell'urto. Vale allora:
-\[ \mathbf{p}_i = m\mathbf{v}_{i,\text{tot}} = 0 \Rightarrow \mathbf{v}_{i,\text{tot}} = 0 \]
+\[ \vecsymb{p}_i = m\vecsymb{v}_{i,\text{tot}} = 0 \Rightarrow \vecsymb{v}_{i,\text{tot}} = 0 \]
 Ma sappiamo anche che la velocità totale è rappresentato dal centro di massa
 del sistema. Ciò significa che se il centro di massa era ``fermo''
 inizialmente, rimarrà tale anche poco prima dell'urto, grazie alla legge
@@ -207,10 +207,10 @@ del centro di massa e il gioco è fatto.
 
 
 \section{Impulso}
-\[ \left\langle \mathbf{F} \right\rangle = \mathbf{F}_\text{impulsiva} \simeq \frac{\Delta\mathbf{p}}{\Delta t} \]
-\[ \Delta\mathbf{p} = \mathbf{F}_\text{impulsiva}\Delta t \]
+\[ \left\langle \vecsymb{F} \right\rangle = \vecsymb{F}_\text{impulsiva} \simeq \frac{\Delta\vecsymb{p}}{\Delta t} \]
+\[ \Delta\vecsymb{p} = \vecsymb{F}_\text{impulsiva}\Delta t \]
 Deformazioni per tempi brevi, tempo di contatto.
-\[ \Delta\mathbf{p} = m\mathbf{v}_f - m(\overrightarrow{0}) \qquad F_\text{imp} = \frac{mv_f}{T} \]
+\[ \Delta\vecsymb{p} = m\vecsymb{v}_f - m(\overrightarrow{0}) \qquad F_\text{imp} = \frac{mv_f}{T} \]
 
 
 \section{Urti elastici}
@@ -218,8 +218,8 @@ In un urto elastico, si conservano la quantità di moto e l'energia cinetica.
 Un sistema contenente un certo numero di corpi può dunque essere descritto come segue:
 \begin{align*}
     \begin{cases}
-        \sum_j m_j\mathbf{v}_{0,j} = \sum_j m_j\mathbf{v}_{f,j} \qquad \text{conservazione della quantità di moto}\\
-        \sum_j m_j\mathbf{v}_{0,j}^2 = \sum_j m_j\mathbf{v}_{f,j}^2 \qquad \text{conservazione dell'energia cinetica}
+        \sum_j m_j\vecsymb{v}_{0,j} = \sum_j m_j\vecsymb{v}_{f,j} \qquad \text{conservazione della quantità di moto}\\
+        \sum_j m_j\vecsymb{v}_{0,j}^2 = \sum_j m_j\vecsymb{v}_{f,j}^2 \qquad \text{conservazione dell'energia cinetica}
     \end{cases}
 \end{align*}
 Nella realtà comunemente osservabile, urti pressoché elasti avvengono tra
@@ -233,18 +233,18 @@ Negli urti anelastici, vale sempre la legge di conservazione della quantità
 di moto. Supponiamo di avere due masse che viaggiano ad una certa velocità
 e in rotta di collisione tra loro. Dopo l'urto, le due masse rimangono
 in contatto. Supponendo che le due masse attaccate formino un unico corpo, Vale:
-\[ \mathbf{p}_{1,i} + \mathbf{p}_{2,i} = \mathbf{p}_{3,f} \]
+\[ \vecsymb{p}_{1,i} + \vecsymb{p}_{2,i} = \vecsymb{p}_{3,f} \]
 Dal punto di vista energetico, però, accade qualcosa di diverso. Osserviamo
 l'energia cinetica:
-\[ E_{K,i} = E_{K1, i} + E_{K2, i} = \frac12 m_1\mathbf{v}_{1,i}^2 + \frac12 m_2\mathbf{v}_{2,i}^2\]
+\[ E_{K,i} = E_{K1, i} + E_{K2, i} = \frac12 m_1\vecsymb{v}_{1,i}^2 + \frac12 m_2\vecsymb{v}_{2,i}^2\]
 Supponiamo di porre gli oggetti nel sistema di riferimento del centro di massa
-e di osservare esternamente la situazione (poniamo $\mathbf{v} = \mathbf{v}_\text{CM} + \mathbf{v}_\text{scm}$):
-\[ E_{K,i} = \frac12 m_1(\textbf{v}_\text{CM} + \mathbf{v}_{1,i,\text{scm}})^2 + \frac12 m_2(\textbf{v}_\text{CM} + \mathbf{v}_{2,i,\text{scm}})^2 = \frac12(m_1 + m_2)\mathbf{v}_\text{CM}^2 + E'_{K,i} \]
+e di osservare esternamente la situazione (poniamo $\vecsymb{v} = \vecsymb{v}_\text{CM} + \vecsymb{v}_\text{scm}$):
+\[ E_{K,i} = \frac12 m_1(\textbf{v}_\text{CM} + \vecsymb{v}_{1,i,\text{scm}})^2 + \frac12 m_2(\textbf{v}_\text{CM} + \vecsymb{v}_{2,i,\text{scm}})^2 = \frac12(m_1 + m_2)\vecsymb{v}_\text{CM}^2 + E'_{K,i} \]
 dove abbiamo isolato i termini nei quali compare la velocità del centro di massa
 elevata al quadrato, per poi condensare l'energia rimanente in $E'_{K,i}$,
 la cui forma non è per noi rilevante. Se invece calcoliamo l'energia cinetica
 finale,
-\[ E_{K,f} = \frac12 (m_1 + m_2)\mathbf{v}_{3,f}^2 = \frac12(m_1 + m_2)\mathbf{v}_\text{CM}^2 \]
+\[ E_{K,f} = \frac12 (m_1 + m_2)\vecsymb{v}_{3,f}^2 = \frac12(m_1 + m_2)\vecsymb{v}_\text{CM}^2 \]
 è immediato infatti notare che, data la conservazione della quantità di moto,
 il corpo finale comprensivo di entrambe le massse non potrà che muoversi
 con velocità identica a quella del centro di massa.

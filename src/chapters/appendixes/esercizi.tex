@@ -1,0 +1,76 @@
+\chptr{Esercizi}
+
+\section{Girandola}
+
+Un corpo è vincolato a muoversi lungo una guida
+rigida (può muoversi parallelamente alla guida
+ma non perpendicolarmente ad essa) che sta
+ruotando intorno ad uno dei suoi estremi con
+velocità angolare $\omega$ (rad/s). Inizialmente
+il corpo si trova a $d_0$ m dall'asse di rotazione
+ed è fermo; dopo un certo intervallo di tempo
+il corpo ha raggiunto una posizione $d_f$ (m)
+ed ha una velocità $v_f$ (m/s). Dati
+$d_0 = 1$, $d_f = 2.5$, $v_f = 8.1$, trovare
+$\omega$.
+\begin{enumerate}
+    \item 5.0
+    \item 5.6
+    \item 8.9
+    \item 3.5
+\end{enumerate}
+
+\noindent \textbf{Soluzione:} Fissiamo un sistema di riferimento
+solidale con la guida. In tal modo, è come se
+l'oggetto si stesse muovendo solamente in linea
+retta sulla guida stessa. In tale situazione,
+l'oggetto si sposta verso l'esterno per via
+della forza centrifuga, una forza apparente,
+perché il sistema di riferimento scelto
+non è inerziale.
+
+Ricorriamo ad una analisi energetica. L'energia
+cinetica dell'oggetto viene incrementata dall'azione
+della forza centrifuga; ciò suggerisce il ricorso
+al teorema dell'energia cinetica:
+
+\begin{align}
+    \Delta E_K &= W_{F_c}\label{g1}\\
+    K_f - K_0 &= \int_{d_0}^{d_f}F_c ds\label{g2}\\
+    \frac12 m v_f^2 &= \int_{d_0}^{d_f}m\omega^2sds\label{g3}\\
+    v_f^2 &= \omega^2(d_f^2 - d_0^2)\label{g4}
+\end{align}
+
+\noindent da cui il risultato cercato
+
+\[ \omega = \frac{v_f}{\sqrt{d_f^2 - d_0^2}} \]
+
+\noindent Eseguendo i calcoli, risulta che la risposta
+(4) è quella corretta. Analizziamo più chiaramente i passaggi:
+In \ref{g1} esprimiamo il teorema delle forze vive
+come variazione dell'energia cinetica dell'oggetto
+equivalente al lavoro compiuto dalla forza centrifuga $F_c$.
+In \ref{g2} esplicitiamo la differenza tra le energie
+cinetiche iniziale e finale; dall'altro membro costruiamo
+invece l'integrale che permette di ottenere il lavoro
+totale dalla posizione iniziale $d_0$ a $d_f$: ricorriamo
+alla definizione più generale di lavoro (appunto impiegando
+il calcolo integrale), perché $F_c$ varia durante il
+percorso da $d_0$ a $d_f$. In \ref{g3} possiamo accorgerci
+che l'energia cinetica iniziale è nulla (il testo afferma
+che l'oggetto è inizialmente fermo rispetto alla guida);
+al membro di destra esprimiamo invece $F_c$ in funzione
+di $m$, $\omega$ e $s$, dove $s$ rappresenta la posizione
+dell'oggetto sulla guida. Per ricavare questa relazione
+abbiamo utilizzato la definizione di forza centripeta
+(che si rivela essere, in modulo, la stessa di quella
+centrifuga)
+
+\[ a_c = \omega^2 s \]
+
+\noindent In \ref{g4} cancelliamo i termini comuni
+come la massa e il fattore $\frac12$ (che compare
+anche al membro di destra per via dell'integrazione
+del tipo $\int xdx = x^2/2$). Notiamo poi che $\omega$
+è costante, perché la guida ruota con velocità angolare
+costante, e può essere ``estratto'' dall'integrale.

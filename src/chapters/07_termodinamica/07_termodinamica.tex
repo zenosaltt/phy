@@ -3,10 +3,67 @@
 
 \section{Introduzione}
 \section{Principio zero}
+
 \section{Principio primo}
+
+\subsection*{Modalità di trasmissione del calore}
+Come il lavoro può presentarsi in svariate forme, come abbiamo
+visto dagli esperimenti di Joule ma già anche dalla meccanica,
+anche il calore può essere scambiato in vari modi. Queste modalità
+di trasmissione hanno in comune la condizione di \textit{contatto
+termico}, ovvero situazioni in cui due corpi sono in grado di
+trasmettere calore tra di loro. È importante non confondere il
+contatto termico con quello fisico, perché, come vedremo, non
+sempre il calore si trasmette solo se due corpi si toccano tra loro.
+
+Altro punto da ricordare è che possiamo distinguere che l'energia
+si trasferisce sotto forma di calore perché non si compie lavoro.
+
+\subsubsection*{Conduzione}
+Nella conduzione, il calore viene scambiato per contatto tra corpi.
+Un semplice modello per descrivere questo fenomeno è la finestra di
+un edificio.
+
+\subsubsection*{Convezione}
+Nella convezione, il calore viene scambiato per mezzo di masse calde
+in movimento, all'interno di masse più fredde. Questa modalità è
+caratteristica dei fluidi, data la necessità del moto. Semplici esempi
+di questo fenomeno sono la pentola d'acqua sul fornello acceso e la
+lava-lamp.
+
+\subsubsection*{Irraggiamento}
+L'irraggiamento permette lo scambio di energia per mezzo di onde
+elettromagnetiche, quindi senza la necessità di essere in contatto
+termico con un corpo. Un esempio è il Sole, che di fatto scalda la
+Terra mediante le radiazioni emesse. In realtà non è propriamente
+corretto dire che il calore viene trasmesso durante il tragitto tra
+i due corpi, ma l'effetto delle onde elettromagnetiche che raggiungono
+la destinazione è un aumento di temperatura, che assimiliamo ad uno
+scambio di calore.
+
+Una legge degna di nota è la \textit{legge di Stefan-Boltzmann} del
+potere emissivo di un corpo
+
+\begin{align}
+    \varepsilon = \sigma e T^4
+\end{align}
+
+\noindent Questa legge esprime la quantità di energia che un corpo
+può emettere per irraggiamento data la sua temperatura. Nella realtà,
+un corpo non è in grado di emettere la totalità di questa energia
+e per tale motivo è presente un fattore $e$ adimensionale, tale che
+$0 < e < 1$. Nel caso ideale $e = 1$ si parla di \textit{corpo nero}.
+La quantità
+
 \section{Gas ideali}
+
+\subsection*{Prima legge di Gay-Lussac}
+\subsection*{Seconda legge di Gay-Lussac}
+\subsection*{Legge di Boyle}
+\subsection*{Legge di Avogadro}
+
 \section{La teoria cinetica dei gas}
-\section{Le trasformazioni termodinamiche}
+\section{Trasformazioni termodinamiche}
 \section{Macchine}
 \section{Principio secondo}
 \section{Studi di Carnot}
@@ -567,17 +624,29 @@ ad un quantitativo basso di calore assorbito:
 \end{center}
 
 \section*{Il secondo principio della termodinamica}
-Il primo principio della termodinamica ci consente di osservare che non
-è possibile costruire macchine in grado di sprigionare più energia di
-quella con la quale la alimentiamo. Possiamo però notare che se $\Delta U = 0$
-allora $Q = W$. Ciò può far sperare che una macchina possa comunque
-convertire l'intera energia fornita in lavoro, senza alcuna dispersione.
-Tuttavia, ciò è talmente difficile da sembrare impossibile (vedremo che
-effettivamente lo è). Parimenti è sperimentalmente evidente che il
-calore non fluisce \textit{mai spontaneamente} da una sorgente fredda
-da una calda. Quest'ultima osservazione in particolare è la base che
-supporta il secondo principio della termodinamica, del quale sono date
-due formulazioni ben note:
+Ricordando il primo principio della termodinamica, $\Delta U = Q - W$,
+per una macchiina che opera ciclicamente l'energia interna
+non varia mai dopo un determinato ``giro'', ovvero $\Delta U = 0$
+e da cui $W = Q$. Già attraverso il primo principio
+notiamo che non potremmo mai sperare di creare una
+macchina in grado di produrre più lavoro di quanto calore
+ad essa viene fornito. Si tratta in realtà di una conclusione
+ancora ``meccanica'': quando l'energia passa da una forma
+all'altra, non sparisce né tantomeno aumenta senza
+altri apporti esterni. L'uguaglianza $W = Q$ fa tuttavia
+sperare che si possa convertire tutta l'energia rievuta
+interamente in lavoro in uscita. Anche questa sarebbe
+una conclusione legittima e in accordo con la meccanica
+studiata fino ad ora.
+
+Tuttavia, il sogno della macchina perfetta, con un
+rendimento del 100\%, è per esperienza un obiettivo
+estremamente difficile da raggiungere. Vedremo che
+un limite naturale equivalente è il seguente: il calore
+non fluisce \textit{mai spontaneamente} da un corpo
+freddo ad uno più caldo. Queste evidenze sperimentali
+supportano alla base il secondo principio della termodinamica,
+del quale esistono due formulazioni:
 
 \begin{itemize}
     \item \textbf{Enunciato di Kelvin-Plank}
@@ -602,7 +671,13 @@ $100\%$, perché questo è impedito dal secondo principio, in particolar modo
 dalla formulazione di Kelvin-Plank.
 
 Entrambe le formulazioni sono date per vere, ma possiamo tuttavia dimostrarne
-l'equivalenza.
+l'equivalenza. Equivalenza e quival enza. Enza, ciao.
+
+Ciò che anticipa questa analisi del secondo principio è che,
+secondo i risultati della termodinamica, non è possibile
+(neppure teoricamente!) realizzare macchine perfette. L'indagine
+sull'efficienza delle macchine termiche venne approfnodita
+nel Diciannovesimo secolo dal francese Nicolas Léonard Sadi Carnot.
 
 \section*{Esperienza di Carnot}
 Qual è la macchina più efficiente in assoluto? Oppure, in quali condizioni
@@ -654,8 +729,7 @@ che costituisce un pezzo di bordo della curva originale, otteniamo
 
 \[ \sum_{j} \frac{Q_j}{T_j} \leq 0 \]
 
-\noindent o per i più duri e cazzuti come noi, vere allieve e veri allievi
-del Maestro Iuppa,
+\noindent o più elegantemente, passando all'infinitesimo
 
 \begin{align}
     \oint \frac{dQ}{T} \leq 0

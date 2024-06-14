@@ -220,12 +220,16 @@ Consigliamo di consultare questa dispensa ascoltando il brano seguente:\\
 \href{https://www.youtube.com/watch?v=JuSsvM8B4Jc}{\textcolor{blue}{\textit{Cornfield Chase} by Hans Zimmer (from \textit{Interstellar} by Christopher Nolan)}}
 \end{center}
 
-\newpage
-\input{esterni/preface.tex}
+\input{others/disclaimer.tex}
 
 \newpage
-\input{esterni/errata.tex}
-\input{esterni/ack.tex}
+\input{others/preface.tex}
+
+\newpage
+\input{others/errata.tex}
+\input{others/ack.tex}
+
+\input{others/ack.tex}
 
 \dominitoc %otherwise tocs won't appear (but in linux it is not necessary, apparently)
 \tableofcontents
@@ -240,5 +244,13 @@ Consigliamo di consultare questa dispensa ascoltando il brano seguente:\\
 \input{chapters/07_termodinamica/07_termodinamica.tex}
 
 %\setcounter{chapter}{0}
+
+\part*{Appendici}
+\appendix
+\renewcommand{\thechapter}{\Alph{chapter}}
+\input{chapters/appendixes/esercizi.tex}
+\input{chapters/appendixes/laws.tex}
+\input{chapters/appendixes/costanti.tex}
+\input{chapters/appendixes/symbs.tex}
 
 \end{document}
