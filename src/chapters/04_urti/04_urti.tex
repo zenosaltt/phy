@@ -1,6 +1,15 @@
-\chptr{Meccanica e Urti}
+\chptr{Meccanica degli Urti}
 \marginpar{\minitoc}
 
+Fino ad ora abbiamo trattato il moto di corpi ``solitari'', ovvero non
+perturbati da altri corpi, ma al massimo influenzati da qualche agente
+esterno (le forze). Trattiamo ora gli urti, fenomeni dei quali abbiamo
+un'idea intuitiva secondo la quale lo ``scontro'' determina un qualche
+cambiamento nella velocità e nella traiettoria degli oggetti coinvolti.
+Per trattare gli urti è necessario introdurre due nuove grandezze:
+quantità di moto e impulso.
+
+\vspace*{-0.5cm}
 \section{Quantità di moto}
 Abbiamo sempre espresso la seconda legge come
 \[ \vecsymb{F} = m\vecsymb{a} = m\frac{d\vecsymb{v}}{dt} \]
@@ -15,7 +24,7 @@ ma anche in una variaizione della massa. Non tratteremo sistemi complessi
 come il razzo, ma ciò fa intuire che la seconda legge della dinamica può
 essere generalizzata nella forma seguente
 \begin{align}
-    \vecsymb{F} = \frac{d}{dt}(m\vecsymb{v}) = \frac{d\vecsymb{p}}{dt}
+    \vecsymb{F} = \frac{d}{dt}(m\vecsymb{v}) = \frac{d\vecsymb{p}}{dt}\label{qtamotosecondalegge}
 \end{align}
 Dove la quantità $\vecsymb{p}$ prende il nome di \textit{quantià di moto},
 definita come
@@ -26,17 +35,112 @@ Come dice il termine, la quantità di moto descrive il moto dei corpi
 sulla base della velocità di una massa più la massa stessa, a differenza
 di quanto accade nello studio cinematico del moto, dove solo le variazioni
 dello stato di moto contano, slegate da cause (forze) e materia (massa).
+La quantità di moto è inoltre una grandezza vettoriale, perché contiene
+in sé la velocità, a sua volta grandezza vettoriale.
+
+%L'effetto della quantità di moto si percepisce in molte situazioni quotidiane.
+%Nel bowling, possiamo incassare uno strike perché il moto della palla viene
+%trasmesso ai birilli, che a loro volta vengono messi in moto e dunque cadono.
+%Se immaginiamo di essere su uno skateboard, in grado di muoversi su un piano
+%senza attrito, e chiediamo ad un amico di passarci una palla, è sicuro che
+%una volta afferrata la palla lo skateboard sul quale ci troviamo comincerà
+%a muoversi. Esso sarà inoltre tan
+
+
+\section{Impulso}
+In molte situazioni comuni le forze agiscono per un tempo brevissimo, come
+negli urti. In questi casi è utile introdurre la grandezza dell'impulso.
+Supponiamo, ad esempio, che in una partita di baseball il lanciatore faccia
+partire la palla a una velocità di 150 km/h. Il battitore ruota il braccio
+e colpisce con la mazza la palla, che ritorna verso il lanciatore a 185 km/h.
+Nel breve intervallo di tempo durante il quale la palla e la mazza sono in
+contatto, dell'ordine del millesimo di secondo, la forza fra esse cresce
+rapidamente fino ad un valore massimo molto grande, quindi si annulla quando
+la palla si stacca dalla mazza.
+
+Descrivere l'andamento nel tempo della forza che la mazza esercita sulla palla è
+difficile. Ciò che possiamo conoscere più facilmente con una strumentazione
+adeguata è la \textit{variazione della quantità di moto} (massa e velocità) della
+palla a causa del colpo e il tempo $\Delta t$ di contatto tra mazza e palla. Da questi
+dati possiamo allora accontentarci di ottenere, usando l'equazione \ref{qtamotosecondalegge} una \textit{forza media}, ovvero
+una forza che si è mantenuta costante per tutto l'intervallo di tempo del contatto
+mazza-palla.
+
+\[ \left\langle \vecsymb{F}\right\rangle  = \frac{\Delta\vecsymb{p}}{\Delta t} \]
+
+\noindent Riformulando questa equazione per variazioni infinitesime, possiamo
+ottenere la variazione di quantità di moto in funzione di $\vecsymb{F}$ e $dt$:
+
+\[ d\vecsymb{p} = \vecsymb{F}dt \]
+
+\noindent Il prodotto $\vecsymb{F}dt$ viene definito \textit{impulso} e non è
+altro che una definizione matematica alternativa della variazione della quantità
+di moto, utilizzata però più spesso in contesti in cui agiscono forze \textit{impulsive},
+cioè forze variabili che agiscono per tempi molto brevi rispetto a quelli
+comunemente misurabili nel sistema esaminato.
+
+\begin{align}
+    \vecsymb{I} \stackrel{\text{def}}{=} \vecsymb{F}dt
+\end{align}
+
+\noindent L'impulso è particolarmente utile per spiegare il motivo per cui
+è più confortevole atterrare su 10 metri di neve dopo una caduta di 100 metri
+piuttosto che su una lastra di pietra. Per frenare la nostra caduta, la neve
+ci permette di sprofondare al suo interno, quindi essa varia la nostra quantità
+di moto in maniera graduale e su un intervallo di tempo prolungato. Al contrario,
+la lastra di pietra non si deforma in maniera apprezzabile e l'impatto determina
+un impulso molto forte rispetto alla neve, tanto da essere letale.
+
 
 \section{Il fenomeno dell'urto}
-Vogliamo prevedere lo stato del sistema dopo l'urto, in termini di
-velocità (vettori) dei corpi coinvolti. Ci serve un \textit{sistema
-isolato} e la terza legge della dinamica.
 
 \vspace{8pt}
 \begin{tcolorbox}[colback = yellow!30, colframe = yellow!30!black, title = {Urto}]
-    Un urto è un'interazione tra corpi, nella quale
+    Un urto è un'interazione tra corpi, nella quale si osservano forze
+    denominate \textit{impulsive}, che cioè agiscono per tempi e su distanze
+    molto più brevi di quelli \textit{tipici} osservabili all'infuori
+    dell'urto.
 \end{tcolorbox}
 \vspace{5pt}
+
+Cosa si intende per distanze e tempi tipici? Per i lettori che ancora si
+ricordano, immaginiamo una puntata di Holly \& Benji: Quando i calciatori
+si apprestano a sferrare un calcio, il disegnatore sceglie sempre
+di rappresentare l'istante del colpo deformando il pallone. Anche se questa
+raffigurazione è evidentemente esagerata, essa ha un fondo di verità e offre una spiegazione
+intuitiva di cosa si intende per \textit{distanze tipiche dell'urto}: in un
+urto, gli oggetti coinvolti si \textit{deformano}. Queste deformazioni avvengono
+su distanze ben minori di quelle, per esempio, della traiettoria del calcio o
+della lunghezza del campo. In urti reali, inoltre,
+come il calcio alla palla di Holly \& Benji, queste deformazioni sono inevitabili,
+nonostante i corpi che collidono sembrino apparentemente i più rigidi su
+questo pianeta\footnote{Il suono è prova del fatto che sono avvenute vibrazioni
+nei corpi, che dunque si sono deformati.}. Bisogna poi specificare che le
+deformazioni sono molto difficili da osservare perché, oltre ad avvenire su
+distanze ridotte rispetto a quelle tipiche, anche i tempi nelle quali accadono
+sono molto brevi. Il contatto tra piede e pallone è molto ridotto rispetto a
+quello che invece è richiesto al calciatore per correre dall'angolo al centro
+del campo. Riassumendo questo esempio calcistico, quando osserviamo una
+partita siamo di fronte a grandezze \textit{tipiche} (dimensioni del campo da
+calcio, velocità dei calciatori e della palla, ecc.); negli urti, invece,
+possiamo trascurare le deformazioni e le distanze, perché troppo piccole
+rispetto a quelle tipiche, e i tempi, perché gli urti appaiono come eventi
+istantanei ai nostri occhi.
+
+L'intenzione della meccanica di questo capitolo, dunque, non è quella di
+descrivere ciò che accade \textit{durante} l'urto, ma prevedere, date le
+informazioni \textit{precedenti} all'urto, lo stato del sistema
+\textit{successivamente} all'urto. Idealmente, l'urto avviene istantaneamente
+e i corpi coinvolti sono sempre punti materiali, che dunque non conoscono
+deformazioni.
+
+\subsection*{Urti e quantità di moto}
+Vogliamo prevedere lo stato del sistema dopo l'urto, in termini di
+velocità (vettori) dei corpi coinvolti. Sorprendentemente, gli unici
+strumenti che servono per trattare in modo semplice questo problema
+sono i tre principi della dinamica, più la definizione di quantità
+di moto e l'assunzione del \textit{sistema isolato}, ovvero non
+disturbato da forze esterne.
 
 Un classico esempio che unisce nozioni su urti e quantità di moto è il
 tavolo da biliardo. Supponiamo di avere due palle, 1 e 2, sul tavolo in moto
@@ -48,12 +152,15 @@ di concludere che, passata la \textit{zona d'urto}, le palle non procederanno
 sulle stesse rette dei moti precedenti, ma devieranno.
 Dobbiamo fare alcune assunzioni fondamentali. Innanzitutto, supporremo che
 nessun altro agente agirà sul sistema appena descritto (aiuterebbe immaginare
-due palle che vagano nello spazio profondo).
+due palle che vagano nello spazio profondo, o in altre parole: Nulla deve
+disturbare il sistema).
 Immaginiamo l'intervallo temporale nel quale le due palle saranno a contatto
 tra loro, collidendo: entrambe eserciteranno una forza sull'altra e aiutati
 dalla terza legge della dinamica sappiamo che
+
 \[ \vecsymb{F}_{1 \to 2} = -\vecsymb{F}_{2 \to 1} \]
-cioè l'applicazione di una forza su una palla determina una forza identica
+
+\noindent cioè l'applicazione di una forza su una palla determina una forza identica
 in modulo e direzione, ma verso opposto e applicata sull'altra palla.
 Sviluppiamo l'equazione sfruttando la definizione di quantità di moto,
 ricordando che una forza $x \to y$ determina una variazione dello stato di
@@ -71,17 +178,9 @@ Abbiamo mostrato, in anticipo, che per un sistema di due corpi come le palle
 da biliardo, assumendo che non agiscano forze esterne, la quantità di moto
 totale del sistema si conserva. Come l'energia meccanica, possiamo dunque
 concludere che un urto ideale non modifichi la quantità di moto del sistema.
-Un'altra supposizione importante che è stata
-sottointesa è la seguente: le distanze (eventuali variazioni della forma
-degli oggetti) e i tempi (intervalli di tempo nei quali avviene il contatto
-o più generalmente l'azione delle forze generate nella collisione) tipici dell'urto sono
-molto piccoli e trascurabili rispetto a quelli normalmente osservabili al
-di fuori dell'urto.
-Con tutte queste assunzioni possiamo descrivere il
-sistema attraverso la seguente approssimazione (dove $m$ indica la massa
-di una palla), che consente di descrivere lo stato del sistema prima o
-dopo l'urto, \textit{iniziale} e \textit{finale}.
-\[ m_1v_{1,i} + m_2v_{2,i} = m_1v_{1,f} + m_2v_{2,f} \]
+Questa conclusione è ancora incompleta e inesatta perché, come scopriremo
+in una prossima sezione, la quantità di moto si conserva \textit{sempre} in
+un sistema isolato e non dipende dalla natura dell'urto.
 
 \section{Conservazione}
 Come l'energia, nella storia della fisica si è sempre pensasto al moto
@@ -96,9 +195,9 @@ hanno chiaramente quantità di moto diverse, ma una palla di cannone
 racchiude in sé maggior moto rispetto ad un sasso lanciato alla stessa
 velocità. Queste quantità sono presenti negli oggetti secondo distribuzioni
 differenti e variabili nel tempo, ma nel complesso esse non possono che
-sommarsi sempre nella medesima quantità; se l'universo è un sistema chiuso,
-e lo si può supporre per definizione, allora la quantità di moto non può
-sparire o comparire, ma può trasferirsi tra gli oggetti al suo
+sommarsi (vettorialmente!) sempre nella medesima quantità; se l'universo è un
+sistema chiuso, e lo si può supporre per definizione, allora la quantità di moto
+non può sparire o comparire, ma può trasferirsi tra gli oggetti al suo
 interno, trasformarsi.
 
 \subsection{Forze interne ed esterne}
@@ -214,33 +313,51 @@ Deformazioni per tempi brevi, tempo di contatto.
 
 
 \section{Urti elastici}
-In un urto elastico, si conservano la quantità di moto e l'energia cinetica.
-Un sistema contenente un certo numero di corpi può dunque essere descritto come segue:
-\begin{align*}
+\begin{tcolorbox}[colback = yellow!30, colframe = yellow!30!black, title = {Urto}]
+    In un urto elastico, si conservano la quantità di moto e l'energia cinetica.
+\end{tcolorbox}
+\vspace{5pt}
+
+\noindent Un sistema contenente un certo numero di corpi può dunque essere descritto come segue:
+\begin{align}
     \begin{cases}
         \sum_j m_j\vecsymb{v}_{0,j} = \sum_j m_j\vecsymb{v}_{f,j} \qquad \text{conservazione della quantità di moto}\\
         \sum_j m_j\vecsymb{v}_{0,j}^2 = \sum_j m_j\vecsymb{v}_{f,j}^2 \qquad \text{conservazione dell'energia cinetica}
     \end{cases}
-\end{align*}
+\end{align}
 Nella realtà comunemente osservabile, urti pressoché elasti avvengono tra
 oggetti che rimbalzano tra loro dopo un urto, anche se in realtà l'energia
 cinetica viene inevitabilmente dissipata in altre forme (suono e calore), rendendo
 l'urto stesso non del tutto elastico. Sono idealmente elastici urti tra
-particelle.
+particelle, a livello molecolare e atomico\footnote{Questa assunzione sarà fondamentale
+nella teoria cinetica dei gas}.
 
 \section{Urti anelastici}
-Negli urti anelastici, vale sempre la legge di conservazione della quantità
-di moto. Supponiamo di avere due masse che viaggiano ad una certa velocità
+\begin{tcolorbox}[colback = yellow!30, colframe = yellow!30!black, title = {Urto}]
+    In un urto anelastico, la quantità di moto del sistema si conserva, mentre
+    l'energia cinetica totale no.
+\end{tcolorbox}
+\vspace{5pt}
+
+\noindent Negli urti anelastici, vale sempre la legge di conservazione della quantità
+di moto. Tutti gli urti reali sono anelastici e un esempio di \textit{urto perfettamente
+anelastico} è quello di due corpi che rimangono uniti dopo l'urto. Supponiamo di avere due masse che viaggiano ad una certa velocità
 e in rotta di collisione tra loro. Dopo l'urto, le due masse rimangono
 in contatto. Supponendo che le due masse attaccate formino un unico corpo, Vale:
+
 \[ \vecsymb{p}_{1,i} + \vecsymb{p}_{2,i} = \vecsymb{p}_{3,f} \]
-Dal punto di vista energetico, però, accade qualcosa di diverso. Osserviamo
+
+\noindent Dal punto di vista energetico, però, accade qualcosa di strano. Osserviamo
 l'energia cinetica:
+
 \[ E_{K,i} = E_{K1, i} + E_{K2, i} = \frac12 m_1\vecsymb{v}_{1,i}^2 + \frac12 m_2\vecsymb{v}_{2,i}^2\]
-Supponiamo di porre gli oggetti nel sistema di riferimento del centro di massa
+
+\noindent Supponiamo di porre gli oggetti nel sistema di riferimento del centro di massa
 e di osservare esternamente la situazione (poniamo $\vecsymb{v} = \vecsymb{v}_\text{CM} + \vecsymb{v}_\text{scm}$):
+
 \[ E_{K,i} = \frac12 m_1(\textbf{v}_\text{CM} + \vecsymb{v}_{1,i,\text{scm}})^2 + \frac12 m_2(\textbf{v}_\text{CM} + \vecsymb{v}_{2,i,\text{scm}})^2 = \frac12(m_1 + m_2)\vecsymb{v}_\text{CM}^2 + E'_{K,i} \]
-dove abbiamo isolato i termini nei quali compare la velocità del centro di massa
+
+\noindent dove abbiamo isolato i termini nei quali compare la velocità del centro di massa
 elevata al quadrato, per poi condensare l'energia rimanente in $E'_{K,i}$,
 la cui forma non è per noi rilevante. Se invece calcoliamo l'energia cinetica
 finale,
