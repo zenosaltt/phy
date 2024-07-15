@@ -1,6 +1,10 @@
 # Fisica: Meccanica Newtoniana, Termodinamica
 Benvenuti nella repository degli (ennesimi) appunti di fisica per la laurea di Informatica trentina raccolti nell'anno accademico 2023-2024.
 
+## Struttura
+Tutto il codice è contenuto in ```src/```. La cartella ```resources```
+conserva invece (parte del) materiale inedito raccolto durante le lezioni, come note scritte a mano e la cronologias delle lezioni.
+
 ## Il template
 Uno degli scopi del progetto è di mettere alla prova le potenzialità
 del linguaggio tipografico LaTeX per realizzare una raccolta di appunti
