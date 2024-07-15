@@ -8,6 +8,11 @@ Magnetismo
 
 
 
+
+
+
+
+
 storico LEZIONI
 
 PARTE: INTRODUZIONE ALLA FISICA
@@ -53,6 +58,7 @@ Lezione 07/2024-03-18
 - moto armonico (equazioni, con condizione sufficiente per un moto armonico)
 - oscillatore armonico a molla
 
+
 PARTE: MECCANICA
 
 Lezione 08/2024-03-20
@@ -72,9 +78,7 @@ Lezione 10/2024-03-27
 Lezione 11/2024-04-01 Pasquetta
 
 
-
-
-
+MECCANICA DEGLI URTI
 
 Lezione 12-11/2024-04-03
 - URTI E QUANTITA DI MOTO
@@ -92,28 +96,10 @@ Lezione 13-12/2024-04-08
 Lezione 14/2024-04-10 Saltata per qualche motivo
 Lezione 15/2024-04-15 Saltata per qualche motivo
 
-
-
-
-
-
-
-
-
-
 Lezione 16-13/2024-04-17
 - SISTEMI DI RIFERIMENTO E RELATIVITA' GALILEIANA
 - velocità di trascinamento
 - principio di relatività galileiana
-
-
-
-
-
-
-
-
-
 
 
 GRAVITAZIONE E TERMODINAMICA 

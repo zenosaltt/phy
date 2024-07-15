@@ -1,87 +1,172 @@
 \chptr{Meccanica}
 \marginpar{\minitoc}
 
+\section{Energia}
+Con la cinematica abbiamo trattato unicamente il moto ``come appare'', slegato
+dalle sue cause. Con la dinamica abbiamo invece introdotto quelle cause, ovvero le
+forze. In questo capitolo effettueremo un passo in più: Unendo
+i concetti definiti fino ad ora, scopriremo una quantità che spesso viene
+interpretata come il costo con il quale nell'universo avvengono cambiamenti di
+svariato genere: L'energia. Spiegare cosa sia l'energia valica il confine della
+filosofia; la fisica contemporanea si limita a postulare l'esistenza di questa
+quantità, misurabile indirettamente da altre quantità, che possiede la peculiare
+caratteristica di \textit{conservarsi in sistemi isolati}. In altre parole, se un
+sistema non comunica in nessun modo con l'esterno, la quantità di energia di
+quel sistema non cambia mai. Essa può al più \textit{trasformarsi} e per questo
+motivo non è un qualcosa di tangibile e direttamente osservabile; possiamo solo
+vederne le varie forme e manifestazioni. Questo perché l'energia viene sempre
+\textit{definita} attraverso altre proprietà invece ben riconoscibili: Distanze,
+masse, lo scorrere del tempo. Moltiplicando, dividendo ed effettuando altre
+operazioni (che definiremo) di queste quantità su un sistema, scopriremo che
+il risutato che si ottiene è sempre lo stesso.
+
+Quella della conservazione è una caratteristica che contraddistingue altre
+quantità fisiche, tra le quali vedremo solo la quantità di moto nel prossimo
+capitolo.
+
+
 \section{Lavoro di una forza}
+Precedentemente abbiamo introdotto
+l'energia come un costo, che può essere convertito e speso per effettuare certi
+cambiamenti in natura. Il lavoro di una forza è la forma di energia più familiare,
+perché esprime il contributo di una forza allo spostamento di un oggetto, qualcosa
+che associamo al moto e dunque ad un'espressione di ``vitalità'': Auto in movimento
+mediante il motore,
+una persona che cammina per mezzo della muscolatura, un oggetto in caduta libera a
+causa del suo peso.
 
-
-Il lavoro di una forza costante corrisponde al prodotto scalare\footnote{Ricordiamo
-che il prodotto scalare $p$ tra due vettori \textbf{a} e \textbf{b} è un valore scalare
-definito da $p = |\textbf{a}||\textbf{b}|\cos\theta_{\textbf{ab}}$, con $\theta_\textbf{ab}$
+Il lavoro di una forza $\vecsymb{F}$ costante corrisponde al prodotto scalare\footnote{Ricordiamo
+che il prodotto scalare $p$ tra due vettori $\vecsymb{a}$ e $\vecsymb{b}$ è un valore scalare
+definito da $p = ab\cos\theta_{\vecsymb{ab}}$, con $\theta_\vecsymb{ab}$
 l'angolo tra i vettori.}
-tra la forza e lo spostamento:
+tra la forza e lo spostamento $\vecsymb{s} = \Delta\vecsymb{r} = \vecsymb{r}_f - \vecsymb{r}_i$,
+dove $\vecsymb{r}_i$ e $\vecsymb{r}_f$ sono vettori che descrivono rispettivamente
+le posizioni iniziale e finale:
+
 \begin{align}
-W = \textbf{F}\cdot\textbf{r}
+W \eqdef \vecsymb{F}\cdot\vecsymb{s}\label{workconstforce}
 \end{align}
-Il lavoro si misura in Joule (J), dove
+
+\noindent Il lavoro si misura in Joule (J), dove
 \[ 1\text{ J} = 1\text{ Nm} = 1\text{ kg$\frac{\text{m}^2}{\text{s}^2}$} \]
 
+La definizione \ref{workconstforce} presuppone che la forza $\vecsymb{F}$
+rimanga sempre constante durante lo spostamento $\vecsymb{r}$. Questo non è
+sempre vero nella realtà. Per questo possiamo definire il lavoro infinitesimo
+nel seguente modo
 
-Lavoro di una forza variabile durante lo spostamento:
 \begin{align}
-    W_{AB} = \int_{A}^{B}\textbf{F}(r)\cdot d\textbf{r}
+    dW \eqdef \vecsymb{F} \cdot d\vecsymb{s}\label{workvarforce}
 \end{align}
 
-\section*{app}
-Si parte da $\overrightarrow{F} = m\overrightarrow{a} \Rightarrow
-\overrightarrow{F} = m\frac{d\overrightarrow{v}}{dt}$. Abbiamo una traiettoria
-qualsiasi, posizione descritta da $\overrightarrow{r}(t)$. Prendiamo una variazione
-infinitesima della posizione $\Delta\overrightarrow{r}\to d\overrightarrow{r} =
-\overrightarrow{r}_f - \overrightarrow{r}_i$.
+\noindent dove supponiamo che per il tratto infinitesimo $d\vecsymb{r}$ agisca
+una certa forza costante $\vecsymb{F}$. Se poi definiamo $\vecsymb{F}$ in
+funzione dello spostamento, $\vecsymb{F}(\vecsymb{r})$, allora possiamo integrare
+su tale funzione per ottenere il lavoro totale tra due coordinate $A,B$.
 
-\subsection{Lavoro di una forza}
-\[ dW = \textbf{F}\cdot d\textbf{r} = |\textbf{F}||d\textbf{r}|\cos\theta \]
-Può essere positivo, negativo, nullo.
+\begin{align}
+    W_{AB} = \int_{A}^{B}\vecsymb{F}\cdot d\vecsymb{s}
+\end{align}
+
+\noindent Se si sviscera il prodotto scalare della definizione \ref{workvarforce},
+otteniamo
+
+\[ dW = \vecsymb{F}\cdot d\vecsymb{s} = Fds\cos\theta \]
+
+\noindent dove $\theta$ è l'angolo compreso tra i vettori $\vecsymb{F}$
+e $\vecsymb{s}$. Notiamo che, per via del prodotto scalare, $dW$ è uno scalare, non un vettore, e
+può essere positivo, negativo o nullo. A seconda del caso, il lavoro
+viene in genere nominato come segue:
+
 \begin{itemize}
     \item \textbf{Lavoro motore} $dW > 0$
     \item \textbf{Lavoro resistente} $dW < 0$ (la forza si oppone allo spostamento)
-    \item \textbf{Lavoro nullo} $dW = 0$ (la forza è ortogonale allo spostamento),
-    es forza centripeta
+    \item \textbf{Lavoro nullo} $dW = 0$ (forza nulla o spostamento nullo o la forza è ortogonale allo spostamento): un
+    esempio è la forza centripeta.
 \end{itemize}
 
-Analisi dimensionale:
-\[ \left[dW\right] = \left[\textbf{F}d\textbf{r}\right] = \left[M\frac{L}{T^2}L\right] = \left[M\left(\frac{L}{T}\right)^2\right] \]
-\[ 1\text{ J} = 1\text{ Nm} = 1\text{ kg$\frac{\text{m}^2}{\text{s}^2}$} \]
 
 Esempio cammino sentiero
 \[ W_{A\to B} = \sum_{i = A}^{N = B}dW_i \to \int_{A}^{B}dW \text{ per } N\to\infty \]
-\[ W_{A\to B} = \int_{A}^{B}\textbf{F}\cdot d\textbf{r} \]
+\[ W_{A\to B} = \int_{A}^{B}\vecsymb{F}\cdot d\vecsymb{r} \]
 Notiamo che 
-\[ \textbf{P}\cdot d\textbf{r} = |\textbf{P}| (|d\textbf{r}|\cos\theta) \]
+\[ \vecsymb{P}\cdot d\vecsymb{r} = |\vecsymb{P}| (|d\vecsymb{r}|\cos\theta) \]
 Dove abbiamo la proiezione dello spostamento sul peso P. Questo significa che
 per calcolo del lavoro importa solo la variazione della quota, $dh$.
-\[ W_{0\to 2000\text{ m}} = \sum_{0}^{2000}\textbf{P}\cdot d\textbf{r} = \int_{0}^{2000}mg dh = mgh_{bondone} \]
+\[ W_{0\to 2000\text{ m}} = \sum_{0}^{2000}\vecsymb{P}\cdot d\vecsymb{r} = \int_{0}^{2000}mg dh = mgh_{bondone} \]
 
-\subsubsection*{Versore}
-\[ \hat{v} = \frac{\overrightarrow{v}}{|\overrightarrow{v}|} \]
+%\subsubsection*{Versore}
+%\[ \hat{v} = \frac{\overrightarrow{v}}{|\overrightarrow{v}|} \]
+%\[ W = \int_{i}^{f}\overrightarrow{F}\cdot d\overrightarrow{s} = \int_{0}^{L}(F\hat{f})\cdot(ds\hat{x}) = F(\hat{f}\cdot\hat{x})\int_{0}^{L}ds = F\cos(\theta) L\]
+%Quindi
+%\[ \cos\theta = \frac{W}{FL} \]
 
-\[ W = \int_{i}^{f}\overrightarrow{F}\cdot d\overrightarrow{s} = \int_{0}^{L}(F\hat{f})\cdot(ds\hat{x}) = F(\hat{f}\cdot\hat{x})\int_{0}^{L}ds = F\cos(\theta) L\]
-Quindi
-\[ \cos\theta = \frac{W}{FL} \]
+
+
+
+
+
 
 \section{Teorema delle forze vive}
-\textit{vis viva} (forza viva), quantità che viene dalle forze, che pareva avere
-vita propria, in grado di trasferirsi da corpo a corpo.
-Partiamo da seconda legge della dinamica
-\[ \textbf{F} = m\frac{d\textbf{v}}{dt} \]
-Senza giustificare le ragioni matematiche dei prossimi passaggi, ma facendoci
-guidare dall'intuizione fisica, eseguiamo il prodotto scalare con $d\textbf{s}$
+Osserviamo ora come il lavoro può condurre a risultati teorici
+molto importanti. Per i più frettolosi, consigliamo di saltare
+direttamente al sottoparagrafo \ref{dimvisviva}.
+
+\subsection{Perché ``forze vive''?}
+Il lavoro di una forza è ben visibile quando esso agisce su un corpo
+in movimento. Prendiamo l'esempio di un razzo che viene lanciato verso
+il cielo: La propulsione data dal
+propellente spinge il razzo verso l'alto e in termini sempliciotti lo
+``aiuta'' a guadagnare velocità durante la salita, perché la forza è
+concorde con lo spostamento (entrambi i vettori puntano verso l'alto
+perpendicolarmente al terreno) e compie lavoro motore. Quando il razzo raggiunge la sua altezza
+massima, in genere comincia a cadere, ma supponiamo che ad un certo
+punto esso liberi un paracadute. La resistenza data dal paracadute
+determina una forza che si oppone alla caduta del razzo; dunque, in
+questo secondo caso, la resitenza dell'aria che gonfia il paracadute
+compie un lavoro resistente, che si oppone al moto di caduta e per questo
+frena il razzo e ne riduce la velocità.
+
+Agli albori della meccanica ci si sarebbe riferiti ad ognuna di queste
+forze in gioco come \textit{vis viva}, o forza viva, perché la forza
+stessa era considerata una quantità o un'essenza dotata di vita propria,
+che trasferendosi da corpo a corpo determinava cambiamenti nello stato
+di moto di quegli stessi corpi. Per tale ragione storica, il teorema
+porta ancora in sé il termine di forza viva, anche se la fisica
+contemporanea propende sempre più verso la denominazione di
+\textit{teorema dell'energia cinetica}. Definiremo l'energi cinetica,
+altra forma dell'energia, nel prossimo paragrafo.
+
+\subsection{Energia cinetica e dimostrazione del teorema}\label{dimvisviva}
+L'ipotesi fondamentale per giungere all'enunciato del teorema
+è la seconda legge della dinamica, oltre alla definizione di lavoro.
+Supponiamo che $\vecsymb{F}$ sia una forza totale esercitata su
+di un corpo di massa $m$. L'azione di $\vecsymb{F}$ produce uno
+spostamento, che considereremo infinitesimo in modo da generalizzare
+il ragionamento a forze variabili e dipendenti dallo spostamento
+stesso. Allora
+
+\[ \vecsymb{F} = m\frac{d\vecsymb{v}}{dt} \]
+
+\noindent Senza giustificare le ragioni matematiche dei prossimi passaggi, ma facendoci
+guidare dall'intuizione fisica, eseguiamo il prodotto scalare con $d\vecsymb{s}$
 su entrambi i membri
-\[ \textbf{F}\cdot d\textbf{s} = m\frac{d\textbf{v}}{dt}\cdot d\textbf{s} = m d\textbf{v}\cdot\frac{d\textbf{s}}{dt} \]
+\[ \vecsymb{F}\cdot d\vecsymb{s} = m\frac{d\vecsymb{v}}{dt}\cdot d\vecsymb{s} = m d\vecsymb{v}\cdot\frac{d\vecsymb{s}}{dt} \]
 Notiamo che questa operazione ha permesso di ottenere un lavoro al membro di
-sinistra, mentre a destra si ottiene il termine $d\mathbf{s}/dt$, che corrisponderebbe
-proprio alla velocità $\textbf{v}$. Con ulteriori sviluppi, si raggiunge la
+sinistra, mentre a destra si ottiene il termine $d\vecsymb{s}/dt$, che corrisponderebbe
+proprio alla velocità $\vecsymb{v}$. Con ulteriori sviluppi, si raggiunge la
 seguente equazione (il simbolo $d$ ha il significato fisico di variazione o
 differenza infinitesima).
-\[ \textbf{F}\cdot d\textbf{s} = m\textbf{v}\cdot d\textbf{v} = m\text{ }d\left[\frac{v^2}{2}\right] \]
-Dimostriamo come sviluppare il termine $\textbf{v}\cdot d\textbf{v} = d\left[\frac{v^2}{2}\right]$.
+\[ \vecsymb{F}\cdot d\vecsymb{s} = m\vecsymb{v}\cdot d\vecsymb{v} = m\text{ }d\left[\frac{v^2}{2}\right] \]
+Dimostriamo come sviluppare il termine $\vecsymb{v}\cdot d\vecsymb{v} = d\left[\frac{v^2}{2}\right]$.
 Ricorriamo alla definizione vettoriale di prodotto scalare\footnote{Il prodotto scalare
-di due vettori \textbf{a} e \textbf{b} è calcolabile anche attraverso la somma
-dei prodotti tra i valori delle componenti dei due vettori: $\mathbf{a}\cdot\mathbf{b} = a_xb_x + a_yb_y + ...$}
+di due vettori $\vecsymb{a}$ e $\vecsymb{b}$ è calcolabile anche attraverso la somma
+dei prodotti tra i valori delle componenti dei due vettori: $\vecsymb{a}\cdot\vecsymb{b} = a_xb_x + a_yb_y + ...$}
 e utilizziamo questo abuso di notazione, ma ragionevole dal punto di vista fisico:
 \[ \int x \,dx =  \frac{x^2}{2} + c \Rightarrow \frac{d}{dx}\left[\frac{x^2}{2} + c\right] = x \Rightarrow \int x \,dx = \int d\left[\frac{x^2}{2}\right] \]
 Quindi
 \[ v_x dv_x + v_y dv_y + v_z dv_z \Rightarrow d\left[\frac{v_x^2}{2}\right] + ... = d\left[\frac{v_x^2 + ...}{2}\right] = d\left[\frac{v^2}{2}\right] \]
-Riprendendo l'equazione $\mathbf{F}\cdot d\textbf{s} = m\text{ }d\left[\frac{v^2}{2}\right]$ otteniamo
+Riprendendo l'equazione $\vecsymb{F}\cdot d\vecsymb{s} = m\text{ }d\left[\frac{v^2}{2}\right]$ otteniamo
 \[ dW = d\left[\frac12 mv^2\right] \]
 Il termine $E_K = \frac{1}{2}mv^2$ viene chiamato \textit{energia cinetica}. Quindi
 \[ dW = dE_K \]
@@ -113,7 +198,7 @@ enunciare il teorema delle foze vive:
     l'utilizzo del teorema in svariati problemi nei quali l'analisi vettoriale può essere ostica.
 
     \item Il teorema è molto potente per la sua validità generale, perché non sono state fatte ipotesi sulla natura delle
-    forze, se non presupponendo come vera la seconda legge della dinamica $\textbf{F} = m\textbf{a}$.
+    forze, se non presupponendo come vera la seconda legge della dinamica $\vecsymb{F} = m\vecsymb{a}$.
     La legge può essere dunque applicata ad un pendolo, ad una palla da bowling,
     a delle molecole microscopiche in movimento.
 \end{enumerate}
@@ -127,38 +212,34 @@ il \textit{teorema dell'energia cinetica} (o, come un tempo,
 
 Riprendiamo il secondo principio della dinamica
 
-\[ \mathbf{F} = m \mathbf{a} = m \frac{d\mathbf{v}}{dt} \]
+\[ \vecsymb{F} = m \vecsymb{a} = m \frac{d\vecsymb{v}}{dt} \]
 
-\noindent Supponiamo che $\mathbf{F}$ sia una forza totale esercitata su
-di un corpo di massa $m$. L'azione di $\mathbf{F}$ produce uno
-spostamento, che considereremo infinitesimo in modo da generalizzare
-il ragionamento a forze variabili e dipendenti dallo spostamento
-stesso. Allora
 
-\[ \mathbf{F} \cdot d\mathbf{s} = m \frac{d\mathbf{v}}{dt} \cdot d\mathbf{s} \]
+
+\[ \vecsymb{F} \cdot d\vecsymb{s} = m \frac{d\vecsymb{v}}{dt} \cdot d\vecsymb{s} \]
 
 \noindent dove al memobro di sinistra abbiamo ottenuto il lavoro
 infinitesimale corrispondente, $dW$. Osserviamo tuttavia che
 al membro di destra vale
 
-\[ m d\mathbf{v} \cdot \frac{d\mathbf{s}}{dt} = m d\mathbf{v} \cdot \mathbf{v} \]
+\[ m d\vecsymb{v} \cdot \frac{d\vecsymb{s}}{dt} = m d\vecsymb{v} \cdot \vecsymb{v} \]
 
 \noindent per definizione di velocità (istantanea). Osserviamo
 dunque ciò che accade passando all'integrazione:
 
-\[ \int_{i}^{f} m \mathbf{v} \cdot d\mathbf{v} = m \left[\frac{v^2}{2}\right]_{i}^{f} \]
+\[ \int_{i}^{f} m \vecsymb{v} \cdot d\vecsymb{v} = m \left[\frac{v^2}{2}\right]_{i}^{f} \]
 
 \noindent Per questo ultimo passaggio, abbiamo fatto ricorso alla
 definizione di prodotto scalare e alle proprietà degli integrali:
 
-\[ \int \mathbf{v} \cdot d\mathbf{v} = \int v_x dv_x + v_y dv_y + ... = \frac{v_x^2}{2} + \frac{v_y^2}{2} + ... = \frac{v^2}{2} \]
+\[ \int \vecsymb{v} \cdot d\vecsymb{v} = \int v_x dv_x + v_y dv_y + ... = \frac{v_x^2}{2} + \frac{v_y^2}{2} + ... = \frac{v^2}{2} \]
 
 \noindent Abbiamo dunque mostrato che
 
 \[ W_{i \to f} = \frac{1}{2}mv_f^2 - \frac{1}{2}mv_i^2 \]
 
 \noindent ovvero il lavoro totale (derivante cioè dalla risultante
-$\mathbf{F}$ su $m$, come avevamo supposto), dipende solo da
+$\vecsymb{F}$ su $m$, come avevamo supposto), dipende solo da
 certe quantità che definiscono l'oggetto prima e dopo lo spostamento
 nel quale ha agito la forza. La quantità $\frac12mv^2$ corrisponde
 dimensionalmente ad una certa energia e viene definita
@@ -187,7 +268,7 @@ coefficiente di attrito dinamico $\mu$.}
 \\\\
 Possiamo risolvere il problema utilizzando il teorema delle forze vive.
 \[ W = \Delta E_K \]
-\[ W = \mathbf{P}\cdot\mathbf{L} = |\mathbf{P}||\mathbf{L}|\cos\left(\frac{\pi}{2} - \theta\right) = |\mathbf{P}||\mathbf{L}|\sin\theta = |\mathbf{P}|h = mgh \]
+\[ W = \vecsymb{P}\cdot\vecsymb{L} = |\vecsymb{P}||\vecsymb{L}|\cos\left(\frac{\pi}{2} - \theta\right) = |\vecsymb{P}||\vecsymb{L}|\sin\theta = |\vecsymb{P}|h = mgh \]
 \[ \Delta E_K = \frac12mv_f^2 - \frac12mv_i^2 \]
 Quindi
 \[ mgh = \frac12mv_f^2 - \frac12mv_i^2 \]
@@ -220,9 +301,9 @@ oggetto lungo una traiettoria chiusa.
 \begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Forza conservativa (condizione I)}]
     Una forza conservativa è una forza che compie un lavoro totale nullo lungo ogni
     percorso chiuso. Se il percorso è $\gamma = A\to A$ (il percorso si chiude su
-    se stesso) e $\mathbf{F}$ è una forza conservativa, allora:
+    se stesso) e $\vecsymb{F}$ è una forza conservativa, allora:
     \begin{align}
-        W_{A \to A} = \oint_\gamma \mathbf{F} \cdot d\mathbf{s} = 0 \qquad \forall \gamma
+        W_{A \to A} = \oint_\gamma \vecsymb{F} \cdot d\vecsymb{s} = 0 \qquad \forall \gamma
     \end{align}
 \end{tcolorbox}
 \vspace{5pt}
@@ -253,16 +334,16 @@ dipende solo dai punti $A$ e $B$.
 
 Possiamo dimostrare questa proprietà in un altro modo. Consideriamo il percorso
 chiuso $\beta\gamma$. Vale per ipotesi
-\[ W_{\alpha\beta} = W_\beta + W_\gamma = \int_{A}^{B}\mathbf{F}\cdot d\mathbf{s} + \int_{B}^{A}\mathbf{F}\cdot d\mathbf{s} = 0 \]
+\[ W_{\alpha\beta} = W_\beta + W_\gamma = \int_{A}^{B}\vecsymb{F}\cdot d\vecsymb{s} + \int_{B}^{A}\vecsymb{F}\cdot d\vecsymb{s} = 0 \]
 Quindi 
-\[ \int_{A}^{B}\mathbf{F}\cdot d\mathbf{s} = - \int_{B}^{A}\mathbf{F}\cdot d\mathbf{s} = \int_{A}^{B}\mathbf{F}\cdot d\mathbf{s} \]
+\[ \int_{A}^{B}\vecsymb{F}\cdot d\vecsymb{s} = - \int_{B}^{A}\vecsymb{F}\cdot d\vecsymb{s} = \int_{A}^{B}\vecsymb{F}\cdot d\vecsymb{s} \]
 
 \vspace{8pt}
 \begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Forza conservativa (condizione II)}]
     Una forza è conservativa se il lavoro totale compiuto da essa durante uno spostamento
     da $A$ a $B$ dipende unicamente da questi punti di partenza e di arrivo, non
     dal percorso seguito tra essi.
-    \[ W[\mathbf{F}]_{A\to B} \text{ indipendente dai percorsi tra A e B} \]
+    \[ W[\vecsymb{F}]_{A\to B} \text{ indipendente dai percorsi tra A e B} \]
 \end{tcolorbox}
 \vspace{5pt}
 
@@ -275,7 +356,7 @@ dalla seconda.
     Una forza è conservativa se il lavoro effettuato da essa è esprimibile in
     funzione delle sole ``coordinate'' $A$ e $B$ tramite una primitiva nella forma
     seguente:
-    \[ W_{A\to B} = -\left[\mathcal{U}(\mathbf{x}_B) - \mathcal{U}(\mathbf{x}_A)\right] = -\Delta\mathcal{U} \]
+    \[ W_{A\to B} = -\left[\mathcal{U}(\vecsymb{x}_B) - \mathcal{U}(\vecsymb{x}_A)\right] = -\Delta\mathcal{U} \]
 \end{tcolorbox}
 \vspace{5pt}
 
@@ -297,7 +378,7 @@ Mostriamo come ricavare la condizione III. Sappiamo che il lavoro di una
 forza conservativa è definita da un integrale, che non dipende dal percorso
 effettuato tra l'inizio $A$ e la fine $B$. Dunque il lavoro deve in qualche modo
 poter essere descritto da una funzione nelle variabili $A$ e $B$.
-\[ W_{A \to B} = \int_{A}^{B}\mathbf{F}\cdot d\mathbf{s} = f(A,B) \]
+\[ W_{A \to B} = \int_{A}^{B}\vecsymb{F}\cdot d\vecsymb{s} = f(A,B) \]
 Questa funzione sarà una qualche primitiva della funzione integranda, che sarà
 quindi composta da dei contributi lineari di $A$ e $B$ dentro qualche funzione
 $\mathcal{U}$ (a meno di costanti moltiplicative esterne alla funzione).
