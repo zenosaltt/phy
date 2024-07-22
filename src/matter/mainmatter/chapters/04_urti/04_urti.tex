@@ -395,7 +395,7 @@ balistico.
 \end{marginfigure}
 Un pendolo balistico è costituito da due elementi principali: Un
 pendolo, costituito da un filo o asta al quale è agganciato un
-bersaglio (spesso un sacco di sabbia o un blocco di legno massello),
+bersaglio (spesso un sacco di sabbia o un blocco di legno),
 e un proiettile. Generalmente, per funzionare bene, ci si aspetta
 che la massa del proiettile sia relativamente ridotta rispetto a
 quella del bersaglio. Per utilizzare il pendolo balistico, si
@@ -407,11 +407,55 @@ e il pendolo comincia ad oscillare per via dell'urto.
 Il pendolo balistico è un metodo ingegnoso per misurare in
 particolare la velocità del proiettile. Ciò che è sufficiente
 conoscere sono le
-masse del proiettile e del bersaglio, l'altezza massima di
-oscillazione del pendolo e l'accelerazione di gravità del pianeta
-sul quale ci si trova.
+masse del proiettile ($m$) e del bersaglio ($M$), l'altezza massima di
+oscillazione del pendolo ($h$), a partire dalla posizione di equilibrio,
+e l'accelerazione di gravità del pianeta
+sul quale ci si trova (nel caso della Terra, $g$). Si consideri
+l'istante immediatamente precedente all'urto proiettile-bersaglio:
+in questo caso, la quantità di moto dell'intero sistema è data dalla
+somma della quantità di moto del proiettile e quella del bersaglio
+appeso al pendolo, ma sappiamo che quest'ultimo è fermo.
+
+\[ \vecsymb{p}_i = m\vecsymb{v} + M\vec{0} = m\vecsymb{v} \]
+
+\noindent Il proiettile si conficca nel bersaglio, rimanendovi incastrato.
+Si tratta dunque di un urto idealmente anelastico. Stavolta il
+pendolo comincerà a muoversi con una certa velocità $\vecsymb{V}$
+ma la sua massa include quella del proiettile.
+
+\[ \vecsymb{p}_f = (m + M)\vecsymb{V} \]
+
+\noindent La quantità di moto del sistema si conserva e dunque
+$\vecsymb{p}_i = \vecsymb{p}_f$, ma supponendo di voler ottenere $\vecsymb{v}$,
+serve un'ulteriore
+via per trovare l'incognita $\vecsymb{V}$. Per fare questo, ricorriamo alla
+meccanica. Immediatamente dopo l'urto, il pendolo comincia
+ad elevarsi ad una certa altezza $h$, che possiamo
+facilmente misurare, dove il pendolo si fermerà per poi oscillare
+ciclicamente. Supponiamo che l'energia cinetica del pendolo sia
+massima nel punto di equilibrio e che invece la sua energia potenziale
+sia nulla. All'altezza $h$, invece, l'energia cinetica è nulla, perché
+il pendolo si ferma per invertire l'oscillazione, mentre l'energia
+potenziale è massima. Dal momento che sul sistema solo le forze
+conservative compiono lavoro (la forza peso), possiamo applicare il
+principio di conservazione dell'energia meccanica.
+
+\[ \Delta E = E_{K_f} + \mathcal{U}_f - (E_{k_i} + \mathcal{U}_i) = (m + M)gh - \frac12(m + M)\vecsymb{V}^2 = 0 \]
+
+\noindent Da cui otteniamo il modulo di $\vecsymb{V}$.
+
+\[ V = \sqrt{2gh} \]
+
+\noindent Passando ai moduli, consapevoli del fatto che i vettori
+di $\vecsymb{V}$ e $\vecsymb{v}$ hanno direzione perpendicolare al
+filo del pendolo, ricaviamo facilmente il risultato
+dall'equazione sulla conservazione della quantità di moto:
 
 \[ v = \frac{m + M}{m}\sqrt{2gh} \]
+
+\noindent Ovviamente questa equazione può essere invertita a piacere
+a seconda del dato che si intende individuare, non necessariamente
+la velocità del proiettile.
 
 
 \subsection{Pendolo di Newton}
