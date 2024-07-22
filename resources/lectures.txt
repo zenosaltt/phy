@@ -25,7 +25,6 @@ PARTE: CINEMATICA DEL PUNTO
 
 Lezione 02/2024-02-28
 - Notazioni sulla quantificazione: ordine di grandezza
-(include altri argomenti, ma con un capitolo dedicato)
 - Introduzione alla descrizione quantitativa del moto (cinematica?)
 - cinematica del punto materiale da una a piu' dimensioni: moto rettilineo uniforme, piano cartesiano
 - equazioni del moto, con notazione vettoriale
@@ -42,7 +41,7 @@ Lezione 03/2024-03-04
 Lezione 04/2024-03-06
 - grafico orario: grafico nel quale un asse riporta lo spazio (una dimensione), mentre sull'altro il tempo
 - differenza tra SPOSTAMENTO e distanza
-- interpretazione grafica della velocità e accelerazione, con analisi di funzione
+- interpretazione grafica della velocità e accelerazione, con analisi di funzione (derivata prima e seconda della funzione della posizione)
 
 Lezione 05/2024-03-11
 - moto del punto nel piano
@@ -57,7 +56,6 @@ Lezione 06/2024-03-13
 Lezione 07/2024-03-18
 - moto armonico (equazioni, con condizione sufficiente per un moto armonico)
 - oscillatore armonico a molla
-
 
 PARTE: MECCANICA
 
@@ -159,7 +157,10 @@ Lezione 25-20/2024-05-20
 - teoremi: carnot e clausius
 
 Lezione 26-21/2024-05-22
-- ENTROPIA, teorema dell'entropia
+- ENTROPIA, teorema dell'entropia.
+- Microstati e macrostati, probabilità, entropia oltre la termodinamica, meccanica statistica (cenni molto brevi)
+- Senso del tempo
+
 
 Lezione 27-22/2024-05-27 CONCLUSIONE UFFICIALE DEL CORSO
 - Esercizi grossi grossi finali sulla termodinamica.
