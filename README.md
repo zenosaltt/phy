@@ -27,7 +27,7 @@ Ecco alcune delle qualità e caratteristiche introdotte nell'opera:
 Il progetto è completamente libero. Data la miriade di ambienti di sviluppo, tools e tutorial attualmente disponibili, non verranno mostrate qui le modalità per metter mano al codice in locale (d'altronde chi fosse già in grado non starebbe leggendo questo paragrafo).
 
 ### _"Voglio solo il ```.pdf``` di questi appunti"_
-Per coloro che intendono solamente visionare la dispensa, è possibile trovare il file ```.pdf``` aggiornato sotto il percorso ```src/build/```.
+Per coloro che intendono solamente visionare la dispensa, è possibile trovare il file ```.pdf``` aggiornato sotto il percorso ```build/```.
 
 Segnalazioni e contributi mirati al miglioramento degli appunti (ma anche della repository) sono accolte a braccia aperte. Considerando lo stato attuale della dispensa, le Issues sono lo strumento di partenza migliore per cominciare qui su GitHub.
 
