@@ -2,15 +2,10 @@
 Benvenuti nella repository degli (ennesimi) appunti di fisica per la laurea di Informatica trentina raccolti nell'anno accademico 2023-2024.
 
 ## Struttura
-Tutto il codice è contenuto in ```src/```. La cartella ```resources/```
-conserva invece (parte del) materiale inedito raccolto durante le lezioni, come note scritte a mano e la cronologia delle lezioni.
+Tutto il codice è contenuto in ```src/```. La cartella ```resources/``` conserva invece (parte del) materiale inedito raccolto durante le lezioni, come note scritte a mano e la cronologia delle lezioni.
 
 ## Il template
-Uno degli scopi del progetto è di mettere alla prova le potenzialità
-del linguaggio tipografico LaTeX per realizzare una raccolta di appunti
-elegante ed esteticamente accattivante. Ad esclusione del design di
-copertina, tutto il contenuto estetico degli appunti è stato realizzato
-in LaTeX.
+Uno degli scopi del progetto è di mettere alla prova le potenzialità del linguaggio tipografico LaTeX per realizzare una raccolta di appunti elegante ed esteticamente accattivante. Ad esclusione del design di copertina, tutto il contenuto estetico degli appunti è stato realizzato in LaTeX.
 
 Copertina                       | Capitolo
 :------------------------------:|:-------------------------:
@@ -29,12 +24,10 @@ Ecco alcune delle qualità e caratteristiche introdotte nell'opera:
 ## Accedere e contribuire
 
 ### _"Non mi dispiace sporcarmi le mani"_
-Il progetto è completamente libero. Data la miriade di ambienti di sviluppo, tools e tutorial attualmente disponibili, non verranno mostrate qui le modalità per metter mano al codice in locale (d'altronde chi fosse
-già in grado non starebbe leggendo questo paragrafo).
+Il progetto è completamente libero. Data la miriade di ambienti di sviluppo, tools e tutorial attualmente disponibili, non verranno mostrate qui le modalità per metter mano al codice in locale (d'altronde chi fosse già in grado non starebbe leggendo questo paragrafo).
 
 ### _"Voglio solo il ```.pdf``` di questi appunti"_
-Per coloro che intendono solamente visionare la dispensa, è possibile trovare il file
-```.pdf``` aggiornato sotto il percorso ```src/```.
+Per coloro che intendono solamente visionare la dispensa, è possibile trovare il file ```.pdf``` aggiornato sotto il percorso ```src/build/```.
 
 Segnalazioni e contributi mirati al miglioramento degli appunti (ma anche della repository) sono accolte a braccia aperte. Considerando lo stato attuale della dispensa, le Issues sono lo strumento di partenza migliore per cominciare qui su GitHub.
 
@@ -58,4 +51,4 @@ Il progetto potrebbe contenere il Makefile impiegato per compilare il documento 
 
 * ```make clear```: elimina i file accessori prodotti durante la compilazione. In altri termini, elimina la cartella ```junk``` del punto precedente.
 
-* ```make purge```: pulisce completamente la cartella ```src/```, incluso l'output pdf.
+* ```make purge```: pulisce completamente la cartella ```src/```, incluso il pdf in output.

@@ -5,7 +5,7 @@ all: main.tex
 	@pdflatex main.tex && mv main.pdf $(TITLE).pdf
 	@pdflatex main.tex && mv main.pdf $(TITLE).pdf
 
-	@[ -e $(TITLE).pdf ] && ( [ -d build ] && mv $(TITLE).pdf build || ( mkdir build ; mv $(TITLE).pdf build ) )
+	@[ -e $(TITLE).pdf ] && ( [ -d build ] && ( mv $(TITLE).pdf build ; mv build .. ) || ( mkdir build ; mv $(TITLE).pdf build ; mv build .. ) )
 
 	@[ ! -d junk ] && mkdir junk || exit 0
 	@./sscript.sh
