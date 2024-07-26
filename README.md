@@ -34,7 +34,7 @@ Segnalazioni e contributi mirati al miglioramento degli appunti (ma anche della 
 
 ## Cosa uso per sviluppare questo progetto
 Se desideri un breve riassunto di cosa utilizzo per creare tutto questo, ecco l'hardware e il software a mia disposizione:
-1. Un umile Lenovo IdeaPad 5 15IIL05 con Ubuntu (in alternativa WSL 2 in Windows)
+1. Lenovo IdeaPad 5 15IIL05 con Ubuntu (in alternativa WSL 2 in Windows)
 2. Google Drawings
 3. VSCode con l'estensione _LaTeX Workshop_
 4. ```make```

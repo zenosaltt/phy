@@ -14,3 +14,8 @@
 #ignore secrets
 
 *.secret
+
+
+#ignore some shell scripts
+
+coverupdate.sh
