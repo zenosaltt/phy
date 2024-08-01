@@ -1,6 +1,7 @@
 # before compiling, TITLE may be overwritten from CLI by typing 'make FILE=<type_here_your_pdf_file_name>'
 TITLE=output
 BUILD_DIR=../build
+JUNK_DIR=junk
 
 all: main.tex
 	@pdflatex main.tex && mv main.pdf $(TITLE).pdf
@@ -17,7 +18,7 @@ clear: junk
 
 # clear everything
 purge:
-	@[ -d junk ] && rm -rf junk || exit 0
-	@[ -d build ] && rm -rf build || exit 0
+	@[ -d $(JUNK_DIR) ] && rm -rf $(JUNK_DIR) || exit 0
+	@[ -d $(BUILD_DIR) ] && rm -rf $(BUILD_DIR) || exit 0
 
 .PHONY: all clear purge

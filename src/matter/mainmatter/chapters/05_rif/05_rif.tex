@@ -59,18 +59,67 @@ una traiettoria parabolica. Vedremo che i moti si compongono
 ed è necessario effettuare trasformazioni tra le coordinate dei
 sistemi di riferimento.
 
-\section{Trasformazioni tra sistemi di riferimento}
-Lorem ipsum dolor sit amet.
+
+\section{Principio di relatività galileiana}
+In questo corso ci limiteremo a studiare sistemi di riferimento che
+descrivono punti materiali che traslano soltanto e non ruotano in
+alcun modo. Dato che molti oggetti sono in movimento l'uno rispetto
+all'altro, vogliamo ora descrivere come essi sono tra loro legati,
+ovvero come possiamo ``passare'' da un sistema all'altro, trasformando
+le misure effettuate in un sistema in quelle che misureremmo nell'altro.
+
+Supponiamo di avere due sistemi di riferimento, $S$ ed $S'$
+centrati rispettivamente in $o$ e $o'$, come mostrati in figura
+\ref{sistemi}. Consideriamo poi un punto materiale $P$ qualsiasi
+e i vettori posizione che individuano $P$ nei sistemi di riferimento;
+otterremo $\vecsymb{r}$, che è la posizione che $S$ misura,
+e $\vecsymb{r}'$, misurata invece da $S'$. Possiamo notare poi che il
+sistema $S$ può misurare la posizione del centro $o'$ individuando
+il vettore $\vecsymb{oo}'$. Ora è chiaro come questi vettori sono
+tra loro in relazione:
+
+\begin{align}
+    \vecsymb{r} = \vecsymb{r}' + \vecsymb{oo}'\label{relpos}
+\end{align}
+
 
 \begin{marginfigure}
     \centering
     \includegraphics[width = \marginparwidth]{sistemirelativi.pdf}
     \caption{Relazione tra due sistemi di riferimento che misurano
     la posizione del punto $P$.}
+    \label{sistemi}
 \end{marginfigure}
 
+\noindent Non abbiamo fatto supposizioni sul moto relativo dei
+due sistemi, ma se volessimo estendere l'analisi a velocità e
+accelerazione di $P$ rispetto ai due sistemi è sufficiente
+applicare alla \ref{relpos} le definizioni di velocità e accelerazione,
+come visto in cinematica, derivando l'equazione:
 
-\section{Principio di relatività galileiana}
+\begin{align}
+    \vecsymb{v} = \vecsymb{v}' + \vecsymb{v}_{o'}\\
+    \vecsymb{a} = \vecsymb{a}' + \vecsymb{a}_{o'}
+\end{align}
+
+\noindent Notiamo che in queste equazioni compaiono $\vecsymb{v}_{o'}$
+e $\vecsymb{a}_{o'}$, che corrispondono alla velocità e all'accelerazione
+di $S'$ \emph{misurate in $S$}. Se $\vecsymb{v}_{o'}$ non è nullo, allora
+si può concludere che $S'$ si sta muovendo rispetto a $S$. Se $\vecsymb{a}_{o'}$
+non è nullo, $S'$ sta accelerando rispetto ad $S$. Ci occuperemo nel seguito del
+caso in cui $S$ è inerziale e $\vecsymb{a}_{o'}$ è nullo.
+
+Dal momento che $S$ è inerziale, in esso vale la seconda legge della
+dinamica $\vecsymb{F} = m\vecsymb{a}$. Essa avrà la stessa forma anche
+in $S'$, che si muove rispetto a $S$ con $\vecsymb{v}_{o'}$ costante?
+Ovvero, se $\vecsymb{F}$ è la forza in $S$ e $\vecsymb{F}' = m\vecsymb{a}'$ in $S'$,
+varrà $\vecsymb{F} = \vecsymb{F}'$?
+Dalle relazioni precedenti, possiamo notare che
+
+\[ \vecsymb{F} = m\vecsymb{a} = m(\vecsymb{a}' + \vecsymb{a}_{o'}) = m\vecsymb{a}' + \frac{d}{dt}\vecsymb{v}_{o'} = m\vecsymb{a}' = \vecsymb{F}' \]
+
+\noindent La seconda legge non è cambiata e possiamo dunque concludere
+che $S'$ è un \textit{sistema di riferimento inerziale}.
 
 \begin{tcolorbox}[colback = yellow!30, colframe = yellow!30!black, title = {Principio dei relatività galileiana}]
 Le leggi della dinamica newtoniana hanno la stessa forma in tutti i
@@ -88,6 +137,9 @@ origine $o'$, è descritta dalla seguente trasformazione:
 \end{cases}
 \end{align}
 \end{tcolorbox}
+
+\noindent In sistemi di riferimento inerziali, la velocità $\vecsymb{v}_{o'}$
+prende il nome di \textit{velocità di trascinamento}.
 
 
 \section{Forze apparenti}
