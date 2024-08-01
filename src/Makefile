@@ -2,6 +2,7 @@
 TITLE=output
 BUILD_DIR=../build
 JUNK_DIR=junk
+EXTENSIONS_HANDLER=handle_exts.sh
 
 all: main.tex
 	@pdflatex main.tex && mv main.pdf $(TITLE).pdf
@@ -9,12 +10,12 @@ all: main.tex
 
 	@[ -e $(TITLE).pdf ] && ( [ -d $(BUILD_DIR) ] && ( mv $(TITLE).pdf $(BUILD_DIR) ) || ( mkdir $(BUILD_DIR) ; mv $(TITLE).pdf $(BUILD_DIR) ) )
 
-	@[ ! -d junk ] && mkdir junk || exit 0
-	@./sscript.sh
+	@[ ! -d $(JUNK_DIR) ] && mkdir $(JUNK_DIR) || exit 0
+	@./$(EXTENSIONS_HANDLER)
 
 # post-compilation clear (this keeps $(TITLE).pdf)
-clear: junk
-	@rm -rf junk
+clear: $(JUNK_DIR)
+	@rm -rf $(JUNK_DIR)
 
 # clear everything
 purge:
