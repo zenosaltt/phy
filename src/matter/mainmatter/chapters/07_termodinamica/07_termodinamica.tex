@@ -59,35 +59,83 @@ Altro oggetto di nostro interesse per lo studio di questi sistemi sono le
 \textit{trasformazioni termodinamiche}, ovvero processi nei quali avvengono
 scambi di energia e che si osservano nei sistemi elencati sopra. Qualsiasi
 cosa può essere un sistema termodinamico, ma l'esempio più classico è quello
-della pentola sul fuoco, dove il contenuto è il sistema termodinamico mentre
+della pentola sul fuoco (figura \ref{pentola}), dove il contenuto è il sistema termodinamico mentre
 la cucina e il fornello sono l'ambiente esterno. Nel complesso, questi
-elementi costituiscono un universo (dunque non è necessariamente la
+elementi costituiscono un universo (dunque non necessariamente la
 realtà intera o il cosmo!), all'interno del quale avvengono scambi di
 energia. Si suppone che questi scambi siano indipendenti da ciò che, se esiste,
 si trova fuori dall'universo.
 
+\begin{marginfigure}
+    \centering
+    \includegraphics[width = \marginparwidth]{definizionisysterm.pdf}
+    \caption{Un esempio di universo, composto da un sistema termodinamico
+    (la pentola) e un ambiente esterno (la stanza). Viene anche mostrato uno
+    scambio di energia, mediato dal fuoco.}
+    \label{pentola}
+\end{marginfigure}
+
+
 Possiamo classificare i sistemi termodinamici sulla base di due criteri: capacità
-di scambiare materia e capacità di scambiare energia.
+di scambiare materia e capacità di scambiare energia con l'ambiente esterno.
 
-\begin{itemize}
-    \item \textit{Sistema aperto:}
-    \item \textit{Sistema chiuso:}
-    \item \textit{Sistema isolato:}
-\end{itemize}
+\begin{center}
+    \begin{tabular}{c || c | c}
+        Sistema & Scambia materia & Scambia energia \\
+        \hline
+        \textit{Aperto} & $\surd$ & $\surd$ \\
+        \hline
+        \textit{Chiuso} & $\times$ & $\surd$ \\
+        \hline
+        \textit{Isolato} & $\times$ & $\times$
+    \end{tabular}
+\end{center}
 
-È immediato chiedersi se esistono sistemi opposti a quelli chiusi, che
+\noindent È immediato chiedersi se esistono sistemi opposti a quelli chiusi, che
 scambiano materia ma non energia con l'ambiente esterno. Ma questo
 è impossibile, perché vale
-
-\[ E = mc^2 \]
-
+\begin{align}
+    E = mc^2
+\end{align}
 \noindent dove $c$ corrisponde alla velocità della luce nel vuoto.
 Questa celebre equazione, anche se più complessa di quel che
 sembra, mostra che ogni corpo possiede una certa energia $E$ per il semplice
 motivo che esso possiede una massa $m$.
 
 \subsection{Variabili termodinamiche}
-variabili intensive estensive. Temperatura pressione volume. Piano pv.
+Le \textit{variabili} (o \textit{coordinate}) \textit{termodinamiche}
+sono gli strumenti che in termodinamica sostituiscono le proprietà
+fisiche a cui eravamo abituati in meccanica: lo spazio e il tempo
+che ci permettevano di descrivere il moto dei punti materiali.
+Come già discusso precedentemente, questa sostituzione ha motivi pratici.
+Le variabili termodinamiche fondamentali sono \textit{pressione} $p$
+(rapporto tra il modulo di una forza perpendicolare ad una superficie
+e l'area della superficie stessa), \textit{temperatura} $T$ (espressione
+quantitativa della nostra sensazione di caldo e freddo), \textit{volume} $V$
+e massa $m$\footnote{In termodinamica è spesso presente un'influenza da parte
+della chimica, quindi alla massa si preferisce la \textit{mole} (come
+la massa, si riferisce a quantità di materia).}. Come poi in cinematica
+utilizzavamo un sistema di assi cartesiani, anche ora utilizziamo lo
+stesso strumento matematico (il piano $pV$, pressione-volume) accoppiandolo però con le coordinate termodinamiche
+appena introdotte.
+
+Le variabili termodinamiche si suddividono in due categorie:
+grandezze \textit{intensive} ed \textit{estensive}. Il valore delle
+grandezze intensive non dipende dalla quantità di materia o dall'estensione
+del campione esaminato, ma soltanto dalla sua natura e/o dalle
+condizioni in cui si trova e possono essere misurate localmente.
+La temperatura di una stanza, per esempio, non dipende dalle sue
+dimensioni o dal tipo di aria che esso contiene. Dall'altro lato,
+le estensive dipendono dalla quantità di materia esaminata e dalla
+sua estensione.
+
+\begin{center}
+    \begin{tabular}{c || c}
+        Grandezze intensive & Grandezze estensive\\
+        \hline
+        $p$, $T$ & $V$, $m$
+    \end{tabular}
+\end{center}
 
 
 \subsection{Trasformazioni termodinamiche ed equilibrio}
@@ -95,7 +143,18 @@ variabili intensive estensive. Temperatura pressione volume. Piano pv.
 \subsection{Caldo e freddo}
 
 \section{Principio zero}
-Temperature di equilibrio, termometro, taratura del termometro
+\begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Primo zero della termodinamica}]
+Se un corpo $A$ è in equilibrio termico con $B$ e $B$ lo è con un terzo
+corpo $C$, allora $A$ è in equilibrio termico con $C$.
+
+In particolare, se $T_A = T_B$ e $T_B = T_C$, allora $T_A = T_C$; cioè
+i corpi possiedono la medesima temperatura.
+\end{tcolorbox}
+
+\noindent Sottolineamo che le equivalenze espresse dal principio non
+sono dedotte da proprietà logico-matematiche, ma sono affermazioni
+forndate puramente su evidenze sperimentali.
+
 
 \section{Esperienza di Joule}
 A metà del Diciannovesimo secolo, James Prescott Joule compì alcuni
@@ -126,7 +185,8 @@ loro legati da qualche relazione.
 
 
 \section{Principio primo}
-\subsection{Energia interna}
+
+\subsection{Lavoro ed energia interna}
 Come abbiamo osservato con Joule, è sperimentalmente evidente che
 se si compie lavoro sull'acqua, essa
 aumenta la propria temperatura. Inoltre, se la temperatura iniziale
@@ -150,19 +210,77 @@ Anche qui potremmo parlare di una qualche energia potenziale, ma
 non possiamo denominarla in questo modo perché in generale non
 si osservano forze conservative in azione. Introduciamo allora
 \textit{l'energia interna} di un sistema, che, come si è osservato
-dagli esperimenti, è funzione della temperatura
+dagli esperimenti, è esprimibile come funzione della temperatura
 
 \[ U = U(T) \]
 
 \subsection{Calore}
+Dal paragrafo precedente abbiamo scoperto che si può dedurre il
+contenuto energetico di un sistema in funzione della sua temperatura.
+Con Joule, però, abbiamo visto che, per aumentare la temperatura di
+un sistema, è necessario compiere del lavoro su di esso. Ma per
+esperienza sappiamo che un corpo freddo può essere riscaldato da uno
+più caldo. Tuttavia non si osserva alcun lavoro in azione. Per
+spiegare questo fenomeno, la fisica ha introdotto una quantità
+energetica nuova: \textit{il calore}.
 
+\begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Calore}]
+Energia scambiata tra corpi in contatto termico e a temperature
+differenti\footnote{Per esperienza sappiamo che il passaggio spontaneo avviene
+dal corpo più caldo a quello più freddo, ma questa proprietà della natura viene riassunta in principi della termodinamica che affronteremo più avanti.}.
 
+Spesso indicata con $Q$.
+\end{tcolorbox}
 
-Il primo principio della termodinamica si riassume in una sola
-equazione essenziale:
+Spesso si è tentati di associare il calore alla temperatura. Si
+tratta di un'idea errata, perché la temperatura rappresenta lo
+stato di un sistema, mentre il calore è solo energia in movimento,
+come lo è il lavoro. Queste grandezze si manifestano solamente
+durante trasferimenti di energia. Il legame tra temperatura e calore
+è tuttavia molto stretto:
+
+\[ \Delta T \propto Q \]
+
+\noindent cioè il calore corrisponde ad una certa variazione della temperatura
+del sistema. In altri termini, variazione di temperatura e calore sono legati
+mediante una certa costante dalla relazione $\Delta T = \gamma Q$.
+
+Abbiamo visto come quantificare la temperatura mediante i termometri. Rimane
+però il problema di come quantificare il calore. Per fare un
+esempio concreto, supponiamo di voler scaldare un salotto con una stufa. Per
+incrementare la temperatura della stanza da 200 K a 300 K, sarà necessario
+bruciare una certa quantità di legna. È facile allora esprimere il calore
+necessario (che è l'energia sprigionata dalla legna che arde) ad aumentare
+la temperatura della stanza: È proprio funzione della quantità di legna che dobbiamo
+comprare e bruciare, a meno della costante $\gamma$ espressa precedentemente.
+
+Se anche il calore, come il lavoro, può variare la temperatura di un sistema,
+ciò implica che anche lo scambio di calore può mutare l'energia interna di
+un sistema.
+Abbiamo visto precedentemente che l'energia interna di un sistema è una qualche
+funzione della temperatura, $U = U(T)$. Questa relazione si suppone essere
+invertibile, $T = T(U)$. Dagli studi sul calore, poi, abbiamo mostrato la
+relazione tra calore e variazione di temperatura, dalla quale possiamo notare
+che
+
+\[ Q = \frac{1}{\gamma}\Delta T = \frac{1}{\gamma}(T_f - T_i) = \frac{1}{\gamma}(T(U_f) - T(U_i)) \]
+
+\noindent A meno di costanti, possiamo esprimere il calore come quantità
+proporzionale alla variazione di energia interna del sistema:
+
+\[ Q \propto \Delta U \]
+
+\subsection{Formulazione del primo rincipio}
+Possiamo ora mostrare il primo principio della termodinamica. Il principio
+mostra semplicemente che un sistema può variare la propria energia interna
+mediante il contributo energetico di due quantità ``in movimento'': il lavoro,
+$W = -\Delta U_W$\footnote{Poniamo il segno negativo per convenzione e convenienza matematica, come abbiamo fatto per l'energia potenziale.}
+e il calore scambiato con l'ambiente, $Q = \Delta U_Q$. Questi contributi si sommano per deterimanre una
+variazione totale $\Delta U = \Delta U_Q  + \Delta U_W$, da cui la formulazione
+seguente del primo principio:
 
 \begin{align}
-    \Delta U = Q - W
+    \Delta U = Q - W\label{firstprincip}
 \end{align}
 
 \noindent Sarebbe più corretto mostrare la seguente forma differenziale
@@ -176,12 +294,47 @@ equazione essenziale:
 \noindent Ci limetermo alla seguente interpretazione: $d$ rappresenta
 un differenziale esatto, che sottolinea l'indipendenza della differenza
 dal percorso. La differenza di energia interna $dU$ dipende solo dagli
-stati iniziale e finale, ignorando ciò che è accaduto nel mezzo.
+stati iniziale e finale del sistema, ignorando ciò che è accaduto durante la
+trasformazione.
 Il simbolo $\delta$ indica invece che i contributi di calore e lavoro
-possono essere differenti a seconda della trasformazione che è
+possono essere differenti a seconda della trasformazione
 avvenuta. In altre parole, la stessa differenza $dU$ può aver
 avuto origine da trasformazioni termodinamiche differenti, ognuna
 delle quali ha osservato un diverso contributo di lavoro e calore.
+Per riassumere, \textit{l'energia interna definisce una proprietà
+di stato del sistema} e invece \textit{calore e lavoro sono proprietà
+della particolare trasformazione}.
+
+\begin{marginfigure}
+    \centering
+    \includegraphics[width = \marginparwidth]{termosyst.pdf}
+    \caption{Convenzione sui segni dei flussi energetici in un
+    sistema termodinamico, al quale si applica la nostra
+    formulazione del primo principio.}\label{fluxi}
+\end{marginfigure}
+
+Chiariamo le convenzioni sui segni: supponiamo di avere un sistema
+termodinamico che scambia calore con l'ambiente e che può compiere
+lavoro. La situazione è mostrata in figura \ref{fluxi}.
+Quando il sistema acquista calore dall'ambiente esterno,
+il valore di questà quantità sarà positivo. Quando invece il
+sistema perde calore, quest'ultimo ha valore negativo. In accordo
+con il primo principio, supponendo di ignorare il lavoro, l'energia
+interna $U$ del sistema diminuisce quando il calore esce e viceversa
+aumenta quando entra nel sistema.
+Per il lavoro vale il contrario: quando l'ambiente effettua lavoro
+sul sistema, questa quantità di energia in entrata ha valore negativo;
+quando invece il sistema effettua lavoro sull'ambiente, esso spende
+e perde parte della sua energia interna. Per questo motivo, nel
+primo principio, il lavoro viene sottratto alla variazione di energia
+totale.
+
+Sottolineamo infine che, nella formulazione \ref{firstprincip},
+$\Delta U$ corrisponde alla variazione \textit{totale} di energia
+interna del sistema in un dato momento nel quale avviene scambio
+di energia. Sono dunque totali anche il calore scambiato
+$Q$ e il lavoro effettuato $W$.
+
 
 \subsection{Modalità di trasmissione del calore}
 Come il lavoro può presentarsi in svariate forme, come abbiamo
@@ -244,55 +397,582 @@ La quantità
 Esempio di equazione di stato.
 
 \subsection{Lavoro di un gas ideale}
+Mostreremo ora parte del principio di funzionamento di un pistone
+di un motore a combustione interna. Si tratta di un esempio estremamente
+semplificato, perché considereremo gas ideali.
+Sappiamo bene che il motore termico di, ad esempio, una motocicletta
+genera lavoro per azionare la catena e di conseguenza la ruota posteriore.
+Il ``tempo'' nel quale il motore genera lavoro è quello nel quale
+avviene lo scoppio, che aumenta violentemente la temperatura e la
+pressione dell'aria all'interno del cilindro, spingendo di fatto il
+pistone.
 
-\section{La teoria cinetica dei gas}
+\begin{marginfigure}
+    \centering
+    \includegraphics[width = \marginparwidth]{lavorogas.pdf}
+    \caption{Lavoro infinitesimo di un gas all'interno di un cilindro.}
+    \label{workinggas}
+\end{marginfigure}
+
+Si faccia riferimento al motore in figura \ref{workinggas}, costituito
+da un cilindro e un pistone libero di muoversi al suo interno. Inizialmente, il pistone,
+con sezione di area $S$, si trova ad una distanza $L$ dal fondo del cilindro.
+L'aria all'interno ha pressione e volume iniziali $p_0$ e $V_0$. Se l'esterno
+del pistone oppone resistenza, il gas del cilindro, avendo una certa pressione,
+esercita sulla sezione del pistone una certa forza $\vecsymb{F}$. Immaginiamo
+che la resistenza esterna cessi ad un certo istante: il gas, in virtù della forza
+esercitata, spingerà il pistone di una certa distanza infinitesima $dh$.
+Il gas sta allora compiendo lavoro sul pistone:
+
+\[ dW = \vecsymb{F} \cdot d\vecsymb{s} = Fdh \]
+
+\noindent la forza $F$ non ci è molto utile attualmente. Vogliamo esprimere
+tutto sotto forma di variabili termodinamiche e non meccaniche. Notiamo
+allora che, dopo lo spostamento $dh$, il gas raggiungerà un certo volume
+$V_f$, che è leggermente più voluminoso di $V_0$ di una certa quantità $dV$:
+
+\[ V_f = (L + dh)S = SL + Sdh = V_0 + dV \]
+
+\noindent Tramite semplice algebretta, possiamo dedurre che
+$dW = Fdh = \frac{F}{S}Sdh = pdV$. Abbiamo dunque definito
+il lavoro infinitesimo di un gas ideale
+
+\begin{align}
+    dW = pdV
+\end{align}
+
+Stiamo assumendo che, durante l'aumento di $dV$, la pressione
+rimanga costante. Se però vogliamo calcolare il lavoro totale
+sprigionato durante l'intera corsa del pistone, dobbiamo effettuare
+un'integrazione tenendo presente che la pressione varierà durante
+tale processo. In generale, data una certa trasformazione termodinamica
+$\gamma$, il lavoro totale di un gas può essere espresso nella
+seguente forma:
+
+\begin{align}
+    W_\gamma = \int_\gamma pdV
+\end{align}
+
+\noindent Si noti che la pressione $p$ dovrà essere
+una qualche funzione esprimibile secondo altre variabili termodinamiche,
+in particolare il volume.
 
 
-\section{Trasformazioni}
+\subsection{La teoria cinetica dei gas}
+È evidente che, nella termodinamica da noi affrontata, il sistema
+fisico preferito è quello del gas. Lo abbiamo però sempre trattato
+da un punto di vista macroscopico, utilizzando variabili termodinamiche
+(pressione, volume e temperatura), senza mai spiegare cosa in realtà
+accade nel microscopico, all'interno del gas stesso. È ciò che proveremo
+a fare ora, costruendo una teoria che spieghi ciò che osserviamo
+dall'esterno. Non abbiamo però altro strumento che quello della meccanica
+e per questo motivo i risultati che otterremo in seguito sono
+conosciuti sotto il nome di \textit{teoria cinetica dei gas}.
+
+\subsubsection*{Ipotesi e presupposti della teoria}
+Sottolineamo che la teoria cinetica, per funzionare, poggia su numerosi
+presupposti, molti dei quali sono solo un'approssimazione della realtà.
+Tuttavia, vedremo che queste ipotesi condurranno ad una spiegazione
+soddisfacente delle nostre osservazioni:
+
+\begin{itemize}
+    \item Oggetto della trattazione teorica è un \textit{gas ideale}
+    (o perfetto) che si trova all'interno di un contenitore con
+    volume $V$. La forma del contenitore non sarà rilevante, ma spesso
+    si semplificano i calcoli se esso è un cubo.
+
+    \item Il gas è ideale nel senso che esso è costituito da particelle
+    infinitamente piccole rispetto al contenitore e alle distanze che
+    le separano. Tali particelle sono inoltre indistinguibili l'una
+    dall'altra (eccezion fatta per il loro stato di moto): esse hanno
+    in particolare la medesima massa.
+
+    \item Sempre il gas è ideale in quanto a bassa pressione e densità,
+    nella misura in cui l'interazione tra le particelle è nulla: non
+    avvengono urti e non vi sono interazioni di natura gravitazionale,
+    elettrica o di altro genere.
+
+    \item Gli unici urti non trascurabili sono quelli che avvengono
+    tra particella e parete del contenitore ed essi sono perfettamente
+    elastici, perché tra l'altro la massa delle particelle è infinitamente
+    piccola rispetto a quella del contenitore e delle sue pareti. L'urto
+    non mette dunque in moto il contenitore.
+\end{itemize}
+
+\subsubsection*{La teoria}
+Coerentemente con le ipotesi espresse nel paragrafo precedente,
+consideriamo ora una singola particella del gas ideale, con massa
+$m$. Esso sta per urtare una parete del contenitore cubico, con
+lato $L$ e di una certa massa $M$ tale che $M \gg m$. Proiettiamo la situazione su un piano, come in figura
+\ref{wall}. La particella potrebbe avere una qualsiasi velocità,
+che denoteremo $\vecsymb{v}$. Consideriamo poi solo la componente
+orizzontale di tale vettore, ovvero $\vecsymb{v}_x$.
+
+\begin{marginfigure}
+    \centering
+    \includegraphics[width = \marginparwidth]{thewall.pdf}
+    \caption{Urto tra una particella di gas e una delle pareti
+    del contenitore.}
+    \label{wall}
+\end{marginfigure}
+
+Sappiamo dalle equazioni \ref{perfelastico} che l'urto perfettamente
+elastico farà rimbalzare la particella in modo tale da rendere
+invariato il modulo di $\vecsymb{v}_x$, ma invertendone il verso.
+Le quantità di moto finale e iniziale della particella, allora,
+corrispondono rispettivamente a $\vecsymb{p}_{x,i} = m\vecsymb{v}_x$
+e $\vecsymb{p}_{x,f} = -m\vecsymb{v}_x$. La variazione della quantità
+di moto della particella è quindi
+
+\[ \Delta\vecsymb{p}_x = -2mv_x \hat{x} \]
+
+\noindent Utilizziamo il versore $\hat{x}$ per separare i moduli e per trattare
+oggetti scalari.
+
+Sappiamo che la variazione $\Delta\vecsymb{p}_x$ può essere interpretata
+come un impulso esercitato dalla parete, che quindi esercita una forza
+sulla particella. Ma come calcolare questa forza? È necessario trovare
+un intervallo temporale entro il quale l'impulso agisce, in modo da
+ricavare l'intensità della forza mediante la definizione \ref{impulso}.
+Possiamo notare che, per via degli urti perfettamente elastici, la particella
+continua a rimbalzare senza che la sua velocità totale $v$ muti.
+Proiettando il moto sull'asse $x$, vedremmo il vettore $\vecsymb{v}_x$
+invertirsi ciclicamente ad ogni urto con le pareti di destra e sinistra.
+La particella impiega allora un tempo
+
+\[ \Delta t = \frac{2L}{v_x} \]
+
+\noindent per lasciare una parete e tornarvici per urtare nuovamente.
+Durante questo intervallo di tempo, in media, la forza impulsiva
+esercitata da una parete sulla particella ha intensità
+
+\[ F_x = \frac{\Delta p_x}{\Delta t} = 2mv_x \frac{v_x}{2L} = \frac{mv_x^2}{L} \]
+
+\noindent Tramite la definizione di pressione $p = F/S$, (con $S$ la
+superficie di una parete, dunque $L^2$) otteniamo la
+pressione esercitata dalla singola particella
+
+\[ p_x = \frac{F_x}{L^2} = \frac{mv_x^2}{L^3} = \frac{mv_x^2}{V} \]
+
+\noindent Notare che questo ragionamento vale solo per la componente
+$x$, ma lo stesso ragionamento può essere esteso a tutte le altre
+componenti. La relazione precedente non è ancora di nostro aiuto,
+perché riguarda solo una particolare particella, la cui velocità può
+essere differente dalle altre. Calcoliamo dunque la pressione mediante
+la forza totale esercitata dalle particelle sull'asse $x$:
+
+\[ F_{\text{tot}, x} = \sum_i F_{x,i} = \sum_i \frac{mv_{x,i}^2}{L} = \frac{m}{L}\sum_i v_{x,i}^2 \]
+
+Supponendo che il gas sia costituito da $N$ particelle, possiamo
+effettuare un'approssimazione riducendo le velocità ad una loro media
+(essendo al quadrato, sarà una velocità quadratica media).
+
+\[ p_x = \frac{F_{\text{tot},x}}{L^2} = N\frac{m\overline{v_x^2}}{V} \]
+
+Il ragionamento effettuato per la componente $x$ vale anche per tutte
+le altre. Per questo motivo, dato che la pressione è una grandezza
+intensiva che idealmente rimane costante in tutto il cubo, possiamo
+supporre che $p_x = p_y = p_z = p$. Vogliamo però ottenere un'equazione
+che non dipenda da una componente della velocità delle particelle,
+ma dalla loro velocità totale. Anche qui supponiamo di ridurre le
+velocità di tutte le particelle, che potrebbero differire tra loro,
+ad una velocità quadratica media totale. La relazione con le sue
+componenti spaziali è ricavabile geometricamente:
+
+\[ \overline{v^2} = \overline{v_x^2} + \overline{v_y^2} + \overline{v_z^2} \]
+
+\noindent Le approssimazioni introdotte ci permettono anche di
+supporre che tutte e tre le componenti spaziali siano equivalenti
+tra loro, ovvero che $\overline{v_x^2} = \overline{v_y^2} = \overline{v_z^2}$.
+Usando allora l'equazione della pressione:
+
+\[ p = N\frac{m}{V}\left(\frac13 \overline{v^2}\right) \]
+
+\noindent Notiamo che compare il prodotto $m\overline{v^2}$, che
+corrisponde al doppio dell'energia cinetica media delle particelle,
+$\overline{E_K}$. Otteniamo dunque la seguente relazione:
+
+\[ pV = \frac23 N\overline{E_K} \]
+
+\noindent $\overline{E_K}$ corrisponde ad una singola particella.
+Allora possiamo concludere che la somma di tutte le energie cinetiche
+medie delle particelle del gas costituiscono l'energia interna del
+gas stesso: $E_\text{int} = U = N\overline{E_K}$.
+La teoria ci ha dunque permesso dunque di unire le seguenti relazioni:
+
+\[ pV = Nk_BT = \frac23 U \]
+
+In particolare, possiamo notare che
+
+\[ \overline{E_K} = \frac{3}{2}k_B T \]
+
+\noindent che esprime la relazione tra energia cinetica media di una
+particella e la temperatura. In un certo senso, la temperatura \textit{è}
+l'energia cinetica media delle particelle.
+
+\subsubsection*{Conclusioni}
+Il risultato più importante della teoria cinetica è l'unione tra
+il mondo macroscopico osservato sperimentalmente e il mondo microscopico
+modellato teoricamente. In particolare:
+\begin{itemize}
+    \item La teoria cinetica offre una spiegazione dell'origine della
+    pressione esercitata da un gas in un contenitore. L'origine è proprio
+    dovuta alla continua collisione delle particelle con le pareti
+    del contenitore.
+
+    \item La teoria cinetica mostra che la temperatura è strettamente
+    legata all'energia cinetica media delle particelle. Intuitivamente,
+    la temperatura è interpretabile proprio come l'agitazione media
+    delle particelle, per l'appunto l'energia del loro movimento.
+
+    \item La teoria cinetica costruisce un modello generalizzabile
+    a sistemi di costituenti non necessariamente monoatomico-puntiformi,
+    come approfondito nella prossima sezione.
+\end{itemize}
+
+\subsubsection*{Gradi di libertà}
+Nell'equazione relativa all'energia cinetica media,
+il fattore $1/2$ deriva dalla definizione di enrgia cinetica, ma
+il numero $3$ invece? Esso dipende dal numero di dimensioni entro
+le quali le particelle possono muoversi, ovvero i \textit{gradi di
+libertà}. Se compissimo lo studio da capo, costringendo però le particelle
+a giacere su un piano, i gradi di libertà sarebbero solo due e il fattore
+moltiplicativo
+dell'energia cinetica media sarebbe diverso. Ciò è dovuto al fatto
+che ogni grado di libertà permette alla particella di muoversi su
+un'altra dimensione e quindi di aggiungere un contributo in più alla
+propria energia cinetica. In generale, ogni grado di
+liberta comporta un contributo energetico di $\frac12k_BT$ e
+dunque, per $l$ gradi di libertà, si ottiene
+
+\begin{align}
+    \overline{E_K} = \frac{l}{2}k_BT
+\end{align}
+
+I gradi di libertà possono crescere all'aumentare della complessità
+della particella di gas. Oltre alle tre dimensioni, una molecola
+biatomica (quindi non puntiforme come abbiamo sempre supposto finora)
+può anche ruotare su due assi\footnote{Due assi sono sufficienti a
+coprire tutte le rotazioni nelle tre dimensioni}; i due atomi possono
+poi vibrare intorno alla loro ``sede'' nella molecola, dunque anche
+questa energia deve essere presa in considerazione. In totale, una
+molecola biatomica ideale può avere $l = 6$ gradi di libertà.
 
 
-\subsection{Reversibilità e irreversibilità}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Trasformazioni fonamentali}
+
+\subsection{Isocore}
+\subsection{Isobare}
+\subsection{Isoterme}
+\subsection{Adiabatiche}
+
+\subsection{Ancora sulle trasformazioni termodinamiche}
+Di seguito riportiamo alcune considerazioni sulle trasformazioni
+introdotte.
+
+\subsubsection*{Tabella riassuntiva}
+Sappiamo bene che le tabelle riassuntive piacciono a tutti quando
+si parla di leggi da memorizzare.
+
+\begin{center}
+    \begin{tabular}{c | c | c | c | c}
+        & Isocora & Isobara & Isoterma & Adiabatica\\
+        & $\Delta V = 0$ & $\Delta p = 0$ & $\Delta T = 0$ & $Q = 0$\\
+        \hline
+        $\Delta U$ & $nc_V\Delta T$ & $nc_V\Delta T$ & 0 & $nc_V\Delta T$\\
+        \hline
+        $Q$ & $nc_V\Delta T$ & $nc_p\Delta T$ & $nRT\ln(V_f/V_i)$ & 0\\
+        \hline
+        $W$ & 0 & $nR\Delta T = p\Delta V$ & $nRT\ln(V_f/V_i)$ & $-nc_V\Delta T$
+    \end{tabular}
+\end{center}
+
+\subsubsection*{Trasformazioni composte e cicliche}
+Combinando insieme le trasformazioni semplici viste fino ad ora, è possibile
+comporre trasformazioni più complesse. Ad esempio, un gas in certe
+condizioni di pressione e volume può passare ad un altro stato mediante
+una adiabatica, seguita da una isoterma e infine da una isobara.
+
+Tra tutte queste trasformazioni ``composte'', quelle più interessanti
+sono forse le \textit{trasformazioni cicliche} (o cicli termodinamici), nelle
+quali, data una coordinata termodinamica, il sistema ritorna nello stesso
+punto dopo aver compiuto alcune trasformazioni. Seguendo i nostri presupposti,
+possiamo concludere che la variazione di energia interna dei sistemi che
+subiscono trasformazioni cicliche non varia per definizione:
+
+\[ \Delta U_\gamma = 0 \quad \forall \gamma \text{ ciclica} \]
+
+\noindent in quanto quest'ultima dipende unicamente dallo stato.
+
+Avremo modo di osservare che le trasformazioni cicliche costituiscono
+il principio di funzionamento delle \textit{macchine}.
+
+\subsubsection*{Reversibilità e irreversibilità}
+
+
 
 \section{Macchine}
 
 \subsection{Rendimento}
+
+
 \subsection{Ciclo Diesel e ciclo di Otto}
+Esaminiamo un esempio reale di ciclo termodinamico, impiegato in
+una classe diffusa di motori termici: il ciclo Diesel, il cui
+principio di funzionamento consiste nel portare la mistura di
+miscela e aria a pressione elevata in tempi brevi per generare
+lo scoppio. Tale ciclo
+è illustrato sul piano $pV$ nella figura \ref{erciclodiesel}, anche
+se in realtà, come vedremo, si tratta solo di una idealizzazione.
+Considereremo infatti molti tratti del ciclo come trasformazioni
+quasistatiche. Nel ciclo, il gas che subisce queste trasformazioni
+è la mistura di aria, combustibile (la cosiddetta miscela) ed
+eventuali residui di scarico, combusti o meno.
+
+\begin{marginfigure}
+    \centering
+    \includegraphics[width = \marginparwidth]{erciclodiesel.pdf}
+    \caption{Ciclo diesel teorico.}
+    \label{erciclodiesel}
+\end{marginfigure}
+
+\noindent Il ciclo diesel è costituito dai seguenti tratti, o
+``tempi'':
+\begin{enumerate}
+    \item $OA$ è una fase di aspirazione della miscela. Si
+    tratta di una trasformazione isobara. Qui il pistone si
+    abbassa, aumentando il volume della camera di combustione.
+
+    \item $AB$ è una adiabatica, che corrisponde ad una compressione
+    forte abbastanza da innescare, in $B$, l'esplosione della
+    miscela. Ovviamente non viene scambiato calore.
+
+    \item $BC$ è la fase di esplosione. Si tratta di un fenomeno
+    più complesso di quello che i nostri strumenti di termodinamica
+    possano descrivere. Per questo assumiamo che tale fase non
+    sia quasistatica. Questo tratto è quello che immette calore
+    nel cilindro, permettendo di alzare violentemente la pressione
+    (e la temperature) a volume idealmente costante.
+
+    \item $CD$ è una seconda adiabatica, nella quale il pistone
+    viene spinto in seguito alla precedente esplosione. Qui viene
+    compiuto lavoro dal motore.
+
+    \item $DA$ è un'altra fase non quasistatica, perché dopo le
+    precedenti due fasi violente il pistone termina la sua
+    corsa; pressione e temperatura crollano vertiginosamente.
+
+    \item $AO$ chiude il ciclo, scaricando i gas combusti e,
+    permettendo di preparare il motore all'aspirazione di miscela
+    successiva.
+\end{enumerate}
+
+Calcoliamo l'efficienza di questo ciclo. Innanzitutto, posiamo
+notare che le fasi $OA$ e $AO$, sommandosi, si annullano e dunque
+non le considereremo. Possiamo utilizzare la definizione di
+efficienza $\eta = 1 - |Q_c|/Q_a$; serve dunque calcolare i
+calori scambiati nel ciclo. Dal momento che $AB$ e $CD$ sono
+adiabatiche, rimangono solo i tratti $BC$ e $DA$. Abbiamo detto
+che queste fasi non sono quasistatiche, ma possiamo notare che
+avvengono dei ``salti'' di temperatura simili ad una isocora.
+Possiamo allora supporre che valgano le leggi finora studiate:
+
+\[ Q_a = Q_{BC} = \Delta U_{BC} = nc_V(T_B - T_C) > 0 \quad Q_c = Q_{DA} = nc_V(T_A - T_D) < 0 \]
+
+\noindent da cui
+
+\[ \eta_\text{Diesel} = 1 - \frac{|T_A - T_D|}{T_C - T_B} \]
+
+\noindent ricordiamo, in condizioni ideali. Questa efficienza,
+secondo analisi più approfondite, potrebbe raggiungere un
+valore pari a $\eta \simeq 0.6$.
+
+\begin{marginfigure}
+    \centering
+    \includegraphics[width = \marginparwidth]{ciclootto.pdf}
+    \caption{Rappresentazione approssimativa del ciclo di Otto in
+    condizioni reali. Sono evidenziate anche le coordinate teoriche
+    corrispondenti a quelle presenti in figura \ref{erciclodiesel}.}
+    \label{ciclo8}
+\end{marginfigure}
+
+Nella realtà, il ciclo Diesel come appena mostrato è ben lontano
+da quelli che vengono solitamente progettati. In figura \ref{ciclo8}
+viene mostrato il \textit{ciclo Otto}, molto simile a quello Diesel
+e dal quale traggono ispirazione i maggiori tipi di motori termici
+attuali. Si deve essere coscienti del fatto che la forma in figura
+subisce numerosissime fluttuazioni sul piano $pV$ e l'intera trasformazione
+è ovviamente irreversibile. Tutto ciò spiega il crollo drastico
+dell'efficienza prevista teoricamente.
+
+
+
+
 
 
 \section{Principio secondo}
-Anche se storicamente non fu così, trattiamo prima l'attuale forma
-del secondo principio della termodinamica, permettendoci di chiarire
-le sezioni successive. Ricordando dal primo principio che $\Delta U =
-Q - W$, potremmo concludere che in un ciclo vale
+\epigraph{A: ``Quindi non è possibile nemmeno teoricamente?''\\B: ``Esattamente.''\\A: ``Per questo secondo me è \emph{mind-blowing}.''}{Lezione di termodinamica,\\a.a. 2023/2024}
 
-\[ \Delta U = 0 \Rightarrow Q = W \]
+Dopo aver introdotto il concetto di macchina e della sua efficienza,
+è legittimo chiedersi se è possibile progettare \textit{nella realtà}
+la macchina perfetta, che cioè converte tutta l'energia
+(in particolare calore) in ingresso interamente in lavoro in uscita,
+con un'efficienza del 100\%.
+Operando ciclicamente, per una macchina dovrebbe seguire dal primo
+principio $\Delta U = Q - W$ la conclusione $\Delta U = 0$ e allora
 
-\noindent Sembrerebbe dunque che, in un ciclo che per esempio alimenta
-una macchina, tutto il calore speso possa essere trasformato tutto
-in lavoro e viceversa. Per esperienza, tuttavia, è evidente che non
+\[ Q = W \]
+
+\noindent Sembrerebbe che la teoria sia fondata: lavoro e calore sono
+convertibili, cioè speso il calore otteniamo lavoro e possiamo tra l'altro
+\textit{invertire} il processo, perché l'uguaglianza non ci impone un
+verso preferenziale. Per esperienza, tuttavia, è evidente che non
 è così, cioè se spendiamo una certa quantità di calore $Q$ e
 la trasformiamo in lavoro, sembra impossibile, mediante quel lavoro,
 riottenere tutto il calore $Q$ iniziale. Per fare un esempio, potremmo
-immaginare di costruire un dispositivo costituito da una lampadina che
-alimenta una serie di pannelli fotovoltaici, che a loro volta alimentano
-la lampadina. Assumendo che il dispositivo sia costruito in maniera
-eccellente, riducendo quanto possibile la dispersione di luce e calore,
-in realtà questa ``macchina'' è destinata a spegnersi dopo un certo
-intervallo di tempo\footnote{Notare come il modo di pensare ``meccanico''
-non valga più qui. Cioè, non è sempre possibile ``tornare indietro'', invertire
-un processo. La questione sarà più chiara parlando di entropia.}.
+immaginare di costruire un mulino ad acqua in questo modo: sappiamo che
+tutti i mulini sono mossi dalla corrente e in tal modo producono
+lavoro; potremmo dunque far sì che il mulino alimenti una pompa che
+riporta l'acqua in cima al mulino, facendolo muovere indefinitamente.
+Assumendo che il dispositivo sia costruito in maniera
+eccellente, riducendo quanto possibile dispersione e attriti,
+in realtà questa macchina è destinata a fermarsi dopo un certo
+intervallo di tempo\footnote{Consigliamo di dare un'occhiata alla
+sezione dedicata al moto perpetuo, negli approfondimenti di questo
+capitolo.}.
 
-Inoltre, sempre per esperienza ed evidenza sperimentale, \textit{il
-calore non fluisce mai spontaneamente da un corpo ad uno più caldo}.
+Potremmo ribattere affermando che la realtà ci pone problemi come
+attrito e dissipazioni di vario genere. Ciò che è sconcertante è
+l'impossibilità non solo \textit{reale} di realizzare macchine simili,
+ma anche \textit{teorica}. Questa conclusione, come vedremo, fonda
+le radici nel secondo principio, che a sua volta poggia sulla
+seguente evidenza: \textit{il calore non fluisce mai spontaneamente
+da un corpo ad uno più caldo}.
 
-Dalle prossime sezioni, noteremo che queste semplici osservazioni
-conducono a risultati più inquietanti di quello che si possa
-pensare. Il punto di partenza è costituito dalle due formulazioni
-del secondo principio, che si fondano proprio sulle evidenze appena
-citate.
+\subsection{Enunciati}
+Esistono due enunciati celebri del secondo principio della termodinamica\footnote{Anche se storicamente non fu così, trattiamo prima l'attuale forma
+del secondo principio della termodinamica, permettendoci di chiarire
+le sezioni successive.}.
+In qualità di principi, essi sono dati per veri sulla base dell'esperienza,
+ma è comunque possibile dimostrare che essi si riferiscono alla
+stessa proprietà della natura.
 
+\begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Enunciati del secondo principio della termodinamica}]
+    \begin{itemize}
+        \item \textbf{Enunciato di Kelvin-Plank}
+        
+        \begin{center}
+            \textit{È impossibile realizzare una macchina il cui unico risultato
+            sia quello di trasformare calore, a partire da una sola sorgente, interamente in lavoro.}
+        \end{center}
+    
+        \item \textbf{Enunciato di Clausius}
+        
+        \begin{center}
+            \textit{È impossibile realizzare un processo il cui unico risultato\\
+            sia quello di trasferire calore da un corpo ad uno più caldo.}
+        \end{center}
+    \end{itemize}
+\end{tcolorbox}
 
-\subsection{Equivalenza degli enunciati del secondo principio}
+\noindent Una delle proprietà della natura che il secondo principio sottointende
+è il fatto che ogni macchina termica, qualsiasi essa sia (anche tra quelle non ancora
+inventate!) deve sempre operare tra almeno due sorgenti affiché essa possa
+funzionare. Inoltre, da come si evince dall'enunciato di Kelvin-Plank, è impossibile
+costruire macchine con rendimento pari a 1.
+
+\subsection{Equivalenza degli enunciati}
+Dimostreremo che i due enunciati sono equivalenti nel seguente modo:
+indicando con $KP$ l'enunciato di Kelvin-Plank e con $C$ quello di
+Clausius, concluderemo che $KP \Leftrightarrow C$ mostrando che
+$\overline{KP} \Leftrightarrow \overline{C}$, cioè negando uno necessariamente
+si deve negare anche l'altro. Di volta in volta
+considereremo macchine che disobbediscono ai due principi, che chiameremo
+sempre $\overline{KP}$ e $\overline{C}$, e che operano tra due
+serbatoi 1 e 2 a temperature $T_1 < T_2$.
+
+\subsubsection*{Dimostrazione: $\overline{KP} \Rightarrow \overline{C}$}
+Cominciamo mostrando che $\overline{KP} \Rightarrow \overline{C}$,
+facendo riferimento alla figura \ref{kptocproof}.
+Consideriamo allora la macchina $\overline{KP}$ che preleva una
+certa quantità di calore $Q_1 > 0$ da 1 e lo converte interamente
+in lavoro $W$, alla facciaccia di Kelvin e Plank.
+
+\[ Q_1 = W \]
+
+\begin{marginfigure}
+    \centering
+    \includegraphics[width = \marginparwidth]{kpcproof.pdf}
+    \caption{Dimostrazione dell'implicazione $\overline{KP} \Rightarrow \overline{C}$.}
+    \label{kptocproof}
+\end{marginfigure}
+
+\noindent Il lavoro $W$ viene poi impiegato per alimentare una
+seconda macchina che cede il calore prodotto $Q_2$ alla sorgente
+2. Questa macchina può essere progettata, per esempio, sulla base
+di trasformazioni isoterme, oppure dissipando il lavoro meccanico
+in attrito, che genera sempre calore. Allora
+
+\[ Q_2 = -W \]
+
+\noindent Ma allora,
+se uniamo le macchine, ne otteniamo una che nel complesso preleva
+del calore $Q_1$ dalla sorgente fredda 1 e cede quella stessa
+quantità di calore alla sorgente calda 2, senza produrre altri
+risultati. Questa macchina composta è proprio $\overline{C}$.
+
+\subsubsection*{Dimostrazione: $\overline{C} \Rightarrow \overline{KP}$}
+Si osservi la figura \ref{ctokpproof}.
+Supponiamo di avere una macchina $\overline{C}$ che trasferisce
+calore $Q > 0$ da 1 verso 2. Il calore in entrata nella macchina è
+$Q_1 = Q$ mentre quello in uscita è $Q_2 = -Q$.
+Consideriamo poi una seconda macchina $M$, progettata per prelevare
+del calore $Q^* > Q$ dalla sorgente calda 2, produrre lavoro $W$
+e cedere calore $Q_c = -Q$ alla sorgente fredda 1. Questo è ammissibile
+operando sul rendimento $\eta_M = 1 - |Q_c|/Q^*$ di $M$.
+Se si uniscono $\overline{C}$ e $M$, si ottiene una macchina che nel
+complesso assorbe calore $Q^* - Q$ dalla sorgente calda 2, produce
+lavoro $W$ ma che preleva per poi cedere di nuovo lo stesso calore
+$Q$ alla sorgente 1, come se non esistesse. Dunque $W = Q^* - Q$.
+La macchina composta corrisponde allora a $\overline{KP}$.
+
+\begin{marginfigure}
+    \centering
+    \includegraphics[width = \marginparwidth]{ckpproof.pdf}
+    \caption{Dimostrazione dell'implicazione $\overline{C} \Rightarrow \overline{KP}$.}
+    \label{ctokpproof}
+\end{marginfigure}
+
+Si potrebbe ribattere sostenendo che $\overline{KP}$ può funzionare
+perché vi è comunque scambio di calore $Q$ con la sorgente fredda,
+anche se questo calore viene sempre ceduto e prelevato ripetutamente,
+ma comunque questo ragionamento non regge. Per convincerci di ciò,
+basta pensare ad un'altra macchina composta $X$ che incorpora
+$\overline{KP}$ (costruita precedentemente) e la sorgente 1, mentre la 2
+rimane esterna. Non vediamo la sorgente 1, in quanto componente
+della macchina $X$ che opera solamente con la sorgente 2. Allora anche $X$
+è analoga ad una macchina di tipo $\overline{KP}$.
+
 
 \section{Esperienza di Carnot}
 Nel 1824, l'ingegnere francese Sadi Carnot pubblicò il
@@ -337,8 +1017,58 @@ Carnot. Se $\mathcal{R}$ è una macchina reversibile, allora:
 
 
 \section{Esperienza di Clausius}
+Un ulteriore personaggio degno del titolo di main character
+della termodinamica è il tedesco Rudolf Clausius, il quale estese
+gli studi di Carnot. Illustreremo il teorema di Clausius, che
+aprirà la strada ad uno degli ultimi concetti di questi appunti:
+l'entropia.
 
-\section{Entropia}
+\subsection{Teorema di Clausius}
+Abbiamo visto che una delle relazioni ottenute da Carnot è la
+somma di rapporti $Q_1/T_1 + Q_2/T_2 \leq 0$. Ciò vale per tutte
+le macchine, reversibili o meno, che operano tra due sorgenti 1
+e 2 tali che $T_1 < T_2$. Avere però solamente due sorgenti è
+alquanto limitante e irrealistico, perché nella realtà le macchine
+operano su cicli ben più complessi, fluttuando tra svariati valori
+di temperatura, come se operassero tra infinite sorgenti. Clausius
+ebbe così la brillante idea di generalizzare le conclusioni di
+Carnot per un ciclo termodinamico qualsiasi.
+
+Si consideri il ciclo motore mostrato in figura. Esso attraversa
+un infinità di temperature differenti. Immaginiamo di approssimare
+la curva di questo ciclo mediante piccole trasformazioni adiabatiche
+e isoterme. Se estendiamo queste piccole trasformazioni, otterremo
+una griglia che suddivide l'area interna del nostro ciclo in tanti
+piccoli cicli di Carnot. Per il ciclo $i$-esimo, vale allora
+$Q_{1,i}/T_{1,i} + Q_{2,i}/T_{2,i} \leq 0$. Sommando i rapporti di
+tutti i cicli otteniamo
+
+\[ \sum_i \left(\frac{Q_{1,i}}{T_{1,i}} + \frac{Q_{2,i}}{T_{2,i}}\right) \leq 0 \]
+
+\noindent Questa relazione non ci dice ancora molto di straordinario,
+anche se possiamo notare due fatti: i tratti adiabatici non coinvolgono
+scambi di calore per definizione e dunque possiamo ignorarli nel
+nostro calcolo, perché il rapporto calore-temperatura è sempre nullo
+durante questo tipo di trasformazione; esistono poi molti tratti
+isotermi che vengono percorsi in versi opposti da cicli adiacenti.
+Ciò accade nei tratti interni alla curva originale e non introducono
+contributi calorici. Gli unici tratti di nostro interesse sono
+quelli delle trasformazioni isoterme ai bordi del ciclo. Possiamo
+allora riformulare la somma unendo solamente i rapporti di questi
+tratti. Supponendo che il tratto $j$-esimo sia una isoterma che
+costituisce parte del bordo della curva originale, vale
+$\sum_j Q_j/T_j \leq 0$. Più elegantemente, passando all'infinitesimo
+si ottiene la seguente disuguaglianza
+
+\begin{align}
+    \oint \frac{dQ}{T} \leq 0
+\end{align}
+
+\noindent che è proprio la tesi del teorema di Clausius. L'integrale
+prende il nome di \textit{integrale di Clausius}. Il caso particolare
+dell'uguaglianza vale solamente per trasformazioni reversibili.
+
+\subsection{Differenza di entropia}
 Si consideri una trasformazione termodinamica \textit{reversibile} qualsiasi.
 Per ipotesi di reversibilità, l'integrale di Clausius calcolato sulla curva $\gamma$
 di tale trasformazione nel piano pressione-volume è nullo.
@@ -362,13 +1092,11 @@ Definiamo dunque, in modo simile all'energia potenziale studiata in meccanica,
 la \textit{differenza di entropia tra due stati termodinamici}.
 
 \begin{align}
-    \Delta S_{AB} = S_B - S_A = \stackrel{\text{def}}{=} \int_{A,\text{rev}}^{B} \frac{dQ}{T}
+    \Delta S_{AB} \stackrel{\text{def}}{=} \int_{A,\text{rev}}^{B} \frac{dQ}{T}
 \end{align}
 
 
-\section{Oltre la termodinamica classica}
-
-\subsection{Microstato e macrostato}
+\subsection{Il teorema dell'entropia}
 
 
 
@@ -379,6 +1107,50 @@ la \textit{differenza di entropia tra due stati termodinamici}.
 
 
 \section{Approfondimenti}
+
+\subsection{Espansione libera dei gas}
+
+\subsection{Oltre la termodinamica: micro- e macro-stato}
+%microstato e macrostato, probabilit
+
+\subsection{Il terzo principio}
+Ebbene sì: esiste un terzo principio della termodinamica che è stato
+ignorato in queste lezioni. Esso introduce concetti già avanzati, ma,
+in alcune delle sue formulazioni equivalenti, rimane comunque estremamente
+affascinante. In breve, questo principio afferma che non esiste
+temperatura più bassa dello zero assoluto e che quest'ultimo non è
+neppur raggiungibile. Ecco una delle formulazioni:
+
+\begin{center}
+    \textit{Non esiste processo in grado portare la temperatura di un corpo\\allo
+    zero assoluto tramite un numero finito di passi.}
+\end{center}
+
+\noindent Analogamente alle dimostrazioni viste per l'equivalenza
+degli enunciati del secondo principio, anche il terzo può essere
+dimostrato con un esperimento mentale che si basa sulo stesso principio
+di funzionamento del frigorifero:
+
+Supponiamo di avere un insieme di oggetti a 0 K e un oggetto $X$ da
+raffreddare e a temperatura superiore. Mettiamo $X$ in
+contatto termico con uno degli oggetti a 0 K. Sappiamo dalla calorimetria
+che i due corpi raggiungeranno l'equilibrio termico e avranno una
+temperatura uguale intermedia alle loro iniziali. Possiamo allora
+ripetere il raffreddamento con $X$ e un altro oggetto a 0 K, ma
+non raggiungeremo mai lo zero assoluto con un numero finito di
+contatti, perché l'equilibrio termico viene raggiunto ad una temperatura
+che è sempre compresa tra 0 K (escluso) e quella di $X$ raffreddato, che
+è maggiore di 0 K.
+
+Purtroppo per noi, non è ancora stato trovato un oggetto a 0 K\footnote{Sono
+molti gli oggetti leggendari come questo in fisica: la massa infinita, il
+corpo nero, il piano privo di attrito...}, né tantomeno sono state
+trovate tecniche di raffreddamento in grado di raggiungere lo zero
+assoluto, anche se siamo stati in grado di avvicinarci ad esso
+nell'ordine di una frazione di Kelvin.
+
+\subsection{Il moto perpetuo}
+
 
 \subsection{La questione del calorico}
 La fisica poggia su un substrato filosofico molto sofisticato e
@@ -399,7 +1171,9 @@ molti casi concetti confusi, come a volte capita anche nell'esperienza.
 Grazie agli esperimenti di Joule, la fisica comprese che il calore
 rappresenta in realtà una forma di energia. Nell'esperimento del
 mulinello, l'innalzamento di temperatura dell'acqua è dovuto al
-lavoro compiuto da una massa.
+lavoro compiuto da una massa in caduta. Secondo l'interpretazione
+precedente, del calorico sarebbe comparso dal nulla, quando invece
+viene semplicemente osservata una trasformazione di lavoro in calore.
 
 
 
@@ -413,34 +1187,9 @@ lavoro compiuto da una massa.
 
 
 
+\newpage
+\subsection*{Trasform termodinamiche}
 
-
-
-
-
-
-
-
-
-
-
-
-\subsection*{Variabili termodinamiche}
-In cinematica utilizziamo variabili spazio-temporali per descrivere i nostri
-sistemi di punti materiali. Fare questo per un numero di punti o costituenti
-dell'ordine di $10^{23}$ è di fatto proibitivo. In termodinamica si utilizzano
-invece grandezze diverse, dette \textit{variabili (o coordinate) termodinamiche}.
-Le distinguiamo in
-
-\begin{itemize}
-    \item \textbf{Grandezze intensive}: si possono misurare localmente,
-    indipendentemente dall'estensione dell'oggetto che ne è caratterizzato.
-    Sono grandezze intensive la \textit{pressione} e la \textit{temperatura}.
-
-    \item \textbf{Grandezze estensive}: è necessario considerare l'oggetto nel
-    suo complesso, non ha senso o non si può misurare in un punto locale arbitrario.
-    Sono grandezze estensive il \textit{volume} e la \textit{massa}.
-\end{itemize}
 
 \noindent Come in cinematica impiegavamo un sistema di assi cartesiani come
 forma di rappresentazione del sistema di punti materiali in moto nelle dimensioni,
@@ -464,195 +1213,6 @@ Un sistema si dice in equilibrio dinamico se esso rispetta i seguenti equilibri:
 \noindent Per ``parti'' di uno stato o di un sistema intendiamo sottoinsiemi
 abbastanza piccoli rispetto al sistema originale ma allo stesso tempo sufficientemente
 grandi affiché gli strumenti della termodinamica funzionino.
-
-\section*{Calore e scambi}
-\section*{Gas ideali}
-\subsection*{Leggi dei gas ideali}
-\subsection*{Lavoro di un gas ideale}
-
-\section*{La teoria cinetica dei gas}
-Finora abbiamo affrontato la termodinamica parlando spesso di gas.
-Lo abbiamo fatto inoltre da un punto di vista macroscopico, ovvero
-utilizzando variabili termodinamiche (pressione, volume, temperatura).
-Tuttavia, vogliamo ora tentare di costruire un modello che permetta
-di spiegare cosa accade a livello microscopico e che sia allo stesso
-tempo coerente con le leggi mostrate fino ad ora.
-Per giungere a tale obbiettivo, ovvero collegare macroscopico e mocroscopico,
-l'unico strumento che abbiamo a diposizione in questo corso è la meccanica.
-Questa è la via che porta alla cosiddetta \textit{teoria cinetica dei
-gas}.
-
-\subsection*{Ipotesi e presupposti della teoria cinetica}
-La teoria cinetica dei gas semplifica molto ciò che veramente accade
-nella realtà fisica, ma è una approssimazione piuttosto buona e
-soddisfacente. In particolare, chiariamo che la teoria si basa sulle
-seguenti ipotesi:
-\begin{itemize}
-    \item Oggetto delle osservazioni è un gas \textit{ideale} (o
-    perfetto) che si trova all'interno di un contenitore con volume
-    $V$.
-
-    \item Il gas è ideale nel senso che esso è costituito da
-    particelle infinitamente piccole rispetto al contenitore nel
-    quale sitrovano e alle distanze che le separano; tali particelle
-    sono inoltre tutte uguali, compresa massa e altre proprietà.
-
-    \item Il gas ha una densità bassa nell'ordine in cui le interazione
-    tra le sue particelle è minimo o possibilmente nullo (non avvengono
-    urti, interazioni gravitazionali o di qualsiasi altra natura).
-
-    \item Gli unici urti di interesse teorico, non trascurabili, sono
-    quelli con le pareti del contenitore, perfettamente elastici (la
-    massa delle particelle è infinitamente piccola rispetto a quella
-    delle pareti del contenitore).
-\end{itemize}
-
-\subsection*{Logica della teoria}
-Per semplificare i calcoli, supponiamo che il contenitore sia un
-cubo con lati di lunghezza $L$. Si consideri una sola particella
-di gas (massa $m$) che sta per urtare la parete destra e la componente $x$
-della sua velocità ($v_x$). La quantità di moto iniziale di tale particella
-è
-
-\[ \mathbf{p}_{x,i} = m\textbf{v}_{x,i} \]
-
-Avviene un urto elastico con la parete destra, dunque la velocità finale
-della particella è uguale in modulo a quella iniziale, ma con verso
-opposto:
-
-\[ \mathbf{p}_{x,f} = m\textbf{v}_{x,f} = -m\textbf{v}_{x,i} \]
-
-La variazione della quantità di moto della particella equivale dunque
-a
-
-\[ \Delta\mathbf{p}_x = -2mv_x\hat{x} \]
-
-Utilizziamo d'ora in poi i moduli dei vettori. Sappiamo che tale
-variazione nella quantità di moto della particella può essere
-interpretata come un impulso esercitato dalla parete; dunque la
-parete esercita una forza sulla particella, ma come calcolarla?
-Diventa necessario trovare un intervallo temporale entro il quale
-agisce l'impulso per ricavare l'intensita della forza.
-Semplicemente notiamo che la velocità della particella non varia,
-per via degli urti elastici, e dunque essa rimbalza ripetutamente
-a destra e sinistra nel cubo. Dunque, la particella impiega un tempo
-
-\[ \Delta t = \frac{2L}{v_x} \]
-
-Per lasciare la parete e tornarvici per un altro urto. In media nel
-tempo, dunque, la forza impulsiva esercitata dalla parete destra
-sulla particella equivale a
-
-\[ F_x = \left|\frac{\Delta p_x}{\Delta t}\right| = 2mv_x \cdot \frac{v_x}{2L} = \frac{mv_x^2}{L} \]
-
-Dalla definizione di pressione, otteniamo la pressione esercitata
-dalla particella che rimbalza tra due pareti opposte (di superficie
-$S = L^2$):
-
-\[ p_x = \frac{F_x}{S} = \frac{mv_x^2}{L^3} = \frac{mv_x^2}{V} \]
-
-Lo stesso ragionamento vale per tutte le componenti spaziali.
-Macroscopicamente, osserviamo che la pressione è una quantità intensiva,
-che non dipende dalla località della misurazione. Dunque tutte
-le dimensioni spaziali sono equivalenti e possiamo effettuare la
-seguente semplificazione:
-
-\[ p_x = p_y = p_z = p \]
-
-Unendo la legge dei gas perfetti al risultato ottenuto precedentemente,
-
-\[ pV = mv_x^2 \]
-
-Ma ciò riguarda solamente una singola particella. Sommiamo dunque
-tutti i contributi:
-
-\[ F_{\text{tot}, x} = \sum_i F_{x,i} = \sum_i \frac{mv_{x,i}^2}{L} = \frac{m}{L}\sum_iv_{x,i}^2 \]
-
-In generale le velocità delle particelle potrebbero non essere tutte
-uguali. Supponendo che il gas sia costituito da $N$ particelle, possiamo
-determinare la loro velocità quadratica media
-
-\[ F_{\text{tot},x} = N\frac{m}{L}\overline{v_x^2} \]
-
-Dunque
-
-\[ pV = Nm\overline{v_x^2} \]
-
-Sappiamo che $v^2 = v_x^2 + v_y^2 + v_z^2$, che vale anche per la
-velocità quadratica media $\overline{v^2}$. Ma trattando delle medie,
-i contributi di tutte le dimensioni sono tra loro equivalenti:
-
-\[ \overline{v_x^2} = \overline{v_y^2} = \overline{v_z^2} \]
-
-Da cui
-
-\[ \overline{v^2} = \overline{v_x^2} + \overline{v_y^2} + \overline{v_z^2} = 3\overline{v_x^2} \]
-
-Allora
-
-\[ pV = Nm\frac{\overline{v^2}}{3} = \frac{2}{3}N\overline{E_K}\]
-
-Dove abbiamo esplicitato l'energia cinetica media della singola particella.
-Per andare più in profondità, possiamo notare che la teoria può
-portarci a concludere che
-
-\[ N\overline{E_K} = E_{int} = U \]
-
-Abbiamo dunque collegato la nostra teoria da un lato e gli esperimenti
-dall'altro:
-
-\[ pV = Nk_BT = \frac{2}{3}U \]
-
-Possiamo inoltre osservare dalla precedente che
-
-\[ \overline{E_K} = \frac{3}{2}k_BT \]
-
-Che esprime la relazione tra energia cinetica media di una particella
-e la temperatura. In un certo senso, dunque, la temperatura \textit{è}
-proprio l'energia cinetica media delle particelle.
-
-\subsection*{Risultati della teroria}
-Il risultato più importante della teoria cinetica è l'unione tra
-il mondo macroscopico osservato sperimentalmente e il mondo microscopico
-modellato teoricamente. In particolare:
-\begin{itemize}
-    \item La teoria cinetica offre una spiegazione dell'origine della
-    pressione esercitata da un gas in un contenitore.
-
-    \item La teoria cinetica mostra che la temperatura è strettamente
-    legata all'energia cinetica media delle particelle. Intuitivamente,
-    la temperatura è interpretabile proprio come l'agitazione media
-    delle particelle, per l'appunto l'energia del loro movimento.
-
-    \item La teoria cinetica costruisce un modello generalizzabile
-    a sistemi di costituenti non necessariamente monoatomico-puntiformi,
-    come approfondito nella prossima sezione.
-\end{itemize}
-
-\subsubsection*{Gradi di libertà}
-Il fattore $1/2$ deriva dalla definizione di enrgia cinetica, ma
-il numero $3$ invece? Esso dipende dal numero di dimensioni entro
-le quali le particelle possono muoversi, ovvero i \textit{gradi di
-libertà}. Se compissimo lo studio da capo, costringendo però le particelle
-a giacere su un piano, i gradi di libertà sarebbero solo due e il fattore
-moltiplicativo
-dell'energia cinetica media sarebbe diverso. Ciò è dovuto al fatto
-che ogni grado di libertà permette alla particella di muoversi su
-un'altra dimensione e dunque di aggiungere un contributo in più alla
-propria energia cinetica. In generale, dunque, ogni grado di
-liberta comporta un contributo energetico di $\frac12k_BT$ e
-dunque, per $l$ gradi di libertà, si ottiene
-
-\[ \overline{E_K} = \frac{l}{2}k_BT \]
-
-I gradi di libertà possono crescere all'aumentare della complessità
-della particella di gas. Oltre alle tre dimensioni, una molecola
-biatomica (quindi non puntiforme come abbiamo sempre supposto finora)
-può anche ruotare su due assi\footnote{Due assi sono sufficienti a
-coprire tutte le rotazioni nelle tre dimensioni}; i due atomi possono
-poi vibrare intorno alla loro ``sede'' nella molecola, dunque anche
-questa energia deve essere presa in considerazione. In totale, una
-molecola biatomica ideale può avere $l = 6$ gradi di libertà.
 
 
 \section*{Trasformazioni termodinamiche}
@@ -818,18 +1378,6 @@ Vale allora per le adiabatiche
 In particolare, nel caso di trasformazioni adiabatiche che coinvolgono
 gas monotatomici risulta $pV^{\frac53} = \text{const}$.
 
-\section*{Trasformazioni cicliche}
-Combinando insieme le trasformazioni semplici viste fino ad ora, è possibile
-comporre trasformazioni più complesse. Tra queste, quelle più interessanti
-sono forse le \textit{trasformazioni cicliche} (o cicli termodinamici), nelle
-quali, data una coordinata termodinamica, il sistema ritorna nello stesso
-punto dopo aver compiuto alcune trasformazioni. Seguendo i nostri presupposti,
-possiamo concludere che la variazione di energia interna dei sistemi che
-subiscono trasformazioni cicliche non varia per definizione:
-
-\[ \Delta U_\gamma = 0 \quad \forall \gamma = A \to A \]
-
-\noindent in quanto quest'ultima dipende unicamente dallo stato.
 
 \section*{Macchine}
 I cicli termodinamici caratterizzano i principi di funzionamento delle
@@ -918,61 +1466,6 @@ ad un quantitativo basso di calore assorbito:
     \textit{Minimo sforzo, massima resa. Spendi poco, ottieni molto.}
 \end{center}
 
-\section*{Il secondo principio della termodinamica}
-Ricordando il primo principio della termodinamica, $\Delta U = Q - W$,
-per una macchiina che opera ciclicamente l'energia interna
-non varia mai dopo un determinato ``giro'', ovvero $\Delta U = 0$
-e da cui $W = Q$. Già attraverso il primo principio
-notiamo che non potremmo mai sperare di creare una
-macchina in grado di produrre più lavoro di quanto calore
-ad essa viene fornito. Si tratta in realtà di una conclusione
-ancora ``meccanica'': quando l'energia passa da una forma
-all'altra, non sparisce né tantomeno aumenta senza
-altri apporti esterni. L'uguaglianza $W = Q$ fa tuttavia
-sperare che si possa convertire tutta l'energia rievuta
-interamente in lavoro in uscita. Anche questa sarebbe
-una conclusione legittima e in accordo con la meccanica
-studiata fino ad ora.
-
-Tuttavia, il sogno della macchina perfetta, con un
-rendimento del 100\%, è per esperienza un obiettivo
-estremamente difficile da raggiungere. Vedremo che
-un limite naturale equivalente è il seguente: il calore
-non fluisce \textit{mai spontaneamente} da un corpo
-freddo ad uno più caldo. Queste evidenze sperimentali
-supportano alla base il secondo principio della termodinamica,
-del quale esistono due formulazioni:
-
-\begin{itemize}
-    \item \textbf{Enunciato di Kelvin-Plank}
-    
-    \begin{center}
-        \textit{È impossibile realizzare una macchina il cui unico risultato\\
-        sia quello di trasformare calore, da una sorgente, interamente in lavoro.}
-    \end{center}
-
-    \item \textbf{Enunciato di Clausius}
-    
-    \begin{center}
-        \textit{È impossibile realizzare un processo il cui unico risultato\\
-        sia quello di trasferire calore da un corpo ad uno più caldo.}
-    \end{center}
-\end{itemize}
-
-
-\noindent Purtroppo per la nostra umanità (e probabilmente per tutte le civiltà avvenire),
-non è possibile realizzare macchine perfette, ovvero dal rendimento del
-$100\%$, perché questo è impedito dal secondo principio, in particolar modo
-dalla formulazione di Kelvin-Plank.
-
-Entrambe le formulazioni sono date per vere, ma possiamo tuttavia dimostrarne
-l'equivalenza. Equivalenza e quival enza. Enza, ciao.
-
-Ciò che anticipa questa analisi del secondo principio è che,
-secondo i risultati della termodinamica, non è possibile
-(neppure teoricamente!) realizzare macchine perfette. L'indagine
-sull'efficienza delle macchine termiche venne approfnodita
-nel Diciannovesimo secolo dal francese Nicolas Léonard Sadi Carnot.
 
 \section*{Esperienza di Carnot}
 Qual è la macchina più efficiente in assoluto? Oppure, in quali condizioni
@@ -980,61 +1473,7 @@ una macchina può ottenere il rendimento massimo? Queste sono domande che
 Carnot si pose ai suoi tempi.
 
 \section*{Esperienza di Clausius}
-Altra figura importante in termodinamica è il tedesco Rudolf Clausius,
-che estese gli studi importanti di Carnot ad un livello superiore.
 
-\subsection*{Teorema di Clausius}
-Abbiamo appena visto che una delle relazioni ottenute da Carnot è la
-somma di rapporti $\frac{Q_1}{T_1} + \frac{Q_2}{T_2} \leq 0$. Ciò vale
-per tutte le macchine, reversibili o no, che operano tra due sorgenti
-$T_1 < T_2$. Avere però solamente due sorgenti è piuttosto limitante,
-perché nella realtà le macchine operano su cicli ben più complessi e
-dunque è come se operassero tra più di due sorgenti. Clausius ebbe così
-la brillante idea di generalizzare le conclusioni di Carnot per un
-ciclo termodinamico qualsiasi.
-
-Supponiamo di osservare un cilo motore qualsiasi (la nocciolina motrice,
-che carina). Questo ciclo
-attraversa gradi di temperatura molteplici. Possiamo però effettuare
-una approssimazione della curva del ciclo immaginando di percorrerla
-mediante piccole trasformazioni adiabatiche e isoterme. Se estendiamo
-queste piccole trasformazioni, otterremo
-una suddivisione dell'area interna del nostro ciclo in tanti piccoli
-cicli di Carnot. Per allora il ciclo $i$-esimo, vale la relazione
-
-\[ \frac{Q_{1,i}}{T_{1,i}} + \frac{Q_{2,i}}{T_{2,i}} \leq 0 \]
-
-\noindent È allora immediato osservare che sommando questa quantità
-per ogni ciclo interno all'area del ciclo vale
-
-\[ \sum_{i} \left(\frac{Q_{1,i}}{T_{1,i}} + \frac{Q_{2,i}}{T_{2,i}}\right) \leq 0\]
-
-\noindent Questa relazione non ci dice ancora molto di straordinario.
-Possiamo però notare due cose: i tratti adiabatici non coinvolgono
-scambi di calore per definizione, e dunque possiamo ignorarli nel
-nostro calcolo, perché il rapporto calore-temperatura è sempre nullo
-durante questo tipo di trasformazione; esistono molti tratti isotermi
-che vengono percorsi in versi opposti. Questi sono i tratti \textit{interni}
-alla nostra curva origniale ed essendo percorsi in versi opposti non
-introducono ulteriori contributi calorici. Gli unici tratti di nostro
-interesse, dunque, sono quelli delle trasformazioni isoterme \textit{ai
-bordi} del ciclo. Possiamo allora riformulare la sommatoria unendo
-solo questi rapporti. Supponendo che il tratto $j$-esimo sia una isoterma
-che costituisce un pezzo di bordo della curva originale, otteniamo
-
-\[ \sum_{j} \frac{Q_j}{T_j} \leq 0 \]
-
-\noindent o più elegantemente, passando all'infinitesimo
-
-\begin{align}
-    \oint \frac{dQ}{T} \leq 0
-\end{align}
-
-\noindent che è proprio la tesi del teorema di Clausius. L'integrale
-prende il nome di \textit{integrale di Clausius}, giusto per sottolineare
-che se un qualche oggetto matematico porta il nome di una persona, esso è più
-importante di quanto si possa credere. Inoltre, come sempre, l'uguaglianza
-vale solamente per trasformazioni reversibili.
 
 \subsection*{Entropia}
 Supponiamo di avere un ciclo reversibile $\gamma$ qualsiasi. Essendo
@@ -1079,11 +1518,6 @@ inoltre ricavare le seguenti osservazioni:
     l'entropia è una funzione di stato e non dipende dal percorso.
 \end{itemize}
 
-\subsection*{Variazione di entropia nelle trasformazioni reversibili elementari}
-\begin{itemize}
-    \item Isoterma:
-\end{itemize}
-
 
 \subsection*{Il teorema dell'entropia}
 Consideriamo due trasformazioni termodinamiche che collegano due punti
@@ -1118,7 +1552,7 @@ non vi è alcuno scambio di calore con l'esterno, qualunque siano le
 trasformazioni che stanno avvenendo al suo interno, reversibili oppure
 no. Dunque $dQ = 0$ e l'integrale è sempre nullo.
 
-\[ \Delta_{AB} \geq \int_{A}^{B} \frac{dQ}{T} = 0 \qquad \Delta_{AB} \geq 0 \]
+\[ \Delta S_{AB} \geq \int_{A}^{B} \frac{dQ}{T} = 0 \qquad \Delta S_{AB} \geq 0 \]
 
 \noindent ovvero
 
@@ -1128,5 +1562,3 @@ no. Dunque $dQ = 0$ e l'integrale è sempre nullo.
 diminuire; essa può al più rimanere costante. Ma la cosa più sconcertante
 è che anche quest'ultima prospettiva è pressoché un miraggio: dovremmo
 riprodurre trasformazioni \textit{sempre reversibili}.
-
-\subsection*{Entropia e tempo}

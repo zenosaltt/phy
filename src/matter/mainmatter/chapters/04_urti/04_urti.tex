@@ -80,7 +80,7 @@ cioè forze variabili che agiscono per tempi molto brevi rispetto a quelli
 comunemente misurabili nel sistema esaminato.
 
 \begin{align}
-    \vecsymb{I} \stackrel{\text{def}}{=} \vecsymb{F}dt
+    \vecsymb{I} \stackrel{\text{def}}{=} \vecsymb{F}dt\label{impulso}
 \end{align}
 
 \noindent L'impulso è particolarmente utile per spiegare il motivo per cui
@@ -461,3 +461,88 @@ la velocità del proiettile.
 \subsection{Pendolo di Newton}
 
 \subsection{Carrelli}
+Ammesso che esistano ancora, i fisici si intrattengono nei laboratori
+utilizzando anche i carrelli, costituiti da oggetti che scorrono su
+binari. È frequente che, per ridurre l'attrito, la rotaia permetta al
+carrello di levitare mediante un cuscinetto d'aria. Minimizzare gli
+attriti e le dissipazioni è importante, perché ciò consente di giocare
+coi carrelli al fine di ottenere degli urti \textit{perfettamente} (in
+realtà quasi) elastici e anelastici. Nel seguito illustreremo i più
+banali casi di urto perfettamente elastico e urto perfettamente anelastico.
+
+\subsubsection*{Urto perfettamente elastico}
+Supponiamo di avere un carrello $A$, di massa $m_A$, che si dirige con velocità $v_A$
+verso un carrello fermo $B$ (dunque $v_B = 0$), con massa $m_B$. Il binario è dritto
+è dunque il problema si riduce ad una sola dimensione. Supponiamo
+che il verso di $\vecsymb{v}_A$ sia positivo. $A$ urta elasticamente
+$B$ e il loro stato di moto cambierà in qualche modo a seconda delle
+loro masse. Possiamo descrivere il sistema prima e dopo l'urto come
+segue:
+
+\[
+\begin{cases}
+    m_A\vecsymb{v}_A = m_A\vecsymb{v}_{A,f} + m_B\vecsymb{v}_{B,f}\\
+    m_A\vecsymb{v}_A^2 = m_A\vecsymb{v}_{A,f}^2 + m_B\vecsymb{v}_{B,f}^2
+\end{cases}
+\]
+
+\noindent Cerchiamo una forma chiusa con la quale esprimere $\vecsymb{v}_{A,f}$
+e $\vecsymb{v}_{B,f}$.
+
+\[
+\begin{cases}
+    \vecsymb{v}_{B,f} = \frac{m_A}{m_B}(\vecsymb{v}_A - \vecsymb{v}_{A,f})\\
+    m_A\vecsymb{v}_A^2 = m_A\vecsymb{v}_{A,f}^2 + m_B \frac{m_A^2}{m_B^2}(\vecsymb{v}_A - \vecsymb{v}_{A,f})^2
+\end{cases}
+\]
+
+\[
+\begin{cases}
+    \vecsymb{v}_{B,f} = \frac{m_A}{m_B}(\vecsymb{v}_A - \vecsymb{v}_{A,f})\\
+    \vecsymb{v}_A^2 - \vecsymb{v}_{A,f}^2 = \frac{m_A}{m_B}(\vecsymb{v}_A - \vecsymb{v}_{A,f})^2
+\end{cases}
+\]
+
+\noindent Otteniamo dunque
+
+\begin{align}
+\begin{cases}
+    \vecsymb{v}_{B,f} = \vecsymb{v}_A\frac{2m_A}{m_A + m_B}\\
+    \vecsymb{v}_{A,f} = \vecsymb{v}_A\frac{m_A - m_B}{m_A + m_B}
+\end{cases}\label{perfelastico}
+\end{align}
+
+\noindent Dalla \ref{perfelastico} possiamo notare che, se $m_A = m_B$,
+il carrello $A$ trasferirà tutto il suo moto su $B$ e dunque $A$ si fermerà,
+mentre $\vecsymb{v}_{B,f} = \vecsymb{v}_A$. Inoltre, $\vecsymb{v}_{B,f}$
+non sarà mai negativo, mentre a seconda della differenza tra $m_A$ e $m_B$
+il blocco $A$ potrebbe rimbalzare o proseguire seguendo $B$.
+
+Nella teoria cinetica dei gas impiegheremo la \ref{perfelastico} nei
+casi ideali dove $m_A \ll m_B$, o ancor meglio $m_B \to \infty$. Ciò significa
+che $A$ rimbalza su $B$ e torna dunque indietro con la stessa velocità
+precedente all'urto, ma stavolta con verso opposto. $B$ invece non si
+muove.
+
+
+\subsubsection*{Urto perfettamente anelastico}
+Il sistema è lo stesso di prima, ma stavolta l'urto è anelastico.
+Supporremo che i carrelli rimangono saldamente uniti tra loro. La
+descrizione stavolta riguarda solo la quantità di moto del sistema,
+per definizione di urto anelastico:
+
+\[
+m_A\vecsymb{v}_A = \vecsymb{v}_f(m_A + m_B)
+\]
+
+\noindent e dunque
+
+\[
+\vecsymb{v}_f = \vecsymb{v}_A \frac{m_A}{m_A + m_B}
+\]
+
+\noindent Qui non è possibile che $\vecsymb{v}_f$ si opponga al
+verso di $\vecsymb{v}_A$ (in questo contesto ideale, sarebbe assurdo
+se $A$, dopo essersi unito a $B$ fermo, tornasse indietro). $A$
+e $B$ rimarrebbero invece immobili dopo l'urto qualora la massa di
+$B$ fosse infinitamente più grande di quella di $A$.

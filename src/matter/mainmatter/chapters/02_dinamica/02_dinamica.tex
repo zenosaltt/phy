@@ -1,28 +1,29 @@
 \chptr{Dinamica}
 \marginpar{\minitoc}
 
-\section{Leggi della dinamica}
+\section{Le leggi della dinamica}
 
 Nella descrizione introduttiva del moto, non è stata analizzata alcuna causa del
-fenomeno.
+fenomeno. Cioè, non ci siamo mai preoccupati di studiare \textit{cosa}
+fa muovere un oggetto, ma solo di \textit{come} esso si muove. In
+questo capitolo affronteremo lo studio quantitativo di questi agenti
+esterni, che si uniscono sotto il termine di \textit{forze}. La dinamica
+è il campo che si occupa di queste entità e fonda le proprie radici su
+tre principi formulati da Newton.
 
 \subsection{La prima legge}
 
-\vspace{8pt}
 \begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Prima legge della dinamica (legge di inerzia)}]
     Un corpo permane nel suo stato di \textit{quiete} o moto rettilineo uniforme
     finché non intervenga un \textit{agente esterno}.
 \end{tcolorbox}
-\vspace{5pt}
 
-In altre parole, se nulla ``rompe le scatole'' al corpo, esso permanerà nel suo
+\noindent In altre parole, se nulla ``rompe le scatole'' al corpo, esso permanerà nel suo
 stato di moto, naturalmente.
 
-\vspace{8pt}
 \begin{tcolorbox}[colback = yellow!30, colframe = yellow!30!black, title = {Sistema inerziale}]
     Sistema nel quale vale la prima legge della dinamica.
 \end{tcolorbox}
-\vspace{5pt}
 
 \subsection{La seconda legge}
 Quando l'agente esterno agisce sull'oggetto, l'effetto è un cambiamento nello
@@ -31,7 +32,7 @@ della velocità nel tempo è chiamata \textbf{accelerazione}.
 
 \[ \lim_{\Delta t \to 0} \frac{\Delta v}{\Delta t} = \frac{dv}{dt} = a \]
 
-\vspace{8pt}
+
 \begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Seconda legge della dinamica}]
 Il cambiamento dello stato di moto è proporzionale all'intensità della forza applicata.
     \begin{align}
@@ -40,10 +41,9 @@ Il cambiamento dello stato di moto è proporzionale all'intensità della forza a
 Inoltre, il cambiamento avviene lungo la retta secondo la quale la forza
 si applica.
     \begin{align}
-        \mathbf{F} = m \mathbf{a}
+        \vecsymb{F} = m \vecsymb{a}
     \end{align}
 \end{tcolorbox}
-\vspace{5pt}
 
 \noindent Gli oggetti hanno inerzia, ovvero capacità di opporsi all'agire dell'agente
 esterno. Questa capacità di opporsi è rappresentato da una quantità detta
@@ -51,133 +51,128 @@ esterno. Questa capacità di opporsi è rappresentato da una quantità detta
 e accelerazione: fissata una accelerazione $a$, più $m$ è grande, tanto più $F$ cresce.
 Questo è l'effetto tangibile dell'inerzia.
 
-\subsection{Analisi dimensionale}
+\subsection*{Analisi dimensionale}
 \[ [F] = [ma] = \left[m\cdot\frac{v}{t}\right] = \left[m\cdot\frac{l}{t^2}\right]  \]
 \[ 1\text{ kg}\cdot\frac{\text{m}}{\text{s}^2} = \text{udm}\left[M\cdot\frac{L}{T^2}\right] = \text{udm}[F] = 1\text{ N} \]
 
 
-\subsection{Molla e forza elastica}
+
+\subsection{La terza legge}
+\begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Terza legge della dinamica (legge di azione e reazione)}]
+La forza che un corpo $A$ esercita su un corpo $B$ è uguale e opposta alla forza
+che
+
+\[ \vecsymb{F}_{A\to B} = -\vecsymb{F}_{B\to A} \]
+\end{tcolorbox}
+
+
+
+
+\section{Forze}
+Il mondo che ci circonda è costituito da oggetti che esercitano delle azioni gli
+uni sugli altri. Tali azioni impresse da agenti esterni su altri agenti sono
+generalmente chiamate \textit{forze}, ma possono avere natura differente a seconda
+del fenomeno fisico in esame. Ad esempio, le forze possono agire per contatto, come
+la spinta delle ruote di un'auto sull'asfalto, o a distanza, come la forza di gravità.
+Rimane tuttavia la caratteristica comune del loro \textit{effetto}, ovvero la capacità
+di modificare il moto dei corpi in accordo con la seconda legge della dinamica.
+
+Tra le forze più familiari che affronteremo in questo corso ci sono:
+la forza elastica; il peso; l'attrito.
+
+\subsection{Forza elastica}
+
 \[ F \propto \Delta x \]
 
 La forza che la molla esercita, essendo in opposizione alla direzione nella
 quale la deformazione viene effettuata, corrisponde a:
 \[ F_\textit{el} = -k\Delta x \]
 
-\section{Forza agente sul moto}
-Un blocco di massa $m = 10 \text{ kg}$ viaggia ad una velocità $v_i =
-2 \text{ m/s}$. Una forza $F = 20 \text{ N}$ agisce sul blocco per
-$T = 5 \text{ s}$. Quale velocità raggiungerà il blocco dopo $T$?.
-Dopo $T$, la forza cessa di agire e il blocco viaggia a $v_f$ trovata
-precedentemente. Includendo lo spazio percorso durante $T$ (e dunque il
-tempo $T$), quanto tempo impiega il blocco a coprire $s_w = 2\text{ km}$
-di distanza?
-
-\begin{marginfigure}
-    \centering
-    \includegraphics[width = \marginparwidth]{scivola.pdf}
-    \caption{Forza agente su una massa in moto}
-\end{marginfigure}
-
-Per rispondere al primo quesito, possiamo assumere un moto rettilineo
-uniformemente accelerato durante l'intervallo $T$. Sappiamo che \[ a = \frac{F}{m} = \frac{dv}{dt} \]
-Da cui possiamo esprimere la velocità in funzione del tempo (la velocità
-iniziale la conosciamo già, ma assumiamo un tempo iniziale $t_0 = 0$):
-\[ \frac{F}{m}dt = dv \to \int_{t_0}^{t}\frac{F}{m}dp = \int_{v_0}^{v}dw \to \frac{F}{m}\int_{0}^{t}dp = v - v_0 \to \frac{F}{m}t = v - v_0 \]
-Dunque
-\[ v(t) = v_0 + \frac{F}{m}t \]
-Non ci manca che calcolare la velocità in corrispondenza di un $t_f = t_0 + \Delta t = 0 + T = T$:
-\[ v(t_f) = v(T) = v_0 + \frac{F}{m}T \]
-
-Nel secondo quesito, possiamo spezzare il problema in due parti: durante
-l'azione della forza, la distanza percorsa ($s_a$) deve essere calcolata tenendo
-conto del moto uniformemente accelerato, mentre nell'intervallo di tempo
-successivo ($T_v$) il moto è semplicemente uniforme. Dalla seguente equazione,
-possiamo ricavare $T_v$ ($T$ lo conosciamo già).
-\[ s_w = s_a + s_v = s_a + v_fT_v = \int_{0}^{T}(v_0 + at)dp + v_fT_v = v_0T + \frac{1}{2}aT^2 + v_fT_v \]
-Il tempo per percorrere $2\text{ km}$ è dunque:
-\[ T_{2\text{ km}} = T + \frac{s_w - v_iT - \frac{F}{2m}T^2}{v_f} = T + \frac{s_w - v_iT - \frac{F}{2m}T^2}{v_i + \frac{F}{m}T} \]
-
-\section{Lancio verso l'alto}
-Si consideri la situazione mostrata in Figura \ref{lanciobasso}.
-Durante la salita, l'oggetto rallenta a causa dell'accelerazione di gravità $g$.
-Determiniamo la quota che l'oggetto raggiungerà.
-
-\[ a = \frac{dv}{dt} \to dv = adt \to \int_{v_0}^{v}dw = \int_{t_0}^{t}adp \to v - v_0 = a\int_{t_0}^{t}dp \to v - v_0 = a(t - t_0) \]
-Dunque
-\[ v(t) = v_0 + a(t - t_0) = v_0 + at \]
-Rallentando, si arriverà ad un istante $t_f$ nel quale l'oggetto avrà velocità
-nulla:
-\begin{marginfigure}
-    \centering
-    \includegraphics[width = \marginparwidth]{greve.pdf}
-    \caption{Lancio di un oggetto verso l'alto}
-    \label{lanciobasso}
-\end{marginfigure}
-\[ v(t_f) = 0 \to v_0 + at_f = 0 \]
-Non disponiamo tuttavia del tempo, ma possiamo avvalerci della legge oraria
-che descrive la distanza percorsa:
-\[ v(t) = \frac{dh}{dt} \to \int_{h_0}^{h}dk = \int_{t_0}^{t}v(t)dp \to h - h_0 = \int_{t_0}^{t}(v_0 + ap)dp \]
-\[ h - h_0 = v_0\int_{t_0}^{t}dp + a\int_{t_0}^{t}pdp \to h - h_0 = v_0t + \frac12 at^2 \]
-Da cui:
-\[ h(t) = h_0 + v_0t + \frac12 at^2 = v_0t + \frac12 at^2 \]
-Abbiamo quindi ottenuto la quota in funzione del tempo, che possiamo ricavare
-dall'equazione $v_0 + at_f = 0 \to t_f = -\frac{v_0}{a}$.
-\[ h(t_f) = v_0t_f + \frac12 at_{f}^2 =  -\frac{v_0^2}{a} + \frac{1}{2}a\frac{v_0^2}{a^2} = -\frac{v_0^2}{a} + \frac{v_0^2}{2a} = -\frac{v_0^2}{2a} \]
-Sapendo che $a = -|g|$, la quota massima $h_m$ raggiunta è:
-\[ h_m = \frac{v_0^2}{2|g|} \]
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection*{Spostamento}
-\[ \Delta\mathbf{s} = \mathbf{s}_f - \mathbf{s}_i \]
+\subsection{Peso}
 
 
-\subsection{La terza legge}
-\vspace{8pt}
-\begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Terza legge della dinamica (legge di azione e reazione)}]
-La forza che un corpo $A$ esercita su un corpo $B$ è uguale e opposta alla forza
-che
+\subsection{Attrito}
+Anche la più liscia delle superfici, se osservata a livello atomico, risulta
+scabra. Per far scorrere due superfici l'una sull'altra, occorre superare la
+resistenza dovuta agli urti fra i loro minuscoli avvallamenti e sporgenze. Questo
+modello grossolano spiega intuitivamente l'origine della forza chiamata
+\textit{attrito}. Esso dipende da molti fattori, come il materiale, la finitura
+delle superfici, la presenza di lubrificanti, e pertanto non esiste una legge
+fisica semplice ed universale che lo descriva. È tuttavia possibile derivare
+alcune leggi empiriche in grado di calcolare le forze di attrito.
 
-\[ \mathbf{F}_{A\to B} = -\mathbf{F}_{B\to A} \]
-\end{tcolorbox}
-\vspace{5pt}
+\subsubsection*{Attrito radente}
+L'attrito radente si manifesta durante lo scivolamento tra due superfici (esiste
+anche l'attrito volvente, che riguarda corpi estesi che rotolano e ruotano, ma non
+è di nostro interesse dato lo studio del punto materiale). La forza di attrito
+radente è proporzionale alla forza normale alla superficie ma è indipendente dalla
+superficie di contatto fra le superfici ed è espressa dalla relazione
+\[ \textbf{F}_A = \mu\mathbf{F}_\perp \]
+dove $\mathbf{F}_\perp$ è la forza perpendicolare, o premente, alla superficie,
+mentre $\mu$ è un coefficiente di attrito che dipende dai materiali degli oggetti
+e altri fattori e spesso è compreso tra 0 e 1.
+
+Le forze di attrito si suddividono a loro volta in attrito \textit{dinamico} e
+\textit{statico}.
+
+\subsubsection*{Attrito dinamico}
+L'attrito dinamico si oppone allo scorrimento di un corpo su una superficie.
+
+\subsubsection*{Attrito statico}
+L'attrito statico si oppone al distacco di un corpo da una superficie. Esso tende
+a impedire che un oggetto fermo su una superficie si distacchi da essa, cominciando
+a scivolare. L'attrito statico è generalmente maggiore di quello dinamico, perché,
+quando le supefici sono in contatto statico, i loro microscopici avvallamenti
+(riprendiamo il modello introdotto per spiegare l'origine dell'attrito)
+possono aderire maggiormente l'uno all'altro, determinando una maggiore
+interazione tra superfici.
+
+\subsubsection*{...}
+$\mathbf{F_A} = \mu|\mathbf{N}|\hat{A}$. Grafico, zona statica
+forza di attrito statica, regime dinamico forza di attrito dinamica.
+
+Statica
+\begin{align}
+    \mathbf{F}_{A,S} = -\mathbf{F}_{\text{app}, T}\\
+    |\mathbf{F}_{A,S} = |\mathbf{F}_{A,S}^\text{max}| = \mu_s|\mathbf{N}|
+\end{align}
+Dinamica
+\begin{align}
+    \mathbf{F}_{A,D} = -\mu_d|\mathbf{N}|\hat{v}
+\end{align}
+
+
+
+\section{Forze agenti sul moto}
+Ci occupiamo brevemente di alcuni problemi comuni di dinamica, nei
+quali forze di svariato genere modificano lo stato di moto dei corpi.
+Prenderemo come esempio il lancio in verticale con caduta libera e
+l'automobile che accelera e frena. Considereremo solo moti in una
+dimensione (su una linea retta), ma è possibile applicare gli stessi
+ragionamenti alle componenti di moti nel piano e nello spazio.
+
+\subsection{Lancio verticale e caduta libera}
+
+\subsection{Accelerazione e frenata orizzontali}
 
 
 \section{Statica}
-\[ \sum_{i = 1}^{N}\mathbf{F}_i = m\mathbf{a} \]
-La somma nel membro di sinistra è detta \textit{risultante} ($\mathbf{R}$).
-In quiete, non c'è accelerazione:
-\[ \mathbf{R} = \mathbf{0} \]
-Se la velocità è costante, possiamo parlare di problemi di quiete? Yes.
-
-\subsection*{Esercizio}
-$\mathbf{P} + \mathbf{T} = \mathbf{0} \Rightarrow -mg + T = 0 \Rightarrow T = mg$.
-
-\begin{marginfigure}
-    \centering
-    \includegraphics[width = \marginparwidth]{statica.pdf}
-    \caption{Massa appesa ad un filo}
-    \label{filo}
-\end{marginfigure}
-
-\subsection*{Esercizio}
-Come quello precedente ma con due corde che tengono $m$, inclinate di
-tot gradi fissate al soffitto. Trovare la tensione su ciascun filo.
+Dopo aver affrontato alcuni problemi di dinamica di corpi \textit{in
+moto}, ci occuperemo ora di problemi di dinamica nei quali i corpi
+sono \textit{immobili}.
 
 
-
-
-\section{Dinamica e moti armonici}
+\section{Dinamica dei moti armonici}
 Tratteremo il moto armonico introducendo elementi di dinamica newtoniana,
 studiando in particolare i cosiddetti \textit{oscillatori armonici}.
-\vspace{8pt}
+
 \begin{tcolorbox}[colback = yellow!30, colframe = yellow!30!black, title = {Oscillatore armonico}]
     Un oscillatore armonico è un oggetto su cui agisce una forza proporzionale,
     in modulo, allo spostamento dalla posizione di equilibrio e diretta in
     verso opposto rispetto a tale spostamento.
 \end{tcolorbox}
-\vspace{5pt}
-Saranno due gli oscillatori armonici di nostro interesse: l'oscillatore a
+
+\noindent Saranno due gli oscillatori armonici di nostro interesse: l'oscillatore a
 molla e il pendolo semplice. Tuttavia, esistono numerosi esempi di oscillatori
 armonici in natura, come uno snowboarder che compie evoluzioni in un half-pipe o
 un atomo che vibra intorno al suo punto di equilibrio, il bilanciere di un
@@ -462,65 +457,160 @@ della tensione di un pendolo per piccole oscillazioni:
     T(t) = mg\left(1 - \frac{(A\sin(\omega t + \phi))^2}{2}\right) + mlA^2\omega^2\cos^2(\omega t + \phi)
 \end{align}
 
-\section{Forze}
-Il mondo che ci circonda è costituito da oggetti che esercitano delle azioni gli
-uni sugli altri. Tali azioni impresse da agenti esterni su altri agenti sono
-generalmente chiamate \textit{forze}, ma possono avere natura differente a seconda
-del fenomeno fisico in esame. Ad esempio, le forze possono agire per contatto, come
-la spinta delle ruote di un'auto sull'asfalto, o a distanza, come la forza di gravità.
-Rimane tuttavia la caratteristica comune del loro \textit{effetto}, ovvero la capacità
-di modificare il moto dei corpi in accordo con la seconda legge della dinamica.
 
-\subsection{Peso}
 
-\subsection{Forza elastica}
+\section{Approfnodimenti}
 
-\subsection{Attrito}
-Anche la più liscia delle superfici, se osservata a livello atomico, risulta
-scabra. Per far scorrere due superfici l'una sull'altra, occorre superare la
-resistenza dovuta agli urti fra i loro minuscoli avvallamenti e sporgenze. Questo
-modello grossolano spiega intuitivamente l'origine della forza chiamata
-\textit{attrito}. Esso dipende da molti fattori, come il materiale, la finitura
-delle superfici, la presenza di lubrificanti, e pertanto non esiste una legge
-fisica semplice ed universale che lo descriva. È tuttavia possibile derivare
-alcune leggi empiriche in grado di calcolare le forze di attrito.
+\subsection{Raggio di curvatura}
+L'accelerazione centripeta non esiste solamente nei moti circolari uniformi,
+ma, come possiamo ricordare da esperienze quotidiane, qualsiasi variazione
+nella traiettoria di un corpo in moto, attraverso una ``sterzata'', permette
+di percepire l'effetto e la direzione dell'accelerazione.
+Possiamo dunque estendere la descrizione del moto circolare uniforme a casi
+meno eccezionali, come quelli dei moti dalle traiettorie curvilinee. È interessante
+come l'equazione dell'accelerazione centripeta permetta di ottenere informazioni
+interessantissime su moti come questi, come il \textbf{raggio di curvatura}. Si
+osservi l'esempio in Figura \ref{curvilinee}.
 
-\subsubsection*{Attrito radente}
-L'attrito radente si manifesta durante lo scivolamento tra due superfici (esiste
-anche l'attrito volvente, che riguarda corpi estesi che rotolano e ruotano, ma non
-è di nostro interesse dato lo studio del punto materiale). La forza di attrito
-radente è proporzionale alla forza normale alla superficie ma è indipendente dalla
-superficie di contatto fra le superfici ed è espressa dalla relazione
-\[ \textbf{F}_A = \mu\mathbf{F}_\perp \]
-dove $\mathbf{F}_\perp$ è la forza perpendicolare, o premente, alla superficie,
-mentre $\mu$ è un coefficiente di attrito che dipende dai materiali degli oggetti
-e altri fattori e spesso è compreso tra 0 e 1.
+\begin{marginfigure}
+    \centering
+    \includegraphics[width = \marginparwidth]{curvilinee.pdf}
+    \caption{Una traiettoria curvilinea apporssimata da archi di circonferenze con raggi differenti}
+    \label{curvilinee}
+\end{marginfigure}
 
-Le forze di attrito si suddividono a loro volta in attrito \textit{dinamico} e
-\textit{statico}.
+Tratti di traiettorie come queste possono essere approssimate da archi di
+circonferenze con raggi di lunghezze differenti. Durante ognuno di questi brevi
+tratti, percorsi sugli archi, l'oggetto in moto è sottoposto ad una certa
+accelerazione centripeta. Assumento che tale oggetto abbia una massa, è
+possibile misurare l'accelerazione rilevando la forza esercitata sull'oggetto
+durante il tratto di curva. Dall'equazione dell'accelerazione centripeta,
+vale
+\[\frac{F}{m} = \frac{v^2}{r}\]
+Date le nostre supposizioni sulle grandezze conosciute (forza, massa e velocità), l'unico
+dato che rimane è il raggio, che in questo caso prende il nome di
+\textit{raggio di curvatura}:
+\[ r = \frac{v^2m}{F} \]
 
-\subsubsection*{Attrito dinamico}
-L'attrito dinamico si oppone allo scorrimento di un corpo su una superficie.
 
-\subsubsection*{Attrito statico}
-L'attrito statico si oppone al distacco di un corpo da una superficie. Esso tende
-a impedire che un oggetto fermo su una superficie si distacchi da essa, cominciando
-a scivolare. L'attrito statico è generalmente maggiore di quello dinamico, perché,
-quando le supefici sono in contatto statico, i loro microscopici avvallamenti
-(riprendiamo il modello introdotto per spiegare l'origine dell'attrito)
-possono aderire maggiormente l'uno all'altro, determinando una maggiore
-interazione tra superfici.
 
-\subsubsection*{...}
-$\mathbf{F_A} = \mu|\mathbf{N}|\hat{A}$. Grafico, zona statica
-forza di attrito statica, regime dinamico forza di attrito dinamica.
 
-Statica
-\begin{align}
-    \mathbf{F}_{A,S} = -\mathbf{F}_{\text{app}, T}\\
-    |\mathbf{F}_{A,S} = |\mathbf{F}_{A,S}^\text{max}| = \mu_s|\mathbf{N}|
-\end{align}
-Dinamica
-\begin{align}
-    \mathbf{F}_{A,D} = -\mu_d|\mathbf{N}|\hat{v}
-\end{align}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\section*{Forza agente sul moto}
+Un blocco di massa $m = 10 \text{ kg}$ viaggia ad una velocità $v_i =
+2 \text{ m/s}$. Una forza $F = 20 \text{ N}$ agisce sul blocco per
+$T = 5 \text{ s}$. Quale velocità raggiungerà il blocco dopo $T$?.
+Dopo $T$, la forza cessa di agire e il blocco viaggia a $v_f$ trovata
+precedentemente. Includendo lo spazio percorso durante $T$ (e dunque il
+tempo $T$), quanto tempo impiega il blocco a coprire $s_w = 2\text{ km}$
+di distanza?
+
+\begin{marginfigure}
+    \centering
+    \includegraphics[width = \marginparwidth]{scivola.pdf}
+    \caption{Forza agente su una massa in moto}
+\end{marginfigure}
+
+Per rispondere al primo quesito, possiamo assumere un moto rettilineo
+uniformemente accelerato durante l'intervallo $T$. Sappiamo che \[ a = \frac{F}{m} = \frac{dv}{dt} \]
+Da cui possiamo esprimere la velocità in funzione del tempo (la velocità
+iniziale la conosciamo già, ma assumiamo un tempo iniziale $t_0 = 0$):
+\[ \frac{F}{m}dt = dv \to \int_{t_0}^{t}\frac{F}{m}dp = \int_{v_0}^{v}dw \to \frac{F}{m}\int_{0}^{t}dp = v - v_0 \to \frac{F}{m}t = v - v_0 \]
+Dunque
+\[ v(t) = v_0 + \frac{F}{m}t \]
+Non ci manca che calcolare la velocità in corrispondenza di un $t_f = t_0 + \Delta t = 0 + T = T$:
+\[ v(t_f) = v(T) = v_0 + \frac{F}{m}T \]
+
+Nel secondo quesito, possiamo spezzare il problema in due parti: durante
+l'azione della forza, la distanza percorsa ($s_a$) deve essere calcolata tenendo
+conto del moto uniformemente accelerato, mentre nell'intervallo di tempo
+successivo ($T_v$) il moto è semplicemente uniforme. Dalla seguente equazione,
+possiamo ricavare $T_v$ ($T$ lo conosciamo già).
+\[ s_w = s_a + s_v = s_a + v_fT_v = \int_{0}^{T}(v_0 + at)dp + v_fT_v = v_0T + \frac{1}{2}aT^2 + v_fT_v \]
+Il tempo per percorrere $2\text{ km}$ è dunque:
+\[ T_{2\text{ km}} = T + \frac{s_w - v_iT - \frac{F}{2m}T^2}{v_f} = T + \frac{s_w - v_iT - \frac{F}{2m}T^2}{v_i + \frac{F}{m}T} \]
+
+\subsection*{Lancio verso l'alto}
+Si consideri la situazione mostrata in Figura \ref{lanciobasso}.
+Durante la salita, l'oggetto rallenta a causa dell'accelerazione di gravità $g$.
+Determiniamo la quota che l'oggetto raggiungerà.
+
+\[ a = \frac{dv}{dt} \to dv = adt \to \int_{v_0}^{v}dw = \int_{t_0}^{t}adp \to v - v_0 = a\int_{t_0}^{t}dp \to v - v_0 = a(t - t_0) \]
+Dunque
+\[ v(t) = v_0 + a(t - t_0) = v_0 + at \]
+Rallentando, si arriverà ad un istante $t_f$ nel quale l'oggetto avrà velocità
+nulla:
+\begin{marginfigure}
+    \centering
+    \includegraphics[width = \marginparwidth]{greve.pdf}
+    \caption{Lancio di un oggetto verso l'alto}
+    \label{lanciobasso}
+\end{marginfigure}
+\[ v(t_f) = 0 \to v_0 + at_f = 0 \]
+Non disponiamo tuttavia del tempo, ma possiamo avvalerci della legge oraria
+che descrive la distanza percorsa:
+\[ v(t) = \frac{dh}{dt} \to \int_{h_0}^{h}dk = \int_{t_0}^{t}v(t)dp \to h - h_0 = \int_{t_0}^{t}(v_0 + ap)dp \]
+\[ h - h_0 = v_0\int_{t_0}^{t}dp + a\int_{t_0}^{t}pdp \to h - h_0 = v_0t + \frac12 at^2 \]
+Da cui:
+\[ h(t) = h_0 + v_0t + \frac12 at^2 = v_0t + \frac12 at^2 \]
+Abbiamo quindi ottenuto la quota in funzione del tempo, che possiamo ricavare
+dall'equazione $v_0 + at_f = 0 \to t_f = -\frac{v_0}{a}$.
+\[ h(t_f) = v_0t_f + \frac12 at_{f}^2 =  -\frac{v_0^2}{a} + \frac{1}{2}a\frac{v_0^2}{a^2} = -\frac{v_0^2}{a} + \frac{v_0^2}{2a} = -\frac{v_0^2}{2a} \]
+Sapendo che $a = -|g|$, la quota massima $h_m$ raggiunta è:
+\[ h_m = \frac{v_0^2}{2|g|} \]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection*{Spostamento}
+\[ \Delta\mathbf{s} = \mathbf{s}_f - \mathbf{s}_i \]
+
+
+\section*{Statica}
+\[ \sum_{i = 1}^{N}\mathbf{F}_i = m\mathbf{a} \]
+La somma nel membro di sinistra è detta \textit{risultante} ($\mathbf{R}$).
+In quiete, non c'è accelerazione:
+\[ \mathbf{R} = \mathbf{0} \]
+Se la velocità è costante, possiamo parlare di problemi di quiete? Yes.
+
+\subsection*{Esercizio}
+$\mathbf{P} + \mathbf{T} = \mathbf{0} \Rightarrow -mg + T = 0 \Rightarrow T = mg$.
+
+\begin{marginfigure}
+    \centering
+    \includegraphics[width = \marginparwidth]{statica.pdf}
+    \caption{Massa appesa ad un filo}
+    \label{filo}
+\end{marginfigure}
+
+\subsection*{Esercizio}
+Come quello precedente ma con due corde che tengono $m$, inclinate di
+tot gradi fissate al soffitto. Trovare la tensione su ciascun filo.

@@ -4,6 +4,10 @@ BUILD_DIR=../build
 JUNK_DIR=junk
 EXTENSIONS_HANDLER=handle_exts.sh
 
+# WARNING: filesys. dependent
+FIG_NAME=none
+PDF_TERMINAL=~/Downloads
+
 all: main.tex
 	@pdflatex main.tex && mv main.pdf $(TITLE).pdf
 	@pdflatex main.tex && mv main.pdf $(TITLE).pdf

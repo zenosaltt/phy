@@ -2,8 +2,8 @@
 \marginpar{\minitoc}
 
 \section{Gravità e forze fondamentali}
-Conosciamo bene la seconda legge della dinamica $\mathbf{F} = m\mathbf{a}$.
-Sappiamo che il termine $\mathbf{F}$ rappresenta l'azione di un agente esterno,
+Conosciamo bene la seconda legge della dinamica $\vecsymb{F} = m\vecsymb{a}$.
+Sappiamo che il termine $\vecsymb{F}$ rappresenta l'azione di un agente esterno,
 chiamato forza, che può avere natura diversa a seconda del sistema studiato.
 Pertanto, possiamo esprimere
 la sua intensità in forme a volte diverse, sia essa il peso, l'attrito, la
@@ -27,12 +27,23 @@ della stessa forza fondamentale.
 Sorprendentemente, è stata la forza più debole ad essere studiata per prima.
 La legge fondamentale venne formulata da Newton nel seguente modo:
 
+
 \begin{align}
-    \mathbf{F}_{\text{G}, 1\to 2} = -G\frac{m_{\text{G},1}m_{\text{G},2}}{r^2_{1,2}}\hat{r}_{1,2}\label{gravity}
+    \vecsymb{F}_{\text{G}, 1\to 2} = -G\frac{m_{\text{G},1}m_{\text{G},2}}{r^2_{1,2}}\hat{r}_{1,2}\label{gravity}
 \end{align}
 
+\begin{marginfigure}
+    \centering
+    \includegraphics[width = \marginparwidth]{gravity.pdf}
+    \caption{Illustrazione dell'applicazione della legge di Newton.
+    Anche se non viene mostrata, il corpo 2 esercita la stessa
+    forza, ma opposta in verso, sul corpo 1, in accordo con la
+    terza legge della dinamica.}
+    \label{gravitescionalfors}
+\end{marginfigure}
+
 \noindent Che esprime il vettore della forza gravitazionale che un corpo 1 esercita su un
-altro corpo 2. Il vettore giace sulla congiungente tra i due corpi (considerati come
+altro corpo 2. Come mostrato in figura \ref{gravitescionalfors}, il vettore giace sulla congiungente tra i due corpi (considerati come
 punti materiali), separati da una distanza $r_{1,2}$ e dotati di una certa
 \textit{massa gravitazionale} $m_G$. Il segno negativo, accompagnato dalla
 \textit{costante di gravitazione universale}, indica che la forza gravitazionale è
@@ -43,7 +54,7 @@ Soffermiamoci a chiarire alcuni concetti. Innanzitutto, vogliamo esprimere la le
 \ref{gravity} in maniera più generica.
 
 \begin{align}
-    \mathbf{F} = c\frac{p_1p_2}{r^2}\hat{r} \label{template}
+    \vecsymb{F} = c\frac{p_1p_2}{r^2}\hat{r} \label{template}
 \end{align}
 
 \noindent Sorprendentemente, questa forma verrà proposta da Coulomb per esprimere
@@ -97,7 +108,7 @@ $a = g$,
 \[ g = \frac{m_\text{G,C}}{m_\text{I,C}}G\frac{M_\text{G,T}}{R_{T}^2} \]
 
 \noindent Se assumessimo che le masse inerziale e gravitazionale di uno stesso corpo
-fossero diverse, l'accelerazione $g$ non sarebbe la stessa per tutti gli oggetti. Tuttavia,
+sono diverse, l'accelerazione $g$ non sarebbe la stessa per tutti gli oggetti. Tuttavia,
 non è ancora stata trovata evidenza della differenza quantitativa (apprezzabile, in
 quanto misure sperimentali) tra le due proprietà. L'osservazione galileiana stessa
 sulla caduta libera, ovvero che tutti i corpi cadono con la stessa accelerazione,
