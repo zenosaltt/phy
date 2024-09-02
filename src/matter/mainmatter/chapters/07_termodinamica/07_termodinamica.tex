@@ -139,6 +139,57 @@ sua estensione.
 
 
 \subsection{Trasformazioni termodinamiche ed equilibrio}
+I sistemi termodinamici possono essere descritti dalle coordinate
+termodinamiche appena introdotte, che giacciono su un piano. Un
+sistema che viene idealmente rappresentato da un punto fisso sul
+piano $pV$ è in uno \textit{stato di equilibrio termodinamico},
+nel quale le condizioni di pressione, volume e temperatura rimangono
+costanti col passare del tempo.
+Un sistema si dice in equilibrio termodinamico se esso rispetta i seguenti equilibri:
+\begin{enumerate}
+    \item \textit{Equilibrio meccanico}: lo stato non è sottoposto a forze totali non nulle,
+    in qualsiasi coppia delle sue parti.
+
+    \item \textit{Equilibrio chimico}: non esiste alcuna reazione chimica tra una qualsiasi
+    coppia di parti del sistema.
+
+    \item \textit{Equilibrio termico}: per ogni coppia di parti, la temperatura è la stessa.
+\end{enumerate}
+
+\noindent Per ``parti'' di un sistema intendiamo sottoinsiemi
+abbastanza piccoli rispetto al sistema originale ma allo stesso
+tempo sufficientemente grandi affiché gli strumenti della termodinamica
+funzionino.
+
+
+Un sistema può ovviamente muoversi all'interno del piano $pV$, cambiando
+i propri parametri termodinamici e spostandosi tra due stati differenti.
+Questi movimenti sono chiamati \textit{trasformazioni termodinamiche} e
+vedremo più avanti che sono processi che coinvolgono scambi di energia
+tra sistema termodinamico e ambiente esterno. Nel mondo reale, approssimare
+sperimentalmente la curva di una trasformazione sul piano $pV$ è
+estremamente difficile e dunque, se un sistema passa dallo stato $A$
+ad uno differente $B$, non vi è garanzia di equilibrio nel percorso
+tra i due punti. Per ora, ciò ci permette solo di ``accontentarci'' di
+stimare teoricamente l'energia scambiata e i parametri in una trasformazione
+termodinamica. Per questo motivo, sottointenderemo la seguente assunzione
+in questo capitolo: tutte le trasformazioni trattate sono \textit{quasistatiche}\footnote{Da non confondere con le trasformazioni \textit{reversibili}, trattate più avanti.}
+(a meno che non venga specificato diversamente).
+
+\begin{tcolorbox}[colback = yellow!30, colframe = yellow!30!black, title = {Trasformazione quasistatica}]
+    Trasformazione termodinamica ideale nella quale il sistema termodinamico
+    attraversa equilibri successivi. Data una trasformazione $\gamma$ quasistatica
+    sul piano $pV$, tutti i punti di $\gamma$ sono stati di equilibrio.
+\end{tcolorbox}
+
+\noindent Le trasformazioni quasistatiche sono irriproducibili sperimentalmente,
+perché, affinché ad \textit{ogni} istante il sistema si trovi in uno stato
+di equilibrio, è necessario variare le sue coordinate termodinamiche in
+quantità infinitesime e in tempi sufficienetemente lunghi in modo da non
+rompere gli equilibri.
+
+
+
 
 \subsection{Caldo e freddo}
 
@@ -666,23 +717,81 @@ molecola biatomica ideale può avere $l = 6$ gradi di libertà.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-\section{Trasformazioni fonamentali}
+\section{Trasformazioni fondamentali}
 
 \subsection{Isocore}
+Queste trasformazioni traggono il loro nome per via del loro volume,
+che rimane sempre costante, cioè $dV = 0$. Segue in particolare che
+$dW = pdV = 0$, ricordando la definizione di lavoro di un gas ideale.
+D'altronde, il volume del gas non cambia e quindi nessuna parte del
+suo contenitore viene mossa.
+
+Dal primo principio vale $dU = dQ$. Ciò significa che avviene solo
+scambio di calore. Possiamo supporre che il gas, durante la trasformazione,
+vari la propria temperatura in relazione al calore scambiato secondo
+un certo \textit{calore specifico a volume costante} $c_V$.
+
+\begin{align}
+    dQ = nc_VdT
+\end{align}
+
+\noindent Da cui $dU = nc_VdT$. Come aveva previsto Joule, per questa
+particolare trasformazione abbiamo individuato una relazione che lega
+energia interna e (variazione di) temperatura di un gas. Ricordando
+poi la teoria cinetica, $U = \frac32 nRT$. È facile allora scoprire
+che, dati $l$ gradi di libertà per un gas ideale,
+
+\[ c_V = \frac{l}{2}R \]
+
+\noindent per gas monoatomici in tre dimensioni, vale perciò $c_V = \frac32 R$.
+
+
 \subsection{Isobare}
+In queste trasformazioni, è la pressione a rimanere costante.
+Calcolarne il lavoro è molto semplice. Si evince infatti che
+la definizione si riduce ad una semplice moltiplicazione:
+$dW = pdV$, da cui $W = p\Delta V$.
+
+Dalle trasformazioni isocore, abbiamo scoperto un legame tra
+variazione di energia interna del gas e variazione di temperatura.
+Già per definizione legammo in una funzione queste due quantità.
+In particolare, sptabilimmo che $U$ è una funzione di stato, la
+cui variazione non dipende dal percorso ma dagli stati iniziale
+e finale. Siamo allora legittimati a impiegare la relazione
+$dU = nc_VdT$ trovata nelle isocore.
+
+Rimane da trovare il calore scambiato durante una isobara. Anche
+qui possiamo inventare una nuova costante, un \textit{calore specifico
+a pressione costante} $c_p$, col quale legare calore e intervallo
+di temperatura:
+
+\[ dQ = nc_pdT \]
+
+\noindent come per $c_p$, ci piacerebbe conoscere la sua vera forma.
+Notiamo che differenziando i membri della legge di Avogadro,
+$d[pV] = d[nRT]$, ci ritroveremo con la relazione $pdV = nRdT$,
+da cui scopriamo che $dW = nRdT$. Dal primo principio $dU = dQ - dW$,
+possiamo allora scoprire che $nc_VdT = nc_pdT - nRdT$, da cui
+la \textit{relazione di Mayer}\footnote{Come lo studentato.}
+
+\begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Relazione di Mayer}]
+\begin{align}
+    c_p - c_V = R
+\end{align}
+\end{tcolorbox}
+
+\noindent La relazione ci permette di esprimere $c_p$ per gas
+monoatomici in tre dimensioni: $c_p = c_V + R = \frac52 R$.
+Osserviamo infine che $c_p > c_V$. È facile spiegare intuitivamente
+il perché di questa disuguaglianza: a parità di calore fornito ad
+una certa quantità di gas, è maggiore la differenza di temperatura
+registrata dal gas a volume costante, perché esso non disperde il
+calore fornito in lavoro, come invece accade per il gas a pressione
+costante (in quest'ultimo, possiamo immaginare che il contenitore
+possieda un pistone mobile. Fornendo calore al gas, la pressione
+può rimanere costante a costo di muovere il pistone).
+
+
 \subsection{Isoterme}
 \subsection{Adiabatiche}
 
@@ -837,16 +946,17 @@ Dopo aver introdotto il concetto di macchina e della sua efficienza,
 è legittimo chiedersi se è possibile progettare \textit{nella realtà}
 la macchina perfetta, che cioè converte tutta l'energia
 (in particolare calore) in ingresso interamente in lavoro in uscita,
-con un'efficienza del 100\%.
+con efficienza unaria (100\%).
 Operando ciclicamente, per una macchina dovrebbe seguire dal primo
 principio $\Delta U = Q - W$ la conclusione $\Delta U = 0$ e allora
 
 \[ Q = W \]
 
 \noindent Sembrerebbe che la teoria sia fondata: lavoro e calore sono
-convertibili, cioè speso il calore otteniamo lavoro e possiamo tra l'altro
+convertibili, cioè spendendo il calore otteniamo lavoro e possiamo tra l'altro
 \textit{invertire} il processo, perché l'uguaglianza non ci impone un
-verso preferenziale. Per esperienza, tuttavia, è evidente che non
+verso preferenziale e noi siamo tanto furbi da costruire macchine
+in grado di funzionare al contrario. Per esperienza, tuttavia, è evidente che non
 è così, cioè se spendiamo una certa quantità di calore $Q$ e
 la trasformiamo in lavoro, sembra impossibile, mediante quel lavoro,
 riottenere tutto il calore $Q$ iniziale. Per fare un esempio, potremmo
@@ -1188,32 +1298,6 @@ viene semplicemente osservata una trasformazione di lavoro in calore.
 
 
 \newpage
-\subsection*{Trasform termodinamiche}
-
-
-\noindent Come in cinematica impiegavamo un sistema di assi cartesiani come
-forma di rappresentazione del sistema di punti materiali in moto nelle dimensioni,
-anche in termodinamica utilizziamo il medesimo strumento, ma utilizzando le
-coordinate termodinamiche. Una trasformazione termodinamica consiste in uno
-spostamento tra due punti $A$ e $B$ su questo nuovo piano cartesiano e assumeremo
-sempre, affinché la nostra teoria funzioni, che $A$ e $B$ siano situazioni, stati, di
-\textit{equilibrio termodinamico}. Nel mezzo non vi è garanzia di equilibrio.
-
-Un sistema si dice in equilibrio dinamico se esso rispetta i seguenti equilibri:
-\begin{enumerate}
-    \item \textbf{Equilibrio meccanico}: lo stato non è sottoposto a forze totali non nulle,
-    in qualsiasi coppia delle sue parti.
-
-    \item \textbf{Equilibrio chimico}: non esiste alcuna reazione chimica tra una qualsiasi
-    coppia di parti dello stato.
-
-    \item \textbf{Equilibrio termico}: per ogni coppia di parti, la temperatura è la stessa.
-\end{enumerate}
-
-\noindent Per ``parti'' di uno stato o di un sistema intendiamo sottoinsiemi
-abbastanza piccoli rispetto al sistema originale ma allo stesso tempo sufficientemente
-grandi affiché gli strumenti della termodinamica funzionino.
-
 
 \section*{Trasformazioni termodinamiche}
 Abbiamo mostrato che il lavoro di un gas ideale (ovvero a bassa densità)
@@ -1237,99 +1321,6 @@ ben definito. L'equazione $dU = \delta Q - \delta W$ è più generale
 perché presuppone la possibilità che il gas possa compiere più di una
 trasformazione per variare la propria energia interna.
 
-Il ``percorso'' prende il nome di \textit{trasformazione termodinamica}
-e studieremo ora le più semplici. Ricordiamo inoltre che le
-trasformazioni che verranno mostrate sono \textit{quasistatiche}
-e che quindi ogni punto può essere approssimato ad uno stato di
-equilibrio differente.
-
-\subsection*{Trasformazione isocora}
-Nelle trasformazioni isocore, il volume del gas rimane costante.
-Segue dunque
-
-\[ dV = 0 \Rightarrow dW = pdV = 0 \Rightarrow dU = dQ \]
-
-\noindent Sappiamo dagli studi di calorimetria che possiamo associare al
-gas un certo calore specifico $c_v$ che permette di descrivere il calore
-scambiato rispetto alla variazione di temperatura. Utilizziamo per
-convenienza un calore specifico \textit{molare}, anziché ricorrere
-alla massa. Bisogna però specificare che tale calore specifico
-vale solo a volume costante.
-
-\[ dQ = nc_VdT \]
-
-Da cui
-
-\[ dU = nc_VdT \]
-Dal momento che l'energia interna di un gas dipende solamente dalla
-temperatura, ciò vale anche per la sua variazione. Dunque, anche
-nelle trasformazioni che vedremo di seguito possiamo supporre che
-valga tale relazione.
-
-Dalla teoria cinetica abbiamo inoltre osservato che l'energia
-interna di un gas equivale a $U = \frac32nRT$, da cui
-$dU = \frac32nRdT$
-Possiamo dunque concludere con la seguente proposizione (per i
-gas ideali monoatomici):
-
-\[ c_V = \frac{3}{2}R \]
-
-\noindent In generale, avendo $l$ gradi di libertà vale $c_V = \frac{l}{2}R$.
-
-\subsection*{Trasformazione isobara}
-Per una trasformazione isobara, la pressione rimane costante.
-Diventa dunque facile calcolare il lavoro effettuato in tale
-trasformazione:
-
-\[ W_\text{isobara} = p\Delta V = nR\Delta T \]
-
-\noindent Dalle trasformazioni isocore abbiamo concluso che $dU = nc_VdT$.
-Per quanto riguarda il calore, dobbiamo introdurre un ulteriore
-calore specifico $c_p$ che invece vale per trasformazioni isobare.
-
-\[ dQ = nc_pdT \]
-
-\noindent Riproponiamo l'equazione di stato dei gas ideali $pV = nRT$ e
-consideriamo una variazione infinitesimale su entrambi i membri.
-
-\[ d[pV] = d[nRT] \]
-\[ dpV + pdV = nRdT \]
-\[ pdV = dW = nRdT \]
-
-\noindent Dunque $dU = nc_pdT - nRdT = nc_vdT$, da cui la seguente relazione.
-
-\begin{align}
-    c_p - c_v = R
-\end{align}
-
-\noindent Quella che abbiamo appena ottenuto è la cosiddetta \textit{relazione
-di Mayer} (esatto, lo studentato). Dai risultati precedenti otteniamo
-
-\[ c_p = c_v + R = \frac52R \]
-
-Se riformuliamo la relazione di Mayer otteniamo una ulteriore relazione
-molto impiegata nello studio di un'altra trasformazione che vedremo.
-
-\[ R = c_V\left(\frac{c_p}{c_V} - 1\right) = c_V(\gamma - 1) > 0 \]
-
-\noindent Incontreremo di nuovo il rapporto $\gamma$. Da questo risultato
-risulta dunque che
-
-\[ c_p > c_V \]
-
-\noindent sempre (entro il nostro modello). Ma come mai è importante precisare
-questa osservazione? In verità tale relazione ha un riscontro reale
-e sperimentale: in una trasformazione isocora, il volume non varia;
-d'altra parte in trasformazioni isobare la pressione viene mantenuta
-costante e ciò significa che il gas deve esercitare tale pressione
-costante durante tutal la trasformazione. Ciò comporta la necessità di un
-supplemento di energia dovuto alla variazione di volume e alla costanza
-della pressione. Di fatto, per aumentare l'energia interna di un
-gas è necessario fornire maggior energia qualora la pressione rimanga
-costante (per esempio in un contenitore chiuso da uno stantuffo mobile,
-dove il gas impiega energie per sollevare lo stantuffo), mentre risulta
-meno dispendioso innalzare l'energia interna di un gas a volume
-costante. Da qui il motivo della disuguaglianza $c_p > c_V$.
 
 \subsection*{Trasformazioni isoterme}
 Nelle trasformazioni isoterme, la temperatura non varia. Come
