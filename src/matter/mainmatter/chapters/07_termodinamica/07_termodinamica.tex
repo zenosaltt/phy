@@ -178,8 +178,8 @@ in questo capitolo: tutte le trasformazioni trattate sono \textit{quasistatiche}
 
 \begin{tcolorbox}[colback = yellow!30, colframe = yellow!30!black, title = {Trasformazione quasistatica}]
     Trasformazione termodinamica ideale nella quale il sistema termodinamico
-    attraversa equilibri successivi. Data una trasformazione $\gamma$ quasistatica
-    sul piano $pV$, tutti i punti di $\gamma$ sono stati di equilibrio.
+    attraversa equilibri successivi. Data una trasformazione $\tau$ quasistatica
+    sul piano $pV$, tutti i punti di $\tau$ sono stati di equilibrio.
 \end{tcolorbox}
 
 \noindent Le trasformazioni quasistatiche sono irriproducibili sperimentalmente,
@@ -294,7 +294,7 @@ durante trasferimenti di energia. Il legame tra temperatura e calore
 
 \noindent cioè il calore corrisponde ad una certa variazione della temperatura
 del sistema. In altri termini, variazione di temperatura e calore sono legati
-mediante una certa costante dalla relazione $\Delta T = \gamma Q$.
+mediante una certa costante $\epsilon$ dalla relazione $\Delta T = \epsilon Q$.
 
 Abbiamo visto come quantificare la temperatura mediante i termometri. Rimane
 però il problema di come quantificare il calore. Per fare un
@@ -303,7 +303,7 @@ incrementare la temperatura della stanza da 200 K a 300 K, sarà necessario
 bruciare una certa quantità di legna. È facile allora esprimere il calore
 necessario (che è l'energia sprigionata dalla legna che arde) ad aumentare
 la temperatura della stanza: È proprio funzione della quantità di legna che dobbiamo
-comprare e bruciare, a meno della costante $\gamma$ espressa precedentemente.
+comprare e bruciare, a meno della costante $\epsilon$ espressa precedentemente.
 
 Se anche il calore, come il lavoro, può variare la temperatura di un sistema,
 ciò implica che anche lo scambio di calore può mutare l'energia interna di
@@ -314,7 +314,7 @@ invertibile, $T = T(U)$. Dagli studi sul calore, poi, abbiamo mostrato la
 relazione tra calore e variazione di temperatura, dalla quale possiamo notare
 che
 
-\[ Q = \frac{1}{\gamma}\Delta T = \frac{1}{\gamma}(T_f - T_i) = \frac{1}{\gamma}(T(U_f) - T(U_i)) \]
+\[ Q = \frac{1}{\epsilon}\Delta T = \frac{1}{\epsilon}(T_f - T_i) = \frac{1}{\epsilon}(T(U_f) - T(U_i)) \]
 
 \noindent A meno di costanti, possiamo esprimere il calore come quantità
 proporzionale alla variazione di energia interna del sistema:
@@ -497,16 +497,12 @@ rimanga costante. Se però vogliamo calcolare il lavoro totale
 sprigionato durante l'intera corsa del pistone, dobbiamo effettuare
 un'integrazione tenendo presente che la pressione varierà durante
 tale processo. In generale, data una certa trasformazione termodinamica
-$\gamma$, il lavoro totale di un gas può essere espresso nella
+$\tau$, il lavoro totale di un gas può essere espresso nella
 seguente forma:
 
 \begin{align}
-    W_\gamma = \int_\gamma pdV
+    W_\tau = \int_\tau pdV
 \end{align}
-
-\noindent Si noti che la pressione $p$ dovrà essere
-una qualche funzione esprimibile secondo altre variabili termodinamiche,
-in particolare il volume.
 
 
 \subsection{La teoria cinetica dei gas}
@@ -718,6 +714,26 @@ molecola biatomica ideale può avere $l = 6$ gradi di libertà.
 
 
 \section{Trasformazioni fondamentali}
+Questa sezione è dedicata ad analisi più approfondite sulle trasformazioni
+termodinamiche fondamentali, ovvero trasformazioni molto semplici da
+trattare mediante gli strumenti di termodinamica finora mostrati. Da
+un certo punto di vista, queste trasformazioni rappresentano le modalità
+fondamentali con le quali un sistema può muoversi sul piano $pV$. Un
+motivo della loro semplicità risiede nel fatto che, in ogni trasformazione,
+un qualche parametro termodinamico rimane sempre costante.
+
+Supporremo che queste trasformazioni riguarderanno un gas ideale
+contenuto in un cilindro. A seconda del caso di studio, il cilindro
+potrà variare il proprio volume interno grazie ad un pistone mobile,
+oppure sarà adiabatico. Le trasformazioni saranno inoltre \textit{quasistatiche
+reversibili}: ad ogni istante, il sistema è in uno stato di
+equilibrio (il passaggio dall'uno all'altro è sufficientemente lento
+per raggiungere tale scopo) e inoltre è sempre possibile ripercorrere
+la trasformazione, e ogni suo tratto intermedio, in senso inverso.
+Le leggi che deriveremo non saranno pertanto applicabili alla lettera
+a trasformazioni reali di gas reali, ma costituiranno solo una buona
+approssimazione delle osservazioni sperimentali.
+
 
 \subsection{Isocore}
 Queste trasformazioni traggono il loro nome per via del loro volume,
@@ -782,7 +798,13 @@ la \textit{relazione di Mayer}\footnote{Come lo studentato.}
 
 \noindent La relazione ci permette di esprimere $c_p$ per gas
 monoatomici in tre dimensioni: $c_p = c_V + R = \frac52 R$.
-Osserviamo infine che $c_p > c_V$. È facile spiegare intuitivamente
+Osserviamo infine che
+
+\begin{align}
+    c_p > c_V
+\end{align}
+
+\noindent È facile spiegare intuitivamente
 il perché di questa disuguaglianza: a parità di calore fornito ad
 una certa quantità di gas, è maggiore la differenza di temperatura
 registrata dal gas a volume costante, perché esso non disperde il
@@ -791,9 +813,82 @@ costante (in quest'ultimo, possiamo immaginare che il contenitore
 possieda un pistone mobile. Fornendo calore al gas, la pressione
 può rimanere costante a costo di muovere il pistone).
 
+Per finire, tenete bene a mente questa definizione:
+
+\begin{align}
+    \gamma = \frac{c_p}{c_V}\label{gamgam}
+\end{align}
+
+\noindent il motivo: ci tornerà utile in una delle prossime trasformazioni.
+
 
 \subsection{Isoterme}
+Come si evince dal nome, queste trasformazioni avvengono a temperatura
+costante. Come già visto con la legge di Boyle, per il gas ideale
+vale $pV = \text{ cost.} = nRT$. Per questo motivo, $dT = 0$, da cui
+$dU = nc_VdT = 0$ (come prima, esprimiamo la variazione di energia
+interna sfruttando il calore specifico a volume costante). Sempre in
+accordo con le precedenti osservazioni, se la temperatura non varia
+allora anche l'energia interna del gas rimane costante. Dal primo
+principio segue allora
+
+\[ dQ = dW \]
+
+\noindent da cui $dQ = dW = pdV = nRT\frac{dV}{V}$ per definizione di lavoro
+di un gas ideale. Segue dunque che:
+
+\begin{align}
+    Q = W = \int_{V_i}^{V_f}nRT\frac{dV}{V} = nRT\ln\left(\frac{V_f}{V_i}\right)
+\end{align}
+
+\subsubsection*{Considerazioni}
+Si noti che, per ottenere il calore scambiato, non ha
+senso inventarsi, come per le altre trasformazioni, un calore specifico
+a temperatura costante $c_T$, perché la sua eventuale definizione
+$dQ = nc_TdT$ non funzionerebbe: $dT = 0$, da cui concluderemmo erroneamente che
+$dQ = 0$! In verità, in una trasformazione isoterma è possibile
+mantenere una temperatura costante del gas a patto di convertire tra
+loro calore e lavoro. Se ad esempio si riceve lavoro dall'ambiente esterno,
+esso viene contemporaneamente dissipato in calore in uscita, altrimenti
+l'energia interna del gas (quindi la sua temperatura) aumenterebbe.
+
+
 \subsection{Adiabatiche}
+Se nelle trasformazioni isocore non si osserva lavoro in azione, nelle
+adiabatiche non si registra invece scambio di calore: $dQ = 0$, da cui,
+sempre per il primo principio, $dU = -dW$. Anche qui possiamo utilizzare
+la scorciatoia di $c_V$ per concludere che $dU = nc_VdT$.
+
+Dalla relazione $dU = -dW$ possiamo trarre conclusioni interessanti.
+Possiamo infatta esprimerla come $nc_VdT = -pdV$. Proseguendo,
+
+\begin{align*}
+    nc_VdT &= -pdV\\
+    \not n c_VdT &= -\not n RT\frac{dV}{V}\\
+    \frac{dT}{T} &= -\frac{R}{c_V}\frac{dV}{V}
+\end{align*}
+
+\noindent notiamo che l'algebretta e la relazione di Mayer
+ci portano a scoprire che $R/c_V = (c_p - c_V)/c_V = \gamma - 1$
+(ricordate la \ref{gamgam}?). Possiamo allora scrivere
+
+\begin{align*}
+    \frac{dT}{T} &= -(\gamma - 1)\frac{dV}{V}\\
+    \int_{i}^{f}\frac{dT}{T} &= \int_{i}^{f}-(\gamma - 1)\frac{dV}{V}\\
+    \ln\left(\frac{T_f}{T_i}\right) &= -(\gamma - 1)\ln\left(\frac{V_f}{V_i}\right)\\
+    T_fV_f^{\gamma - 1} &= T_iV_i^{\gamma - 1}
+\end{align*}
+
+\noindent vedere un prodotto che rimane sempre costante solletica le
+meningi dei fisici. Dall'ultima equazione si conclude che
+
+\begin{align}
+    TV^{\gamma - 1} = \text{ cost.}
+\end{align}
+
+\noindent Lasciamo al lettore l'esercizio di ricavare le altre
+espressioni di questa relazione (ovvero, utilizzando le altre
+variabili termodinamiche).
 
 \subsection{Ancora sulle trasformazioni termodinamiche}
 Di seguito riportiamo alcune considerazioni sulle trasformazioni
@@ -829,14 +924,26 @@ punto dopo aver compiuto alcune trasformazioni. Seguendo i nostri presupposti,
 possiamo concludere che la variazione di energia interna dei sistemi che
 subiscono trasformazioni cicliche non varia per definizione:
 
-\[ \Delta U_\gamma = 0 \quad \forall \gamma \text{ ciclica} \]
+\[ \Delta U_\tau = 0 \quad \forall \tau \text{ ciclica} \]
 
 \noindent in quanto quest'ultima dipende unicamente dallo stato.
 
 Avremo modo di osservare che le trasformazioni cicliche costituiscono
 il principio di funzionamento delle \textit{macchine}.
 
+
 \subsubsection*{Reversibilità e irreversibilità}
+Abbiamo affermato che le leggi che descrivono le trasformazioni fondamentali
+valgono solamente nel caso ideale di trasformazioni \textit{reversibili}.
+
+\begin{tcolorbox}[colback = yellow!30, colframe = yellow!30!black, title = {Trasformazioni reversibili}]
+    Un processo si dice reversibile se esso, in qualche modo, è
+    invertibile in modo tale da riportare l'universo allo stato
+    precedente.
+\end{tcolorbox}
+
+\noindent Prendiamo come esempio
+
 
 
 
@@ -879,7 +986,8 @@ eventuali residui di scarico, combusti o meno.
     \item $BC$ è la fase di esplosione. Si tratta di un fenomeno
     più complesso di quello che i nostri strumenti di termodinamica
     possano descrivere. Per questo assumiamo che tale fase non
-    sia quasistatica. Questo tratto è quello che immette calore
+    sia quasistatica, essendo tra l'altro molto rapida. Questo tratto
+    è quello che immette calore
     nel cilindro, permettendo di alzare violentemente la pressione
     (e la temperature) a volume idealmente costante.
 
@@ -952,8 +1060,8 @@ principio $\Delta U = Q - W$ la conclusione $\Delta U = 0$ e allora
 
 \[ Q = W \]
 
-\noindent Sembrerebbe che la teoria sia fondata: lavoro e calore sono
-convertibili, cioè spendendo il calore otteniamo lavoro e possiamo tra l'altro
+\noindent La teoria sembrerebbe essere fondata: lavoro e calore sono
+convertibili, cioè spendendo calore otteniamo lavoro e possiamo tra l'altro
 \textit{invertire} il processo, perché l'uguaglianza non ci impone un
 verso preferenziale e noi siamo tanto furbi da costruire macchine
 in grado di funzionare al contrario. Per esperienza, tuttavia, è evidente che non
@@ -976,8 +1084,11 @@ attrito e dissipazioni di vario genere. Ciò che è sconcertante è
 l'impossibilità non solo \textit{reale} di realizzare macchine simili,
 ma anche \textit{teorica}. Questa conclusione, come vedremo, fonda
 le radici nel secondo principio, che a sua volta poggia sulla
-seguente evidenza: \textit{il calore non fluisce mai spontaneamente
-da un corpo ad uno più caldo}.
+seguente evidenza:
+
+\begin{center}
+    \textit{il calore non fluisce \emph{mai spontaneamente} da un corpo ad uno più caldo}.
+\end{center}
 
 \subsection{Enunciati}
 Esistono due enunciati celebri del secondo principio della termodinamica\footnote{Anche se storicamente non fu così, trattiamo prima l'attuale forma
@@ -1180,10 +1291,10 @@ dell'uguaglianza vale solamente per trasformazioni reversibili.
 
 \subsection{Differenza di entropia}
 Si consideri una trasformazione termodinamica \textit{reversibile} qualsiasi.
-Per ipotesi di reversibilità, l'integrale di Clausius calcolato sulla curva $\gamma$
+Per ipotesi di reversibilità, l'integrale di Clausius calcolato sulla curva $\tau$
 di tale trasformazione nel piano pressione-volume è nullo.
 
-\[ \oint_\gamma \frac{dQ}{T} = 0 \]
+\[ \oint_\tau \frac{dQ}{T} = 0 \]
 
 \noindent Selezioniamo due punti, $A$ e $B$, distinti su questo ciclo. Scomponiamo
 dunque l'integrale nei due percorsi, sempre reversibili, $\alpha$ e $\beta$.
@@ -1297,79 +1408,25 @@ viene semplicemente osservata una trasformazione di lavoro in calore.
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \newpage
-
-\section*{Trasformazioni termodinamiche}
-Abbiamo mostrato che il lavoro di un gas ideale (ovvero a bassa densità)
-è legato al volume e alla temperatura dalla seguente relazione:
-
-\[ W_{A\to B} = \int_{A,\gamma}^{B}p(V)dV \]
-
-\noindent Notare che è sempre necessario specificare il ``percorso'' $\gamma$
-che il gas intraprende nel piano pressione-volume (e temperatura),
-perchè in generale il lavoro dipende da tale percorso. Ricordiamo
-infatti che
-
-\[ \Delta U = Q - W \quad\text{ ma }\quad dU = \delta Q - \delta W \]
-
-\noindent dove $\delta$ indica una quantità dipendente dai punti attraversati.
-La differenza finale $dU$ sarà sempre la stessa, ma può derivare
-da contributi differenti di calore e lavoro. Nelle prossime sezioni
-sostituiremo $\delta$ con $d$, perché ci limiteremo a definire una
-sola trasformazione alla volta, quindi un solo tratto di percorso
-ben definito. L'equazione $dU = \delta Q - \delta W$ è più generale
-perché presuppone la possibilità che il gas possa compiere più di una
-trasformazione per variare la propria energia interna.
-
-
-\subsection*{Trasformazioni isoterme}
-Nelle trasformazioni isoterme, la temperatura non varia. Come
-conseguenza, nemmeno l'energia interna varia.
-
-\[ dU = nc_VdT = 0 \]
-
-Segue dunque che
-
-\[ dQ - dW = 0 \]
-\[ dQ = dW = pdV = nRT\frac{dV}{V} \]
-\[ Q_\text{isoterma} = \int_{i}^{f}nRT\frac{dV}{V} = nRT\ln\left(\frac{V_f}{V_i}\right) = W_\text{isoterma} \]
-
-In una isoterma, dunque, non varia l'energia interna, perché il calore
-scambiato viene ``consumato'' in una quantità uguale di lavoro.
-
-\subsection*{Trasformazioni adiabatiche}
-In queste trasformazioni non avvengono scambi di calore.
-
-\[ dU = dQ - dW = -dW \]
-
-Come sempre, sapendo che la variazione di energia interna è esprimibile
-attraverso una corrispondente variazione di temperatura legata a $c_V$,
-
-\[ nc_VdT = -pdV \]
-
-\[ nc_VdT = -nRTdV \]
-
-Otteniamo dunque la seguente relazione:
-
-\[ \frac{dT}{T} = -\frac{R}{c_V}\frac{dV}{V} \]
-
-\[ \int_{i}^{f}\frac{dT}{T} = -\frac{R}{c_V}\int_{i}^{f}\frac{dV}{V} \]
-
-\[ \ln\left( \frac{T_f}{T_i} \right) = -(\gamma - 1)\ln\left(\frac{V_f}{V_i}\right) \]
-
-\[ T_i V_i^{\gamma - 1} = T_fV_f^{\gamma - 1} \]
-
-Vale allora per le adiabatiche
-
-\begin{align}
-    TV^{\gamma - 1} = \text{const}\\
-    pV^\gamma = \text{const}
-\end{align}
-
-In particolare, nel caso di trasformazioni adiabatiche che coinvolgono
-gas monotatomici risulta $pV^{\frac53} = \text{const}$.
-
-
 \section*{Macchine}
 I cicli termodinamici caratterizzano i principi di funzionamento delle
 \textit{macchine}. Il motore due-tempi dell'Husqvarna sotto
