@@ -9,7 +9,7 @@ Uno degli scopi del progetto è di mettere alla prova le potenzialità del lingu
 
 Copertina                       | Capitolo
 :------------------------------:|:-------------------------:
-![](./src/cover//graphics/bookcover.jpg)  |  ![](./src/cover//graphics/demo.png)
+![cover-demo](./src/cover//graphics/bookcover.jpg)  |  ![chapter-demo](./src/cover//graphics/demo.jpg)
 
 ### Peculiarità
 * Veste grafica generale ispirata alle _The Feynman Lectures on Physics_
