@@ -12,7 +12,6 @@ Copertina                       | Capitolo
 ![](./src/cover//graphics/bookcover.jpg)  |  ![](./src/cover//graphics/demo.png)
 
 ### Peculiarità
-Ecco alcune delle qualità e caratteristiche introdotte nell'opera:
 * Veste grafica generale ispirata alle _The Feynman Lectures on Physics_
 * Concetti chiave delimitati da box colorati.
 * Font standard AMS.
@@ -28,8 +27,6 @@ Il progetto è completamente libero. Data la miriade di ambienti di sviluppo, to
 
 ### _"Voglio solo il ```.pdf``` di questi appunti"_
 Per coloro che intendono solamente visionare la dispensa, è possibile trovare il file ```.pdf``` aggiornato sotto il percorso ```build/```.
-
-Segnalazioni e contributi mirati al miglioramento degli appunti (ma anche della repository) sono accolte a braccia aperte. Considerando lo stato attuale della dispensa, le Issues sono lo strumento di partenza migliore per cominciare qui su GitHub.
 
 
 ## Cosa uso per sviluppare questo progetto
