@@ -39,8 +39,7 @@ Se desideri un breve riassunto di cosa utilizzo per creare tutto questo, ecco l'
 
 Avrebbe poco senso mostrare tutta la procedura in questo file. Esistono tuttavia centinaia di forum e tutorial in rete per effettuare installazioni, eventuali troubleshooting e molti altri aiuti.
 
-Si tratta di un modo di lavorare molto spartano, essenziale e dotato di supporto minimo da parte di interfacce grafiche. Sono cosciente
-del fatto che questo metodo produce con elevata probabilità progetti fatti coi piedi (oltre alle mani), ma d'altronde sto ancora imparando e non smetterò mai di farlo: consigli su come migliorare il workflow sono altrettanto importanti.
+Si tratta di un modo di lavorare molto spartano, essenziale e dotato di supporto minimo da parte di interfacce grafiche. Consigli su come migliorare il workflow sono altrettanto importanti.
 
 ### Make
 Il progetto potrebbe contenere il Makefile impiegato per compilare il documento e mantenere le direcotry del progetto pulite. Se stai utilizzando il metodo di lavoro mostrato precedentemente, ecco come il Makefile può aiutarti dalla command line:
