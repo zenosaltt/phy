@@ -20,8 +20,8 @@ costituenti dell'ordine del numero di Avogadro
 \[ N_A = 6 \cdot 10^{23} \]
 
 \noindent Il sistema di questo tipo che più ci interessa è quello
-dei gas. Supporremo che i gas saranno costituiti da particelle
-infinitesime che dovranno seguire certi comportamenti ideali. Ma
+dei gas. Supporremo che i gas sono costituiti da particelle
+infinitesime che devono seguire certi comportamenti ideali. Ma
 trattandosi di punti materiali, non possiamo studiare questi
 sistemi in termini meccanici, secondo la dinamica newtoniana,
 come abbiamo sempre fatto? Se seguissimo questa strada, potremmo
@@ -68,7 +68,7 @@ si trova fuori dall'universo.
 
 \begin{marginfigure}
     \centering
-    \includegraphics[width = \marginparwidth]{definizionisysterm.pdf}
+    \includegraphics[width = \marginparwidth]{universo_termodinamico.pdf}
     \caption{Un esempio di universo, composto da un sistema termodinamico
     (la pentola) e un ambiente esterno (la stanza). Viene anche mostrato uno
     scambio di energia, mediato dal fuoco.}
@@ -118,7 +118,9 @@ della chimica, quindi alla massa si preferisce la \textit{mole} (come
 la massa, si riferisce a quantità di materia).}. Come poi in cinematica
 utilizzavamo un sistema di assi cartesiani, anche ora utilizziamo lo
 stesso strumento matematico (il piano $pV$, pressione-volume) accoppiandolo però con le coordinate termodinamiche
-appena introdotte.
+appena introdotte. Il piano $pV$ sarà costituito da un solo quadrante,
+perché sia il volume che la pressione possono assumere valori non
+negativi\footnote{Anzi positivi, come accade spesso nella realtà.}.
 
 Le variabili termodinamiche si suddividono in due categorie:
 grandezze \textit{intensive} ed \textit{estensive}. Il valore delle
@@ -359,7 +361,7 @@ della particolare trasformazione}.
 
 \begin{marginfigure}
     \centering
-    \includegraphics[width = \marginparwidth]{termosyst.pdf}
+    \includegraphics[width = \marginparwidth]{convenzione_segni_flussi_energetici_sistema_termodinamico.pdf}
     \caption{Convenzione sui segni dei flussi energetici in un
     sistema termodinamico, al quale si applica la nostra
     formulazione del primo principio.}\label{fluxi}
@@ -461,7 +463,7 @@ pistone.
 
 \begin{marginfigure}
     \centering
-    \includegraphics[width = \marginparwidth]{lavorogas.pdf}
+    \includegraphics[width = \marginparwidth]{lavoro_gas_ideale.pdf}
     \caption{Lavoro infinitesimo di un gas all'interno di un cilindro.}
     \label{workinggas}
 \end{marginfigure}
@@ -502,8 +504,45 @@ $\tau$, il lavoro totale di un gas può essere espresso nella
 seguente forma:
 
 \begin{align}
-    W_\tau = \int_\tau pdV
+    W_\tau = \int_\tau pdV\label{lavorogas}
 \end{align}
+
+\subsubsection*{Il lavoro sul piano $pV$}
+Sappiamo bene dalla quinta superiore e da Analisi 1 che gli integrali
+sono in qualche modo correlati a interpretazioni geometriche di aree
+sottese a grafici. Dalla legge \ref{lavorogas} ottenuta pocanzi si può
+notare che il lavoro ``si può vedere'' sul piano $pV$. Dato infatti
+il tratto di curva $\tau$ che descrive una trasformazione, il lavoro
+$W$ è proprio l'area (con segno) sottesa a $\tau$. In generale,
+
+\begin{itemize}
+    \item se il sistema percorre $\tau$ in modo tale da spostarsi nel verso positivo
+    dell'asse del volume, il lavoro effettuato dal gas è positivo;
+
+    \item se il sistema si dirige nel verso opposto dell'asse del volume,
+    allora il lavoro effettuato è negativo;
+
+    \item se il sistema non si discosta dal proprio volume ($dV = 0$)
+    allora il lavoro è nullo.
+\end{itemize}
+
+Anticipiamo che esistono trasformazioni particolari, le trasformazioni
+\textit{cicliche}, che partendo da una coordinata termodinamica
+ritornano sulla medesima dopo la trasformazione, descrivendo un circuito.
+In tal caso, il lavoro effettuato dal (o sul) sistema corrisponde
+all'area racchiusa nel circuito. La figura mostra intuitivamente le
+ragioni di questa proprietà.
+
+\begin{itemize}
+    \item Se il sistema percorre il circuito in senso orario, il
+    lavoro è positivo.
+
+    \item Se il sistema percorre il circuito in senso antiorario,
+    il lavoro è negativo.
+\end{itemize}
+
+
+
 
 
 \subsection{La teoria cinetica dei gas}
@@ -558,7 +597,7 @@ orizzontale di tale vettore, ovvero $\vecsymb{v}_x$.
 
 \begin{marginfigure}
     \centering
-    \includegraphics[width = \marginparwidth]{thewall.pdf}
+    \includegraphics[width = \marginparwidth]{teoria_cinetica_parete.pdf}
     \caption{Urto tra una particella di gas e una delle pareti
     del contenitore.}
     \label{wall}
@@ -615,7 +654,7 @@ Supponendo che il gas sia costituito da $N$ particelle, possiamo
 effettuare un'approssimazione riducendo le velocità ad una loro media
 (essendo al quadrato, sarà una velocità quadratica media).
 
-\[ p_x = \frac{F_{\text{tot},x}}{L^2} = N\frac{m\overline{v_x^2}}{V} \]
+\[ p_x = \frac{F_{\text{tot},x}}{L^2} = N\frac{m\left\langle v_x^2 \right\rangle}{V} \]
 
 Il ragionamento effettuato per la componente $x$ vale anche per tutte
 le altre. Per questo motivo, dato che la pressione è una grandezza
@@ -627,32 +666,32 @@ velocità di tutte le particelle, che potrebbero differire tra loro,
 ad una velocità quadratica media totale. La relazione con le sue
 componenti spaziali è ricavabile geometricamente:
 
-\[ \overline{v^2} = \overline{v_x^2} + \overline{v_y^2} + \overline{v_z^2} \]
+\[ \left\langle v^2 \right\rangle  = \left\langle v_x^2 \right\rangle + \left\langle v_y^2 \right\rangle + \left\langle v_z^2 \right\rangle \]
 
 \noindent Le approssimazioni introdotte ci permettono anche di
 supporre che tutte e tre le componenti spaziali siano equivalenti
-tra loro, ovvero che $\overline{v_x^2} = \overline{v_y^2} = \overline{v_z^2}$.
+tra loro, ovvero che $\left\langle v_2^2 \right\rangle = \left\langle v_y^2 \right\rangle = \left\langle v_z^2 \right\rangle$.
 Usando allora l'equazione della pressione:
 
-\[ p = N\frac{m}{V}\left(\frac13 \overline{v^2}\right) \]
+\[ p = N\frac{m}{V}\left(\frac13 \left\langle v^2 \right\rangle\right) \]
 
-\noindent Notiamo che compare il prodotto $m\overline{v^2}$, che
+\noindent Notiamo che compare il prodotto $m\left\langle v^2 \right\rangle$, che
 corrisponde al doppio dell'energia cinetica media delle particelle,
-$\overline{E_K}$. Otteniamo dunque la seguente relazione:
+$\left\langle E_K \right\rangle$. Otteniamo dunque la seguente relazione:
 
-\[ pV = \frac23 N\overline{E_K} \]
+\[ pV = \frac23 N\left\langle E_K \right\rangle \]
 
-\noindent $\overline{E_K}$ corrisponde ad una singola particella.
+\noindent $\left\langle E_K \right\rangle$ corrisponde ad una singola particella.
 Allora possiamo concludere che la somma di tutte le energie cinetiche
 medie delle particelle del gas costituiscono l'energia interna del
-gas stesso: $E_\text{int} = U = N\overline{E_K}$.
+gas stesso: $E_\text{int} = U = N\left\langle E_K \right\rangle$.
 La teoria ci ha dunque permesso dunque di unire le seguenti relazioni:
 
 \[ pV = Nk_BT = \frac23 U \]
 
 In particolare, possiamo notare che
 
-\[ \overline{E_K} = \frac{3}{2}k_B T \]
+\[ \left\langle E_K \right\rangle = \frac{3}{2}k_B T \]
 
 \noindent che esprime la relazione tra energia cinetica media di una
 particella e la temperatura. In un certo senso, la temperatura \textit{è}
@@ -694,7 +733,7 @@ liberta comporta un contributo energetico di $\frac12k_BT$ e
 dunque, per $l$ gradi di libertà, si ottiene
 
 \begin{align}
-    \overline{E_K} = \frac{l}{2}k_BT
+    \left\langle E_K \right\rangle = \frac{l}{2}k_BT
 \end{align}
 
 I gradi di libertà possono crescere all'aumentare della complessità
@@ -884,7 +923,7 @@ ci portano a scoprire che $R/c_V = (c_p - c_V)/c_V = \gamma - 1$
 meningi dei fisici. Dall'ultima equazione si conclude che
 
 \begin{align}
-    TV^{\gamma - 1} = \text{ cost.}
+    TV^{\gamma - 1} = \text{ cost.}\label{lativuu}
 \end{align}
 
 \noindent Lasciamo al lettore l'esercizio di ricavare le altre
@@ -939,7 +978,7 @@ valgono solamente nel caso ideale di trasformazioni \textit{reversibili}.
 
 \begin{tcolorbox}[colback = yellow!30, colframe = yellow!30!black, title = {Trasformazioni reversibili}]
     Un processo si dice reversibile se esso, in qualche modo, è
-    invertibile in modo tale da riportare l'universo allo stato
+    invertibile così da riportare l'universo allo stato
     precedente.
 \end{tcolorbox}
 
@@ -968,7 +1007,7 @@ eventuali residui di scarico, combusti o meno.
 
 \begin{marginfigure}
     \centering
-    \includegraphics[width = \marginparwidth]{erciclodiesel.pdf}
+    \includegraphics[width = \marginparwidth]{ciclo_diesel.pdf}
     \caption{Ciclo diesel teorico.}
     \label{erciclodiesel}
 \end{marginfigure}
@@ -1027,7 +1066,7 @@ valore pari a $\eta \simeq 0.6$.
 
 \begin{marginfigure}
     \centering
-    \includegraphics[width = \marginparwidth]{ciclootto.pdf}
+    \includegraphics[width = \marginparwidth]{ciclo_8.pdf}
     \caption{Rappresentazione approssimativa del ciclo di Otto in
     condizioni reali. Sono evidenziate anche le coordinate teoriche
     corrispondenti a quelle presenti in figura \ref{erciclodiesel}.}
@@ -1144,7 +1183,7 @@ in lavoro $W$, alla facciaccia di Kelvin e Plank.
 
 \begin{marginfigure}
     \centering
-    \includegraphics[width = \marginparwidth]{kpcproof.pdf}
+    \includegraphics[width = \marginparwidth]{violare_kelvin-plank.pdf}
     \caption{Dimostrazione dell'implicazione $\overline{KP} \Rightarrow \overline{C}$.}
     \label{kptocproof}
 \end{marginfigure}
@@ -1180,7 +1219,7 @@ La macchina composta corrisponde allora a $\overline{KP}$.
 
 \begin{marginfigure}
     \centering
-    \includegraphics[width = \marginparwidth]{ckpproof.pdf}
+    \includegraphics[width = \marginparwidth]{violare_clausius.pdf}
     \caption{Dimostrazione dell'implicazione $\overline{C} \Rightarrow \overline{KP}$.}
     \label{ctokpproof}
 \end{marginfigure}
@@ -1210,21 +1249,154 @@ macchina funziona. Non importa se essa è il motore di una monoposto
 di Formula 1, lo scramjet del Boeing X-43 o un altro metodo di
 propulsione di qualche civiltà aliena a noi sconosciuta.
 
+
 \subsection{Ciclo e macchina di Carnot}
+Per rispondere ai suoi quesiti,
+Carnot si ingegnò nella creazione di una macchina ideale,
+la \textit{maccina di Carnot} (che indicheremo spesso con $\mathcal{C}$),
+costituita da un cilindro che può esser reso adiabatico o
+diatermico a piacere, un pistone mobile e un gas sottoposto al
+\textit{ciclo di Carnot}. Altri componenti essenziali sono due
+sorgenti a temperature differenti.
+Un modello della macchina è mostrato in figura \ref{macchinacarnot}.
+Durante un ciclo
+di funzionamento, la macchina esegue i seguenti quattro passi
+(consideriamo la sua versione termica, non frigorifera):
+
+
+\begin{marginfigure}
+    \centering
+    \includegraphics[width = \marginparwidth]{macchina_di_carnot.pdf}
+    \caption{I quattro tempi che costituiscono il ciclo di funzionamento della macchina di Carnot.
+    Il diagramma originale di Carnot non lo prevedeva, ma possiamo immaginare questa macchina come
+    un classico motore che mette in rotazione un volano.}
+    \label{macchinacarnot}
+\end{marginfigure}
+
+\begin{enumerate}
+    \item \textit{Acquisizione di calore:} la macchina viene posta sulla
+    sorgente calda. Supponendo che il gas sia già alla temperatura di
+    questa sorgente, esso viene espanso isotermicamente, determinando
+    il sollevamento del pistone e dunque la conversinoe di calore in
+    lavoro.
+
+    \item \textit{Raffreddamento adiabatico:} la macchina viene tolta dalla
+    sorgente calda, ma il gas continua ad espandersi adiabaticamente
+    (per questo il cilindro deve essere adiabatico durante questa
+    fase) fino a raggiungere la temperatura della sorgente fredda.
+
+    \item \textit{Cessione di calore:} il pistone viene abbassato per
+    comprimere il gas, che isotermicamente cede calore alla sorgente
+    fredda.
+
+    \item \textit{Riscaldamento adiabatico:} la macchina viene tolta dalla sorgente
+    fredda, ma il gas continua ad esser compresso adiabaticamente fino
+    a raggiungere la temperatura della sorgente più calda. Il ciclo
+    ricomincia.
+\end{enumerate}
+
+Carnot tiene a sottolineare come la macchina debba operare in condizioni
+ben controllate, perché il gas al suo interno deve poter percorrere un
+ciclo termodinamico \textit{quasistatico reversibile}. Perciò, lo spostamento
+della macchina tra le due sorgenti, la compressione e l'espansione devono
+essere estremamente lente, tanto da evitare attriti, dissipazioni di
+calore, fluttuazioni irregolari nella temperatura delle sorgenti e del gas,
+turbolenze e comportamenti non ideali delle particelle di gas.
+Una volta certi di aver soddisfatto i requisiti appena citati, il
+grafico del \textit{ciclo di Carnot} si presenterà nella forma mostrata
+in figura \ref{ciclodicarnot}.
+
+\begin{marginfigure}
+    \centering
+    \includegraphics[width = \marginparwidth]{ciclo_di_carnot.pdf}
+    \caption{Il ciclo di Carnot sul piano $pV$.}
+    \label{ciclodicarnot}
+\end{marginfigure}
+
+
+
+Analizzando il ciclo otterremo un risultato interessante.
+Supponiamo che la sorgente fredda abbia temperatura $T_1$ mentre quella
+calda $T_2$ e che la macchina di Carnot venga caricata di $n$ moli
+di gas ideale. Calcoliamo gli scambi di energia nelle varie
+trasformazioni che compongono il ciclo:
+
+\begin{itemize}
+    \item \textit{AB:} essendo una isoterma, $\Delta U_{AB} = 0$ e
+    \[ Q_{AB} = W_{AB} = nRT_2\ln\left(\frac{V_B}{V_A}\right) > 0 \]
+    Notare come questo costituisce il calore assorbito dalla macchina.
+
+    \item \textit{BC:} essendo adiabatica, $Q_{BC} = 0$ e
+    \[ \Delta U_{BC} = -W_{BC} = -nc_V(T_1 - T_2) \]
+
+    \item \textit{CD:} la situazione è analoga a quella in \textit{AB}:
+    \[ Q_{CD} = nRT_1\ln\left(\frac{V_D}{V_C}\right) < 0 \]
+
+    \item \textit{DA:} come in \textit{BC}
+    \[ \Delta U_{DA} = -W_{DA} = -nc_V(T_2 - T_1) \]
+\end{itemize}
+
+\noindent Abbiamo potuto usare le leggi ricavate dallo studio delle
+trasformazioni elementari perché abbiamo supposto che il ciclo di
+Carnot fosse quasistatico-reversibile. Veniamo ora alla risposta che
+Carnot desiderava trovare: quale efficienza può essere raggiunta da
+una tale macchina. Applicando la definizione di rendimento, dai
+risultati precedenti è facile concludere che
+
+\[ \eta_\mathcal{C} = \frac{W}{Q_{AB}} = 1 + \frac{T_1}{T_2}\frac{\ln(V_D/V_C)}{\ln(V_B/V_A)} \]
+
+\noindent Ricordando la legge \ref{lativuu} che caratterizza le
+trasformazioni adiabatiche, si scopre che l'efficienza qui sopra può
+essere semplificata ulteriormente. Infatti, per la trasformazione
+\textit{BC} vale $T_2V_B^{\gamma - 1} = T_1V_C^{\gamma - 1}$ mentre
+per \textit{DA} $T_1V_D^{\gamma - 1} = T_2V_A^{\gamma - 1}$. Mediante
+semplice algebretta, è evidente che $V_B/V_A = V_C/V_D$. Concludiamo
+allora che
+
+\begin{align}
+    \eta_\mathcal{C} = 1 - \frac{T_1}{T_2}
+\end{align}
+
+Ecco dunque svelato l'arcano: idealmente, l'efficienza di una buona
+macchina, ovvero ideale, dipende unicamente dalle temperature entro
+le quali essa opera. Quanto più la loro differenza è grande, tanto
+più la macchina sarà efficiente. Tuttavia, allo stato attuale della
+nostra conoscenza della natura, non possiamo neppur teoricamente
+ottenere $\eta_\mathcal{C} = 1$, (anzi $0 \leq \eta_\mathcal{C} < 1$),
+perché dovremmo possedere un oggetto di temperatura $T_2 = +\infty$\footnote{Ammesso che ciò possa essere fisicamente sopportabile da qualche materiale misterioso, un corpo a temperatura infinita sarebbe
+caratterizzato da un'energia interna infinita, il che minerebbe la
+solidità dei principi di conservazione fin ora incontrati.},
+oppure un oggetto a temperatura nulla\footnote{Si faccia
+riferimento agli approfondimenti di questo capitolo per giustificazioni
+alternative dell'impossibilità di raggiungere lo zero assoluto.}.
+
+Vale inoltre per una macchina di questo tipo
+
+\[ 1 - \frac{T_1}{T_2} = 1 - \frac{|Q_\text{ced}|}{Q_\text{ass}} \]
+
+
+
 
 \subsection{Teorema di Carnot}
+Carnot progetto mentalmente una macchina semplice ma inrealtà
+particolare, che ha ben poco a che fare con il motore, ad esempio,
+di una turbina di un aereo. Per questo motivo è stato formulato
+il teorema di Carnot, con il quale si estende la valutazione
+dell'efficienza a \textit{tutte} le macchine che operano tra due
+sole sorgenti, anche quelle non ancora progettate.
+
 
 \begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Teorema di Carnot}]
 Il rendimento di una qualsiasi macchina termica $\mathcal{M}$ (reversibile o non)
 che opera tra due
-temperature costanti $T_1,T_2: T_1 > T_2$ è limitato superiormente dal rendimento della
+temperature costanti $T_1,T_2: T_1 < T_2$ è limitato superiormente dal rendimento della
 macchina di Carnot $\mathcal{C}$ che lavora tra le medesime temperature.
 
 \begin{align}
-    \eta_\mathcal{M} \leq \eta_\mathcal{C} \quad \text{per } T_1 > T_2\label{carnot1}
+    \eta_\mathcal{M} \leq \eta_\mathcal{C} \quad \text{per } T_1 < T_2\label{carnot1}
 \end{align}
 
-Inoltre, tutte le macchine reversibili che operano tra le medesime temperature
+Inoltre, tutte le macchine reversibili che operano tra la medesima coppia di temperature
 hanno lo stesso rendimento, che equivale a quello della corrispondente macchina di
 Carnot. Se $\mathcal{R}$ è una macchina reversibile, allora:
 
@@ -1234,14 +1406,88 @@ Carnot. Se $\mathcal{R}$ è una macchina reversibile, allora:
 
 \end{tcolorbox}
 
-\noindent Ricordiamo che $\eta_\mathcal{C} = 1 - T_2 / T_1$.
 
+\subsubsection*{Dimostrazione}
+Per dimostrare il teorema, consideriamo una macchina $X$ qualsiasi
+e una macchina di Carnot $\mathcal{C}$. Esse operano tra le solite
+sorgenti a temperature $T_1$ e $T_2 > T_1$.
+$X$ è costruita in tal guisa da produrre lavoro $W'$ e scambiare
+calore $Q_1' < 0$ e $Q_2' > 0$ con le rispettive sorgenti. $\mathcal{C}$
+produce invece $W$ e scambia $Q_1 < 0$ e $Q_2 > 0$.
+Non sappiamo ancora nulla sui loro rendimenti né quale sia la migliore.
+Quale dunque vincerà questa battaglia?
 
+Chi scommette su $X$ sosterrà che \[\eta_X \stackrel{?}{>} \eta_\mathcal{C} \]
+La macchina di Carnot è per definizione reversibile. Esiste dunque
+la sua ``versione frigorifera'' $\overline{\mathcal{C}}$ che opera al contrario.
+$\overline{\mathcal{C}}$ avrà bisogno di lavoro esterno $-W$ per operare,
+prelevando dalla sorgente fredda il calore $-Q_1$ e cedendo nel
+complesso $-Q_2$ a quella calda. Immaginiamo che le due macchine
+vengano ora accoppiate, in modo che $X$ alimenti $\overline{\mathcal{C}}$.
+Ciò che ne deriva è una macchina $M$ che compie un certo lavoro
+$W_M = W' - W$ e scambia certe quantità di energia con le sorgenti
+tali che $Q_{1,M} = Q_1'-Q_1$ e $Q_{2,M} = Q_2' - Q_2$. $X$ è infine
+progettata cosicché $W' = W$, cioè essa fornisce il lavoro di cui
+$\overline{\mathcal{C}}$ ha bisogno. Ciò a cui vogliamo arrivare è
+confrontare le efficienze a parità di lavoro prodotto.
+Se allora si sostiene che $\eta_X > \eta_\mathcal{C}$ (attenzione che
+ora torniamo a considerare $\mathcal{C}$! Possiamo farlo per supposizione
+di reversibilità), ciò equivale
+ad assumere che $W/Q_2' > W/Q_2$ da cui $Q_2 > Q_2'$. Come ci si
+aspetterebbe, a parità di lavoro prodotto, $X$ consuma meno calore di
+quello che invece utilizzerebbe $\mathcal{C}$.
+Però in $M$ sta accadendo qualcosa che non dovrebbe: infatti
+avremmo $Q_{2,M} < 0$, $W_M = 0$ e pertanto $Q_{1,M} > 0$. $M$ è proprio
+una macchina che viola il secondo principio della
+termodinamica secondo la formulazione di Clausius, perché non accade
+altro che un trasferimento di calore dalla sorgente fredda a quella calda.
+Si conclude che \[ \eta_X \leq \eta_\mathcal{C} \]
+
+Se poi si assume che anche $X$ è reversibile, risulta che
+$\eta_X \geq \eta_\mathcal{C}$ (basti ripercorrere la dimostrazione
+sostituendo $X$ con $\mathcal{C}$), da cui si dimostra facilmente
+che \[ \eta_X = \eta_\mathcal{C} \] Da questa conclusione, con
+la quale termina la dimostrazione dell'intero teorema di Carnot,
+si può osservare che la macchina di Carnot e tutte le macchine
+reversibili che operano tra le stesse temperature sono equivalenti
+in termini di efficienza; pertanto, la dimostrazione potrebbe essere
+ripetuta anche senza limitarsi alla specifica macchina di Carnot,
+eliminando, come proprio voleva Carnot, le particolari ``implementazioni''
+che potrebbero rendere una macchina diversa dall'altra.
+
+Nel caso $X$ non fosse reversibile, ciò significherebbe che
+nessuna macchina reversibile può raggiungere, né tantomeno
+superare, l'efficienza della corrispondente macchina di Carnot
+che opera tra le medesime sorgenti. Non importa la macchina,
+le sue prestazioni energetiche saranno sempre limitate superiormente
+secondo l'espressione $1 - T_1/T_2$.
+
+\subsubsection*{Altre osservazioni}
+Da Carnot è possibile osservare che, se $Q_1 < 0$ è il calore ceduto
+dalla sorgente fredda e $Q_2 > 0$ quello assorbito dalla sorgente
+calda, per le definizioni alternative di rendimento vale
+
+\[ 1 + \frac{Q_1}{Q_2} \leq 1 - \frac{T_1}{T_2} \]
+
+\noindent Che ci porta a concludere con la seguente:
+
+\begin{align}
+    \frac{Q_1}{T_1} + \frac{Q_2}{T_2} \leq 0
+\end{align}
+
+Ovviamente l'uguaglianza vale solo per macchine reversibili.
+A prima vista, questa disuguaglianza potrebbe non comunicare
+alcunché di straordinario. Nei prossimi paragrafi vedremo che
+proprio da questa innocua relazione trarremo l'osservazione
+forse più inquietante ma allo stesso tempo affascinante di
+questo corso.
 
 \section{Esperienza di Clausius}
-Un ulteriore personaggio degno del titolo di main character
+Un ulteriore personaggio degno del titolo di \textit{main character}
 della termodinamica è il tedesco Rudolf Clausius, il quale estese
-gli studi di Carnot. Illustreremo il teorema di Clausius, che
+gli studi di Carnot. Di fatto, il teorema di Carnot non è sufficientemente
+generale e ancora distante dalla nostra realtà, perché nelle trasformazioni
+sarebbe ammesso venire a contatto con due sole sorgenti distinte. Illustreremo il teorema di Clausius, che
 aprirà la strada ad uno degli ultimi concetti di questi appunti:
 l'entropia.
 
@@ -1310,12 +1556,27 @@ dell'integrale. Giungiamo dunque alla seguente conclusione:
 \noindent Dunque, qualsiasi sia il percorso tra $A$ e $B$, l'uguaglianza
 precedente vale sempre per percorsi reversibili. Vi è dunque una dipendenza
 di una certa quantità dai soli stati iniziale e finale della trasformazione.
-Definiamo dunque, in modo simile all'energia potenziale studiata in meccanica,
+Definiamo, in modo simile all'energia potenziale studiata in meccanica,
 la \textit{differenza di entropia tra due stati termodinamici}.
 
 \begin{align}
     \Delta S_{AB} \stackrel{\text{def}}{=} \int_{A,\text{rev}}^{B} \frac{dQ}{T}
 \end{align}
+
+\noindent Definiremo solamente la differenza, non l'entropia in sé.
+Sappiamo però che l'entropia è una funzione di stato, come abbiamo
+potuto vedere poco prima. Da un punto di vista dimensionale, l'entropia
+è un semplice rapporto tra energia e temperatura, una sorta di
+indice della quantità di calore scambiato ad una data temperatura.
+Durante gli scambi energetici, però, spesso la temperatura dei corpi
+coinvolti cambia. Possiamo approssimare questi fenomeni immaginando
+infinitesimi quanità di calore che vengono scambiate di volta in volta
+a temperature diverse:
+
+\[ dS \eqdef \left[\frac{dQ}{T}\right]_\text{reversibile} \]
+
+\subsubsection*{Variazione di entropia per trasformazioni fondamentali}
+
 
 
 \subsection{Il teorema dell'entropia}
@@ -1332,8 +1593,20 @@ la \textit{differenza di entropia tra due stati termodinamici}.
 
 \subsection{Espansione libera dei gas}
 
-\subsection{Oltre la termodinamica: micro- e macro-stato}
-%microstato e macrostato, probabilit
+\subsection{Micro- e macro-stato}
+Con i nostri strumenti non siamo in grado di definire l'entropia in
+senso assoluto, ma solo la sua variazione. Studi più avanzati,
+collegati alla cosiddetta \textit{meccanica statistica}, consentono
+invece di esprimere in forma chiusa l'entropia di un sistema.
+
+\begin{align}
+    S = k_B \ln [N]
+\end{align}
+
+\noindent dove $k_B$ è la costante di Boltzmann, mentre $N$
+corrisponde al \textit{numero di microstati compatibili con il
+macrostato}.
+
 
 \subsection{Il terzo principio}
 Ebbene sì: esiste un terzo principio della termodinamica che è stato
@@ -1396,218 +1669,3 @@ mulinello, l'innalzamento di temperatura dell'acqua è dovuto al
 lavoro compiuto da una massa in caduta. Secondo l'interpretazione
 precedente, del calorico sarebbe comparso dal nulla, quando invece
 viene semplicemente osservata una trasformazione di lavoro in calore.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\newpage
-\section*{Macchine}
-I cicli termodinamici caratterizzano i principi di funzionamento delle
-\textit{macchine}. Il motore due-tempi dell'Husqvarna sotto
-casa è una macchina; ma lo è anche un freezer. Di fatto, la termodinamica
-distingue due categorie principali di macchine sulla base del verso con il
-quale avvengono gli scambi di energia:
-
-\begin{itemize}
-    \item \textbf{Macchine termiche:} per queste macchine valgono
-    
-    \[ W,Q > 0 \]
-    ovvero compiono lavoro al prezzo di un consumo di calore.
-
-    \item \textbf{Macchine frigorifere:} vale
-    
-    \[ W,Q < 0 \]
-    ossia esse dissipano calore al prezzo di un lavoro esterno.
-\end{itemize}
-
-Notare che la classificazione parte dal segno del lavoro, per poi
-dedurre il flusso di calore mediante la definizione di trasformazione
-ciclica combinata alla prima legge della termodinamica $\Delta U = 0 = Q - W$.
-
-\subsection*{Rendimento}
-Sappiamo bene che è necessario un costo in termini energetici (dunque monetari,
-ambientali e così via nella nostra vita economica) per far funzionare una
-macchina e ottenere da essa i risultati attesi. Dal motore dell'auto è desiderabile
-ottenere il massimo della distanza percorribile e della potenza sprigionabile
-partendo dalla benzina pagata al pieno precedente. Ma come valutare la bontà
-di un motore?
-
-Consideriamo una macchina termica, ovvero il motore dell'auto. Il suo scopo
-è produrre lavoro, cioè trasmettere forza motrice alle ruote. Per far funzionare
-una macchina termica è necessario fornire calore. Dunque, possiamo valutare
-l'\textit{efficienza} del motore dell'auto secondo il seguente rapporto:
-
-\begin{align}
-    \eta = \frac{W}{Q_A}
-\end{align}
-
-
-\noindent Dove $Q_A$ rappresenta il calore assorbito dalla macchina, o l'energia pagata
-e immessa nell'auto. Possiamo riformulare la definizione di rendimento
-notando che, durante il funzionamento del motore, parte del calore assorbito
-$Q_A$ viene sì trasformato in lavoro, ma anche in altre forme, che racchiuderemo
-nel calore totale ceduto $Q_C$. Vale dunque:
-
-\[ \Delta U = 0 = Q - W = Q_A + Q_C - W \]
-
-\[ W = Q_A + Q_C \]
-
-\noindent da cui riformuliamo l'efficienza:
-
-\begin{align}
-    \eta = 1 + \frac{Q_C}{Q_A} = 1 - \frac{|Q_C|}{|Q_A|}
-\end{align}
-
-\noindent Notare che, per definizione di macchina termica, il calore
-ceduto possiede segno negativo.
-
-\subsection*{Utopie}
-Chiaramente, senza l'intervento di agenti esterni, non è possibile
-ottenere dal nostro motore più lavoro di quanto calore è stato fornito
-inizialmente
-
-\[ Q_A < W \]
-
-\noindent perché, come sappiamo dalla meccanica, l'energia si conserva
-e non è possibile dunque crearne ``magicamente''. È però lecito chiedersi
-se è possibile ottenere qualcosa come questo:
-
-\[ Q_A \stackrel{?}{=} W \]
-
-\noindent ovvero costruire un motore completamente efficiente. Sempre
-dalla meccanica, possiamo ipotizzare che, anche solo teoricamente e
-in situazioni ideali, ciò sarebbe ammesso, perché i sistemi meccanici
-sono \textit{reversibili}, ovvero è sempre possibile riportarli allo
-stato iniziale dopo un certo fenomeno. Non aggiungiamo altro per riservare
-la sorpresa ai lettori.
-
-In ogni caso, un buon motore dovrebbe produrre quanto più lavoro rispetto
-ad un quantitativo basso di calore assorbito:
-
-\begin{center}
-    \textit{Minimo sforzo, massima resa. Spendi poco, ottieni molto.}
-\end{center}
-
-
-\section*{Esperienza di Carnot}
-Qual è la macchina più efficiente in assoluto? Oppure, in quali condizioni
-una macchina può ottenere il rendimento massimo? Queste sono domande che
-Carnot si pose ai suoi tempi.
-
-\section*{Esperienza di Clausius}
-
-
-\subsection*{Entropia}
-Supponiamo di avere un ciclo reversibile $\gamma$ qualsiasi. Essendo
-reversibile, possiamo concludere che
-
-\[ \oint_\gamma \frac{dQ}{T} = 0 \]
-
-\noindent Selezioniamo due punti distinti su questo ciclo, $A$ e $B$
-e scomponiamo l'integrale di Clausius nei due percorsi $\alpha$ e
-$\beta$:
-
-\[ \int_{A,\alpha}^{B} \frac{dQ}{T} + \int_{B,\beta}^{A} \frac{dQ}{T} = 0 \]
-
-\noindent Trattandosi di un ciclo reversibile, vale la proprietà
-antisimmetrica dell'integrale. Giungiamo dunque alla seguente conclusione:
-
-\[ \int_{A,\alpha}^{B} \frac{dQ}{T} = \int_{A,\beta}^{B} \frac{dQ}{T} \]
-
-\noindent Dunque, qualsiasi sia il percorso tra $A$ e $B$, luguaglianza
-precedente vale sempre per percorsi reversibili. Vi è dunque una dipendenza
-di una certa quantita dai soli stati iniziale e finale. Definiamo dunque,
-come abbiamo fatto per l'energia potenziale, la \textit{differenza di
-entropia tra due stati termodinamici:}
-
-\[ \Delta S_{AB} = S_B - S_A \stackrel{\text{def}}{=} \int_{A,\text{rev}}^{B} \frac{dQ}{T} \]
-
-\noindent L'entropia è a tutti gli effetti una funzione di stato. Possiamo
-inoltre ricavare le seguenti osservazioni:
-
-\begin{itemize}
-    \item La somma dell'entropia di due sottosistemi corrisponde all'entropia
-    del sistema complessivo. Da questa osservazione è possibile supporre
-    che l'universo abbia una propria entropia, derivante da tutti i suoi
-    sottosistemi, conosciuti e non.
-
-    \item Si tratta di una grandezza estensiva. Ha significato solo se si
-    considera l'intero sistema.
-
-    \item Per calcolare le differenze di entropia nelle trasformazioni
-    reversibili, è sufficiente essere furbi utilizzando le trasformazioni
-    reversibili più comode dal punto di vista computazionale, perché
-    l'entropia è una funzione di stato e non dipende dal percorso.
-\end{itemize}
-
-
-\subsection*{Il teorema dell'entropia}
-Consideriamo due trasformazioni termodinamiche che collegano due punti
-$A$ e $B$ descritti da coordinate termodinamiche. Tuttavia, il primo,
-$\alpha$, è irreversibile, mentre $\beta$, il secondo, è reversibile.
-Unendo $\alpha$ e $\beta$ (invertito), otteniamo un ciclo per il quale
-vale la seguente disuguaglianza, che segue dal teorema di Clausius
-
-\[ \oint_\gamma \frac{dQ}{T} < 0 \]
-
-\noindent Perché il tratto $\alpha$ rende l'intera trasfomrazione irreversibile.
-Come per la definizione di variazione di entropia, spezziamo l'integrale
-di Clausius:
-
-\[ \oint_\gamma \frac{dQ}{T} = \int_{A,\alpha}^{B} \frac{dQ}{T} + \int_{B,\beta}^{A} \frac{dQ}{T} < 0 \]
-
-\noindent Da cui, sapendo che $\beta$ è reversibile,
-
-\[ \int_{A,\alpha}^{B} \frac{dQ}{T} < \int_{A,\beta}^{B} \frac{dQ}{T} = \Delta S_{AB} \]
-
-Il fatto che la variazione di entropia dipenda solo dagli stati
-iniziale e finale, è possibile concludere con la seguente generalizzazione
-
-\begin{align}
-    \Delta S_{AB} \geq \int_{A,\text{qualsiasi}}^{B} \frac{dQ}{T}
-\end{align}
-
-\noindent che è l'enunciato del teorema dell'entropia (come sempre,
-l'uguaglianza vale solamente per trasformazioni reversibili). Dal
-teorema segue un'osservazione inquietante. Per un sistema isolato,
-non vi è alcuno scambio di calore con l'esterno, qualunque siano le
-trasformazioni che stanno avvenendo al suo interno, reversibili oppure
-no. Dunque $dQ = 0$ e l'integrale è sempre nullo.
-
-\[ \Delta S_{AB} \geq \int_{A}^{B} \frac{dQ}{T} = 0 \qquad \Delta S_{AB} \geq 0 \]
-
-\noindent ovvero
-
-\[ S_B \geq S_A \]
-
-\noindent Segue che per il nostro sistema isolato l'entropia non può mai
-diminuire; essa può al più rimanere costante. Ma la cosa più sconcertante
-è che anche quest'ultima prospettiva è pressoché un miraggio: dovremmo
-riprodurre trasformazioni \textit{sempre reversibili}.
