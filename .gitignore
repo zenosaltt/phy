@@ -10,17 +10,6 @@
 *.synctex.gz
 *.toc
 
-
-#ignore secrets
-
-*.secret
-
-
-#ignore some shell scripts
-
-coverupdate.sh
-
-
 ##
 
 pre.tex
