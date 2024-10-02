@@ -4,18 +4,18 @@
 \section{Energia}
 Con la cinematica abbiamo trattato unicamente il moto ``come appare'', slegato
 dalle sue cause. Con la dinamica abbiamo invece introdotto quelle cause, ovvero le
-forze. In questo capitolo effettueremo un passo in più: Unendo
-i concetti definiti fino ad ora, scopriremo una quantità spesso
+forze. In questo capitolo effettuiamo un passo in più: Unendo
+i concetti definiti fino ad ora, possiamo scoprire una quantità spesso
 interpretata come il costo con il quale si pagano cambiamenti e trasformazioni
 nell'universo: L'energia. Spiegare cosa sia l'energia valica il confine della
 filosofia; la fisica contemporanea si limita a postulare l'esistenza di questa
 quantità, misurabile indirettamente da altre quantità, che possiede la peculiare
-caratteristica di \textit{conservarsi in sistemi isolati}. In altre parole, se un
+caratteristica di conservarsi in sistemi isolati. In altre parole, se un
 sistema non comunica in nessun modo con l'esterno, la quantità di energia di
-quel sistema non cambia mai. Essa può al più \textit{trasformarsi} e per questo
+quel sistema non cambia mai. Essa può al più trasformarsi e per questo
 motivo non è un qualcosa di tangibile e direttamente osservabile; possiamo solo
-vederne le varie forme e manifestazioni. Questo perché l'energia viene sempre
-\textit{definita} attraverso altre proprietà invece ben riconoscibili: Distanze,
+vederne gli effetti. Questo perché l'energia viene sempre
+definita attraverso altre proprietà ben riconoscibili: Distanze,
 masse, lo scorrere del tempo. Moltiplicando, dividendo ed effettuando altre
 operazioni (che definiremo) di queste quantità su un sistema, scopriremo che
 il risutato che si ottiene è sempre lo stesso.
@@ -50,7 +50,7 @@ W \eqdef \vecsymb{F}\cdot\vecsymb{s}\label{workconstforce}
 \[ 1\text{ J} = 1\text{ Nm} = 1\text{ kg$\frac{\text{m}^2}{\text{s}^2}$} \]
 
 La definizione \ref{workconstforce} presuppone che la forza $\vecsymb{F}$
-rimanga sempre constante durante lo spostamento $\vecsymb{r}$. Questo non è
+rimanga sempre constante durante lo spostamento $\vecsymb{s}$. Questo non è
 sempre vero nella realtà. Per questo possiamo definire il lavoro infinitesimo
 nel seguente modo
 
@@ -58,9 +58,9 @@ nel seguente modo
     dW \eqdef \vecsymb{F} \cdot d\vecsymb{s}\label{workvarforce}
 \end{align}
 
-\noindent dove supponiamo che per il tratto infinitesimo $d\vecsymb{r}$ agisca
+\noindent dove supponiamo che per il tratto infinitesimo $d\vecsymb{s}$ agisca
 una certa forza costante $\vecsymb{F}$. Se poi definiamo $\vecsymb{F}$ in
-funzione dello spostamento, $\vecsymb{F}(\vecsymb{r})$, allora possiamo integrare
+funzione dello spostamento, $\vecsymb{F}(\vecsymb{s})$, allora possiamo integrare
 su tale funzione per ottenere il lavoro totale tra due coordinate $A,B$.
 
 \begin{align}
@@ -70,7 +70,9 @@ su tale funzione per ottenere il lavoro totale tra due coordinate $A,B$.
 \noindent Se si sviscera il prodotto scalare della definizione \ref{workvarforce},
 otteniamo
 
-\[ dW = \vecsymb{F}\cdot d\vecsymb{s} = Fds\cos\theta \]
+\begin{align}
+    dW = \vecsymb{F}\cdot d\vecsymb{s} = Fds\cos\theta\label{lavoroinfinitesimoangolo}
+\end{align}
 
 \noindent dove $\theta$ è l'angolo compreso tra i vettori $\vecsymb{F}$
 e $\vecsymb{s}$. Notiamo che, per via del prodotto scalare, $dW$ è uno scalare, non un vettore, e
@@ -84,15 +86,48 @@ viene in genere nominato come segue:
     esempio è la forza centripeta.
 \end{itemize}
 
+\subsection*{Osservazione ('importanza di scalare il Bondone)}
+Quando si applica la definizione di lavoro in contesti pratici si può
+giungere ad alcune osservazioni interessanti. Per esempio, avete mai
+scalato il monte Bondone? Se la risposta è negativa, immaginate di
+percorrere un sentiero che da Trento raggiunge la cima della montagna.
+Durante la camminata, fatichiamo principalmente per due motivi: lo
+sforzo dovuto allo spostamento orizzontale e quello impiegato per
+salire di quota. Lo sforzo è indice del fatto che il nostro corpo
+spende energia per muoversi e spostare il proprio peso. Consideriamo
+solamente il nostro peso, che è una forza. Proviamo a calcolare il
+lavoro totale effettuato dal peso durante la camminata.
+Purtroppo per noi, la nostra andatura è piuttosto irregolare:
+percorriamo tratti in orizzontale, piccole discese e grandi
+salite. Come al solito, la soluzione è ragionare all'infinitesimo:
+dividiamo il nostro percorso in piccolissimi spostamenti $d\vecsymb{s}$,
+sui quali agisce il peso $\vecsymb{P}$. Ricordando la definizione
+\ref{lavoroinfinitesimoangolo}, il lavoro infinitesimo che $\vecsymb{P}$
+effettua sul generico tratto $d\vecsymb{s}$ è
 
-Esempio cammino sentiero
-\[ W_{A\to B} = \sum_{i = A}^{N = B}dW_i \to \int_{A}^{B}dW \text{ per } N\to\infty \]
-\[ W_{A\to B} = \int_{A}^{B}\vecsymb{F}\cdot d\vecsymb{r} \]
-Notiamo che 
-\[ \vecsymb{P}\cdot d\vecsymb{r} = |\vecsymb{P}| (|d\vecsymb{r}|\cos\theta) \]
-Dove abbiamo la proiezione dello spostamento sul peso P. Questo significa che
-per calcolo del lavoro importa solo la variazione della quota, $dh$.
-\[ W_{0\to 2000\text{ m}} = \sum_{0}^{2000}\vecsymb{P}\cdot d\vecsymb{r} = \int_{0}^{2000}mg dh = mgh_{bondone} \]
+\[ dW = P ds \cos\theta \]
+
+\noindent Il termine $ds \cos\theta$ è la proiezione del vettore
+$d\vecsymb{s}$ sul vettore $\vecsymb{P}$, cioè la componente
+parallela al peso. Dal momento che il peso punta sempre verso il
+basso, ciò significa che eventuali spostamenti orizzontali (o in
+generale la componente orizzontale di ogni spostamento) non
+contribuiscono al lavoro del peso, perché i loro vettori sono
+tra loro ortogonali. Da qui concludiamo che lo spostamento
+che si deve considerare per il calcolo del lavoro è solamente
+quello verticale $dh = ds \cos\theta$.
+
+\[ W = \int_{h_\text{Trento}}^{h_\text{Bondone}} Pdh = \int_{h_\text{Trento}}^{h_\text{Bondone}} -mg dh = -mg(h_\text{Bondone} - h_\text{Trento}) \]
+
+Ma questo non contraddice la nostra esperienza? Davvero è
+questa l'energia che spendiamo per scalare il Bondone,
+indipendentemente da quanto ci muoviamo in orizzontale? In realtà
+il lavoro che abbiamo calcolato è il lavoro della forza peso, non
+il lavoro che noi abbiamo speso per camminare e salire. Noi non
+produciamo la forza peso e sono i nostri muscoli a contrapporsi
+ad essa. Ovviamente anche la muscolatura compie del lavoro a livello
+microscopico per spostarci in giro e noi sentiamo proprio questa fatica, anche
+per spostamenti orizzontali.
 
 %\subsubsection*{Versore}
 %\[ \hat{v} = \frac{\overrightarrow{v}}{|\overrightarrow{v}|} \]
@@ -106,7 +141,7 @@ per calcolo del lavoro importa solo la variazione della quota, $dh$.
 
 
 
-\section{Teorema delle forze vive}
+\section{Il teorema delle forze vive}
 L'ipotesi fondamentale per giungere all'enunciato del teorema
 è la seconda legge della dinamica, oltre alla definizione di lavoro.
 Supponiamo che $\vecsymb{F}$ sia una forza totale esercitata su
@@ -329,7 +364,10 @@ dalla seconda.
 \end{tcolorbox}
 \vspace{5pt}
 
-\noindent Questa condizione esprime la proprietà delle forze conservative di
+\noindent La differenza $\Delta\mathcal{U}$ viene chiamata differenza
+di potenziale.
+
+Questa condizione esprime la proprietà delle forze conservative di
 consentire agli oggetti ad essa sottoposti di immagazzinare una certa quantità
 di energia da essa trasferita se l'oggetto passa da $A$ a $B$ e di liberare
 quella stessa energia nel tragitto inverso. Immaginiamo di lanciare una palla
