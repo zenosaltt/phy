@@ -5,7 +5,6 @@ JUNK_DIR=junk
 EXTENSIONS_HANDLER=handle_exts.sh
 
 # WARNING: filesys. dependent
-FIG_NAME=none
 PDF_TERMINAL=~/Downloads
 
 all: main.tex

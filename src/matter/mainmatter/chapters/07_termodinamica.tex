@@ -259,8 +259,8 @@ temperatura? Non possiamo ancora rispondere a questa domanda, ma
 sicuramente sappiamo che essa è legata in qualche modo all'energia,
 quantomeno al lavoro.
 
-La temperatura ci fornisce un'informazione sullo \textit{stato} di
-un corpo, cioè una proprietà che lo caratterizza in un dato istante
+La temperatura ci fornisce un'informazione sullo stato di
+un corpo, cioè una proprietà che lo caratterizza in un dato istante,
 in una certa situazione. Il lavoro è invece qualcosa di dinamico,
 una ``energia in movimento'' dovuta al moto di qualche cosa. Il
 lavoro si trasferisce da corpo a corpo e ne altera una proprietà di
@@ -270,10 +270,17 @@ di (variazione di) energia potenziale $\Delta\mathcal{U} = -W$.
 Anche qui potremmo parlare di una qualche energia potenziale, ma
 non possiamo denominarla in questo modo perché in generale non
 si osservano forze conservative in azione. Introduciamo allora
-\textit{l'energia interna} di un sistema, che, come si è osservato
+l'energia interna di un sistema, che, come si è osservato
 dagli esperimenti, è esprimibile come funzione della temperatura
 
 \[ U = U(T) \]
+
+\noindent Non possiamo ancora dire con precisione quale sia
+la formula chiusa che unisce le due quantità, ma sicuramente
+gli esperimenti confermano che energia interna e temperatura
+sono legate da una qualche costante di proporzionalità:
+
+\[ U \propto T \]
 
 \subsection{Calore}
 Dal paragrafo precedente abbiamo scoperto che si può dedurre il
@@ -281,13 +288,12 @@ contenuto energetico di un sistema in funzione della sua temperatura.
 Con Joule, però, abbiamo visto che, per aumentare la temperatura di
 un sistema, è necessario compiere del lavoro su di esso. Ma per
 esperienza sappiamo che un corpo freddo può essere riscaldato da uno
-più caldo. Tuttavia non si osserva alcun lavoro in azione. Per
+più caldo. In una situazione del genere, tuttavia, non si osserva alcun lavoro in azione. Per
 spiegare questo fenomeno, la fisica ha introdotto una quantità
-energetica nuova: \textit{il calore}.
+energetica nuova: il calore.
 
 \begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Calore}]
-Energia scambiata tra corpi in contatto termico e a temperature
-differenti\footnote{Per esperienza sappiamo che il passaggio spontaneo avviene
+Energia scambiata tra corpi con temperature differenti in contatto termico\footnote{Per esperienza sappiamo che il passaggio spontaneo avviene
 dal corpo più caldo a quello più freddo, ma questa proprietà della natura viene riassunta in principi della termodinamica che affronteremo più avanti.}.
 
 Spesso indicata con $Q$.
@@ -330,6 +336,50 @@ che
 proporzionale alla variazione di energia interna del sistema:
 
 \[ Q \propto \Delta U \]
+
+
+\subsection{Capacità termica e calore specifico}
+Esistono definizioni che ci permettono di quantificare il calore
+``ad alto livello\footnote{Nel senso informatico (eh pefforza
+d'altronde questo corso è dedicato agli informatici).}'', ovvero
+ricorrendo a misure che non richiedono di conoscere la struttura
+interna, potenzialmente microscopica, del sistema (in effetti
+è proprio così che funziona la termodinamica).
+
+Già nel paragrafo
+precedente ci siamo posti implicitamente questa domanda: come
+quantificare il calore? Sappiamo che $Q \propto \Delta T$.
+Questa relazione di proporzionalità ci permette di definire una
+proprietà dei corpi, che è la capacità termica.
+
+\begin{align}
+    C_\gamma \eqdef \left[ \frac{dQ}{dT} \right]_\gamma
+\end{align}
+
+\noindent In breve, la costante $C_\gamma$ esprime la quantità di calore
+necessaria per aumentare la temperatura di un corpo di una
+certa differenza $dT$. In casi ideali, possiamo semplificare
+questa legge in $Q = C_\gamma \Delta T$. La $\gamma$ indica che
+la capacità termica è sempre associata ad una certa trasformazione
+termodinamica $\gamma$ e non è necessariamente uguale in ogni
+situazione.
+
+Già intuitivamente possiamo capire che più il corpo è grande,
+nel senso che possiede più massa, più calore sarà richiesto per
+aumentare la sua temperatura. Sempre in base alla trasformazione,
+possiamo allora definire il calore specifico:
+
+\begin{align}
+    c_\gamma \eqdef \frac{C_\gamma}{m}
+\end{align}
+
+\noindent da cui una formula che più avanti si incontra spesso:
+$Q = mc_\gamma \Delta T$. Queste costanti non solo dipendono da
+$\gamma$, ma variano anche da sostanza a sostanza. Il calore
+specifico di un metallo è generalmente più basso di qualcosa
+come l'acqua, principalmente per questione di conducibilità termica,
+di cui parliamo più avanti.
+
 
 \subsection{Formulazione del primo rincipio}
 Possiamo ora mostrare il primo principio della termodinamica. Il principio
@@ -967,7 +1017,7 @@ condizioni di pressione e volume può passare ad un altro stato mediante
 una adiabatica, seguita da una isoterma e infine da una isobara.
 
 Tra tutte queste trasformazioni ``composte'', quelle più interessanti
-sono forse le \textit{trasformazioni cicliche} (o cicli termodinamici), nelle
+sono forse le trasformazioni cicliche (o cicli termodinamici), nelle
 quali, data una coordinata termodinamica, il sistema ritorna nello stesso
 punto dopo aver compiuto alcune trasformazioni. Seguendo i nostri presupposti,
 possiamo concludere che la variazione di energia interna dei sistemi che
@@ -978,12 +1028,12 @@ subiscono trasformazioni cicliche non varia per definizione:
 \noindent in quanto quest'ultima dipende unicamente dallo stato.
 
 Avremo modo di osservare che le trasformazioni cicliche costituiscono
-il principio di funzionamento delle \textit{macchine}.
+il principio di funzionamento delle macchine.
 
 
 \subsubsection*{Reversibilità e irreversibilità}
 Abbiamo affermato che le leggi che descrivono le trasformazioni fondamentali
-valgono solamente nel caso ideale di trasformazioni \textit{reversibili}.
+valgono solamente nel caso ideale di trasformazioni reversibili.
 
 \begin{tcolorbox}[colback = yellow!30, colframe = yellow!30!black, title = {Trasformazioni reversibili}]
     Un processo si dice reversibile se esso, in qualche modo, è
@@ -1097,10 +1147,10 @@ dell'efficienza prevista teoricamente.
 
 
 \section{Principio secondo}
-\epigraph{A: ``Quindi non è possibile nemmeno teoricamente?''\\B: ``Esattamente.''\\A: ``Per questo secondo me è \emph{mind-blowing}.''}{Lezione di termodinamica,\\a.a. 2023/2024}
+\epigraph{A: ``Quindi non è possibile nemmeno teoricamente?''\\B: ``Esattamente.''\\A: ``Per questo secondo me è \emph{mind-blowing}.''}{Una lezione di termodinamica,\\a.a. 2023/2024}
 
 Dopo aver introdotto il concetto di macchina e della sua efficienza,
-è legittimo chiedersi se è possibile progettare \textit{nella realtà}
+è legittimo chiedersi se è possibile progettare nella realtà
 la macchina perfetta, che cioè converte tutta l'energia
 (in particolare calore) in ingresso interamente in lavoro in uscita,
 con efficienza unaria (100\%).
@@ -1111,7 +1161,7 @@ principio $\Delta U = Q - W$ la conclusione $\Delta U = 0$ e allora
 
 \noindent La teoria sembrerebbe essere fondata: lavoro e calore sono
 convertibili, cioè spendendo calore otteniamo lavoro e possiamo tra l'altro
-\textit{invertire} il processo, perché l'uguaglianza non ci impone un
+invertire il processo, perché l'uguaglianza non ci impone un
 verso preferenziale e noi siamo tanto furbi da costruire macchine
 in grado di funzionare al contrario. Per esperienza, tuttavia, è evidente che non
 è così, cioè se spendiamo una certa quantità di calore $Q$ e
@@ -1126,12 +1176,13 @@ eccellente, riducendo quanto possibile dispersione e attriti,
 in realtà questa macchina è destinata a fermarsi dopo un certo
 intervallo di tempo\footnote{Consigliamo di dare un'occhiata alla
 sezione dedicata al moto perpetuo, negli approfondimenti di questo
-capitolo.}.
+capitolo.}, sia esso una manciata di secondi o qualche milione di
+anni.
 
 Potremmo ribattere affermando che la realtà ci pone problemi come
 attrito e dissipazioni di vario genere. Ciò che è sconcertante è
-l'impossibilità non solo \textit{reale} di realizzare macchine simili,
-ma anche \textit{teorica}. Questa conclusione, come vedremo, fonda
+l'impossibilità non solo reale di costruire macchine simili,
+ma anche teorica. Questa conclusione, come vedremo, fonda
 le radici nel secondo principio, che a sua volta poggia sulla
 seguente evidenza:
 
@@ -1450,7 +1501,7 @@ avremmo $Q_{2,M} < 0$, $W_M = 0$ e pertanto $Q_{1,M} > 0$. $M$ è proprio
 una macchina che viola il secondo principio della
 termodinamica secondo la formulazione di Clausius, perché non accade
 altro che un trasferimento di calore dalla sorgente fredda a quella calda.
-Si conclude che \[ \eta_X \leq \eta_\mathcal{C} \]
+Purtroppo per chi ha puntato su $X$, si conclude che \[ \eta_X \leq \eta_\mathcal{C} \]
 
 Se poi si assume che anche $X$ è reversibile, risulta che
 $\eta_X \geq \eta_\mathcal{C}$ (basti ripercorrere la dimostrazione
@@ -1473,7 +1524,7 @@ secondo l'espressione $1 - T_1/T_2$.
 
 \subsubsection*{Altre osservazioni}
 Da Carnot è possibile osservare che, se $Q_1 < 0$ è il calore ceduto
-dalla sorgente fredda e $Q_2 > 0$ quello assorbito dalla sorgente
+alla sorgente fredda e $Q_2 > 0$ quello assorbito dalla sorgente
 calda, per le definizioni alternative di rendimento vale
 
 \[ 1 + \frac{Q_1}{Q_2} \leq 1 - \frac{T_1}{T_2} \]
@@ -1491,14 +1542,14 @@ proprio da questa innocua relazione trarremo l'osservazione
 forse più inquietante ma allo stesso tempo affascinante di
 questo corso.
 
-\section{Esperienza di Clausius}
+\section{Esperienza di Clausius; Entropia}
 Un ulteriore personaggio degno del titolo di \textit{main character}
 della termodinamica è il tedesco Rudolf Clausius, il quale estese
 gli studi di Carnot. Di fatto, il teorema di Carnot non è sufficientemente
-generale e ancora distante dalla nostra realtà, perché nelle trasformazioni
-sarebbe ammesso venire a contatto con due sole sorgenti distinte. Illustreremo il teorema di Clausius, che
-aprirà la strada ad uno degli ultimi concetti di questi appunti:
-l'entropia.
+generale, è ancora distante dalla nostra realtà, perché nelle trasformazioni
+Carnot impone la presenza di due sole sorgenti distinte. Illustriamo nel seguito
+il teorema di Clausius, che apre la strada ad uno degli ultimi concetti di questi
+appunti: l'entropia.
 
 \subsection{Teorema di Clausius}
 Abbiamo visto che una delle relazioni ottenute da Carnot è la
@@ -1545,7 +1596,7 @@ si ottiene la seguente disuguaglianza
 prende il nome di \textit{integrale di Clausius}. Il caso particolare
 dell'uguaglianza vale solamente per trasformazioni reversibili.
 
-\subsection{Differenza di entropia}
+\subsection{Variazione di entropia}
 Si consideri una trasformazione termodinamica \textit{reversibile} qualsiasi.
 Per ipotesi di reversibilità, l'integrale di Clausius calcolato sulla curva $\tau$
 di tale trasformazione nel piano pressione-volume è nullo.
@@ -1566,10 +1617,10 @@ dell'integrale. Giungiamo dunque alla seguente conclusione:
 precedente vale sempre per percorsi reversibili. Vi è dunque una dipendenza
 di una certa quantità dai soli stati iniziale e finale della trasformazione.
 Definiamo, in modo simile all'energia potenziale studiata in meccanica,
-la \textit{differenza di entropia tra due stati termodinamici}.
+la differenza di entropia tra due stati termodinamici.
 
 \begin{align}
-    \Delta S_{AB} \stackrel{\text{def}}{=} \int_{A,\text{rev}}^{B} \frac{dQ}{T}
+    \Delta S_{AB} \stackrel{\text{def}}{=} \int_{A,\text{rev}}^{B} \frac{dQ}{T}\label{variaz_entropia}
 \end{align}
 
 \noindent Definiremo solamente la differenza, non l'entropia in sé.
@@ -1582,9 +1633,131 @@ coinvolti cambia. Possiamo approssimare questi fenomeni immaginando
 infinitesimi quanità di calore che vengono scambiate di volta in volta
 a temperature diverse:
 
-\[ dS \eqdef \left[\frac{dQ}{T}\right]_\text{reversibile} \]
+\begin{align}
+    dS \eqdef \left[\frac{dQ}{T}\right]_\text{reversibile}\label{entropia_infinitesima}
+\end{align}
 
-\subsubsection*{Variazione di entropia per trasformazioni fondamentali}
+\subsubsection*{Cos'è l'entropia?}
+Facciamo presente che in questo corso definiamo solamente la variazione
+di entropia, non l'entropia assoluta di un sistema, un po' come si fa
+con l'energia potenziale. Però, rispetto a quest'ultima, l'entropia
+può essere definita (si vedano gli approfondimenti per brevi accenni,
+in particolare la definizione \ref{entropia_meccanica_statistica}) ma
+per i nostri scopi non è molto utile.
+
+
+\subsubsection*{Variazione di entropia in trasformazioni fondamentali}
+Possiamo aggiungere la variazione di entropia a tutte quelle equazioni viste nelle
+trasformazioni termodinamiche fondamentali. Supponiamo come sempre
+che tali trasformazioni siano quasistatiche reversibili. Applichiamo
+le definizioni \ref{variaz_entropia} e \ref{entropia_infinitesima},
+quindi per ogni trasformazione cerchiamo il calore $dQ$ e
+la temperatura alla quale esso viene scambiato, riconducendoci
+in alcuni casi a relazioni che legano il calore con la temperatura
+stessa per ottenere funzioni da integrare, passando da $dS$ a $\Delta S$.
+
+\begin{itemize}
+    \item \textbf{Isoterma:} nelle isoterme abbiamo scoperto che
+    $dQ = nRTdV/V$. Ci basta dividere questo calore per la temperatura
+    alla quale sta avvenendo la trasformazione, ottenendo dunque
+    
+    \begin{align}
+        dS_\text{isoterma} = nR\frac{dV}{V}
+    \end{align}
+
+    \noindent Integrando, otteniamo
+
+    \begin{align}
+        \Delta S_{AB} = nR\ln\left(\frac{V_B}{V_A}\right)
+    \end{align}
+
+    \noindent Possiamo notare che, in una isoterma, $\Delta S_{AB} > 0 \Leftrightarrow V_B > V_A$.
+    Ciò è compatibile con l'intuizione dell'idea di entropia: se il gas
+    si ``sparge'' in un volume maggiore, il suo disordine è maggiore e
+    dunque aumenta la sua entropia.
+
+    \item \textbf{Isocora:} dalla nostra tabellazza sappiamo che $dQ = nc_VdT$,
+    quindi
+
+    \begin{align}
+        dS_\text{isocora} = nc_V\frac{dT}{T}
+    \end{align}
+
+    \noindent da cui
+
+    \begin{align}
+        \Delta S_{AB} = nc_V\ln\left(\frac{T_B}{T_A}\right)
+    \end{align}
+
+    \noindent In questo caso, $\Delta S_{AB} > 0 \Longleftrightarrow T_B > T_A$.
+    Intuitivamente, il disordine del sistema aumenta per via dell'incremento
+    di temperatura. Immaginando un gas ideale (ma anche un cubetto di ghiaccio
+    in una tazza di té, the, htegh, o come si scrive), di fatto le particelle
+    si agitano di più e il sistema diventa più caotico.
+
+    \item \textbf{Isobara:} vale $dQ = nc_pdT$ e allora
+    
+    \begin{align}
+        dS_\text{isobara} = nc_p\frac{dT}{T}
+    \end{align}
+
+    \noindent e allora
+
+    \begin{align}
+        \Delta S_{AB} = nc_p\ln\left(\frac{T_B}{T_A}\right)
+    \end{align}
+
+    \noindent La spiegazione intuitiva è pressoché la stessa di
+    quelle precedenti. Anzi, da un certo punto di vista si tratta
+    proprio di una combinazione delle prime due.
+
+    \item \textbf{Adiabatica:} abbiamo $dQ = 0$.
+    
+    \begin{align}
+        dS_\text{adiabatica} = 0
+    \end{align}
+
+    \noindent da cui ovviamente segue che $\Delta S_{AB} = 0$.
+    In questa trasformazione la spiegazione intuitiva del
+    binomio entropia-disordine è più complessa. Per andare al punto,
+    immaginiamo una compressione adiabatica di un gas: il suo
+    volume diminuisce, quindi saremmo tentati di concludere che
+    l'entropia del sistema diminuisce, ma in realtà in una adiabatica
+    deve aumentare anche lìenergia interna del gas, quindi anche la
+    sua temperatura. Precedentemente abbiamo associato l'aumento di
+    temperatura all'aumento di entropia. Perciò il disordine dovuto
+    alla temperatura che si innalza compensa l'ordine che si introduce
+    col volume. Il ragionamento è analogo per una decompressione
+    adiabatica.
+\end{itemize}
+
+\noindent Aggiungiamo una formula bonus, la \textbf{variazione di
+entropia in transizioni di fase}. Ricordiamo che, in un cambiamento
+di fase (immaginiamo il ghiaccio che si scioglie, da solido a liquido),
+bisogna fornire al sistema una certa quantità di calore proporzionale
+alla massa che si intende trasformare. Questo è il calore latente,
+che dipende da una costante $\lambda$. Allora possiamo scrivere
+$dQ = \lambda dm$, ovvero una piccolissima quanità di calore che
+permette ad una piccolissima quantità di massa di trasformarsi.
+Concludiamo che
+
+\begin{align}
+    dS_\text{tfase} = \frac{\lambda dm}{T}
+\end{align}
+
+\noindent Ricordiamo anche che le transizioni di fase avvengono
+(idealmente) a temperature costanti. Allora
+
+\begin{align}
+    \Delta S_{AB} = \frac{\lambda m}{T}
+\end{align}
+
+
+\subsubsection*{Diagramma temperatura-entropia}
+
+
+
+
 
 
 
@@ -1609,7 +1782,7 @@ collegati alla cosiddetta \textit{meccanica statistica}, consentono
 invece di esprimere in forma chiusa l'entropia di un sistema.
 
 \begin{align}
-    S = k_B \ln [N]
+    S \eqdef k_B \ln [N]\label{entropia_meccanica_statistica}
 \end{align}
 
 \noindent dove $k_B$ è la costante di Boltzmann, mentre $N$
@@ -1632,7 +1805,7 @@ neppur raggiungibile. Ecco una delle formulazioni:
 
 \noindent Analogamente alle dimostrazioni viste per l'equivalenza
 degli enunciati del secondo principio, anche il terzo può essere
-dimostrato con un esperimento mentale che si basa sulo stesso principio
+dimostrato con un esperimento mentale che si basa sullo stesso principio
 di funzionamento del frigorifero:
 
 Supponiamo di avere un insieme di oggetti a 0 K e un oggetto $X$ da
