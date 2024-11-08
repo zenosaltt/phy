@@ -19,8 +19,9 @@ la matematica è lo strumento essenziale di qeusta scienza.
 Giungendo al sodo, la fisica intende descrivere, e quando possibile giustificare,
 con coerenza e formalità ciò che osserviamo quotidianamente: perché l'acqua
 bolle, quale altezza raggiungerà una palla lanciata in alto con una certa
-velocità e così via. La fisica cerca di individuare innanzitutto delle
-leggi.
+velocità, quali principi rendono un circuito elettrico efficiente dal punto
+di vista energetico, come lanciare un satellite intorno a Giove e così via. La
+fisica cerca di individuare innanzitutto delle leggi.
 
 \begin{tcolorbox}[colback = yellow!30, colframe = yellow!30!black, title = {Legge}]
     Una legge fisica è una regolarità della natura esprimibile in forma
@@ -65,13 +66,10 @@ grandezza che si intende misurare e la grandezza campione scelta convenzionalmen
 per tale scopo.
 
 Mostriamo un esempio: supponiamo di voler misurare la lunghezza di qualsiasi cosa
-in ``chiavette USB'' (si potrebbe argomentare circa quale chiavetta si stia
-impiegando e quale posizione la chiavetta debba assumere durante la misura.
-Supponiamo qui che la chiavetta sia posta in verticale, senza perderci in ulteriori
-dettagli). Decidiamo poi di misurare l'altezza di una porta—anche qui, non
-specifichiamo quale porta—utilizzando l'unità appena scelta. Supponiamo quindi
-di aver registrato il seguente dato:
-\[ h = 20 \text{ chiavette USB} \]
+in ``penne''\footnote{Tratto da una storia vera.}. Decidiamo poi di misurare l'altezza
+di una porta utilizzando l'unità appena scelta. Supponiamo quindi di aver registrato il
+seguente dato:
+\[ h = 20 \text{ penne} \]
 Notare come siano stati specificati:
 \begin{itemize}
     \item Un nome per l'oggetto che si intendeva misurare, $h$, ovvero l'altezza
@@ -80,23 +78,25 @@ Notare come siano stati specificati:
     \item Un'affermazione per legare il nome e il dato, = (``corrisponde a'', ``è
     uguale a'')—caratteristica che peraltro si trova anche nei linguaggi di
     programmazione. Si presti bene attenzione che l'uguaglianza matematica
-    non implica necessariamente l'equivalenza fisica. Questa sottigliezza si
-    noterà bene nella formulazione del principio zero della termodinamica.
-    \item L'unità di misura, chiavette USB.
+    non implica necessariamente l'equivalenza fisica\footnote{Noteremo tale
+    sottigliezza enunciando il principio zero della termodinamica, ma se non
+    lo conoscete non preoccupatevi ora, c'è ancora molta strada da fare.}.
+    \item L'unità di misura, ``penne''.
 \end{itemize}
 Tuttavia, tale misurazione non è stata affatto sincera: non vi è la
 garanzia che il valore registrato sia esatto e, probabilmente, nel
 misurare la porta avremmo affermato di aver misurato ``all'incirca'
-un'altezza pari a 20 chiavette. La prossima sezione
+un'altezza pari a 20 penne. La prossima sezione
 tratta questo problema, ovvero quello dell'incertezza.
 
 \subsubsection{Alcune grandezze fondamentali}
 Tra le grandezze fondamentali studiate in questo corso ci sono:
 \begin{itemize}
-    \item La massa: intuitivamente, rappresentà la quantità di
-    materia di cui un corpo (cioè un oggetto) è carico. Non si
+    \item La massa: intuitivamente, rappresenta la quantità di
+    materia di cui un corpo, cioè un oggetto, è carico. Non si
     deve confondere con il peso, anche se la dinamica mostra che
-    peso e massa sono correlate. Più un oggetto è massivo, più
+    peso e massa sono correlate. L'effetto della massa è il seguente:
+    più un oggetto è massivo, più
     esso è difficile da mettere in moto o da frenare, se in
     movimento (assumendo che esso non sia influenzato da altri
     ``agenti esterni'').
@@ -113,8 +113,10 @@ Tra le grandezze fondamentali studiate in questo corso ci sono:
     intuitiva di questo concetto.
 \end{itemize}
 
-\noindent Con queste sole tre grandezze si possono derivare moltissime
-altre grandezze composte che si incontrano in fisica.
+\noindent Gli standard internazionali definiscono altre grandezze
+fondamentali, ma con queste sole tre se ne possono derivare moltissime
+altre, dette composte, che si incontrano in fisica: velocità, forza,
+pressione e così via.
 
 \section{Incertezza}
 Idealmente, si vorrebbe impiegare, grazie alle misure, numeri puntuali ed esatti.
@@ -122,14 +124,17 @@ In altre parole, dei numeri con una precisione indefinita, aventi un numero
 illimitato di cifre decimali e non.
 
 Ma quando si effettua una misura di una grandezza, il risultato ottenuto è noto solo
-con una certa precisione. Riprendendo l'esempio della chiavetta USB, è impossible
+con una certa precisione. Riprendendo l'esempio della penna, è impossible
 misurare con certezza tutte le lunghezze, in quanto non multipli esatti della
-chiavetta stessa: ci sarà sempre un certo margine di ``un pezzo di chiavetta'',
+penna stessa: ci sarà sempre un certo margine di ``un pezzo di penna'',
 minore dell'unità prescelta. Ma al di sotto di quella unità non è possibile
 fornire alcuna garanzia sulla puntualità del dato. In altre parole, la
 sensibilità\footnote{La più piccola variazione della grandezza che lo
 strumento è in grado di rilevare.} dello strumento è uno dei limiti alla precisione
-della misura.
+della misura. Allora, come nelle architetture di computer è presente un
+numero limitato di bit per registro, anche le misure fisiche non possono
+essere scritte con un numero infinito di cifre. Parliamo dunque di cifre
+significative.
 
 \begin{tcolorbox}[colback = yellow!30, colframe = yellow!30!black, title = {Cifre significative del risultato di una misura}]
 Le cifre significative del risultato di una misura sono le cifre note
@@ -154,19 +159,31 @@ misura ne è affetta (comprese quelle che non la riportano).
 
 \begin{tcolorbox}[colback = yellow!30, colframe = yellow!30!black, title = {Risultato della misura di una grandezza}]
 Il risultato della misura di una grandezza è sempre un'approssimazione
-accompagnata da una certa incertezza, ovvero un \textbf{valore attendibile}
-e un \textbf{errore assoluto} (o semplicemente \textbf{incertezza}).
+accompagnata da una certa incertezza, ovvero un \textbf{valore attendibile} $\overline{x}$
+e un \textbf{errore assoluto} $e_x$ (o semplicemente \textbf{incertezza}).
 \[ x = \overline{x} \pm e_x  \]
 \end{tcolorbox}
 
 Questo risultato non è quindi altro che un intervallo in cui il valore reale
 della misura si trova. Ci limiteremo agli errori relativi a singole misure,
-nelle quali $x$ corrisponde al valore misurato e $e_x$ la sensibilità dello
+nelle quali $\overline{x}$ corrisponde al valore misurato e $e_x$ la sensibilità dello
 strumento\footnote{Durante i calcoli, gli errori si propagano,
 secondo definizioni che tuttavia non verranno affrontate.}. Di conseguenza, possiamo ora correggere il risultato della misura
-effettuata in chiavette USB:
+effettuata in penne:
 
-\[ H = (20 \pm 1) \text{ chiavette USB} \]
+\[ H = (20 \pm 1) \text{ penne} \]
+
+Negli esercizi non vedremo mai risultati scritti con la loro incertezza. L'unica
+cosa alla quale è bene fare attenzione è gestire i calcoli di numeri con diverse cifre
+significative: se i dati sono espressi con un numero differente di cifre significative
+\begin{itemize}
+    \item Si sconsiglia di effettuare calcoli parziali, ovvero effettuati a ``passi''.
+    È buona pratica esprimere simbolicamente il risultato, per poi calcolarlo tutto d'un
+    colpo sostituendo i valori.
+
+    \item Generalmente, nei calcoli finali, il risultato ``eredita'' il numero di cifre
+    significative del dato che ne possiede di meno.
+\end{itemize}
 
 \section{Notazione scientifica}
 Unità di misura come il metro e il kilogrammo sono comode nella vita di tutti i
@@ -221,10 +238,7 @@ In particolare:
     \[ 8.1 \cdot 10^{-12} \approx 10 \cdot 10^{-12} \to \text{ Ordine di grandezza } 10^{-11} \]
 \end{itemize}
 
-\noindent Sono stati definiti dei prefissi stadard per certi ordini di grandezza notevoli,
-cioè quelli che, escludendo la potenza nulla, rappresentano multipli di tre.
-
-\begin{center}
+\marginpar{\begin{center}
     \begin{tabular}{c|c|c}
         Potenza   & Simbolo & Prefisso\\
         \hline
@@ -237,13 +251,16 @@ cioè quelli che, escludendo la potenza nulla, rappresentano multipli di tre.
         $10^{-9}$  & n       & nano\\
         $10^{-12}$ & p       & pico\\
     \end{tabular}
-\end{center}
+\end{center}}
+
+\noindent Sono stati definiti dei prefissi stadard per certi ordini di grandezza notevoli,
+cioè quelli che, escludendo la potenza nulla, rappresentano multipli di tre.
 Utilizzando questi prefissi, di fianco all'unità di misura adottata, si contrae
 ancora di più la notazione scientifica, sottointendendo un certo ordine di
 grandezza.
 
 
-\section{Approfondimenti}
+%\section{Approfondimenti}
 %La fisica trae le proprie origini dalla ``filosofia naturale'',
 %prima della nascita della scienza moderna. La fisica di oggi ha
 %ancora alcuni segni di
