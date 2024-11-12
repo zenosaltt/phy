@@ -451,7 +451,7 @@ macchina di Carnot $\mathcal{C}$ che lavora tra le medesime temperature.
     \eta_X \leq \eta_\mathcal{C} \quad \text{per } T_1 < T_2\label{carnot1}
 \end{align}
 
-Inoltre, tutte le macchine reversibili che operano tra la medesima coppia di temperature
+Inoltre, tutte le macchine reversibili che operano con la stessa coppia di temperature
 hanno lo stesso rendimento, che equivale a quello della corrispondente macchina di
 Carnot. Se $X$ è una macchina reversibile, allora:
 
@@ -528,10 +528,10 @@ che opera tra le medesime sorgenti. Non importa la macchina,
 le sue prestazioni energetiche saranno sempre limitate superiormente
 secondo l'espressione $1 - T_1/T_2$.
 
-\subsubsection*{Altre osservazioni}
+\subsection{Osservazioni di Carnot}
 Da Carnot è possibile osservare che, se $Q_1 < 0$ è il calore ceduto
 alla sorgente fredda e $Q_2 > 0$ quello assorbito dalla sorgente
-calda, per le definizioni altternative di rendimento vale
+calda, per le definizioni alternative di rendimento vale
 
 \[ 1 + \frac{Q_1}{Q_2} \leq 1 - \frac{T_1}{T_2} \]
 
@@ -541,12 +541,17 @@ calda, per le definizioni altternative di rendimento vale
     \frac{Q_1}{T_1} + \frac{Q_2}{T_2} \leq 0
 \end{align}
 
-Ovviamente l'uguaglianza vale solo per macchine reversibili.
+\noindent Ovviamente l'uguaglianza vale solo per macchine reversibili.
 A prima vista, questa disuguaglianza potrebbe non comunicare
 alcunché di straordinario. Nei prossimi paragrafi vedremo che
 proprio da questa innocua relazione trarremo l'osservazione
 forse più inquietante ma allo stesso tempo affascinante di
 questo corso.
+
+Un'altra osservazione: la seconda proposizione del teorema di Carnot
+è molto importante, perché ci assicura, almeno sul piano teorico, che
+le leggi della termodinamica valgono indipendentemente da come costruiamo
+la nostra macchina, anche se questa non esiste ancora!
 
 \section{Esperienza di Clausius; Entropia}
 Un ulteriore personaggio degno del titolo di \textit{main character}
@@ -771,6 +776,7 @@ Concludiamo che
 
 
 
+\subsubsection{Che dire dei frigoriferi?}
 
 
 
@@ -781,8 +787,35 @@ Concludiamo che
 Questo pacco di termodinamica si conclude, ma essendo grande
 merita molti approfondimenti.
 
+\subsection{La questione del calorico}
+La fisica poggia su un substrato filosofico molto sofisticato e
+sviluppato, dal quale hanno origine, per esempio, molte interpretazioni
+della realtà che viene studiata. Una questione che segnò le ricerche
+nel campo della termodinamica fu quella di definire e chiarire le
+ragioni d'essere del \textit{calore}, ovviamente avanzando ipotesi
+secondo il metodo scientifico.
+
+Prima di Joule, si parlava in letteratura di \textit{calorico},
+qualcosa che veniva interpretato come un fluido vero e proprio,
+dotato di esistenza propria e in grado di muoversi da corpo a
+corpo, da sorgenti più calde a quelle più fredde. La temperatura
+veniva poi definita sulla base della concentrazione di calorico
+in un certo corpo, anche se calore e temperatura rimanevano in
+molti casi concetti confusi, come a volte capita anche nell'esperienza.
+
+Grazie agli esperimenti di Joule, la fisica comprese che il calore
+rappresenta in realtà una forma di energia, qualcosa che
+non esiste in natura, ma che la descrive. Nell'esperimento del
+mulinello, l'innalzamento di temperatura dell'acqua è dovuto al
+lavoro compiuto da una massa in caduta. Secondo l'interpretazione
+precedente, del calorico sarebbe comparso dal nulla, quando invece
+viene semplicemente osservata una trasformazione di lavoro in calore,
+in accordo con i principi di conservazione già sviluppati in meccanica.
+
 
 \subsection{Espansione libera dei gas}
+
+
 
 \subsection{Micro- e macro-stato}
 Con i nostri strumenti non siamo in grado di definire l'entropia in
@@ -862,7 +895,7 @@ equamente distribuite tra le due scatole:
 
 \[ N_{3,3} =\binom{6}{3}^2 = 400 \]
 
-In virtù della definizione di entropia, possiamo concludere che
+In virtù della definizione \ref{entropia_meccanica_statistica}, possiamo concludere che
 l'entropia del sistema con la configurazione 4-2, quella iniziale,
 è minore di quella 3-3.
 Dal momento che le palline si muovono tra gli slot in maniera
@@ -878,8 +911,6 @@ cresce esponenzialmente. Per la meccanica statistica, questo
 è il motivo per cui i sistemi termodinamici tendono a massimizzare
 la propria entropia. Ma questo non è dovuto al fatto che essi
 ``vogliono'' farlo, bensì perché è il destino più probabile.
-Nulla vieterebbe al ghiaccio che metti nel bicchiere di Coca-Cola
-di raffreddarsi ancor di più, mentre la bevanda si riscalda.
 
 Non abbiamo scelto l'analogia delle palline e delle scatole a caso.
 Possiamo immaginare le palline come particelle di gas e le scatole
@@ -891,9 +922,13 @@ quantificare il calore scambiato, oltre la temperatura delle barre durante
 gli stati di equilibrio. Come già concluse Boltzmann, non è
 del tutto vero che è impossibile che il gas si accatasti
 tutto in un solo contenitore, oppure che il calore fluisca
-dal corpo freddo a quello caldo. Semplicemente, è estremamente
+dal corpo freddo a quello caldo. Nulla vieta il verificarsi di
+certi fenomeni. Semplicemente, è estremamente
 improbabile che ciò accada e questo vale ancor di più per sistemi
-sempre più grandi e complessi.
+sempre più grandi e complessi, proprio quelli in cui viviamo noi.
+Ricordate la famosa, apparentemente innocua osservazione scritta
+all'inizio della sezione sul secondo principio? Ora dovrebbe essere
+evidente l'importanza di quel \emph{mai spontaneamente}.
 
 \subsubsection*{Entropia, disordine, informazione, tempo}
 L'entropia non è propriamente qualcosa che esiste fisicamente,
@@ -955,28 +990,58 @@ trovate tecniche di raffreddamento in grado di raggiungere lo zero
 assoluto, anche se siamo stati in grado di avvicinarci ad esso
 nell'ordine di una frazione di Kelvin.
 
-\subsection{Il moto perpetuo}
 
+\subsection{Macchine e moto perpetuo}
+Parlando di principio secondo, abbiamo ipotizzato l'esistenza di macchine
+in grado di convertire l'energia fornita (il calore) in lavoro senza alcuna
+dissipazione o perdita. Per via del secondo principio questo non è possibile
+e ci siamo rassegnati presto ad esso. Ora che però siamo nella sezione approfondimenti,
+possiamo fantasticare quanto ci pare: e se non valesse il secondo principio
+della termodinamica? Per il primo principio, sarebbero ammesse le leggendarie
+macchine super efficienti, che una volta azionate entrerebbero in un regime
+di funzionamento conosciuto come moto perpetuo.
 
-\subsection{La questione del calorico}
-La fisica poggia su un substrato filosofico molto sofisticato e
-sviluppato, dal quale hanno origine, per esempio, molte interpretazioni
-della realtà che viene studiata. Una questione che segnò le ricerche
-nel campo della termodinamica fu quella di definire e chiarire le
-ragioni d'essere del \textit{calore}, ovviamente avanzando ipotesi
-secondo il metodo scientifico.
+Una macchina capace di moto
+perpetuo è in grado di produrre lavoro senza alcun apporto di energia esterno,
+eccetto quello necessario ad azionarla. Ricordando sempre il caro, vecchio primo
+principio, $\Delta U = Q - W$, sappiamo che $\Delta U = 0$ per via del
+funzionamento ciclico delle macchine, da cui $W = Q$. $Q$ rappresenta l'energia
+iniziale che innesca il moto, mentre $W$ è il lavoro prodotto. Attenzione però,
+perché anche il primo principio pone un limite a queste macchine.
+Dal momento che calore e lavoro si equivalgono, il moto perpetuo dovrebbe
+convertire queste due forme di energia in continuazione. In altre parole,
+la macchina può solo autoalimentarsi e non potremo mai sfruttarla per generare
+energia infinita, pena lo spegnimento della macchina stessa.
 
-Prima di Joule, si parlava in letteratura di \textit{calorico},
-qualcosa che veniva interpretato come un fluido vero e proprio,
-dotato di esistenza propria e in grado di muoversi da corpo a
-corpo, da sorgenti più calde a quelle più fredde. La temperatura
-veniva poi definita sulla base della concentrazione di calorico
-in un certo corpo, anche se calore e temperatura rimanevano in
-molti casi concetti confusi, come a volte capita anche nell'esperienza.
+Nella storia (anche in tempi recenti) sono state numerose le proposte
+di macchine del genere, ma ovviamente nessuna di esse funziona.
+Sottolineamo che il fantomatico moto perpetuo, \emph{prima o poi}, è
+destinato a fermarsi. Non viene specificato dopo quanto tempo, che tuttavia
+è sicuramente finito: una frazione infinitesima di secondo, un minuto,
+un'ora, un anno, una decina di miliardi di anni.
+Ecco alcuni esempi fantasiosi di moto perpetuo:
 
-Grazie agli esperimenti di Joule, la fisica comprese che il calore
-rappresenta in realtà una forma di energia. Nell'esperimento del
-mulinello, l'innalzamento di temperatura dell'acqua è dovuto al
-lavoro compiuto da una massa in caduta. Secondo l'interpretazione
-precedente, del calorico sarebbe comparso dal nulla, quando invece
-viene semplicemente osservata una trasformazione di lavoro in calore.
+\begin{itemize}
+    \item Il mulino: un mulino ad acqua aziona una pompa idraulica,
+    che riporta il liquido in cima alla ruota, che quindi gira e
+    produce lavoro per mantenere l'acqua in circolo e far ruotare
+    sé stessa indefinitamente.
+
+    \item La lampadina: una lampadina emette la stessa luce necessaria
+    ad attivare dei pannelli fotovoltaici che la alimentano.
+
+    \item Contenitore di Boyle: un vaso riempito di acqua possiede
+    un tubo che dal fondo convoglia l'acqua in cima al contenitore.
+    Il tubo è estremamente stretto e allungato mano a mano che si
+    raggiunge l'estremità. Questa macchina idraulica dovrebbe permettere
+    all'acqua di scorrere all'infinito nel tubo, ritornando nel
+    vaso come una fontanella, perché per capillarità (per questo il tubo deve esssere molto
+    stretto) il liquido dovrebbe essere risucchiato. Per svariate
+    qestioni di pressione e fluidodinamica, la fontanella non
+    riuscirà mai a scorrere.
+\end{itemize}
+
+Questi esempi mostrano che i principi della termodinamica non
+sono validi solamente in quei sistemi in cui si trattano caldo,
+freddo e così via. Come Carnot previde, le leggi reggono anche
+per macchine costruite nelle maniere più bizzarre.
