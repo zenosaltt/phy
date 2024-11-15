@@ -15,7 +15,7 @@ di quella distanza. Bisogna quindi stabilire quale sia la posizione
 dell'auto.
 
 In questo corso, assumiamo che la posizione di qualsiasi oggetto sia
-in realtà la posizione di un suo punto, il cosiddetto punto materiale.
+in realtà la posizione di un suo punto, il cosiddetto \textbf{punto materiale}.
 Nell'auto, per esempio, misureremmo in realtà la velocità della punta
 del suo cofano, oppure di un punto sul fanalino posteriore sinistro.
 Il punto si chiama ``materiale'' perché il punto che identifica la
@@ -26,15 +26,26 @@ a quelle dell'ambiente in cui osserviamo il moto.
 
 Quella del punto materiale è una pura semplificazione, che ha lo scopo
 di ridurre assai il contenuto di questo e dei prossimi capitoli.
-Infatti, qui prendiamo solo in considerazione moti traslatori e ignoriamo
+Infatti, qui prendiamo solo in considerazione \textbf{moti traslatori} e ignoriamo
 ogni tipo di rotazione. Affrontiamo al più moti di punti materiali
-con traiettorie curvilinee. Il punto materiale è geometricamente adeguato
+con traiettorie curvilinee semplici. Il punto materiale è geometricamente adeguato
 per le nostre trattazioni, perché esso è un oggetto indifferente alle
-rotazioni, ovvero non cambia quando ``gira su se stesso''.
+rotazioni, ovvero non cambia quando gira su se stesso.
 
-\subsection{Sistemi di riferimento}
+\section{Diagramma spazio-tempo}
+La sezione precedente è iniziata menzionando la nozione di posizione.
+Il primo passo per descrivere un oggetto in movimento è dunque quello
+di armarci con gli strumenti per formalizzare il concetto di posizione.
+Il modo più naturale per farlo è utilizzare un sistema di assi cartesiani,
+con il quale esprimiamo la posizione come una tupla di coordinate, tra
+le quali è presente anche il tempo.
+Fissato questo sistema di assi cartesiani, stabiliamo un cosiddetto
+\textbf{sistema di riferimento}, di cui parleremo meglio in un capitolo
+successivo. Ci basta sapere che un sistema di riferimento è intuitivamente
+il punto di vista delle nostre misurazioni.
+Quando gli oggetti si muovono in questo sistema di riferimento, compiono
+percorsi che denominiamo col termine di traiettorie.
 
-\subsection{Posizione e traiettoria}
 \begin{tcolorbox}[colback = yellow!30, colframe = yellow!30!black, title = {Posizione e traiettoria}]
 \begin{itemize}
     \item La posizione di un corpo è il punto nel quale esso si trova entro un
@@ -45,9 +56,76 @@ rotazioni, ovvero non cambia quando ``gira su se stesso''.
 \end{itemize}
 \end{tcolorbox}
 
+Notare che ha senso parlare di posizione (e di traiettoria, per costruzione)
+solamente in relazione ad un sistema di riferimento. Graficamente,
+questi sistemi di riferimento sono rappresentati come in figura
+\ref{point}, appunto dei piani cartesiani. Chiamiamo questi piani con
+il termine diagrammi spazio-tempo. Come mostrato nei prossimi paragrafi
+e sezioni, i diagrammi permettono di interpretare numerose situazioni
+e fenomeni osservabili nella realtà.
 
-\section{Il piano spazio-tempo}
-%\subsection{Distanza e spostamento}
+\begin{marginfigure}
+    \centering
+    \includegraphics[width = \marginparwidth]{punto_sul_cartesiano.pdf}
+    \captionof{figure}{Sistema di riferimento con una sola dimensione spaziale ($x$) in funzione del tempo ($t$). All'istante $t_i$, il punto materiale $P$ si trova nella posizione $x_i$}\label{point}
+\end{marginfigure}
+
+Nell'esempio della figura \ref{point}, l'asse delle ascisse (orizzontale)
+rappresenta il tempo, mentre l'asse delle ordinate (verticale) rappresenta
+la posizione. Questo diagramma spazio-tempo può dunque essere utilizzato
+per mostrare il moto di un oggetto in una sola dimensione spaziale. Per
+fare un esempio, supponiamo che una persona si stia preparando a correre
+i 100 metri. Ella si trova ai blocchi di partenza,
+che sono in posizione $x_i$. Al via, all'istante $t_i$, la persona corre
+e raggiunge il traguardo, che si trova in $x_f$, quando il tempo raggiunge
+l'istante $t_f$. I punti $P_i$ e $P_f$ rappresentano le
+coordinate spazio-temporali della persona all'inizio e alla fine della corsa.
+Facciamo un po' di chiarezza su alcuni aspetti: $P_i$ e $P_f$ non sono
+propriamente la \emph{posizione spaziale} della persona, bensì sono posizioni
+\emph{spazio-temporali}. La posizione della persona nello spazio è solo
+quella indicata sull'asse $x$ verticale.
+
+La traiettoria spazio-temporale è il segmento tracciato tra $P_i$ e $P_f$.
+Dobbiamo immaginare questo tratto come un infinità di punti che la persona
+ha occupato durante la corsa, nello spazio e nel tempo. La traiettoria
+spaziale, com'è comunemente intesa, è invece il segmento verticale che
+vediamo proiettato sull'asse $x$. Si tratta appunto del tracciato dei
+100 metri.
+
+\subsection{Funzioni e leggi orarie}
+Insieme al piano cartesiano, il concetto di funzione è fondamentale per
+descrivere il moto di un punto. Riprendendo l'esempio della figura
+\ref{point}, il segmento $P_iP_f$ è in realtà un tratto della retta
+che passa per quei due punti. Questa retta è esprimibile come funzione
+della posizione $x$ nel tempo $t$:
+
+\begin{align}
+    x = x(t)\label{leggeoraria}
+\end{align}
+
+\noindent Per il nostro esempio particolare, con i dovuti calcoli
+scopriamo che $x(t) = mt + q$ per qualche coefficiente $m$, che esprime
+la pendenza della retta, e qualche termine noto $q$.
+Le funzioni come quelle del tipo \ref{leggeoraria} vengono chiamate
+\textbf{leggi orarie}, perché esprimono la posizione di un punto in
+funzione del tempo.
+Le funzioni sono peraltro un ulteriore strumento naturale
+per i nostri scopi, principalmente per due motivi:
+\begin{itemize}
+    \item Prendendo in input il tempo, restituiscono la posizione in
+    output. Ciò significa che, una volta definita una legge oraria,
+    possiamo determinare la posizione di un oggetto in qualsiasi
+    istante, o per lo meno in un certo numero di istanti se la
+    legge non è definita per tutti i valori di $t$.
+
+    \item Le funzioni associano ad un istante di tempo una e una sola
+    posizione. Questo fatto è ben giustificato dalla nostra esperienza:
+    non vediamo mai un oggetto occupare due posizioni diverse dello
+    spazio nello stesso istante! $x(t)$ può dunque rappresentare una
+    curva bizzarra e mai vista prima, ma sicuramente deve essere
+    una funzione, che per sua natura non assume mai due valori diversi
+    per uno stesso input.
+\end{itemize}
 
 \subsection{Pendenze}
 \subsection{Intersezioni}
@@ -103,9 +181,10 @@ sola dimensione.
 
 
 \subsection{Moto circolare uniforme}
+Tra i moti nel piano, uno si distingue in modo particolare.
 Immaginiamo il rotore di un elicottero in hovering\footnote{Volo stazionario.}.
-Un qualsiasi punto che si trova sulle pale del rotore compie un moto
-particolare: il moto circolare uniforme. Un altro esempio pratico è
+Un qualsiasi punto che si trova sulle pale del rotore compie il moto
+protagonista di questa sezione: il moto circolare uniforme. Un altro esempio pratico è
 quello di una pallina che viene fatta roteare mentre essa è fissata
 ad un filo. Tutti questi sono esempi di moto circolare, in particolare
 uniforme.
@@ -407,7 +486,7 @@ si impara che una funzione può essere derivata per un numero virtualmente
 infinito di volte e ciò vale anche in cinematica.
 
 \marginpar{\begin{center}
-    \begin{tabular}{c c}
+    \begin{tabular}{c | c}
         \hline
         Derivata & Nome\\
         \hline
@@ -418,6 +497,7 @@ infinito di volte e ciò vale anche in cinematica.
         $\frac{d^5\vecsymb{r}}{dt^5}$ & Crackle\\
         $\frac{d^6\vecsymb{r}}{dt^6}$ & Pop\\
     \end{tabular}
+    \captionof{table}{Derivate lorem ipsum dolor sit amet cometum et giubilaeum}
 \end{center}}
 
 Il moto rettilineo uniforme e quello uniformemente accelerato sono solo
@@ -444,37 +524,7 @@ molto specifiche.
 
 
 \newpage
-\subsection*{Sistemi di riferimento}
-Abbiamo detto che il moto è caratterizzato da un cambiamento di posizione. Il primo
-passo nella descrizione del moto di un corpo consiste quindi nello stabilire il
-modello da adottare per catturare il concetto di \textbf{posizione}. Sappiamo già
-che i modelli della fisica si basano sul linguaggio matematico; il modello più
-naturale che si possa adottare è dunque un sistema di assi cartesiani. Da qui, la
-posizione del corpo può essere specificata mediante coordinate. Una speciale
-coordinata è il tempo (in caso di moti in più di una dimensione spaziale, il
-tempo viene spesso omesso dalla rappresentazione grafica).
 
-\begin{marginfigure}
-    \centering
-    \includegraphics[width = \marginparwidth]{punto_sul_cartesiano.pdf}
-    \caption{Sistema di riferimento con una sola dimensione spaziale ($x$)
-    in funzione del tempo ($t$). All'istante $t_i$, il punto materiale $P$
-    si trova nella posizione $x_i$}
-    \label{point}
-\end{marginfigure}
-
-La scelta del sistema di riferimento di assi cartesiani è del tutto arbitraria\footnote{
-Gli assi possono addirittura non essere ortogonali, purché si segua la \textit{regola del
-parallelogramma} e si rinunci alle proprietà e alle regolarità matematiche degli
-assi ortogonali, come il teorema di Pitagora per il calcolo del modulo dei
-vettori.}, ma una volta fissata è necessario essere coerenti con essa.
-Questo permette di riflettere sul fatto che il moto è sempre relativo al sitema di
-riferimento adottato: cambiando sistema di riferimento, il moto cambia.
-
-Fissando gli assi cartesiani, si fissa una componente di un \textit{sistema di
-riferimento}. Intuitivamente, un sistema di riferimento è il ``punto di vista''
-da cui si sceglie di effettuare misure ed osservazioni riguardo ad un certo
-fenomeno.
 
 \subsection*{Posizione e traiettoria}
 Alla base della descrizione del moto, è importante individuare quelli che sono
