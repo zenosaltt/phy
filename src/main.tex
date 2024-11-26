@@ -1,9 +1,12 @@
 \documentclass[a4paper]{book}
 \usepackage{feynmanslop}
+\usepackage{pvdiagrams}
+
 
 \title{Fisica}
 \author{Zeno Saletti}
 \date{\today}
+
 
 
 \begin{document}
@@ -11,8 +14,6 @@
 \input{./cover/cov.tex}
 \input{./matter/frontmatter/quote.tex}
 \input{./matter/frontmatter/disclaimer.tex}
-
-%\newpage
 %\input{./matter/frontmatter/pre.tex}
 
 \newpage
@@ -34,18 +35,30 @@
 \input{./matter/mainmatter/chapters/07a_termodinamica.tex}
 \input{./matter/mainmatter/chapters/07b_termodinamica.tex}
 
+
+
+%In un futuro lontano lontano, le parti qui sotto saranno introdotte in questa dispensa. Per amore del sapere
+% \part{Extra}
+% relatività ristretta
+% elettromagnetismo
+
+
 %\setcounter{chapter}{0}
 
+
 \part{Appendici}
+
 \appendix
-\renewcommand{\thechapter}{\Alph{chapter}}
+
+\renewcommand{\thechapter}{\Alph{chapter}} %label appendixes with letters
 \input{./matter/backmatter/appendixes/esercizi.tex}
 \input{./matter/backmatter/appendixes/laws.tex}
 \input{./matter/backmatter/appendixes/costanti.tex}
 \input{./matter/backmatter/appendixes/symbs.tex}
-%\input{chapters/appendixes/playlist.tex}
+
 
 %\input{./matter/backmatter/post.tex}
+
 
 \input{./matter/backmatter/bibliography.tex}
 

@@ -10,6 +10,4 @@
 *.synctex.gz
 *.toc
 
-##
-
-pre.tex
+junk/

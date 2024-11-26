@@ -1,0 +1,62 @@
+\begin{tikzpicture}
+    \def\xmax{3}
+    \def\ymax{2.5}
+    \def\Th{1.20}
+    \def\Tc{0.45}
+    \def\Ch{0.4}
+    \def\Cc{1.9}
+    \def\N{40}
+    \def\gam{2.2}
+    \def\isotherm#1#2{{ #2/(#1) }}
+    \def\adiabatic#1#2{{ #2/(#1)^(\gam) }}
+    \def\xA{ (\Th/\Ch)^(1/(1-\gam)) }
+    \def\xB{ (\Th/\Cc)^(1/(1-\gam)) }
+    \def\xC{ (\Tc/\Cc)^(1/(1-\gam)) }
+    \def\xD{ (\Tc/\Ch)^(1/(1-\gam)) }
+    \coordinate (A) at ({\xA},{\isotherm{\xA}{\Th}});
+    \coordinate (B) at ({\xB},{\isotherm{\xB}{\Th}});
+    \coordinate (C) at ({\xC},{\isotherm{\xC}{\Tc}});
+    \coordinate (D) at ({\xD},{\isotherm{\xD}{\Tc}});
+    
+    %\clip (-0.1*\xmax,-0.12*\ymax) rectangle (1.05*\xmax,1.1*\ymax);
+    
+    % WORK
+    \fill[mylightblue,samples=\N]
+        plot[domain={\xA:\xB}] (\x,\isotherm{\x}{\Th}) --
+        plot[domain={\xB:\xC}] (\x,\adiabatic{\x}{\Cc}) --
+        plot[domain={\xC:\xD}] (\x,\isotherm{\x}{\Tc}) --
+        plot[domain={\xD:\xA}] (\x,\adiabatic{\x}{\Ch});
+    \node[blue,scale=.9] at ($(B)!.5!(D)$) {$W$};
+    
+    % ADIABATIC & ISOTHERMIC TRANSFORMATIONS
+    \draw[myred,thick,midarr=.60,domain={\xA:\xB},samples=\N]
+        plot (\x,\isotherm{\x}{\Th}); % hot
+    \draw[blue,thick,midarr=.45,domain={\xB:\xC},samples=\N]
+        plot (\x,\adiabatic{\x}{\Cc}); % cold
+    \draw[blue,thick,midarr=.65,domain={\xC:\xD},samples=\N]
+        plot (\x,\isotherm{\x}{\Tc}); % cold
+    \draw[myred,thick,midarr=.40,domain={\xD:\xA},samples=\N]
+        plot(\x,\adiabatic{\x}{\Ch}); % hot
+    
+    % POINTS
+    \fill[mydarkblue]
+        (A) circle(0.05) node[above=1,scale=.8] {1}
+        (B) circle(0.05) node[above right,scale=.8] {2}
+        (C) circle(0.05) node[above=1,scale=.8] {3}
+        (D) circle(0.05) node[below left,scale=.8] {4};
+    
+    % HEAT
+    \draw[>={LaTeX[width=6,length=4]},->,line width=2,mydarkred]
+        (.33*\xmax,.590*\ymax) --++ (-89:.56)
+        node[pos=0,inner sep=0,anchor=-130,scale=.9] {$Q_\text{in}$};
+    \draw[>={LaTeX[width=6,length=4]},->,line width=2,mydarkblue]
+        (.50*\xmax,.15*\ymax) --++ (-89:.56)
+        node[inner sep=-2,anchor=60,scale=.9] {$Q_\text{out}$};
+    
+    % AXIS
+    \draw[->,thick] (0,-0.1*\ymax) -- (0,\ymax+0.1)
+        node[anchor=north east,inner sep=4,scale=1] {$P$};
+    \draw[->,thick] (-0.1*\xmax,0) -- (\xmax+0.1,0)
+        node[anchor=north east,inner sep=4,scale=1] {$V$};
+    
+\end{tikzpicture}

@@ -1,0 +1,23 @@
+\usepackage{tikz}
+\usepackage[outline]{contour} % glow around text
+\usetikzlibrary{arrows.meta} % to control arrow size
+\tikzset{>={Latex[length=4,width=4]}} % for LaTeX arrow head
+\usetikzlibrary{calc,decorations.markings,arrows.meta}
+\contourlength{1.2pt}
+
+\colorlet{mylightblue}{blue!20}
+\colorlet{myblue}{blue!80!black}
+\colorlet{mydarkblue}{blue!30!black}
+\colorlet{mylightred}{red!10}
+\colorlet{myred}{red!80!black}
+\colorlet{mydarkred}{red!60!black}
+\colorlet{mydarkgreen}{green!30!black}
+
+%\tikzstyle{midarr}=[decoration={markings,mark=at position 0.5 with {\arrow{stealth}}},postaction={decorate}]
+\tikzset{
+  midarr/.style={decoration={markings,mark=at position #1 with {\arrow{stealth}}},postaction={decorate}},
+  midarr/.default=0.5
+}
+
+\def\xtick#1#2{\draw[thick] (#1)++(0,.1) --++ (0,-.2) node[below=-.5pt,scale=0.9] {#2};}
+\def\ytick#1#2{\draw[thick] (#1)++(.1,0) --++ (-.2,0) node[left=-.5pt,scale=0.9] {#2};}
