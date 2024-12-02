@@ -1,0 +1,8 @@
+* estensione VSC latex workshop
+* install:
+    - latexmk
+    - package: texlive-lang-italian
+    - package: texlive-latex-extra
+    - package: texlive-fonts-extra
+
+> now everything should work in ubuntu

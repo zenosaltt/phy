@@ -41,7 +41,7 @@ purge:
 # TODO: solve this problem in a more elegant way
 tidy:
 	@[ ! -d $(JUNK_DIR) ] && mkdir $(JUNK_DIR) || exit 0
-	@./$(EXTENSIONS_HANDLER)
-	@mv *.pdf $(JUNK_DIR)
+	@./$(EXTENSIONS_HANDLER) || exit 0
+	@mv *.pdf $(JUNK_DIR) || exit 0
 
 .PHONY: all clear purge tidy
