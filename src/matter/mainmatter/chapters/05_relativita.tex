@@ -161,7 +161,7 @@ Spesso è facile ingannare la nostra percezione del moto. Le modalità
 possono spaziare da tecniche molto semplici a intere teorie, come
 quella della relatività di Einstein.
 
-\subsection{Come \textit{Virtual Insanity} è stato girato}
+\subsection{\textit{Virtual Insanity}}
 Per coloro che non la conoscessero, \textit{Virtual Insanity} è
 una canzone del 1996 dei \textit{Jamiroquai}. Il video
 musicale\footnote{\href{https://www.youtube.com/watch?v=4JkIs37a2JE}{\textcolor{blue}{\textit{Jamiroquai - Virtual Insanity} (Official Video)}}},
@@ -203,7 +203,51 @@ i mobili da un sistema di riferimento all'altro, dando un
 tocco di mistero in più all'illusione. Ovviamente il risultato finale
 è anche merito di un lavoro di post produzione da non sottovalutare.
 
-
+%\begin{marginfigure}
+%    \newcommand{\cx}{0}
+%
+%    \newcommand{\Depth}{3} %larghezza
+%    \newcommand{\Height}{2.5} %profondità
+%    \newcommand{\Width}{1.5} %altezza
+%
+%    \newcommand{\pWidth}{6}
+%    \newcommand{\pDepth}{4} %
+%    \newcommand{\pHeight}{4} %profondita
+%
+%    \newcommand{\Offset}{0.5} %distanza stanza-pavimento
+%    \begin{center}
+%        \begin{tikzpicture}
+%            \coordinate (O) at (0+\cx,0,0);
+%            \coordinate (A) at (0+\cx,\Width,0);
+%            \coordinate (B) at (0+\cx,\Width,\Height);
+%            \coordinate (C) at (0+\cx,0,\Height);
+%            \coordinate (D) at (\Depth+\cx,0,0);
+%            \coordinate (E) at (\Depth+\cx,\Width,0);
+%            \coordinate (F) at (\Depth+\cx,\Width,\Height);
+%            \coordinate (G) at (\Depth+\cx,0,\Height);
+%
+%            \coordinate (H) at (0,0+\Offset,0);
+%            \coordinate (I) at (0,0+\Offset,\pHeight);
+%            \coordinate (J) at (\pDepth,0+\Offset,\pHeight);
+%            \coordinate (K) at (\pDepth,0+\Offset,0);
+%
+%            % pavimento
+%            \draw[gray, fill = blue!80] (H) -- (I) -- (J) -- (K) -- cycle;
+%
+%        
+%            \draw[black,fill=yellow!80, opacity = 0] (O) -- (C) -- (G) -- (D) -- cycle;% Bottom Face
+%            \draw[black,fill=blue!30, opacity = 0.8] (O) -- (A) -- (E) -- (D) -- cycle;% Back Face
+%            \draw[black,fill=red!10, opacity = 0.8] (O) -- (A) -- (B) -- (C) -- cycle;% Left Face
+%            \draw[black,fill=red!20,opacity=0.8] (D) -- (E) -- (F) -- (G) -- cycle;% Right Face
+%            \draw[black,fill=red!20,opacity=0] (C) -- (B) -- (F) -- (G) -- cycle;% Front Face
+%            \draw[black,fill=red!20,opacity=0.8] (A) -- (B) -- (F) -- (E) -- cycle;% Top Face
+%
+%            %\foreach \xy in {O, A, B, C, D, E, F, G}{
+%            %    \node at (\xy) {\xy};
+%            %}
+%            \end{tikzpicture}
+%    \end{center}
+%\end{marginfigure}
 
 %\section{Approfondimento: RR}
 %Questa sezione è interamente dedicata alla relatività ristretta, sviluppata

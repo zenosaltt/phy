@@ -34,11 +34,12 @@ termodinamiche sono costituite dagli stessi elementi
 fondamentali:
 
 \begin{itemize}
-    \item Due sorgenti\footnote{In realtà questa è una
+    \item Almeno due \textbf{sorgenti}\footnote{In realtà questa è una
     spensierata idealizzazione. Nella realtà, le macchine
     operano tra più di due sorgenti, anzi, infinite.} (o pozzi, o serbatoi in alcuni
-    testi), una calda e una fredda: queste sorgenti
-    permettono lo ``scorrimento'' di calore. Nel caso
+    testi), una calda e una fredda. Queste sorgenti
+    permettono quello scorrimento di calore essenziale al
+    funzionamento della macchina. Nel caso
     del motore a scoppio, la sorgente calda è rappresentata dalla
     combustione della benzina e quella fredda è il
     liquido refrigerante e/o l'ambiente esterno. Nel
@@ -46,7 +47,7 @@ fondamentali:
     quella fredda è lo scompartimento interno e il
     cibo che esso contiene.
 
-    \item La macchina vera e propria: può sembrare
+    \item La \textbf{macchina} vera e propria: può sembrare
     una definizione circolare, ma con questo componente
     si intende l'agente, la sostanza, il meccanismo
     che sfrutta (o produce) lo scorrimento di
@@ -64,6 +65,22 @@ fondamentali:
     bolletta della corrente.
 \end{itemize}
 
+Come mai le macchine hanno bisogno di almeno due sorgenti?
+Scopriremo che questa regola è stabilita dal secondo principio
+della termodinamica, argomento delle prossime sezioni.
+Per ora ci basti pensare a questo:
+consideriamo una macchina termica, che cioè genera lavoro
+prelevando calore dalla sorgente calda e cedendone un po' a
+quella fredda (la prossima sezione definisce in maniera più
+approfondita le macchine termiche); la macchina agisce come
+una sorta di mulino, che funziona per via della differenza
+di temperatura tra le sorgenti; il flusso di calore equivale
+a quello dell'acqua che permette al mulino di ruotare; come
+però l'acqua deve poter uscire dalla ruota del mulino, cadendo
+in qualche punto più basso, anche
+il calore deve poter essere ceduto ad un'altra sorgente, più
+fredda.
+
 Spesso le macchine termodinamiche vengono raffigurate
 come in figura.
 Sono poche le persone di scienza in grado di disegnare;
@@ -72,14 +89,49 @@ rappresentazione grafica. Notare come
 
 Per principio di conservazione, supponendo
 ovviamente che l'intera macchina sia isolata, l'energia
-non entra né esce dal sistema e pertanto vale la relazione
+non entra né esce dal sistema. Le uniche quantità di energia
+coinvolte sono lavoro e i calori scambiati con le sorgenti,
+pertanto vale la relazione
 
 \begin{align}
-    W = Q_\text{ass} + Q_\text{ced}\label{conservaz_macchina}
+    W = Q_\text{h} + Q_\text{c}\label{conservaz_macchina}
 \end{align}
 
-\subsection{Macchine termiche e frigorifere}
+\noindent Per evitare fin da subito qualsiasi genere di
+ambiguità, scriveremo $Q_\text{c}$ intendendo il calore che
+la macchina scambia con la sorgente fredda (\textit{cold}),
+$Q_\text{h}$ quello scambiato tra macchina e sorgente calda
+(\textit{hot}). I segni di $W, Q_\text{c}$ e $Q_\text{h}$
+possono essere positivi o negativi in base al tipo di
+macchina che si considera: termica o frigorifera.
 
+\subsection{Macchine termiche e frigorifere}
+Tutte le macchine si possono distinguere sulla base del segno
+del lavoro $W$ nella relazione \ref{conservaz_macchina}. Ricordiamo
+che, in un sistema termodinamico (nel nostro caso, quello della
+macchina), il lavoro in uscita (prodotto dalla macchina) assume
+segno positivo, mentre quello in entrata (compiuto sulla macchina)
+è negativo\footnote{Ah, quindi ti stai chiedento perché non classifichiamo
+il caso $W = 0$? Beh si tratta di qualcosa di tanto utile quanto un
+cubo di tungsteno acquistato su Amazon.}.
+
+\begin{itemize}
+    \item \textbf{Macchina termica ($W > 0$):} il genere di macchina a noi
+    più familiare, ovvero quello a cui appartiene il motore della
+    nostra automobile. Queste macchine prelevano calore dalla sorgente
+    calda, fonte di energia, producono del lavoro in uscita e cedono
+    altro calore alla sorgente fredda.
+
+    \item \textbf{Macchina frigorifera ($W < 0$):} in un certo senso
+    è l'antagonista della macchina termica, perché opera al contrario.
+    Non produce lavoro, ma lo richiede dall'esterno per permettere di
+    raffreddare la sorgente fredda, dalla quale viene prelevato calore,
+    e scaldare quella calda. Come suggerisce il nome, i frigoriferi
+    funzionano secondo questo principio, ma anche
+    pompe di calore\footnote{Nome diverso del frigorifero, ma con
+    scopo differente: spinge calore da un'ambiente freddo verso
+    un ambiente caldo.}.
+\end{itemize}
 
 \subsection{Rendimento}
 Ora che abbiamo costruito la nostra macchina, ci chiediamo quanto ci
@@ -705,7 +757,7 @@ Un'altra osservazione: la seconda proposizione del teorema di Carnot
 le leggi della termodinamica valgono indipendentemente da come costruiamo
 la nostra macchina, anche se questa non esiste ancora!
 
-\section[Clausius; Entropia]{Esperienza di Clausius; Entropia}
+\section{Esperienza di Clausius}
 Un ulteriore personaggio degno del titolo di \textit{main character}
 della termodinamica è il tedesco Rudolf Clausius, il quale estese
 gli studi di Carnot. Di fatto, il teorema di Carnot non è sufficientemente
@@ -752,14 +804,21 @@ $\sum_j Q_j/T_j \leq 0$. Più elegantemente, passando all'infinitesimo
 si ottiene la seguente disuguaglianza
 
 \begin{align}
-    \oint \frac{dQ}{T} \leq 0
+    \oint \frac{dQ}{T} \leq 0\label{intclausius}
 \end{align}
 
 \noindent che è proprio la tesi del teorema di Clausius. L'integrale
-prende il nome di \textit{integrale di Clausius}. Il caso particolare
+che compare al membro sinistro della relazione \ref{intclausius}
+prende il nome di integrale di Clausius. Il caso particolare
 dell'uguaglianza vale solamente per trasformazioni reversibili.
 
-\subsection{Variazione di entropia}
+\subsection{Conseguenze del teorema di Clausius}
+L'integrale di Clausius da solo non comunica alcunché di interessante.
+Se però lo consideriamo nel caso in cui il teorema \ref{intclausius}
+vale per macchine reversibili, allora l'integrale è uguale a 0. Quando
+zeri e integrali compaiono insieme in una relazione, spesso si
+nasconde una qualche proprietà mistica.
+
 Si consideri una trasformazione termodinamica \textit{reversibile} qualsiasi.
 Per ipotesi di reversibilità, l'integrale di Clausius calcolato sulla curva $\tau$
 di tale trasformazione nel piano pressione-volume è nullo.
@@ -776,25 +835,37 @@ dell'integrale. Giungiamo dunque alla seguente conclusione:
 
 \[ \int_{A,\alpha}^{B} \frac{dQ}{T} = \int_{A,\beta}^{B} \frac{dQ}{T} \]
 
-\noindent Dunque, qualsiasi sia il percorso tra $A$ e $B$, l'uguaglianza
-precedente vale sempre per percorsi reversibili. Vi è dunque una dipendenza
-di una certa quantità dai soli stati iniziale e finale della trasformazione.
-Definiamo, in modo simile all'energia potenziale studiata in meccanica,
-la differenza di entropia tra due stati termodinamici.
+\noindent Questo significa che, passando dallo stato $A$ allo stato
+$B$, non ha alcuna importanza se il percorso scelto è $\alpha$, $\beta$
+o una qualsiasi altra trasformazione (reversibile!). L'integrale
+$\int_{A}^{B}dQ/T$ ha lo stesso valore in tutti i casi, purché i
+passaggi siano reversibili. Come per l'energia potenziale,
+abbiamo trovato una quantità che non dipende dal percorso che
+scegliamo per calcolarla, ma è legata solamente dagli stati
+iniziali e finali. Questa proprietà di stato si chiama entropia.
+
+\section{Entropia}
+Siamo di fronte all'ultima creatura leggendaria di questo corso,
+l'entropia, che approfondiamo in questa sezione dopo averla introdotta
+come conseguenza degli studi di Clausius.
+
+\subsection{Variazione di entropia}
+A partire dal teorema di Clausius, definiamo la differenza di entropia
+tra due stati termodinamici.
 
 \begin{align}
     \Delta S_{AB} \stackrel{\text{def}}{=} \int_{A,\text{rev}}^{B} \frac{dQ}{T}\label{variaz_entropia}
 \end{align}
 
-\noindent Definiremo solamente la differenza, non l'entropia in sé.
-Sappiamo però che l'entropia è una funzione di stato, come abbiamo
-potuto vedere poco prima. Da un punto di vista dimensionale, l'entropia
+L'entropia è una funzione di stato, come abbiamo
+potuto vedere nei paragrafi precedenti. Da un punto di vista dimensionale, l'entropia
 è un semplice rapporto tra energia e temperatura, una sorta di
 indice della quantità di calore scambiato ad una data temperatura.
 Durante gli scambi energetici, però, spesso la temperatura dei corpi
-coinvolti cambia. Possiamo approssimare questi fenomeni immaginando
+coinvolti cambia. Possiamo approssimare queste trasformazioni immaginando
 infinitesimi quanità di calore che vengono scambiate di volta in volta
-a temperature diverse:
+a temperature diverse. La variazione infinitesima di entropia corrisponde
+allora al rapporto
 
 \begin{align}
     dS \eqdef \left[\frac{dQ}{T}\right]_\text{reversibile}\label{entropia_infinitesima}
@@ -806,10 +877,18 @@ di entropia, non l'entropia assoluta di un sistema, un po' come si fa
 con l'energia potenziale. Però, rispetto a quest'ultima, l'entropia
 può essere definita (si vedano gli approfondimenti per brevi accenni,
 in particolare la definizione \ref{entropia_meccanica_statistica}) ma
-per i nostri scopi non è molto utile.
+per i nostri scopi non è molto utile. Ancora non possiamo rispondere
+con più profnodità alla domanda ``cos'è l'entropia?'' perché per
+rispondere vogliamo fornire un quadro completo dell'entropia tramite
+un ultimo teorema.
 
 
-\subsubsection*{Variazione di entropia in trasformazioni fondamentali}
+\subsection{Entropia nelle trasformazioni termodinamiche}
+L'entropia può essere molto divertente quando applicata alle
+trasformazioni termodinamiche, siano esse quelle fondamentali
+oppure complesse.
+
+\subsubsection{Entropia nelle trasformazioni fondamentali}
 Possiamo aggiungere la variazione di entropia a tutte quelle equazioni viste nelle
 trasformazioni termodinamiche fondamentali. Supponiamo come sempre
 che tali trasformazioni siano quasistatiche reversibili. Applichiamo
@@ -915,24 +994,21 @@ Concludiamo che
     \Delta S_{AB} = \frac{\lambda m}{T}
 \end{align}
 
-
 \subsubsection*{Diagramma temperatura-entropia}
 
-
-
-
+\subsubsection*{Variazione di entropia in trasformazioni complesse}
 
 
 
 \subsection{Il teorema dell'entropia}
 
 
-
 \subsubsection{Che dire dei frigoriferi?}
 
-
-
-
+% spiegaz di Iuppa differenza di entropia: calore sprecato in uno scampio, sprecato = non più recuperabile
+\subsection{Disordine}
+Uno dei tanti modi di vedere l'oggetto matematico dell'entropia
+è quello del calore irrecuperabile.
 
 
 \section{Approfondimenti}
@@ -966,7 +1042,7 @@ in accordo con i principi di conservazione già sviluppati in meccanica.
 
 
 \subsection{Espansione libera dei gas}
-
+Mostriamo un semplice esperimento citato a lezione.
 
 
 \subsection{Micro- e macro-stato}
