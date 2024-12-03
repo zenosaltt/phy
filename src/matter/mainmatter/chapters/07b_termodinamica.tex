@@ -1079,16 +1079,89 @@ loro numero totale, in $A$ o in $B$. Il microstato, invece,
 è rappresentato dalla configurazione delle palline negli slot.
 
 \begin{marginfigure}
-    \centering
-    \includegraphics[width = \marginparwidth]{micro_macro_stati.pdf}
+    \begin{center}
+
+        %STATO I
+        \begin{minipage}{0.4\marginparwidth}
+            \begin{center}
+                $A(4)$
+            \end{center}
+            \begin{tikzpicture}
+                %scacchiera
+                \draw[step=1cm,gray,very thin] (0,0) grid (2,3);
+                %cerchi dentro i quadrati
+                \fill[black] (0.5,0.5) circle (8pt);
+                \fill[black] (1.5,1.5) circle (8pt);
+                \fill[black] (1.5,2.5) circle (8pt);
+                \fill[black] (0.5,2.5) circle (8pt);
+            \end{tikzpicture}
+        \end{minipage}
+        \begin{minipage}{0.4\marginparwidth}
+            \begin{center}
+                $B(2)$
+            \end{center}
+            \begin{tikzpicture}
+                \draw[step=1cm,gray,very thin] (0,0) grid (2,3);
+                \fill[black] (0.5,1.5) circle (8pt);
+                \fill[black] (1.5,2.5) circle (8pt);
+            \end{tikzpicture}
+        \end{minipage}
+
+        \vspace{0.8cm}
+
+        %STATO II
+        \begin{minipage}{0.4\marginparwidth}
+            \begin{center}
+                $A(4)$
+            \end{center}
+            \begin{tikzpicture}
+                \draw[step=1cm,gray,very thin] (0,0) grid (2,3);
+                \draw[fill=none, draw=myblue, thick] (0.5,0.5) circle (8pt);
+                \fill[black] (1.5,1.5) circle (8pt);
+                \draw[fill=none, draw=myred, thick] (1.5,2.5) circle (8pt);
+                \fill[black] (0.5,2.5) circle (8pt);
+
+                %dischi mossi
+                \fill[myblue] (1.5,0.5) circle (8pt);
+            \end{tikzpicture}
+        \end{minipage}
+        \begin{minipage}{0.4\marginparwidth}
+            \begin{center}
+                $B(2)$
+            \end{center}
+            \begin{tikzpicture}
+                \draw[step=1cm,gray,very thin] (0,0) grid (2,3);
+                \fill[black] (0.5,1.5) circle (8pt);
+                \draw[fill=none, draw=green, thick] (1.5,2.5) circle (8pt);
+
+                \fill[myred] (0.5,2.5) circle (8pt);
+                \fill[green] (0.5,0.5) circle (8pt);
+            \end{tikzpicture}
+        \end{minipage}
+    \end{center}
     \caption{Rappresentazione dei microstati dell sistema di scatole
     $A$-$B$. In alto viene mostrata la situazione iniziale, in cui
     un particolare microstato determina il macrostato \textit{4 palline
-    in $A$ e 2 in $B$}. In basso, il sistema passa ad un nuovo microstato.
+    in $A$ e 2 in $B$}. In basso, il sistema passa ad un nuovo microstato,
+    dove le palline che si sono mosse sono evidenziate con colori diversi
+    (quelle vuote indicano la posizione precedente, quelle piene la nuova
+    posizione).
     Notare che le palline possono muoversi anche tra le scatole; infatti,
     il macrostato diventa \textit{3 palline in $A$ e 3 in $B$}.}
     \label{micromacro}
 \end{marginfigure}
+
+%\begin{marginfigure}
+%    \centering
+%    \includegraphics[width = \marginparwidth]{micro_macro_stati.pdf}
+%    \caption{Rappresentazione dei microstati dell sistema di scatole
+%    $A$-$B$. In alto viene mostrata la situazione iniziale, in cui
+%    un particolare microstato determina il macrostato \textit{4 palline
+%    in $A$ e 2 in $B$}. In basso, il sistema passa ad un nuovo microstato.
+%    Notare che le palline possono muoversi anche tra le scatole; infatti,
+%    il macrostato diventa \textit{3 palline in $A$ e 3 in $B$}.}
+%    \label{micromacro}
+%\end{marginfigure}
 
 Poniamoci ora la domanda: quanti microstati sono compatibili
 col macrostato \textit{4 palline in $A$, 2 in $B$}? Per rispondere,

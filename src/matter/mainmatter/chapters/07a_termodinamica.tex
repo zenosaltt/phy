@@ -865,6 +865,15 @@ $dW = pdV = 0$, ricordando la definizione di lavoro di un gas ideale.
 D'altronde, il volume del gas non cambia e quindi nessuna parte del
 suo contenitore viene mossa.
 
+Dal primo principio vale $dU = dQ$. Ciò significa che avviene solo
+scambio di calore. Possiamo supporre che il gas, durante la trasformazione,
+vari la propria temperatura in relazione al calore scambiato secondo
+un certo \textit{calore specifico a volume costante} $c_V$.
+
+\begin{align}
+    dQ = nc_VdT
+\end{align}
+
 \begin{marginfigure}
     \begin{center}
         \def\xmax{3}
@@ -887,17 +896,9 @@ suo contenitore viene mossa.
     \end{center}
     \caption{Trasformazione isocora sul piano $pV$. Il grafico evidenzia
     molto bene il fatto che il lavoro è nullo, proprio perché il tratto
-    $AB$ descrive un segmento verticale che ``non ha larghezza''.}
+    $AB$ descrive un segmento verticale che sottende area nulla (volgarmente, non
+    ha largezza).}
 \end{marginfigure}
-
-Dal primo principio vale $dU = dQ$. Ciò significa che avviene solo
-scambio di calore. Possiamo supporre che il gas, durante la trasformazione,
-vari la propria temperatura in relazione al calore scambiato secondo
-un certo \textit{calore specifico a volume costante} $c_V$.
-
-\begin{align}
-    dQ = nc_VdT
-\end{align}
 
 \noindent Da cui $dU = nc_VdT$. Come aveva previsto Joule, per questa
 particolare trasformazione abbiamo individuato una relazione che lega
@@ -915,6 +916,28 @@ In queste trasformazioni, è la pressione a rimanere costante.
 Calcolarne il lavoro è molto semplice. Si evince infatti che
 la definizione si riduce ad una semplice moltiplicazione:
 $dW = pdV$, da cui $W = p\Delta V$.
+
+Dalle trasformazioni isocore, abbiamo scoperto un legame tra
+variazione di energia interna del gas e variazione di temperatura.
+Già per definizione legammo in una funzione queste due quantità.
+In particolare, sptabilimmo che $U$ è una funzione di stato, la
+cui variazione non dipende dal percorso ma dagli stati iniziale
+e finale. Siamo allora legittimati a impiegare la relazione
+$dU = nc_VdT$ trovata nelle isocore.
+
+Rimane da trovare il calore scambiato durante una isobara. Anche
+qui possiamo inventare una nuova costante, un \textit{calore specifico
+a pressione costante} $c_p$, col quale legare calore e intervallo
+di temperatura:
+
+\[ dQ = nc_pdT \]
+
+\noindent come per $c_p$, ci piacerebbe conoscere la sua vera forma.
+Notiamo che differenziando i membri della legge di Avogadro,
+$d[pV] = d[nRT]$, ci ritroveremo con la relazione $pdV = nRdT$,
+da cui scopriamo che $dW = nRdT$. Dal primo principio $dU = dQ - dW$,
+possiamo allora scoprire che $nc_VdT = nc_pdT - nRdT$, da cui
+la \textit{relazione di Mayer}\footnote{Come lo studentato.}
 
 \begin{marginfigure}
     \begin{center}
@@ -949,28 +972,6 @@ $dW = pdV$, da cui $W = p\Delta V$.
     $\Delta V = V_B - V_A$ e altezza $p_A = p_B$.}
 \end{marginfigure}
 
-Dalle trasformazioni isocore, abbiamo scoperto un legame tra
-variazione di energia interna del gas e variazione di temperatura.
-Già per definizione legammo in una funzione queste due quantità.
-In particolare, sptabilimmo che $U$ è una funzione di stato, la
-cui variazione non dipende dal percorso ma dagli stati iniziale
-e finale. Siamo allora legittimati a impiegare la relazione
-$dU = nc_VdT$ trovata nelle isocore.
-
-Rimane da trovare il calore scambiato durante una isobara. Anche
-qui possiamo inventare una nuova costante, un \textit{calore specifico
-a pressione costante} $c_p$, col quale legare calore e intervallo
-di temperatura:
-
-\[ dQ = nc_pdT \]
-
-\noindent come per $c_p$, ci piacerebbe conoscere la sua vera forma.
-Notiamo che differenziando i membri della legge di Avogadro,
-$d[pV] = d[nRT]$, ci ritroveremo con la relazione $pdV = nRdT$,
-da cui scopriamo che $dW = nRdT$. Dal primo principio $dU = dQ - dW$,
-possiamo allora scoprire che $nc_VdT = nc_pdT - nRdT$, da cui
-la \textit{relazione di Mayer}\footnote{Come lo studentato.}
-
 \begin{tcolorbox}[colback = red!30, colframe = red!30!black, title = {Relazione di Mayer}]
 \begin{align}
     c_p - c_V = R
@@ -1001,7 +1002,15 @@ Per finire, tenete bene a mente questa definizione:
 \end{align}
 
 \noindent il motivo: ci tornerà utile in una delle prossime trasformazioni.
+Spendiamo qualche ultima parola sul termine $\gamma$:
+ricordando che al crescere della complessità delle molecole del
+gas crescono i loro gradi di libertà $l$, concludiamo che
 
+\[ \lim_{l \to +\infty} \gamma(l) = 1 \]
+
+\noindent Questo risultato ci suggerisce che all'aumentare della
+complessità della molecola, i calori specifici del gas a pressione
+e volume costante sono pressoché uguali.
 
 \subsection{Isoterme}
 Come si evince dal nome, queste trasformazioni avvengono a temperatura
@@ -1021,6 +1030,44 @@ di un gas ideale. Segue dunque che:
 \begin{align}
     Q = W = \int_{V_i}^{V_f}nRT\frac{dV}{V} = nRT\ln\left(\frac{V_f}{V_i}\right)
 \end{align}
+
+\begin{marginfigure}
+    \begin{center}
+        % PV diagram - isotherm
+        \begin{tikzpicture}
+            \def\N{40} % number of plot samples
+            \def\xmax{3}
+            \def\ymax{2.5}
+            \def\isotherm{(A) to[out=-60,in=170] (B)}
+            \def\T{1.2}
+            \def\xa{.2*\xmax}
+            \def\xb{.8*\xmax}
+            \def\ya{{\T/(\xa)}}
+            \def\yb{{\T/(\xb)}}
+            
+            % AREA
+            \coordinate (A) at (\xa,\ya);
+            \coordinate (B) at (\xb,\yb);
+            \fill[mylightblue,samples=\N,domain=\xa:\xb]
+            plot(\x,{\T/\x}) -- (B|-0,0) -- (A|-0,0) node[midway,left=4,above=5,blue] {$W$} -- cycle;
+            
+            % LINE
+            \draw[myred,very thick,midarr=.58,samples=\N,domain={\xa}:{\xb}]
+            plot(\x,{\T/\x});
+            \fill (A) circle(0.07) node[right=5,above=2] {$A$};
+            \fill (B) circle(0.07) node[right=2] {$B$};
+            
+            % AXIS
+            \draw[->,thick] (0,-0.1*\ymax) -- (0,\ymax) node[anchor=north east] {$p$};
+            \draw[->,thick] (-0.1*\xmax,0) -- (\xmax,0) node[anchor=north east] {$V$};
+            
+        \end{tikzpicture}
+    \end{center}
+    \caption{Trasformazione isoterma sul piano $pV$. Il
+    grafico corrisponde ad un tratto di ramo di iperbole
+    equilatera. Tutti i punti sul ramo rappresentano stati
+    ad una certa temperatura $T$.}
+\end{marginfigure}
 
 \subsubsection*{Considerazioni}
 Si noti che, per ottenere il calore scambiato, non ha
@@ -1049,24 +1096,6 @@ Possiamo infatta esprimerla come $nc_VdT = -pdV$. Proseguendo,
     \not n c_VdT &= -\not n RT\frac{dV}{V}\\
     \frac{dT}{T} &= -\frac{R}{c_V}\frac{dV}{V}
 \end{align*}
-
-\noindent notiamo che l'algebretta e la relazione di Mayer
-ci portano a scoprire che $R/c_V = (c_p - c_V)/c_V = \gamma - 1$
-(ricordate la \ref{gamgam}?). Possiamo allora scrivere
-
-\begin{align*}
-    \frac{dT}{T} &= -(\gamma - 1)\frac{dV}{V}\\
-    \int_{i}^{f}\frac{dT}{T} &= \int_{i}^{f}-(\gamma - 1)\frac{dV}{V}\\
-    \ln\left(\frac{T_f}{T_i}\right) &= -(\gamma - 1)\ln\left(\frac{V_f}{V_i}\right)\\
-    T_fV_f^{\gamma - 1} &= T_iV_i^{\gamma - 1}
-\end{align*}
-
-\noindent vedere un prodotto che rimane sempre costante solletica le
-meningi dei fisici. Dall'ultima equazione si conclude che
-
-\begin{align}
-    TV^{\gamma - 1} = \text{ cost.}\label{lativuu}
-\end{align}
 
 \begin{marginfigure}
     \begin{center}
@@ -1116,14 +1145,37 @@ meningi dei fisici. Dall'ultima equazione si conclude che
     \end{center}
     \caption{Trasformazione adiabatica sul piano $pV$. La curva
     adiabatica appare più ripida dell'isoterma, rappresentata
-    dalla curva tratteggiata. Più $\gamma$ cresce ($\gamma > 0$
-    per la relazione di Mayer), più la pendenza dell'adiabatica si
-    fa forte.}
+    dalla curva tratteggiata. Più $\gamma$ cresce, più la pendenza
+    dell'adiabatica si
+    fa forte. Ricordiamo però che $\gamma$ può al più avvicinarsi
+    a 1.}
 \end{marginfigure}
 
+\noindent notiamo che l'algebretta e la relazione di Mayer
+ci portano a scoprire che $R/c_V = (c_p - c_V)/c_V = \gamma - 1$
+(ricordate la \ref{gamgam}?). Possiamo allora scrivere
+
+\begin{align*}
+    \frac{dT}{T} &= -(\gamma - 1)\frac{dV}{V}\\
+    \int_{i}^{f}\frac{dT}{T} &= \int_{i}^{f}-(\gamma - 1)\frac{dV}{V}\\
+    \ln\left(\frac{T_f}{T_i}\right) &= -(\gamma - 1)\ln\left(\frac{V_f}{V_i}\right)\\
+    T_fV_f^{\gamma - 1} &= T_iV_i^{\gamma - 1}
+\end{align*}
+
+\noindent vedere un prodotto che rimane sempre costante solletica le
+meningi dei fisici. Dall'ultima equazione si conclude che
+
+\begin{align}
+    TV^{\gamma - 1} = \text{ cost.}\label{lativuu}
+\end{align}
+
 \noindent Lasciamo al lettore l'esercizio di ricavare le altre
-espressioni di questa relazione (ovvero, utilizzando le altre
-variabili termodinamiche).
+espressioni di questa relazione, ovvero utilizzando le altre
+variabili termodinamiche\footnote{Scherzone, forniamo qui
+la legge espressa in pressione-volume: $pV^\gamma = \text{cost}$
+(avete ottenuto la stessa equazione? Sì? Scossa? [\texttt{attesa
+pressante}] Va beneee). Lo facciamo perché possiamo spiegare
+matematicamente l'andamento dell'adiabatica sul piano $pV$.}.
 
 \subsection{Ancora sulle trasformazioni termodinamiche}
 Le sezioni precedenti introducono i mattoncini fondamentali per
@@ -1142,6 +1194,7 @@ si parla di leggi da memorizzare.
     \begin{tabular}{c | c | c | c | c}
         & Isocora & Isobara & Isoterma & Adiabatica\\
         & $\Delta V = 0$ & $\Delta p = 0$ & $\Delta T = 0$ & $Q = 0$\\
+        \hline
         \hline
         $\Delta U$ & $nc_V\Delta T$ & $nc_V\Delta T$ & 0 & $nc_V\Delta T$\\
         \hline
