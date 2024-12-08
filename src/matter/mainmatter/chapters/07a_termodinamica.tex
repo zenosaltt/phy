@@ -836,7 +836,7 @@ molecola biatomica ideale può avere $l = 6$ gradi di libertà.
 
 
 
-\section{Trasformazioni fondamentali}
+\section{Trasformazioni termodinamiche}
 Questa sezione è dedicata ad analisi più approfondite sulle trasformazioni
 termodinamiche fondamentali, ovvero trasformazioni molto semplici da
 trattare mediante gli strumenti di termodinamica finora mostrati. Da
@@ -1127,13 +1127,13 @@ Possiamo infatta esprimerla come $nc_VdT = -pdV$. Proseguendo,
               plot (\x,\isotherm{\x}{\Th});
 
             % ADIABATIC
-            \draw[mydarkred,thick,midarr=.48,
+            \draw[myred,thick,midarr=.48,
                   domain={\A:\B},samples=\N]
               plot (\x,\adiabatic{\x}{\Ch});
             
             % POINTS
-            \fill[mydarkblue] (A) circle(0.05) node[right = 2, above = 2] {$A$};
-            \fill[mydarkblue] (B) circle(0.05) node[right = 2, above = 2] {$B$};
+            \fill[black] (A) circle(0.05) node[right = 2, above = 2] {$A$};
+            \fill[black] (B) circle(0.05) node[right = 2, above = 2] {$B$};
             
             % AXIS
             \draw[->,thick] (0,-0.1*\ymax) -- (0,\ymax+0.1)
@@ -1177,7 +1177,7 @@ la legge espressa in pressione-volume: $pV^\gamma = \text{cost}$
 pressante}] Va beneee). Lo facciamo perché possiamo spiegare
 matematicamente l'andamento dell'adiabatica sul piano $pV$.}.
 
-\subsection{Ancora sulle trasformazioni termodinamiche}
+\subsection[Sunto, trasformazioni composte e cicliche, reversibilità]{Riassunto, trasformazioni composte e cicliche, reversibilità nelle trasformazioni}
 Le sezioni precedenti introducono i mattoncini fondamentali per
 trattare molti problemi termodinamici semplici. Esistono altre
 trasformazioni, più o meno complesse, che però ricorrono a
@@ -1202,25 +1202,31 @@ si parla di leggi da memorizzare.
         \hline
         $W$ & 0 & $nR\Delta T = p\Delta V$ & $nRT\ln(V_f/V_i)$ & $-nc_V\Delta T$
     \end{tabular}
+    \captionof{table}{Leggi utili delle trasformazioni fondamentali.}
+    \label{tabellazza_riassuntazza}
 \end{center}
 
 \subsubsection*{Trasformazioni composte e cicliche}
 Combinando insieme le trasformazioni semplici viste fino ad ora, è possibile
 comporre trasformazioni più complesse. Ad esempio, un gas in certe
 condizioni di pressione e volume può passare ad un altro stato mediante
-una adiabatica, seguita da una isoterma e infine da una isobara.
-
+una adiabatica, seguita da una isoterma e infine da una isobara. %FIGURA!!!
 Tra tutte queste trasformazioni ``composte'', quelle più interessanti
 sono forse le trasformazioni cicliche (o cicli termodinamici), nelle
 quali, data una coordinata termodinamica, il sistema ritorna nello stesso
 punto dopo aver compiuto alcune trasformazioni. Seguendo i nostri presupposti,
 possiamo concludere che la variazione di energia interna dei sistemi che
-subiscono trasformazioni cicliche non varia per definizione:
+subiscono trasformazioni cicliche non varia tra giri consecutivi:
 
 \[ \Delta U_\tau = 0 \quad \forall \tau \text{ ciclica} \]
 
-\noindent in quanto quest'ultima dipende unicamente dallo stato.
+\noindent in quanto quest'ultima dipende unicamente dallo stato. Se
+lo stato iniziale e finale coincidono, non vi sono variazioni di energia
+interna.
 Le trasformazioni cicliche costituiscono il principio di funzionamento delle macchine.
+
+Mostriamo un esempio di trasformazione ciclica, con calcoli
+annessi:
 
 
 \subsubsection*{Reversibilità e irreversibilità}
@@ -1233,4 +1239,37 @@ valgono solamente nel caso ideale di trasformazioni reversibili.
     precedente.
 \end{tcolorbox}
 
-\noindent Prendiamo come esempio
+\noindent L'ipotesi di reversibilità ci consente di utilizzare senza
+pensieri le leggi della tabella \ref{tabellazza_riassuntazza}. Inoltre,
+il verso di percorrenza delle trasformazioni reversibili può essere
+tranquillamente invertito, a patto di rispettare le convenzioni sui
+segni delle quantità di energia che vengono scambiate.
+
+È estremamente importante leggere la definizione senza perdere alcun
+dettaglio: \emph{l'universo} (sistema e ambiente esterno insieme) deve poter
+essere riportato indietro, prima che la trasformazione avvenisse.
+Per spiegare meglio il concetto, prendiamo come esempio un cubetto di ghiaccio e una tazza di
+té\footnote{Té o the? Boh, mai capito quale dei due sia giusto.} bollente.
+Inavvertitamente, facciamo cadere il ghiaccio nella tazza e,
+con indifferente stupore, osservando il cubetto gelido nella bevanda
+incandescente, vedremmo il primo dissolversi lentamente nell'intruglio.
+Il latte è ormai stato versato, ma vorremmo ritornare indietro e
+recuperare quel disgraziato cubetto. Recuperiamo allora un po' di acqua
+del té e la ricongeliamo nel freezer. Ed ecco che il nostro cubetto
+è di nuovo nelle nostre mani.
+
+Ma siamo sicuri di aver riportato proprio \emph{tutto l'universo}
+allo stato iniziale? Non solo il ghiaccio, ma anche il té, la tazza,
+l'intero ambiente nel quale tutto ciò è avvenuto? Purtroppo, il prossimo
+capitolo mostra che queste domande trovano risposta negativa. Il motivo
+non lo possiamo ancora comprendere; possiamo solo dire che il processo
+di scioglimento del ghiaccio è stato irreversibile e in verità lo sono
+tutti quelli che vediamo nella realtà: oggetti che bruciano e si consumano,
+gas che si espandono, stelle che muoiono. Tutto questo non può essere
+riportato come era esattamente all'inizio, ambiente esterno compreso.
+Si tratta di una legge di natura. Perché allora siamo riusciti a riottenere
+il cubetto di ghiaccio dell'esempio precedente? In realtà, questo è possibile
+a spese di qualcos'altro: il congelatore che consuma corrente elettrica,
+prodotta chissà dove mediante trasformazioni irreversibili. Anticipiamo
+peraltro che queste spese prese in carico dall'ambiente esterno sono
+maggiori nel caso in cui si desidera tornare indietro.
