@@ -34,8 +34,21 @@ La legge fondamentale che descrive come i corpi si attraggono gravitazionalmente
 loro venne formulata da Newton nel seguente modo:
 
 \begin{marginfigure}
-    \centering
-    \includegraphics[width = \marginparwidth]{legge_di_newton.pdf}
+    \begin{center}
+        \begin{tikzpicture}
+            %corpi 1 e 2
+            \filldraw[black] (0,0) circle (2pt) node[below right]{1};
+            \filldraw[black] (3.5,3.5) circle (2pt) node[below right]{2};
+            
+            %vettore distanza
+            \draw (1.7,1.7) node[below right]{$\vecsymb{r}_{1,2}$};
+            \draw[->] (0.0,0.0) -- (3.45,3.45);
+
+            %vettore forza gravitazionale (UNA SOLA!!!)
+            \draw[->] (3.3,3.7) -- (1.5,1.9);
+            \draw (2.7,3.5) node[below left]{$\vecsymb{F}_{1,2}$};
+        \end{tikzpicture}
+    \end{center}
     \caption{Illustrazione dell'applicazione della legge di Newton.
     Anche se non viene mostrata, il corpo 2 esercita la stessa
     forza, ma opposta in verso, sul corpo 1, in accordo con la
