@@ -681,9 +681,33 @@ lato $L$ e di una certa massa $M$ tale che $M \gg m$. Proiettiamo la situazione 
 che denoteremo $\vecsymb{v}$. Consideriamo poi solo la componente
 orizzontale di tale vettore, ovvero $\vecsymb{v}_x$.
 
+%\begin{marginfigure}
+%    \centering
+%    \includegraphics[width = \marginparwidth]{teoria_cinetica_parete.pdf}
+%    \caption{Urto tra una particella di gas e una delle pareti
+%    del contenitore.}
+%    \label{wall}
+%\end{marginfigure}
+
 \begin{marginfigure}
-    \centering
-    \includegraphics[width = \marginparwidth]{teoria_cinetica_parete.pdf}
+    \begin{center}
+        \begin{tikzpicture}
+
+            \filldraw[black] (0,0) circle (2pt) node[below right]{$m$};
+            \filldraw[black] (2,2) circle (2pt) node[below right]{};
+            \filldraw[black] (0,4) circle (2pt) node[below right]{};
+
+            \draw[->] (0.2,0.2) -- (1.8,1.8);
+            \draw (1,1) node[above left]{$\vecsymb{v}_i$};
+
+            \draw[->] (1.8,2.2) -- (0.2,3.8);
+            \draw (1,3) node[above right]{$\vecsymb{v}_f$};
+
+            %wall
+            \draw (2,0) -- (2,4);
+            \fill[pattern=north west lines] (2,0) rectangle ++(1,4);
+        \end{tikzpicture}
+    \end{center}
     \caption{Urto tra una particella di gas e una delle pareti
     del contenitore.}
     \label{wall}

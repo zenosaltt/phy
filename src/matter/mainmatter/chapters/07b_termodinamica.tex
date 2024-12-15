@@ -182,7 +182,7 @@ di prestazione:
     calore dalla sorgente fredda e intanto utilizzare poco lavoro in entrata:
 
     \begin{align}
-        \eta_\text{frigo} = \frac{Q_\text{c}}{W}
+        \eta_\text{frigo} \eqdef \frac{Q_\text{c}}{|W|}\label{rfrigo}
     \end{align}
 
     \item Pompa di calore: lo scopo di una pompa di calore è di impedire che
@@ -193,9 +193,13 @@ di prestazione:
     rispetto a quello prelevato dalla sorgente fredda:
 
     \begin{align}
-        \eta_\text{pompa} = \frac{|Q_\text{h}|}{W}
+        \eta_\text{pompa} \eqdef \frac{Q_\text{h}}{W}\label{rpompa}
     \end{align}
 \end{itemize}
+
+\noindent Il rendimento è sempre positivo.
+Si ricordino bene le convenzioni stabilite in figura
+\ref{fluxi} per avere chiari i segni delle energie scambiate.
 
 \subsection[Cicli Diesel e Otto]{Cicli reali di macchine reali: Diesel e Otto}
 Esaminiamo un esempio reale di ciclo termodinamico, impiegato in
@@ -216,60 +220,61 @@ Il ciclo diesel è costituito dai seguenti tratti, o
     \begin{center}
         \begin{tikzpicture}
             \def\xmax{3}
-            \def\ymax{2.5}
+            \def\ymax{2.7}
             \def\Ch{2.5}
-            \def\Cc{0.9}
+            \def\Cc{1}
             \def\N{40}
             \def\gam{1.0}
             \def\adiabatic#1#2{{ #2/(#1)^(\gam) }}
             \def\xA{.24*\xmax}
-            \def\xB{.90*\xmax}
+            \def\xB{.90*\ymax}
             \coordinate (A) at ({\xA},{\adiabatic{\xA}{\Ch}});
             \coordinate (B) at ({\xB},{\adiabatic{\xB}{\Ch}});
             \coordinate (C) at ({\xB},{\adiabatic{\xB}{\Cc}});
             \coordinate (D) at ({\xA},{\adiabatic{\xA}{\Cc}});
             \coordinate (E) at (C-|A);
-            
+
             % WORK
             \fill[mylightblue,domain={\xA:\xB},samples=\N]
               plot (\x,\adiabatic{\x}{\Ch}) --
               plot[domain={\xB:\xA}](\x,\adiabatic{\x}{\Cc}) -- cycle;
             \node[below=-5,blue,scale=.9] at ($(D)!.4!(B)$) {$W$};
-            
+
             % ADIABATIC TRANSFORMATION
-            \draw[myred,thick,midarr=.18,midarr=.75,domain={\xA:\xB},samples=\N]
-              (D) -- (A)
+            \draw[black,thick,midarr=.75,domain={\xA:\xB},samples=\N]
               plot (\x,\adiabatic{\x}{\Ch});
-            \draw[blue,thick,midarr=.1,midarr=.62,domain={\xB:\xA},samples=\N]
-              (B) -- plot(\x,\adiabatic{\x}{\Cc});
-            \draw[blue!80!white,thick,midarr=.65]
+            \draw[black,thick,midarr=.62,domain={\xB:\xA},samples=\N]
+              plot(\x,\adiabatic{\x}{\Cc});
+            \draw[black!80!white,thick,midarr=.65]
               (C)++(0,.02) -- ($(E)+(0,.02)$);
-            \draw[blue!80!black,thick,midarr=.55]
+            \draw[black!80!black,thick,midarr=.55]
               (E)++(0,-.03) -- ($(C)+(0,-.03)$);
+            \draw[myred,thick,dashed,midarr=0.6] (D) -- (A);
+            \draw[blue,thick,dashed,midarr=0.6] (B) -- (C);
             %\node[blue,above=2,right,scale=0.75] at (B) {exhaust};
             %\node[blue!80!black,right=12,below=-1,scale=0.75] at (E) {intake};
             %\node[myred,above left,scale=0.75] at (D) {spark};
-            
+    
             % HEAT
             \draw[>={LaTeX[width=5,length=4]},->,line width=2,mydarkred]
               ($(D)!.28!(A)$)++(-.2,0) --++ (.5,0) node[near end,left=10,scale=.8] {$Q_\text{h}$};
             \draw[>={LaTeX[width=5,length=4]},->,line width=2,mydarkblue]
               ($(B)!.72!(C)$)++(-.2,0) --++ (.5,0) node[right=-2,scale=.8] {$Q_\text{c}$};
-            
+
             % POINTS
-            \fill[mydarkblue]
+            \fill[black]
                (A) circle(0.05) node[above left] {$C$}
                (B) circle(0.05) node[above right] {$D$}
-               (C) circle(0.05) node[below] {$A$}
+               (C) circle(0.05) node[below right] {$A$}
                (D) circle(0.05) node[below left] {$B$}
                (E) circle(0.05) node[left] {$O$};
-            
+
             % AXIS
             \draw[->,thick] (0,-0.1*\ymax) -- (0,\ymax+0.1)
               node[anchor=north east,inner sep=4,scale=1] {$p$};
             \draw[->,thick] (-0.1*\xmax,0) -- (\xmax+0.1,0)
-              node[anchor=north east,inner sep=4,scale=1] {$V$};
-            
+              node[anchor=north west,inner sep=3,scale=1] {$V$};
+
           \end{tikzpicture}
     \end{center}
     \caption{Ciclo Diesel teorico.}
@@ -608,13 +613,14 @@ di funzionamento, la macchina esegue i seguenti quattro passi
             \node[blue,scale=.9] at ($(B)!.5!(D)$) {$W$};
             
             % ADIABATIC & ISOTHERMIC TRANSFORMATIONS
+            %AB
             \draw[myred,thick,midarr=.60,domain={\xA:\xB},samples=\N]
                 plot (\x,\isotherm{\x}{\Th}); % hot
-            \draw[blue,thick,midarr=.45,domain={\xB:\xC},samples=\N]
+            \draw[black,thick,midarr=.45,domain={\xB:\xC},samples=\N]
                 plot (\x,\adiabatic{\x}{\Cc}); % cold
             \draw[blue,thick,midarr=.65,domain={\xC:\xD},samples=\N]
                 plot (\x,\isotherm{\x}{\Tc}); % cold
-            \draw[myred,thick,midarr=.40,domain={\xD:\xA},samples=\N]
+            \draw[black,thick,midarr=.40,domain={\xD:\xA},samples=\N]
                 plot(\x,\adiabatic{\x}{\Ch}); % hot
             
             % POINTS
@@ -627,10 +633,10 @@ di funzionamento, la macchina esegue i seguenti quattro passi
             % HEAT
             \draw[>={LaTeX[width=6,length=4]},->,line width=2,mydarkred]
                 (.33*\xmax,.590*\ymax) --++ (-89:.56)
-                node[pos=0,inner sep=0,anchor=-130,scale=.9] {$Q_\text{ass}$};
+                node[pos=0,inner sep=0,anchor=-130,scale=.9] {$Q_\text{h}$};
             \draw[>={LaTeX[width=6,length=4]},->,line width=2,mydarkblue]
                 (.50*\xmax,.15*\ymax) --++ (-89:.56)
-                node[inner sep=-2,anchor=60,scale=.9] {$Q_\text{ced}$};
+                node[inner sep=-2,anchor=60,scale=.9] {$Q_\text{c}$};
             
             % AXIS
             \draw[->,thick] (0,-0.1*\ymax) -- (0,\ymax+0.1)
@@ -829,7 +835,7 @@ le sue prestazioni energetiche saranno sempre limitate superiormente
 secondo l'espressione $1 - T_1/T_2$.
 
 \subsection{Osservazioni di Carnot}
-Da Carnot è possibile osservare che, se $Q_1 < 0$ è il calore ceduto
+Grazie agli studi di Carnot è possibile osservare che, se $Q_1 < 0$ è il calore ceduto
 alla sorgente fredda e $Q_2 > 0$ quello assorbito dalla sorgente
 calda, per le definizioni alternative di rendimento vale
 
@@ -853,6 +859,65 @@ Un'altra osservazione: la seconda proposizione del teorema di Carnot
 le leggi della termodinamica valgono indipendentemente da come costruiamo
 la nostra macchina, anche se questa non esiste ancora!
 
+\subsubsection{Rendimento per macchine ideali}
+Se ci troviamo di fronte ad una macchina termica ideale, che opera tra
+una sorgente fredda a temperatura $T_\text{c}$ e una calda a
+temperatura $T_\text{h}$, scambiando rispettivamente quantità di
+calore $Q_\text{c}$ e $Q_\text{h}$, possiamo allora
+esprimere il suo rendimento in due modi:
+
+\[ \eta = 1 - \frac{|Q_\text{c}|}{Q_\text{h}} = 1 - \frac{T_\text{c}}{T_\text{h}} \]
+
+\noindent Osserviamo come cambiano le efficienze di un frigorifero
+e di una pompa ideali, ricorrendo solamente alle temperature delle
+sorgenti: riprendendo le definizioni \ref{rfrigo} e \ref{rpompa} e
+applicando qualche semplice calcolo, scopriamo che
+
+\[ \eta_\text{frigo} = \frac{T_\text{c}}{T_\text{h} - T_\text{c}} \]
+
+\noindent Osservando l'andamento dell'efficienza del frigo in funzione delle
+temperature, possiamo notare che più le due sorgenti sono termicamente
+vicine (possiedono temperature vicine), più il frigo è efficiente\footnote{Occhio a questa definizione, da prendere con un pizzico di
+sale: più $T_\text{h}$ e $T_\text{c}$ si avvicinano tra loro, più
+l'efficienza del frigo cresce. Questo è comprensibile, perché se le
+due sorgenti possiedono pressoché le stesse temperature, è necessario
+poco sforzo per spostare del calore dall'una all'altra; bisogna però
+fare attenzione che l'equazione non funziona per $T_\text{h} = T_\text{c}$,
+e infatti $\eta_\text{frigo}$ tende asintoticamente a $+\infty$ quando
+la temperatura della sorgente calda si avvicina a quella fredda. Questo
+accade perché ci troviamo in condizioni ideali, nelle quali, nell'ipotesi
+di temperature uguali, non è praticamente necessario del lavoro esterno per effettuare
+il primo microscopico spostamento di calore tra le sorgenti.}.
+Possiamo dunque capire perché è più faticoso e dispendioso raffreddare
+un frigorifero per raggiungere basse temperature mentre all'esterno
+fa molto caldo\footnote{Purtroppo i freezer non sono molto efficienti
+nel deserto.}.
+Passiamo ora alla pompa di calore: come prima, applichiamo algebretta
+e molta fretta per ottenere
+
+\[ \eta_\text{pompa} = \frac{T_\text{h}}{T_\text{h} - T_\text{c}} \]
+
+\noindent Anche qui, la pompa necessita di maggior sforzo ed energia
+qualora la differenza di temperatura tra sorgente fredda e calda sia
+elevata.
+
+Abbiamo deciso di battere qualche paragrafo su queste osservazioni
+non solo per volere di Iuppa, ma perché possiamo apprezzare al massimo
+come la natura rema decisamente contro i frigoriferi, che lavorano
+in maniera innaturale. Andando contro il normale e spontaneo flusso
+di calore, ovvero dal corpo più caldo verso il più freddo, dobbiamo
+pagare sempre energia e questo costo è tanto più alto quanto più
+la differenza di temperatura è ampia. Per fortuna, quando invece
+vogliamo che il calore fluisca dal corpo caldo a quello freddo,
+non dobbiamo patire le stesse spese. Come mai alcuni grandi data
+centers sono localizzati in regioni fredde e remote dell'Europa
+settentrionale, nonostante la scarsa presenza di consumatori
+rispetto alle regioni più a sud? Per il semplice fatto che il
+raffreddamento costa meno ed è più efficiente: basta sfruttare
+le basse temperature ambientali nelle quali i caldi computer
+lavorano. La natura fa il resto, ovvero muovere spontaneamente
+il calore indesiderato. Gratuitamente (quasi).
+
 \section{Esperienza di Clausius}
 Un ulteriore personaggio degno del titolo di \textit{main character}
 della termodinamica è il tedesco Rudolf Clausius, il quale estese
@@ -872,6 +937,7 @@ operano su cicli ben più complessi, fluttuando tra svariati valori
 di temperatura, come se operassero tra infinite sorgenti. Clausius
 ebbe così la brillante idea di generalizzare le conclusioni di
 Carnot per un ciclo termodinamico qualsiasi.
+
 
 Si consideri il ciclo motore mostrato in figura. Esso attraversa
 un infinità di temperature differenti. Immaginiamo di approssimare
@@ -1100,6 +1166,8 @@ Concludiamo che
 
 
 \subsubsection{Che dire dei frigoriferi?}
+Dopo aver 
+
 
 % spiegaz di Iuppa differenza di entropia: calore sprecato in uno scampio, sprecato = non più recuperabile
 \subsection{Disordine}
@@ -1208,13 +1276,13 @@ loro numero totale, in $A$ o in $B$. Il microstato, invece,
         %STATO II
         \begin{minipage}{0.4\marginparwidth}
             \begin{center}
-                $A(4)$
+                $A(3)$
             \end{center}
             \begin{tikzpicture}
                 \draw[step=1cm,gray,very thin] (0,0) grid (2,3);
-                \draw[fill=none, draw=myblue, thick] (0.5,0.5) circle (8pt);
+                \draw[fill=none, draw=myblue, thick, dashed] (0.5,0.5) circle (8pt);
                 \fill[black] (1.5,1.5) circle (8pt);
-                \draw[fill=none, draw=myred, thick] (1.5,2.5) circle (8pt);
+                \draw[fill=none, draw=myred, thick, dashed] (1.5,2.5) circle (8pt);
                 \fill[black] (0.5,2.5) circle (8pt);
 
                 %dischi mossi
@@ -1223,12 +1291,12 @@ loro numero totale, in $A$ o in $B$. Il microstato, invece,
         \end{minipage}
         \begin{minipage}{0.4\marginparwidth}
             \begin{center}
-                $B(2)$
+                $B(3)$
             \end{center}
             \begin{tikzpicture}
                 \draw[step=1cm,gray,very thin] (0,0) grid (2,3);
                 \fill[black] (0.5,1.5) circle (8pt);
-                \draw[fill=none, draw=green, thick] (1.5,2.5) circle (8pt);
+                \draw[fill=none, draw=green, thick, dashed] (1.5,2.5) circle (8pt);
 
                 \fill[myred] (0.5,2.5) circle (8pt);
                 \fill[green] (0.5,0.5) circle (8pt);
@@ -1342,14 +1410,15 @@ di avere successo in altre branche del sapere è il seguente: un
 sistema disordinato richiede maggior informazione per essere
 descritto rispetto ad uno ordinato, per via dei diversi gradi
 di complessità che si possono presentare, come abbiamo visto
-nell'esempio delle palline.
+nell'esempio delle palline. Vi è quindi una correlazione tra
+quantità di informazione e livello di entropia di un sistema.
 
 Come già emerge dal teorema dell'entropia, esiste una quantità
 che varia in maniera differente a seconda del verso con cui il
 tempo scorre. La nostra percezione del tempo è abituata a vedere
 il succedersi degli eventi nella sequenza più naturale e spontanea
 che esiste in natura, ovvero quella per cui i sistemi fisici tendono
-a gradi di disordine sempre maggiori.
+a gradi di entropia, e disordine, sempre maggiori.
 
 \subsection{Il terzo principio}
 Ebbene sì: esiste un terzo principio della termodinamica che è stato
