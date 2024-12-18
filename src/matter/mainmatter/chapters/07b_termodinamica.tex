@@ -733,9 +733,15 @@ Vale inoltre per una macchina di questo tipo
 \noindent per cui
 
 \begin{align}
-    \frac{T_1}{T_2} = \frac{|Q_\text{ced}|}{Q_\text{ass}}
+    \frac{T_1}{T_2} = \frac{|Q_\text{ced}|}{Q_\text{ass}}\label{temp_heat_ratio}
 \end{align}
 
+\noindent Questo rapporto trova molte applicazioni e ci torna
+molto utile in questi appunti. Invitiamo poi i più curiosi a sbirciare
+gli approfondimenti (sottosezione \ref{the_thermodynamic_temperature})
+per capire perché l'equivalenza \ref{temp_heat_ratio}
+è un modo migliore per tarare un termometro, oltre a capire perché essa
+è collegata alla scala Kelvin.
 
 
 \subsection{Teorema di Carnot}
@@ -916,7 +922,7 @@ rispetto alle regioni più a sud? Per il semplice fatto che il
 raffreddamento costa meno ed è più efficiente: basta sfruttare
 le basse temperature ambientali nelle quali i caldi computer
 lavorano. La natura fa il resto, ovvero muovere spontaneamente
-il calore indesiderato. Gratuitamente (quasi).
+il calore indesiderato, (quasi) gratuitamente.
 
 \section{Esperienza di Clausius}
 Un ulteriore personaggio degno del titolo di \textit{main character}
@@ -1511,3 +1517,66 @@ Questi esempi mostrano che i principi della termodinamica non
 sono validi solamente in quei sistemi in cui si trattano caldo,
 freddo e così via. Come Carnot previde, le leggi reggono anche
 per macchine costruite nelle maniere più bizzarre.
+
+
+\subsection[La temperatura termodinamica]{La temperatura termodinamica\footnote{\cite{feynmann}, 44-5. \href{https://www.youtube.com/watch?v=elAn6-CNv-w}{https://www.youtube.com/watch?v=elAn6-CNv-w}}}\label{the_thermodynamic_temperature} % necessarie [] per inserire footnote nel titolo
+Se il corso è ancora tenuto dal professor Iuppa, è molto probabile
+che in una lezione di termodinamica abbia chiesto, o chiederà, ai
+propri studenti di stupirlo proponendo un metodo ingegnoso per quantificare
+la temperatura. La risposta da principiante è il mercurio, e infatti non
+è ammessa; quella del secchione o di chi (probabilmente) sbircia online
+è uno dei molti metodi impiegati dai termometri digitali. Il problema di
+tutte queste vie è che dipendono da una sostanza termosensibile, che
+cambia proprietà al variare della temperatura. Dunque, tarare un
+termometro a mercurio sarà diverso rispetto al procedimento per costruire
+un termometro digitale (in genere si sfrutta la variazione di conducibilità
+elettrica).
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Esiste una via alternativa e piuttosto stramba per definire la temperatura:
+% sfruttando l'efficienza delle macchine!
+% La relazione \ref{temp_heat_ratio}, ottenuta studianto il ciclo di Carnot,
+% ci suggerisce per l'ennesima volta che esiste un collegamento tra calore
+% e temperatura. Ancora più strabiliante, questa equazione ha una forma (equivalenza di rapporti)
+% tale da permettere di definire una scala di temperature speciale. Rigirando
+% i termini della formula, possiamo unire nello stesso rapporto il calore e
+% la temperatura della stessa sorgente
+% 
+% \[ \frac{Q_\text{c}}{T_\text{c}} = \frac{|Q_\text{h}|}{T_\text{h}} \]
+% 
+% \noindent Scoprendo dunque che
+% 
+% \[ T \propto Q \]
+% 
+% \noindent Vi ricorda qualcosa? Si tratta di una conclusione molto simile
+% a quella di Joule, con l'unica differenza che qui non stiamo cercando una
+% relazione tra calore e \emph{differenza} di temperatura, bensì stiamo stabilendo
+% una scala \emph{assoluta} della temperatura in funzione del calore scambiato.
+% Diciamo che si tratta di una scala
+% speciale perché l'equivalenza \ref{temp_heat_ratio}, per il teorema di
+% Carnot, vale per qualsiasi macchina reversibile, indipendentemente da
+% come essa è costruita. Questo implica che possiamo costruire una scala
+% di temperatura indipendente da qualsiasi sostanza. Ecco come si procede:
+% stabiliamo la differenza unitaria (standard) di temperatura che intendiamo adottare,
+% per convenienza il ben noto grado Celsius (1°C)\footnote{Questa si misura
+% empiricamente.}; supponiamo di disporre di
+% una macchina termica reversibile; poniamo la macchina tra una sorgente
+% fredda a temperatura $T_S =$ 1°C, ovvero
+% l'unità standard scelta in precedenza, e una
+% sorgente calda a temperatura $T_x$, che è la temperatura che intendiamo
+% misurare. La macchina assorbe del calore $Q_x$ dalla sorgente a temperatura ignota
+% $T_x$ e cede del calore $Q_S$ alla sorgente standard. Ora arriva la parte
+% più complicata: dobbiamo misurare $Q_S$ e $Q_x$, calcolarne il rapporto
+% $Q_x/Q_S$ e il risultato corrisponde alla temperatura $T_x$.
+% 
+% \[ T_x = \frac{Q_x}{S} = \frac{Q_x}{Q_S}\cdot 1\text{°C} \]
+% 
+% \noindent Nota sull'equazione: se $Q_x = Q_S$ significa che la macchina
+% non può produrre alcun lavoro (tutta l'energia in entrata viene sprecata
+% e riversata nella sorgente standard). L'efficienza del motore è dunque
+% nulla. Questo equivale a dire che la temperatura delle due sorgenti è la
+% stessa.
