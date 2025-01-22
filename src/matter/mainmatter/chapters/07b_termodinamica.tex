@@ -3,8 +3,11 @@
 
 \epigraph{A: ``Quindi non è possibile nemmeno teoricamente?''\\I: ``Esattamente.''\\A: ``Per questo secondo me è \emph{mind-blowing}.''}{Una lezione di termodinamica,\\se non sbaglio sul II principio,\\a.a. 2023/2024, semestre II}
 
-Lasciando stare per un momento il noioso capitolo precedente,
-questa seconda parte è una sorta di storia piena di personaggi
+Il capitolo precedente ci ha mostrato concetti essenziali
+che in questa seconda parte rappresentano la coppia martello-scalpello
+con cui affrontare numerose nozioni.
+Senza essere eccessivamente noioso, questo capitolo è una
+sorta di storia piena di personaggi
 leggendari, macchine e teorie bizzarre; qualcosa che tocca
 quasi il genere steampunk. Ora che abbiamo in mano gli strumenti
 fondamentali della termodinamica, possiamo vedere nel
@@ -20,7 +23,7 @@ volta innescato un fenomeno, non sempre si può tornare indietro.
 Scopriremo alla fine che questa osservazione è strettamente
 legata alla nostra percezione dello scorrere del tempo.
 
-\section{Macchine}
+\section{Macchine termodinamiche}
 Senza mancare di generalità, una macchina termodinamica
 è un dispositivo in grado di convertire scambi di calore
 in lavoro o viceversa. Un classico esempio di macchina
@@ -80,6 +83,28 @@ in qualche punto più basso, anche
 il calore deve poter essere ceduto ad un'altra sorgente, più
 fredda.
 
+%\begin{marginfigure}
+%    \begin{center}
+%        \begin{tikzpicture}
+%            \draw[draw=lightgray, fill=red!60] (0,4) rectangle (5,4.8);
+%            \draw[draw=lightgray, fill=blue!60] (0,0) rectangle (5,0.8);
+%
+%            \node at (2.5,0.4) {$T_\text{c}$};
+%            \node at (2.5,4.4) {$T_\text{h}$};
+%
+%            \draw (2.5, 2.4) circle (0.5);
+%            \node at (2.5, 2.4) {$\mathcal{M}$};
+%
+%            \draw[->, line width=2pt] (2.5,3.8) -- (2.5,3);
+%            \draw[->, line width=2pt] (2.5,1.8) -- (2.5,1);
+%            \draw[->, line width=2pt] (3.1,2.4) -- (3.8,2.4);
+%
+%        \end{tikzpicture}
+%    \end{center}
+%    \caption{Schema sintetico di una macchina termodinamica.}
+%    \label{machinery}
+%\end{marginfigure}
+
 Spesso le macchine termodinamiche vengono rappresentate
 come in figura\footnote{Sono poche le persone di scienza in grado di disegnare;
 pertanto, ci dobbiamo accontentare di questa tradizionale
@@ -110,7 +135,7 @@ che, in un sistema termodinamico (nel nostro caso, quello della
 macchina), il lavoro in uscita (prodotto dalla macchina) assume
 segno positivo, mentre quello in entrata (compiuto sulla macchina)
 è negativo\footnote{Ah, quindi ti stai chiedento perché non classifichiamo
-il caso $W = 0$? Beh si tratta di qualcosa di tanto utile quanto un
+il caso $W = 0$? Beh, la macchina in questione corrisponde a qualcosa di tanto utile quanto un
 cubo di tungsteno acquistato su Amazon.}.
 
 \begin{itemize}
@@ -129,10 +154,21 @@ cubo di tungsteno acquistato su Amazon.}.
     categoria anche le
     pompe di calore\footnote{Un frigorifero, ma con uno
     scopo differente: spingere calore da un'ambiente freddo verso
-    un ambiente caldo.}. Come spiegato più avanti, le macchine frigorifere
-    operano in un verso innaturale, mentre le macchine termiche operano in
-    quello naturale.
+    un ambiente caldo.}.
 \end{itemize}
+
+\subsubsection*{Macchine preferenziali}
+Come spiegato più avanti, le macchine frigorifere
+operano in un verso innaturale, mentre le macchine termiche operano in
+quello naturale\footnote{Anticipazione: in natura, il calore
+fluisce spontaneamente dalle sorgenti calde a quelle più fredde.}.
+Per questo e per tanti altri motivi, nelle nostre analisi
+e formulazioni di leggi e definizioni termodinamiche,
+sceglieremo come modello quello della macchina termica.
+Si tratta di una scelta arbitraria, un po' come fissare un
+sistema di riferimento. Non bisogna però dimenticarsi che
+le stesse leggi e definizioni, a meno di alcuni aggiustamenti,
+esistono e valgono anche per le macchine frigorifere.
 
 \subsection{Rendimento}
 Ora che abbiamo costruito la nostra macchina, ci chiediamo quanto ci
@@ -158,12 +194,12 @@ viene convertita in lavoro:
 possiamo esprimere la definizione \ref{rendimento_termica}
 nel seguente modo:
 
-\begin{align*}
+\begin{align}
     \eta = \frac{Q_\text{h} + Q_\text{c}}{Q_\text{h}} = 1 + \frac{Q_\text{c}}{Q_\text{h}}
-\end{align*}
+\end{align}
 
 
-\subsubsection*{Rendimento per macchine frigorifere}
+\subsubsection*{Rendimento di macchine frigorifere: il coefficiente di prestazione}
 Allo stesso modo in cui in occidente si è abituati a leggere le cose
 da sinistra a destra, in termodinamica viene spesso impiegato il senso di
 funzionamento delle macchine termiche per effettuare studi e dimostrazioni
@@ -172,7 +208,7 @@ ma è bene ricordare che esiste un indice di bontà anche per
 le macchine frigorifere, che però prende il nome di coefficiente di
 prestazione.
 
-Estendiamo la definizione di macchina frigorifera, perché, a seconda del
+Estendiamo la definizione di macchina frigorifera con due sottoclassi, perché, a seconda del
 tipo di frigorifero considerato, cambia la definizione del coefficiente
 di prestazione:
 
@@ -195,11 +231,17 @@ di prestazione:
     \begin{align}
         \eta_\text{pompa} \eqdef \frac{Q_\text{h}}{W}\label{rpompa}
     \end{align}
+
+    Si pensi ad un impianto di riscaldamento di una casa: la
+    pompa di calore ha lo scopo di trattenere il calore all'interno
+    dell'abitazione, come se stesse raffreddando l'esterno.
 \end{itemize}
 
 \noindent Il rendimento è sempre positivo.
 Si ricordino bene le convenzioni stabilite in figura
 \ref{fluxi} per avere chiari i segni delle energie scambiate.
+Infine, si noti che il coefficiente di prestazione, rispetto al
+rendimento, può essere maggiore di 1.
 
 \subsection[Cicli Diesel e Otto]{Cicli reali di macchine reali: Diesel e Otto}
 Esaminiamo un esempio reale di ciclo termodinamico, impiegato in
@@ -370,7 +412,8 @@ Dopo aver introdotto il concetto di macchina e della sua efficienza,
 è legittimo chiedersi se è possibile progettare nella realtà
 la macchina perfetta, che cioè converte tutta l'energia
 (in particolare calore) in ingresso interamente in lavoro in uscita,
-con efficienza unaria (100\%).
+con efficienza unaria (100\%). Se così fosse, allora potremmo realizzare dispositivi capaci
+di \emph{moto perpetuo}.
 Operando ciclicamente, per una macchina dovrebbe seguire dal primo
 principio $\Delta U = Q - W$ la conclusione $\Delta U = 0$ e allora
 
@@ -380,22 +423,18 @@ principio $\Delta U = Q - W$ la conclusione $\Delta U = 0$ e allora
 convertibili, cioè spendendo calore otteniamo lavoro e possiamo tra l'altro
 invertire il processo, perché l'uguaglianza non ci impone un
 verso preferenziale e noi siamo tanto furbi da costruire macchine
-in grado di funzionare al contrario. Per esperienza, tuttavia, è evidente che non
+in grado di funzionare al contrario, cioè completamente reversibile.
+D'altronde, in meccanica tutto era reversibile. Per esperienza, tuttavia, è evidente che non
 è così, cioè se spendiamo una certa quantità di calore $Q$ e
 la trasformiamo in lavoro, sembra impossibile, mediante quel lavoro,
-riottenere tutto il calore $Q$ iniziale. Per fare un esempio, potremmo
-immaginare di costruire un mulino ad acqua in questo modo: sappiamo che
-tutti i mulini sono mossi dalla corrente e in tal modo producono
-lavoro; potremmo dunque far sì che il mulino alimenti una pompa che
-riporta l'acqua in cima al mulino, facendolo muovere indefinitamente.
-Assumendo che il dispositivo sia costruito in maniera
+riottenere tutto il calore $Q$ iniziale.
+Assumendo di costruire una macchina in maniera
 eccellente, riducendo quanto possibile dispersione e attriti,
 in realtà questa macchina è destinata a fermarsi dopo un certo
 intervallo di tempo\footnote{Consigliamo di dare un'occhiata alla
 sezione dedicata al moto perpetuo, negli approfondimenti di questo
 capitolo.}, sia esso una manciata di secondi o qualche milione di
 anni.
-
 Potremmo ribattere affermando che la realtà ci pone problemi come
 attrito e dissipazioni di vario genere. Ciò che è sconcertante è
 l'impossibilità non solo reale di costruire macchine simili,
@@ -410,10 +449,12 @@ seguente evidenza:
 \noindent Con questo possiamo spiegare perché le macchine frigorifere
 funzionano in un verso innaturale: remano contro questo fatto di natura,
 permettendo al calore di fluire \emph{non spontaneamente} da sorgenti
-fredde a sorgenti calde.
+fredde a sorgenti calde. Vedremo che questo è possibile a patto
+di spendere energia.
 
 \subsection{Enunciati}
-Esistono due enunciati celebri del secondo principio della termodinamica\footnote{Anche se storicamente non fu così, trattiamo prima l'attuale forma
+Esistono due enunciati celebri del secondo principio della termodinamica\footnote{Anche se la storia ci suggerisce
+un ordine differente, trattiamo prima l'attuale forma
 del secondo principio della termodinamica, permettendoci di chiarire
 le sezioni successive.}.
 In qualità di principi, essi sono dati per veri sulla base dell'esperienza,
@@ -547,7 +588,7 @@ propulsione di qualche civiltà aliena a noi sconosciuta.
 \subsection{Ciclo e macchina di Carnot}
 Per rispondere ai suoi quesiti,
 Carnot si ingegnò nella creazione di una macchina ideale,
-la \textit{maccina di Carnot} (che indicheremo spesso con $\mathcal{C}$),
+la \textit{maccina di Carnot}\footnote{Toh guarda che egocentrico!} (che indicheremo spesso con $\mathcal{C}$),
 costituita da un cilindro che può esser reso adiabatico o
 diatermico a piacere, un pistone mobile e un gas sottoposto al
 \textit{ciclo di Carnot}. Altri componenti essenziali sono due
@@ -646,7 +687,10 @@ di funzionamento, la macchina esegue i seguenti quattro passi
             
         \end{tikzpicture}
     \end{center}
-    \caption{Il ciclo di Carnot sul piano $pV$.}
+    \caption{Il ciclo di Carnot sul piano $pV$. Questo è il
+    ciclo termodinamico che descrive le trasformazioni
+    subite dal gas all'interno del cilindro della macchina
+    di Carnot.}
     \label{ciclodicarnot}
 \end{marginfigure}
 
@@ -1260,10 +1304,10 @@ loro numero totale, in $A$ o in $B$. Il microstato, invece,
                 %scacchiera
                 \draw[step=1cm,gray,very thin] (0,0) grid (2,3);
                 %cerchi dentro i quadrati
-                \fill[black] (0.5,0.5) circle (8pt);
-                \fill[black] (1.5,1.5) circle (8pt);
-                \fill[black] (1.5,2.5) circle (8pt);
-                \fill[black] (0.5,2.5) circle (8pt);
+                \shade[ball color = black!80, opacity = 1] (0.5,0.5) circle (8pt);
+                \shade[ball color = black!80, opacity = 1] (1.5,1.5) circle (8pt);
+                \shade[ball color = black!80, opacity = 1] (1.5,2.5) circle (8pt);
+                \shade[ball color = black!80, opacity = 1] (0.5,2.5) circle (8pt);
             \end{tikzpicture}
         \end{minipage}
         \begin{minipage}{0.4\marginparwidth}
@@ -1272,8 +1316,8 @@ loro numero totale, in $A$ o in $B$. Il microstato, invece,
             \end{center}
             \begin{tikzpicture}
                 \draw[step=1cm,gray,very thin] (0,0) grid (2,3);
-                \fill[black] (0.5,1.5) circle (8pt);
-                \fill[black] (1.5,2.5) circle (8pt);
+                \shade[ball color = black!80, opacity = 1] (0.5,1.5) circle (8pt);
+                \shade[ball color = black!80, opacity = 1] (1.5,2.5) circle (8pt);
             \end{tikzpicture}
         \end{minipage}
 
@@ -1287,12 +1331,12 @@ loro numero totale, in $A$ o in $B$. Il microstato, invece,
             \begin{tikzpicture}
                 \draw[step=1cm,gray,very thin] (0,0) grid (2,3);
                 \draw[fill=none, draw=myblue, thick, dashed] (0.5,0.5) circle (8pt);
-                \fill[black] (1.5,1.5) circle (8pt);
+                \shade[ball color = black!80, opacity = 1] (1.5,1.5) circle (8pt);
                 \draw[fill=none, draw=myred, thick, dashed] (1.5,2.5) circle (8pt);
-                \fill[black] (0.5,2.5) circle (8pt);
+                \shade[ball color = black!80, opacity = 1] (0.5,2.5) circle (8pt);
 
                 %dischi mossi
-                \fill[myblue] (1.5,0.5) circle (8pt);
+                \shade[ball color = blue!80, opacity = 1] (1.5,0.5) circle (8pt);
             \end{tikzpicture}
         \end{minipage}
         \begin{minipage}{0.4\marginparwidth}
@@ -1301,11 +1345,11 @@ loro numero totale, in $A$ o in $B$. Il microstato, invece,
             \end{center}
             \begin{tikzpicture}
                 \draw[step=1cm,gray,very thin] (0,0) grid (2,3);
-                \fill[black] (0.5,1.5) circle (8pt);
+                \shade[ball color = black!80, opacity = 1] (0.5,1.5) circle (8pt);
                 \draw[fill=none, draw=green, thick, dashed] (1.5,2.5) circle (8pt);
 
-                \fill[myred] (0.5,2.5) circle (8pt);
-                \fill[green] (0.5,0.5) circle (8pt);
+                \shade[ball color = red!80, opacity = 1] (0.5,2.5) circle (8pt);
+                \shade[ball color = green!80, opacity = 1] (0.5,0.5) circle (8pt);
             \end{tikzpicture}
         \end{minipage}
     \end{center}
