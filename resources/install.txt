@@ -1,3 +1,5 @@
+== Ubuntu & macOS ==
+
 * estensione VSC latex workshop
 * install:
     - latexmk
