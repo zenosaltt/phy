@@ -1,4 +1,6 @@
-== Ubuntu & macOS ==
+==============
+Ubuntu & macOS
+==============
 
 * estensione VSC latex workshop
 * install:
@@ -6,5 +8,3 @@
     - package: texlive-lang-italian
     - package: texlive-latex-extra
     - package: texlive-fonts-extra
-
-> now everything should work in ubuntu

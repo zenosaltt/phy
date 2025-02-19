@@ -7,7 +7,7 @@ MAIN=main
 # directory where the pdf file will be moved after compilation
 BUILD_DIR=../build
 
-# bin
+# bin-cestino
 JUNK_DIR=junk
 
 EXTENSIONS_HANDLER=handle_exts.sh
