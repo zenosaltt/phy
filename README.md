@@ -10,7 +10,7 @@ Contribuire? Assolutamente sì, ma (attualmente) a queste condizioni:
 * Aprendo una issue
 * Sei esperto di LaTeX? Beh noi non molto; quindi che aspetti, apri una pull request!
 
-Scrivere appunti di questo tenore non è per nulla semplice. Ogni contributo è prezioso e non lo consideriamo tanto un favore verso gli autori (abbiamo già superato l'esame), quanto più un aiuto per gli studenti futuri.
+Queste dispense non sono perfette e hanno bisogno di colmare alcune lacune. Scrivere appunti di questo tenore non è per nulla semplice. Ogni contributo è prezioso e non lo consideriamo tanto un favore verso gli autori (abbiamo già superato l'esame), quanto più un aiuto per gli studenti futuri.
 
 ## Il template
 Uno degli scopi del progetto è di mettere alla prova le potenzialità del linguaggio tipografico LaTeX per realizzare una raccolta di appunti elegante ed esteticamente accattivante. Ad esclusione del design di copertina e di alcune figure, tutto il contenuto estetico degli appunti è stato realizzato in LaTeX.
