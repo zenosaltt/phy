@@ -9,6 +9,7 @@ Contribuire? Assolutamente sì, ma (attualmente) a queste condizioni:
 * Contattando gli autori via email (```nome.cognome@studenti.unitn.it```)
 * Aprendo una issue
 * Sei esperto di LaTeX? Beh noi non molto; quindi che aspetti, apri una pull request!
+
 Scrivere appunti di questo tenore non è per nulla semplice. Ogni contributo è prezioso e non lo consideriamo tanto un favore verso gli autori (abbiamo già superato l'esame), quanto più un aiuto per gli studenti futuri.
 
 ## Il template
