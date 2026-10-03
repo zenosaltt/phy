@@ -1,5 +1,8 @@
-# ignore everything but .tex and .pdf files
+# Output della compilazione.
+/build/.latex/
+/build/*.pdf
 
+# File ausiliari creati da editor o compilazioni LaTeX manuali.
 *.aux
 *.fdb_latexmk
 *.fls
@@ -9,5 +12,14 @@
 *.out
 *.synctex.gz
 *.toc
+*.sta
+*.bbl
+*.blg
+*.nav
+*.snm
+*.vrb
+/src/main.pdf
+/src/junk/
 
-junk/
+# Metadati locali di macOS.
+.DS_Store

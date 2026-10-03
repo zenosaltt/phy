@@ -1,0 +1,63 @@
+name: PDF
+
+"on":
+  pull_request:
+  push:
+    branches: [main]
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pdf-${{ github.ref }}
+  cancel-in-progress: ${{ !startsWith(github.ref, 'refs/tags/') }}
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Installa TeX Live (con cache)
+        uses: zauguin/install-texlive@v4
+        with:
+          texlive_version: '2024'
+          packages: >
+            scheme-medium
+            collection-latexextra
+            collection-pictures
+            collection-langitalian
+            fontawesome
+            latexmk
+      - name: Compila il PDF
+        run: make pdf
+      - name: Conserva il PDF della build
+        uses: actions/upload-artifact@v4
+        with:
+          name: phy-pdf
+          path: build/phy.pdf
+          if-no-files-found: error
+          retention-days: 7
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - name: Scarica il PDF compilato
+        uses: actions/download-artifact@v4
+        with:
+          name: phy-pdf
+          path: build
+      - name: Pubblica la Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: gh release create "$RELEASE_TAG" build/phy.pdf --verify-tag --generate-notes
